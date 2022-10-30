@@ -1,0 +1,21 @@
+/* KANBOARD PLUGIN - CSS FILE */
+
+:root {
+    --pp-blue: #007AC9;
+    --pp-blue-alt: #00ADFF;
+    --pp-red: #B71234;
+    --pp-red-alt: #DA004C;
+    --pp-red-alt-2: #AE003D;
+    --pp-black: #000000;
+    --pp-grey: #4D4D4D;
+    --pp-white: #FFFFFF;
+    --pp-green: #2EA02E;
+    --pp-orange: #FF6500;
+    --border-radius: 3px;
+    --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
+    --blue-border-gradient-match: #476E9E;
+}
+
+.display-none, .d-none {
+    display: none !important;
+}
