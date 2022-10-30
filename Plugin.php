@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\PluginNameExampleStudlyCaps;
+namespace Kanboard\Plugin\KanboardPluginsUX;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
@@ -11,23 +11,17 @@ class Plugin extends Base
     {
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
-        $this->template->setTemplateOverride('action/index', 'pluginNameExampleCamelCase:action/index');
+        $this->template->setTemplateOverride('plugin/show', 'kanboardPluginsUX:plugin/show');
+        $this->template->setTemplateOverride('plugin/directory', 'kanboardPluginsUX:plugin/directory');
+        $this->template->setTemplateOverride('plugin/sidebar', 'kanboardPluginsUX:plugin/sidebar');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/css/plugin-name.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/KanboardPluginsUX/Assets/css/kanboard-plugins-ux.css'));
 
         // JS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginNameExampleStudlyCaps/Assets/js/plugin-name.js'));
-
-        // Views - Template Hook
-        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
-        $this->template->hook->attach('template:project-header:view-switcher-before-project-overview', 'pluginNameExampleCamelCase:project_header/actions');
-
-        // Extra Page - Routes
-        //  - Example: $this->route->addRoute('/my/custom/route', 'myController', 'myAction', 'myplugin');
-        $this->route->addRoute('/settings/support', 'TechnicalSupportController', 'show', 'KanboardSupport');
+        $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux.js'));
     }
 
     public function onStartup()
@@ -37,12 +31,12 @@ class Plugin extends Base
 
     public function getPluginName()
     {
-        return 'Plugin Name';
+        return 'KanboardPluginsUX';
     }
 
     public function getPluginDescription()
     {
-        return t('description text');
+        return t('Replace the Installed Plugins and Plugins Directory section within the Kanboard interface.');
     }
 
     public function getPluginAuthor()
@@ -66,6 +60,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/aljawaid/url';
+        return 'https://github.com/aljawaid/KanboardPluginsUX';
     }
 }
