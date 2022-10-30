@@ -1,15 +1,16 @@
-# `Plugin Name`
+# KanboardPluginsUX
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-`Brief intro`
+Replace the Installed Plugins and Plugins Directory section within the Kanboard interface. 
 
 
 Features
 -------------
 
-- main features list 
-- main features list
+- Add icons and better styling for an improved user experience
+- Installed Plugins
+- Plugin Directory
 
 
 Screenshots
@@ -32,7 +33,7 @@ Compatibility
 #### Other Plugins & Action Plugins
 - _No known issues_
 #### Core Files & Templates
-- `01` Template override
+- `03` Template overrides
 - _No database changes_
 
 Changelog
