@@ -23,7 +23,7 @@ Screenshots
 Usage
 -------------
 
-Go to `Settings` &#10562;
+Go to `Plugins` &#10562;
 
 Compatibility
 -------------
