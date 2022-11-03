@@ -11,6 +11,7 @@
 <?php if (empty($available_plugins)): ?>
     <p class="alert"><?= t('There is no plugin available.') ?></p>
 <?php else: ?>
+    <?php usort($available_plugins, fn ($a, $b) => strtolower($a['title']) <=> strtolower($b['title'])); ?>
     <?php foreach ($available_plugins as $plugin): ?>
     <table>
         <tr>

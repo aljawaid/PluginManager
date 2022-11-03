@@ -13,6 +13,7 @@
             <?php endif ?>
         </tr>
 
+        <?php usort($incompatible_plugins, fn($a, $b) => $a->getPluginName() <=> $b->getPluginName()); ?>
         <?php foreach ($incompatible_plugins as $pluginFolder => $plugin): ?>
             <tr class="">
                 <td class="">
@@ -57,6 +58,7 @@
             </tr>
         </thead>
         <tbody class="">
+    <?php usort($plugins, fn($a, $b) => $a->getPluginName() <=> $b->getPluginName()); ?>
     <?php foreach ($plugins as $pluginFolder => $plugin): ?>
         <tr class="plugin-info">
             <td class="plugin-name">
