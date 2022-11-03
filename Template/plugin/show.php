@@ -1,3 +1,8 @@
+<?php
+function sortPlugins(&$arr) {
+  usort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
+}
+?>
 <?php if (! empty($incompatible_plugins)): ?>
     <div class="page-header">
         <h2><i class="fa fa-cubes"></i> <?= t('Incompatible Plugins') ?></h2>
@@ -13,7 +18,7 @@
             <?php endif ?>
         </tr>
 
-        <?php usort($incompatible_plugins, fn($a, $b) => $a->getPluginName() <=> $b->getPluginName()); ?>
+        <?php sortPlugins($incompatible_plugins); ?>
         <?php foreach ($incompatible_plugins as $pluginFolder => $plugin): ?>
             <tr class="">
                 <td class="">
@@ -58,7 +63,7 @@
             </tr>
         </thead>
         <tbody class="">
-    <?php usort($plugins, fn($a, $b) => $a->getPluginName() <=> $b->getPluginName()); ?>
+    <?php sortPlugins($plugins); ?>
     <?php foreach ($plugins as $pluginFolder => $plugin): ?>
         <tr class="plugin-info">
             <td class="plugin-name">
