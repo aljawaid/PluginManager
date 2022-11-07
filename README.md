@@ -77,6 +77,7 @@ Authors & Contributors
 ----------------------
 
 - @aljawaid - Author
+- [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
 - _Contributors welcome_
 
 License
