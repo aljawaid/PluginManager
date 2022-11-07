@@ -1,6 +1,6 @@
 <?php
 function sortPlugins(&$arr) {
-  usort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
+  uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 ?>
 <?php if (! empty($incompatible_plugins)): ?>
