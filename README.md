@@ -9,8 +9,15 @@ Features
 -------------
 
 - Add icons and better styling for an improved user experience
+- All plugins, installed and available are now sorted alphabetically
 - Installed Plugins
+  - Sorted alphabetically
+  - Searchable filter
+  - Show if plugin has database changes
+  - Show plugin homepage as icon
+  - Show Kanboard compatible version if set
 - Plugin Directory
+  - Sorted alphabetically
 
 
 Screenshots

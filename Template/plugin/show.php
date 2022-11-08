@@ -45,12 +45,15 @@ function sortPlugins(&$arr) {
 <?php endif ?>
 
     <div class="page-header">
-        <h2><i class="fa fa-cubes"></i> <?= t('Installed Plugins') ?></h2>
+        <h2 class="installed-title"><i class="fa fa-cubes"></i> <?= t('Installed Plugins') ?></h2>
     </div>
 <?php if (empty($plugins)): ?>
     <p class="alert"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
-    <input type="search" id="InstalledPluginsFilterInput" class="search-input" onfocus="this.value=' '" placeholder="Search for plugin.." title="Search input for plugin filter" autofocus="on" autocomplete="off">
+    <div class="plugin-installed-filter">
+        <label for="InstalledPluginsFilterInput"><?= t('Installed Plugins:') ?></label>
+        <input type="search" id="InstalledPluginsFilterInput" class="search-input" onfocus="this.value=' '" placeholder="Search for plugin.." title="Search input for plugin filter" autocomplete="off">
+    </div>
 
     <table id="InstalledPluginsTable" class="installed-plugins">
         <thead class="">
@@ -59,7 +62,7 @@ function sortPlugins(&$arr) {
                 <th class="column-30"><?= t('Author') ?></th>
                 <th class="column-5"><?= t('Plugin Version') ?></th>
                 <th class="column-10"><?= t('Kanboard Compatibility') ?></th>
-                <th class="" colspan="2"><?= t('Action') ?></th>
+                <th class="column-25"><?= t('Action') ?></th>
             </tr>
         </thead>
         <tbody class="">
@@ -76,18 +79,25 @@ function sortPlugins(&$arr) {
             <?php else: ?>
                 <td class="not-specified"><?= t('Not Specified') ?></td>
             <?php endif ?>
-            <?php if ($plugin->getPluginHomepage()): ?>
-                <td class="plugin-homepage">
-                    <a href="<?= $plugin->getPluginHomepage() ?>" class="" target="_blank" rel="noopener noreferrer">
-                        <i class="fa fa-globe"></i> <?= t('Homepage') ?> <i class="fa fa-external-link"></i>
-                    </a>
-                </td>
-            <?php endif ?>
-            <?php if ($is_configured): ?>
-            <td class="btn-uninstall">
-                <?= $this->modal->confirm('trash-o', t('Uninstall'), 'PluginController', 'confirm', array('pluginId' => $pluginFolder)) ?>
+            <td class="">
+                <?php $schema = Kanboard\Core\Plugin\SchemaHandler::hasSchema($plugin->getPluginName()); ?>
+                    <?php if ($schema): ?>
+                        <span class="plugin-schema">
+                            <?= $this->app->tooltipHTML('<p><i class="fa fa-database"></i> &nbsp;'. t('This plugin contains database changes') .'</p>', $icon = 'fa-database') ?>
+                        </span>
+                    <?php endif ?>
+                <?php if ($plugin->getPluginHomepage()): ?>
+                    <span class="plugin-homepage">
+                        <a href="<?= $plugin->getPluginHomepage() ?>" class="" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Homepage') ?> &#8663; <?= t('Opens in a new window') ?>"><i class="fa fa-globe"></i>
+                        </a>
+                    </span>
+                <?php endif ?>
+                <?php if ($is_configured): ?>
+                <span class="btn-uninstall">
+                    <?= $this->modal->confirm('trash-o', t('Uninstall'), 'PluginController', 'confirm', array('pluginId' => $pluginFolder)) ?>
+                </span>
+                <?php endif ?>
             </td>
-            <?php endif ?>
         </tr>
         <tr class="plugin-description">
             <td class="" colspan="<?= $is_configured ? 6 : 5 ?>"><?= $this->text->e($plugin->getPluginDescription()) ?></td>

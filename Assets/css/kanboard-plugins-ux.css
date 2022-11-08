@@ -19,3 +19,37 @@
 .display-none, .d-none {
     display: none !important;
 }
+
+.installed-title {}
+
+.plugin-installed-filter {}
+
+.plugin-installed-filter label {}
+
+.plugin-installed-filter input {}
+
+#InstalledPluginsTable {}
+
+.installed-plugins {}
+
+.installed-plugins th {}
+
+.plugin-info {}
+
+.plugin-name {}
+
+.plugin-author {}
+
+.plugin-version {}
+
+.plugin-compatible-version {}
+
+.not-specified {}
+
+.plugin-schema {}
+
+.plugin-homepage {}
+
+.btn-uninstall {}
+
+.plugin-description {}
