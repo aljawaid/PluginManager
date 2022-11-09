@@ -16,6 +16,7 @@
     --blue-border-gradient-match: #476E9E;
     --header-page-margin: 5px 15px 10px 15px;
     --page-margin: 0px 15px 0px 15px;
+    --title-margin: 0px 15px 0px 15px;
 }
 
 .display-none, .d-none {
@@ -30,29 +31,71 @@
     margin: var(--page-margin);
 }
 
-.plugin-menu svg {
+.page-title {
+    margin: var(--title-margin);
+}
+
+.plugin-menu svg, .plugin-name svg {
     vertical-align: sub;
 }
 
 .installed-title {}
 
-.plugin-installed-filter {}
+.plugin-installed-filter {
+    display: block;
+    margin: 10px auto 25px auto;
+    text-align: center;
+}
 
 .plugin-installed-filter label {
     display: inline;
 }
 
-.plugin-installed-filter input {}
+.plugin-installed-filter label svg {
+    vertical-align: sub;
+    margin-right: 5px;
+}
 
-#InstalledPluginsTable {}
+.plugin-installed-filter input {
+    width: 300px;
+    padding: 3px 3px 4px 3px;
+    font-size: 1em;
+    border: 2px solid var(--blue-border-gradient-match);
+}
+
+
+#InstalledPluginsTable {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#InstalledPluginsTable thead {
+    background-color: var(--pp-white);
+    margin-bottom: 10px;
+}
 
 .installed-plugins {}
 
-.installed-plugins th {}
+.installed-plugins th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 2;
+    border: 2px solid var(--blue-border-gradient-match) !important;
+}
 
 .plugin-info {}
 
-.plugin-name {}
+.plugin-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.plugin-name svg {
+    margin-right: 4px;
+    color: var(--pp-grey);
+    fill: var(--pp-grey);
+}
 
 .plugin-author {}
 

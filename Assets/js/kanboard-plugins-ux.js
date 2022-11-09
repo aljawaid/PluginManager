@@ -1,6 +1,6 @@
 // KANBOARD PLUGIN ASSET FILE
 
-   document .querySelector(".search-input") .addEventListener("keyup", searchFunction);
+   document.querySelector(".search-input") .addEventListener("keyup", searchFunction);
    function searchFunction() {
       var input, filter, table, tr, td, i, txtValue;
       input = document.querySelector(".search-input");
