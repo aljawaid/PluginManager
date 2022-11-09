@@ -11,6 +11,7 @@ Features
 - Add icons and better styling for an improved user experience
 - All plugins, installed and available are now sorted alphabetically
 - Installed Plugins
+  - Renamed as `Plugin Manager`
   - Sorted alphabetically
   - Searchable filter
   - Show if plugin has database changes
@@ -18,7 +19,8 @@ Features
   - Show Kanboard compatible version if set
 - Plugin Directory
   - Sorted alphabetically
-
+- Problem Plugins
+  - A page dedicated to common issues with plugins and how to resolve them
 
 Screenshots
 ----------

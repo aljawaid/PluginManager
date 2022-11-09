@@ -20,6 +20,10 @@
     display: none !important;
 }
 
+.plugin-menu svg {
+    vertical-align: sub;
+}
+
 .installed-title {}
 
 .plugin-installed-filter {}
