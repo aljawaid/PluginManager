@@ -65,13 +65,25 @@
 
 
 #InstalledPluginsTable {
-    border-collapse: separate;
-    border-spacing: 5px;
+    /*border-collapse: separate;*/
+    /*border-spacing: 5px;*/
 }
 
 #InstalledPluginsTable thead {
     background-color: var(--pp-white);
     margin-bottom: 10px;
+}
+
+#InstalledPluginsTable tbody {
+    border: 2px inset var(--blue-border-gradient-match) !important;
+}
+
+#InstalledPluginsTable > tbody > tr > td {
+    border: 0 !important;
+}
+
+#InstalledPluginsTable > thead > tr > th {
+    border: 2px inset var(--blue-border-gradient-match) !important;;
 }
 
 .installed-plugins {}
@@ -97,7 +109,10 @@
     fill: var(--pp-grey);
 }
 
-.plugin-author {}
+.plugin-author {
+    font-size: .9em;
+    font-style: italic;
+}
 
 .plugin-version {}
 
@@ -112,3 +127,8 @@
 .btn-uninstall {}
 
 .plugin-description {}
+
+.plugin-description td {
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
