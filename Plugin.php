@@ -15,6 +15,9 @@ class Plugin extends Base
         $this->template->setTemplateOverride('plugin/directory', 'kanboardPluginsUX:plugin/directory');
         $this->template->setTemplateOverride('plugin/sidebar', 'kanboardPluginsUX:plugin/sidebar');
 
+        // PLUGIN PROBLEMS Page - Routes
+        $this->route->addRoute('/extensions/plugin-problems', 'KanboardPluginsUXController', 'show', 'KanboardPluginsUX');
+
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/KanboardPluginsUX/Assets/css/kanboard-plugins-ux.css'));
