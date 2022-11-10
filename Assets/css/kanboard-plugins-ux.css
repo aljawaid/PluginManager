@@ -64,7 +64,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 }
 
 .plugin-installed-filter input {
-    width: 300px;
+    width: 375px;
     padding: 3px 3px 4px 3px;
     font-size: 1em;
     border: 2px solid var(--blue-border-gradient-match);
