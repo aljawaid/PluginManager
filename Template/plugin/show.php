@@ -64,7 +64,7 @@ function sortPlugins(&$arr) {
     <p class="alert page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
     <div class="page-margin">
-        <div class="plugin-installed-filter">
+        <form class="plugin-installed-filter">
             <label for="InstalledPluginsFilterInput">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
                     <title>Plugin Manager</title>
@@ -72,8 +72,8 @@ function sortPlugins(&$arr) {
                 </svg>
                 <?= t('Filter Plugins:') ?>
             </label>
-            <input type="search" id="InstalledPluginsFilterInput" class="search-input" onfocus="this.value=' '" placeholder="<?= t('Search for plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
-        </div>
+            <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
+        </form>
 
         <table id="InstalledPluginsTable" class="installed-plugins">
             <thead class="">

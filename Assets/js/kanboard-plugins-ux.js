@@ -9,6 +9,7 @@ $(document).ready(function(){
   });
 });
 
-
-
-
+const input = document.getElementById("InstalledPluginsFilterInput")
+input.addEventListener('mouseover', () => {
+  input.select();
+})
