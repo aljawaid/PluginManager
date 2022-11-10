@@ -1,3 +1,5 @@
+<?php $_title = '$title'; ?>
+
 <?php
 function sortPlugins(&$arr) {
   uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
@@ -104,13 +106,13 @@ function sortPlugins(&$arr) {
                         <td class="">
                             <?php $schema = Kanboard\Core\Plugin\SchemaHandler::hasSchema($plugin->getPluginName()); ?>
                             <?php if ($schema): ?>
-                                <span class="plugin-schema">
+                                <span class="plugin-schema btn-action">
                                     <?= $this->app->tooltipHTML('<p><i class="fa fa-database"></i> &nbsp;'. t('This plugin contains database changes') .'</p>', $icon = 'fa-database') ?>
                                 </span>
                             <?php endif ?>
                             <?php if ($plugin->getPluginHomepage()): ?>
                                 <span class="plugin-homepage">
-                                    <a href="<?= $plugin->getPluginHomepage() ?>" class="" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Homepage') ?> &#8663; <?= t('Opens in a new window') ?>"><i class="fa fa-globe"></i>
+                                    <a href="<?= $plugin->getPluginHomepage() ?>" class="btn-action" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Homepage') ?> &#8663; <?= t('Opens in a new window') ?>"><i class="fa fa-globe"></i>
                                     </a>
                                 </span>
                             <?php endif ?>
