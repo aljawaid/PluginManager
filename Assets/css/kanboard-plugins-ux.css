@@ -71,7 +71,9 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 }
 
 
-#InstalledPluginsTable {}
+#InstalledPluginsTable {
+    margin-bottom: 0;
+}
 
 #InstalledPluginsTable thead {}
 
@@ -178,4 +180,9 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 .plugin-description td {
     padding-top: 1em;
     padding-bottom: .5em;
+}
+
+#PluginTop {
+    display: block;
+    text-align: right;
 }
