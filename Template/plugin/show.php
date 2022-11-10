@@ -129,6 +129,6 @@ function sortPlugins(&$arr) {
             </tbody>
                 <?php endforeach ?>
         </table>
-        <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
+        <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
     </div>
 <?php endif ?>

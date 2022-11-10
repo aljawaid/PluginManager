@@ -19,7 +19,7 @@
     --title-margin: 0px 15px 0px 15px;
     --table-head-box-shadow: 0px 0px 5px 0px #000;
     --table-head-text-shadow: 2px 2px #373737;
-    --button-background-delete: #AE003D;
+    --button-background-delete: #D05C84;
 }
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall {
@@ -152,19 +152,22 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 .btn-action, .btn-action:visited, span.btn-uninstall a {
     text-align: center;
     display: inline-block;
-    padding: 1px 4px 1px 5px;
     border-radius: var(--border-radius);
-    border: 1px solid var(--pp-grey);
     text-decoration: none !important;
+}
+
+.btn-action {
+    padding: 1px 4px 1px 5px;
+    border: 1px solid var(--pp-grey);
 }
 
 .btn-uninstall {
     vertical-align: middle;
     background: var(--button-background-delete);
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 2px 4px 2px 2px;
     margin: auto 2px;
     border-radius: var(--border-radius);
+    border: 1px solid var(--pp-grey);
 }
 
 .btn-uninstall a {
@@ -173,6 +176,10 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 
 .btn-uninstall:hover {
     background: var(--pp-white);
+}
+
+.btn-uninstall:hover a i {
+    color: var(--pp-red-alt-2);
 }
 
 .plugin-description {}
@@ -184,5 +191,8 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 
 #PluginTop {
     display: block;
-    text-align: right;
+    right: 0;
+    position: relative;
+    float: right;
+    margin-top: 3px;
 }
