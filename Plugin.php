@@ -25,6 +25,9 @@ class Plugin extends Base
         // JS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux.js'));
+        if (!file_exists('plugins/Glancer')) {
+            $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux-top-btn.js'));
+        }
     }
 
     public function onStartup()
