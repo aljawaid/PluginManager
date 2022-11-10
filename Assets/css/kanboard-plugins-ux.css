@@ -159,9 +159,10 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 .btn-uninstall {
     vertical-align: middle;
     background: var(--button-background-delete);
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin: auto 2px;
+    border-radius: var(--border-radius);
 }
 
 .btn-uninstall a {
