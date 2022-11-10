@@ -17,6 +17,8 @@
     --header-page-margin: 5px 15px 10px 15px;
     --page-margin: 0px 15px 0px 15px;
     --title-margin: 0px 15px 0px 15px;
+    --table-head-box-shadow: 0px 0px 5px 0px #000;
+    --table-head-text-shadow: 2px 2px #373737;
 }
 
 .display-none, .d-none {
@@ -64,15 +66,9 @@
 }
 
 
-#InstalledPluginsTable {
-    /*border-collapse: separate;*/
-    /*border-spacing: 5px;*/
-}
+#InstalledPluginsTable {}
 
-#InstalledPluginsTable thead {
-    background-color: var(--pp-white);
-    margin-bottom: 10px;
-}
+#InstalledPluginsTable thead {}
 
 #InstalledPluginsTable tbody {
     border: 2px inset var(--blue-border-gradient-match) !important;
@@ -83,7 +79,13 @@
 }
 
 #InstalledPluginsTable > thead > tr > th {
-    border: 2px inset var(--blue-border-gradient-match) !important;;
+    border: 2px inset var(--blue-border-gradient-match) !important;
+    box-shadow: var(--table-head-box-shadow);
+    background: var(--button-blue-border-gradient-match);
+    color: var(--pp-white);
+    text-shadow: var(--table-head-text-shadow);
+    text-transform: uppercase;
+    font-size: .9em;
 }
 
 .installed-plugins {}
