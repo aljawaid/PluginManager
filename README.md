@@ -10,13 +10,16 @@ Features
 
 - Add icons and better styling for an improved user experience
 - All plugins, installed and available are now sorted alphabetically
+
 **Plugin Manager**
 - Installed Plugins
   - Renamed as **`Plugin Manager`**
   - Searchable user friendly filter for quickly finding installed plugins
+    - Hover over input box to focus without clicking
   - Show icon if plugin has database changes
   - Show icon for plugin homepage if set
   - Show Kanboard compatible version if set
+
 **Plugin Directory**
 - Show icon for Readme file if set
 - Show plugin structure (pending changes to the official Plugins Directory plugin submission structure)
@@ -26,6 +29,7 @@ Features
   - Show when the plugin was last updated
   - _Plugin structures will show gradually as the Plugins Directory is updated for all existing plugins_
 - Searchable user friendly filter for quickly finding available plugins
+
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
 
@@ -33,15 +37,19 @@ Screenshots
 ----------
 
 **Side Menu**
+
 ![Plugin Manager Side Menu](../master/Screenshots/screenshot-plugin-manager-side-menu.png "Plugin Manager Side Menu")
 
 **Plugin Manager**
+
 ![Plugin Manager](../master/Screenshots/screenshot-plugin-manager.png "Installed Plugins becomes Plugin Manager")
 
 **Plugin Manager - Filter**
+
 ![Plugin Manager Filter](../master/Screenshots/screenshot-plugin-manager-filter.png "Plugin Manager Filter")
 
 **Plugin Manager - Database Notice**
+
 ![Plugin Manager Database Notice](../master/Screenshots/screenshot-plugin-manager-schema-tooltip.png "Database Notice")
 
 Usage
