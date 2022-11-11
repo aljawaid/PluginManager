@@ -20,6 +20,7 @@
     --table-head-box-shadow: 0px 0px 5px 0px #000;
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
+    --tooltip-box-shadow: 1px 1px 1px 0px #000;
 }
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall {
@@ -195,4 +196,34 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     position: relative;
     float: right;
     margin-top: 3px;
+}
+
+.tooltip-section {
+    width: 500px;
+}
+
+.tooltip-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.tooltip-title i {
+    color: var(--pp-orange);
+    margin-right: 3px;
+}
+
+.tooltip-hr {
+    box-shadow: var(--tooltip-box-shadow);
+}
+
+.tooltip-content {
+    font-size: .8em;
+}
+
+.tooltip-content .tooltip-link {}
+.tooltip-link {}
+
+.not-specified {
+    font-style: italic;
 }

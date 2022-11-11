@@ -107,7 +107,7 @@ function sortPlugins(&$arr) {
                             <?php $schema = Kanboard\Core\Plugin\SchemaHandler::hasSchema($plugin->getPluginName()); ?>
                             <?php if ($schema): ?>
                                 <span class="plugin-schema btn-action">
-                                    <?= $this->app->tooltipHTML('<p><i class="fa fa-database"></i> &nbsp;'. t('This plugin contains database changes') .'</p>', $icon = 'fa-database') ?>
+                                    <?= $this->app->tooltipHTML($this->render('kanboardPluginsUX:info/db-info'), $icon = 'fa-database') ?>
                                 </span>
                             <?php endif ?>
                             <?php if ($plugin->getPluginHomepage()): ?>
