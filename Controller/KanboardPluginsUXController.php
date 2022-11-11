@@ -21,7 +21,7 @@ class KanboardPluginsUXController extends \Kanboard\Controller\PluginController
 
     public function show()
     {
-        $this->response->html($this->helper->layout->plugin('kanboardPluginsUX:plugin-problems', array(
+        $this->response->html($this->helper->layout->plugin('kanboardPluginsUX:info/plugin-problems', array(
             'title' => t('Plugins').' &#10562; '.t('Plugin Problems'),
         )));
     }
