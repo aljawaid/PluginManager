@@ -10,22 +10,25 @@ Features
 
 - Add icons and better styling for an improved user experience
 - All plugins, installed and available are now sorted alphabetically
+**Plugin Manager**
 - Installed Plugins
   - Renamed as `Plugin Manager`
-  - Sorted alphabetically
-  - Searchable filter
-  - Show if plugin has database changes
-  - Show plugin homepage as icon
+  - Searchable user friendly filter for quickly finding installed plugins
+  - Show icon if plugin has database changes
+  - Show icon for plugin homepage if set
   - Show Kanboard compatible version if set
 - Plugin Directory
-  - Sorted alphabetically
-- Problem Plugins
+  -
+- Plugin Problems
   - A page dedicated to common issues with plugins and how to resolve them
 
 Screenshots
 ----------
 
-**title**  
+**Menu**
+
+
+**Plugin Manager**
 
 ![Screenshot Name](../master/screenshot-name.png "Read Screenshot Name")
 
