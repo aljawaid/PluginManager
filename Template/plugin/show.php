@@ -1,12 +1,10 @@
-<?php $_title = '$title'; ?>
-
 <?php
 function sortPlugins(&$arr) {
   uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 ?>
     <div class="page-header">
-        <h2>
+        <h2 class="">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
                 <title>Plugin Manager</title>
                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"/>
@@ -16,7 +14,7 @@ function sortPlugins(&$arr) {
 
 <?php if (! empty($incompatible_plugins)): ?>
     <div class="page-title">
-        <h3><i class="fa fa-cubes"></i> <?= t('Incompatible Plugins') ?></h3>
+        <h3 class=""><i class="fa fa-cubes"></i> <?= t('Incompatible Plugins') ?></h3>
     </div>
     <span class="page-margin">
         <table class="">
@@ -26,7 +24,7 @@ function sortPlugins(&$arr) {
                 <th class="column-10"><?= t('Version') ?></th>
                 <th class="column-12"><?= t('Compatibility') ?></th>
                 <?php if ($is_configured): ?>
-                    <th class=""><?= t('Action') ?></th>
+                    <th class=""><?= t('Actions') ?></th>
                 <?php endif ?>
             </tr>
 
@@ -82,7 +80,7 @@ function sortPlugins(&$arr) {
                     <th class="column-30"><?= t('Author') ?></th>
                     <th class="column-5"><?= t('Plugin Version') ?></th>
                     <th class="column-10"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-25"><?= t('Action') ?></th>
+                    <th class="column-25"><?= t('Actions') ?></th>
                 </tr>
             </thead>
                 <?php sortPlugins($plugins); ?>
