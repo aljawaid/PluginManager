@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Replace the Installed Plugins and Plugins Directory section within the Kanboard interface. 
+Replace the Installed Plugins section within the Kanboard interface with Plugin Manager and revamp the Plugins Directory (also within the interface). Add a new section for troubleshooting plugins.
 
 
 Features
@@ -12,25 +12,37 @@ Features
 - All plugins, installed and available are now sorted alphabetically
 **Plugin Manager**
 - Installed Plugins
-  - Renamed as `Plugin Manager`
+  - Renamed as **`Plugin Manager`**
   - Searchable user friendly filter for quickly finding installed plugins
   - Show icon if plugin has database changes
   - Show icon for plugin homepage if set
   - Show Kanboard compatible version if set
-- Plugin Directory
-  -
-- Plugin Problems
-  - A page dedicated to common issues with plugins and how to resolve them
+**Plugin Directory**
+- Show icon for Readme file if set
+- Show plugin structure (pending changes to the official Plugins Directory plugin submission structure)
+  - Show if plugin has database changes
+  - Show if plugin contains template overrides
+  - Show if plugin uses hooks
+  - Show when the plugin was last updated
+  - _Plugin structures will show gradually as the Plugins Directory is updated for all existing plugins_
+- Searchable user friendly filter for quickly finding available plugins
+**Plugin Problems**
+- A page dedicated to common issues with plugins and how to resolve them
 
 Screenshots
 ----------
 
-**Menu**
-
+**Side Menu**
+![Plugin Manager Side Menu](../master/Screenshots/screenshot-plugin-manager-side-menu.png "Plugin Manager Side Menu")
 
 **Plugin Manager**
+![Plugin Manager](../master/Screenshots/screenshot-plugin-manager.png "Installed Plugins becomes Plugin Manager")
 
-![Screenshot Name](../master/screenshot-name.png "Read Screenshot Name")
+**Plugin Manager - Filter**
+![Plugin Manager Filter](../master/Screenshots/screenshot-plugin-manager-filter.png "Plugin Manager Filter")
+
+**Plugin Manager - Database Notice**
+![Plugin Manager Database Notice](../master/Screenshots/screenshot-plugin-manager-schema-tooltip.png "Database Notice")
 
 Usage
 -------------
