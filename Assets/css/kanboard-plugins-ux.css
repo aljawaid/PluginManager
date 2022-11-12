@@ -21,6 +21,7 @@
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
     --tooltip-box-shadow: 1px 1px 1px 0px #000;
+    --table-blue-border-gradient-match: #476E9E;
 }
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall {
@@ -89,7 +90,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 #InstalledPluginsTable > thead > tr > th {
     border: 2px inset var(--blue-border-gradient-match) !important;
     box-shadow: var(--table-head-box-shadow);
-    background: var(--button-blue-border-gradient-match) !important;
+    background: var(--table-blue-border-gradient-match) !important;
     color: var(--pp-white);
     text-shadow: var(--table-head-text-shadow);
     font-weight: 600;
