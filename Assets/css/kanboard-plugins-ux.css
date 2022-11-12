@@ -37,6 +37,14 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     margin: var(--header-page-margin);
 }
 
+.page-header h2 {
+    border-bottom: 2px outset var(--blue-border-gradient-match) !important;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 1.6em;
+    padding-top: 5px;
+}
+
 .page-margin {
     margin: var(--page-margin);
 }
