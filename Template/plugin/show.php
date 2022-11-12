@@ -83,7 +83,7 @@ function sortPlugins(&$arr) {
                     <th class="column-30"><?= t('Author') ?></th>
                     <th class="column-5"><?= t('Plugin Version') ?></th>
                     <th class="column-10"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-25"><?= t('Actions') ?></th>
+                    <th class="column-25" colspan="2"><?= t('Actions') ?></th>
                 </tr>
             </thead>
                 <?php sortPlugins($plugins); ?>
@@ -104,7 +104,7 @@ function sortPlugins(&$arr) {
                         <?php else: ?>
                             <td class="not-specified"><?= t('Not Specified') ?></td>
                         <?php endif ?>
-                        <td class="">
+                        <td class="plugin-action">
                             <?php $schema = Kanboard\Core\Plugin\SchemaHandler::hasSchema($plugin->getPluginName()); ?>
                             <?php if ($schema): ?>
                                 <span class="plugin-schema btn-action">
@@ -117,10 +117,12 @@ function sortPlugins(&$arr) {
                                     </a>
                                 </span>
                             <?php endif ?>
+                        </td>
+                        <td class="plugin-uninstall">
                             <?php if ($is_configured): ?>
-                                <span class="btn-uninstall">
+                                <button class="btn-uninstall">
                                     <?= $this->modal->confirm('trash-o', t('Uninstall'), 'PluginController', 'confirm', array('pluginId' => $pluginFolder)) ?>
-                                </span>
+                                </button>
                             <?php endif ?>
                         </td>
                     </tr>

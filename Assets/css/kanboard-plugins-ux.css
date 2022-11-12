@@ -90,6 +90,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 
 #InstalledPluginsTable > tbody > tr > td {
     border: 0 !important;
+    padding: 4px 15px;
 }
 
 #InstalledPluginsTable > thead > tr > th {
@@ -157,6 +158,16 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     margin: auto 2px;
 }
 
+.plugin-action {
+    width: 100px;
+    padding: 4px 5px 4px 5px !important;
+}
+
+.plugin-uninstall {
+    text-align: right;
+    padding: 4px 5px 4px 5px !important;
+}
+
 .btn-action, .btn-action:visited, span.btn-uninstall a {
     text-align: center;
     display: inline-block;
@@ -172,25 +183,37 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 .btn-uninstall {
     vertical-align: middle;
     background: var(--button-background-delete);
-    padding: 2px 4px 2px 2px;
+    padding: 4px 4px 4px 2px;
     margin: auto 2px;
     border-radius: var(--border-radius);
     border: 1px solid var(--pp-grey);
+    display: inline-block;
+    width: 100px;
+    font-size: 1em;
 }
 
-.btn-uninstall a {
-    color: var(--pp-white);
+td .btn-uninstall a, td .btn-uninstall a i {
+    color: var(--pp-white) !important;
+    text-decoration: none !important;
+}
+
+td .btn-uninstall:hover a {
+    color: var(--pp-red-alt-2) !important;
 }
 
 .btn-uninstall:hover {
-    background: var(--pp-white);
+    background: var(--pp-white) !important;
+    text-decoration: none !important;
 }
 
-.btn-uninstall:hover a i {
-    color: var(--pp-red-alt-2);
+.btn-uninstall:hover a, .btn-uninstall:hover a i {
+    color: var(--pp-red-alt-2) !important;
 }
 
-.plugin-description {}
+.plugin-description td {
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
+}
 
 .plugin-description td {
     padding-top: 1em;
