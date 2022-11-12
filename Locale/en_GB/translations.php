@@ -13,7 +13,7 @@ return array(
   'Installed Plugins' => 'Plugin Manager',
   ' Installed Plugins' => 'Installed Plugins',
   'There is no plugin loaded.' => 'There is no plugin loaded.',
-  'Filter Plugins:' => 'Filter Plugins:',
+  //'Filter Plugins:' => 'Filter Plugins:',
   'Search for plugin...' => 'Search for plugin...',
   'Search installed plugins' => 'Search installed plugins',
   'Plugin Version' => 'Plugin Version',
