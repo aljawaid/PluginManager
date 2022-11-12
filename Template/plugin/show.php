@@ -55,9 +55,6 @@ function sortPlugins(&$arr) {
     </span>
 <?php endif ?>
 
-    <div class="page-title">
-        <h3 class="installed-title"><i class="fa fa-cubes"></i> <?= t(' Installed Plugins') ?></h3>
-    </div>
 <?php if (empty($plugins)): ?>
     <p class="alert page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
