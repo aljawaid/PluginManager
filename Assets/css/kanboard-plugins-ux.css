@@ -22,6 +22,7 @@
     --button-background-delete: #D05C84;
     --tooltip-box-shadow: 1px 1px 1px 0px #000;
     --table-blue-border-gradient-match: #476E9E;
+    --table-head-padding: 4px 15px;
 }
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall {
@@ -95,6 +96,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     text-shadow: var(--table-head-text-shadow);
     font-weight: 600;
     letter-spacing: 0.04125em;
+    padding: var(--table-head-padding);
 }
 
 .installed-plugins {}
