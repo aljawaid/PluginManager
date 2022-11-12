@@ -236,6 +236,14 @@ td .btn-uninstall:hover a {
     margin-top: 3px;
 }
 
+#PluginBottom {
+    display: block;
+    right: 0;
+    position: relative;
+    float: right;
+    margin-bottom: 4px;
+}
+
 .tooltip-section {
     width: 500px;
 }
