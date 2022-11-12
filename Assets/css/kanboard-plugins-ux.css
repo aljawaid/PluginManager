@@ -66,7 +66,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 }
 
 .plugin-installed-filter label svg {
-    vertical-align: sub;
+    vertical-align: text-bottom;
     margin-right: 5px;
 }
 
