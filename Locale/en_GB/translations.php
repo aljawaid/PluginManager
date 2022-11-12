@@ -23,6 +23,8 @@ return array(
   'Opens in a new window' => 'Opens in a new window',
   'Go to the top of the page' => 'Go to the top of the page',
   'Top' => 'Top',
+  'Go to the bottom of the page' => 'Go to the bottom of the page',
+  'Bottom' => 'Bottom',
   'This plugin contains database changes' => 'This plugin contains database changes',
   'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.' => 'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.',
   'Learn more' => 'Learn more',

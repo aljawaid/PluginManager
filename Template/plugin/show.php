@@ -17,6 +17,7 @@ function sortPlugins(&$arr) {
         <h3 class=""><i class="fa fa-cubes"></i> <?= t('Incompatible Plugins') ?></h3>
     </div>
     <span class="page-margin">
+        <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         <table class="">
             <tr class="">
                 <th class="column-35"><?= t('Name') ?></th>
