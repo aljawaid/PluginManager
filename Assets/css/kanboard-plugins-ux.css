@@ -51,6 +51,10 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 
 .installed-title {}
 
+.plugin-count {
+    font-style: italic;
+}
+
 .plugin-installed-filter {
     display: block;
     margin: 10px auto 25px auto;

@@ -27,7 +27,7 @@ return array(
   'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.' => 'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.',
   'Learn more' => 'Learn more',
   'Go to Plugin Problems' => 'Go to Plugin Problems',
-  '' => '',
+  'You have %s plugins installed' => 'You have %s plugins installed',
   '' => '',
   '' => '',
   '' => '',

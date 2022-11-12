@@ -15,6 +15,7 @@ Features
 **Plugin Manager**
 - Installed Plugins
   - Renamed as **`Plugin Manager`**
+  - Show installed plugin count
   - Searchable user friendly filter for quickly finding installed plugins
     - Hover over input box to focus without clicking
   - Show icon if plugin has database changes

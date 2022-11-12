@@ -62,6 +62,8 @@ function sortPlugins(&$arr) {
     <p class="alert page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
     <div class="page-margin">
+        <?php $installedCount = count($plugins) ?>
+        <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
         <form class="plugin-installed-filter">
             <label for="InstalledPluginsFilterInput">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
