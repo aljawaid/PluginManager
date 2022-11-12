@@ -28,6 +28,9 @@ class Plugin extends Base
         if (!file_exists('plugins/Glancer')) {
             $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux-top-btn.js'));
         }
+        
+        // Helper
+        $this->helper->register('ageHelper', '\Kanboard\Plugin\KanboardPluginsUX\Helper\AgeHelper');
     }
 
     public function onStartup()
