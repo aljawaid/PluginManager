@@ -8,7 +8,7 @@ Replace the Installed Plugins section within the Kanboard interface. The new Plu
 Features
 -------------
 
-- Add Bootstrap Twitter icons and better styling for an improved user experience
+- Add [Bootstrap Twitter](https://icons.getbootstrap.com) icons and better styling for an improved user experience
 - All plugins, installed and available are now sorted alphabetically
 - Fixed table headers
 
