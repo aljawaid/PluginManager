@@ -166,6 +166,14 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     margin: auto 2px;
 }
 
+.plugin-homepage a {
+    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+.plugin-homepage a svg {}
+
 .plugin-action {
     width: 100px;
     padding: 4px 5px 4px 5px !important;
@@ -184,8 +192,10 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 }
 
 .btn-action {
-    padding: 1px 4px 1px 5px;
+    padding: 2px 4px 1px 5px;
     border: 1px solid var(--pp-grey);
+    cursor: pointer;
+    vertical-align: bottom;
 }
 
 .btn-uninstall {
