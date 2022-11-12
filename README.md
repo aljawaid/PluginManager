@@ -8,8 +8,9 @@ Replace the Installed Plugins section within the Kanboard interface. The new Plu
 Features
 -------------
 
-- Add icons and better styling for an improved user experience
+- Add Bootstrap Twitter icons and better styling for an improved user experience
 - All plugins, installed and available are now sorted alphabetically
+- Fixed table headers
 
 **Plugin Manager**
 - Installed Plugins
@@ -27,6 +28,8 @@ Features
   - Show if plugin uses hooks
   - Show when the plugin was last updated
   - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
+- Show Directory source e.g. official or custom
+- Show current application version
 - Show icon for Readme file if set
 - Searchable user friendly filter for quickly finding available plugins
 
