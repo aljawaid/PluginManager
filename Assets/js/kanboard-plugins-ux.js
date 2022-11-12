@@ -9,7 +9,9 @@ $(document).ready(function(){
   });
 });
 
-const input = document.getElementById("InstalledPluginsFilterInput")
-input.addEventListener('mouseover', () => {
-  input.select();
-})
+const input = document.getElementById("InstalledPluginsFilterInput");
+if (input !== null) {
+  input.addEventListener('mouseover', () => {
+    input.select();
+  })
+}
