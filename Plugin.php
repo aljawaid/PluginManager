@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\KanboardPluginsUX;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+use Kanboard\Plugin\KanboardPluginUX\AgeHelper;
 
 class Plugin extends Base
 {
