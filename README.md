@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Replace the Installed Plugins section within the Kanboard interface with Plugin Manager and revamp the Plugins Directory (also within the interface). Add a new section for troubleshooting plugins.
+Replace the Installed Plugins section within the Kanboard interface. The new Plugin Manager and revamped Plugins Directory provides users and developers with an improved comprehensive interface. With a new section for troubleshooting plugins featuring common issues with old or outdated plugins, you can further improve your Kanboard setup using the new plugin structure as your guide.
 
 
 Features
@@ -22,12 +22,12 @@ Features
 
 **Plugin Directory**
 - Show icon for Readme file if set
-- Show plugin structure (pending changes to the official Plugins Directory plugin submission structure)
+- NEW: Show plugin structure
   - Show if plugin has database changes
   - Show if plugin contains template overrides
   - Show if plugin uses hooks
   - Show when the plugin was last updated
-  - _Plugin structures will show gradually as the Plugins Directory is updated for all existing plugins_
+  - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
 - Searchable user friendly filter for quickly finding available plugins
 
 **Plugin Problems**
