@@ -89,11 +89,11 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
 #InstalledPluginsTable > thead > tr > th {
     border: 2px inset var(--blue-border-gradient-match) !important;
     box-shadow: var(--table-head-box-shadow);
-    background: var(--button-blue-border-gradient-match);
+    background: var(--button-blue-border-gradient-match) !important;
     color: var(--pp-white);
     text-shadow: var(--table-head-text-shadow);
-    text-transform: uppercase;
-    font-size: .9em;
+    font-weight: 600;
+    letter-spacing: 0.04125em;
 }
 
 .installed-plugins {}

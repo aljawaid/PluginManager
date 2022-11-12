@@ -21,13 +21,13 @@ Features
   - Show Kanboard compatible version if set
 
 **Plugin Directory**
-- Show icon for Readme file if set
 - NEW: Show plugin structure
   - Show if plugin has database changes
   - Show if plugin contains template overrides
   - Show if plugin uses hooks
   - Show when the plugin was last updated
   - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
+- Show icon for Readme file if set
 - Searchable user friendly filter for quickly finding available plugins
 
 **Plugin Problems**
