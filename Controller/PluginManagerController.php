@@ -1,17 +1,17 @@
 <?php
 
-namespace Kanboard\Plugin\KanboardPluginsUX\Controller;
+namespace Kanboard\Plugin\PluginManager\Controller;
 
 use Kanboard\Controller\BaseController;
 
 /**
- * Class KanboardPluginsUX
+ * Class PluginManager
  * 
  * @author aljawaid
  * 
  */
 
-class KanboardPluginsUXController extends \Kanboard\Controller\PluginController
+class PluginManagerController extends \Kanboard\Controller\PluginController
 {
 	/**
      * Display the Problem Plugins Page
@@ -21,7 +21,7 @@ class KanboardPluginsUXController extends \Kanboard\Controller\PluginController
 
     public function show()
     {
-        $this->response->html($this->helper->layout->plugin('kanboardPluginsUX:info/plugin-problems', array(
+        $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-problems', array(
             'title' => t('Plugins').' &#10562; '.t('Plugin Problems'),
         )));
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanboard\Plugin\KanboardPluginsUX;
+namespace Kanboard\Plugin\PluginManager;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\KanboardPluginsUX\AgeHelper;
+use Kanboard\Plugin\PluginManager\AgeHelper;
 
 class Plugin extends Base
 {
@@ -12,26 +12,26 @@ class Plugin extends Base
     {
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
-        $this->template->setTemplateOverride('plugin/show', 'kanboardPluginsUX:plugin/show');
-        $this->template->setTemplateOverride('plugin/directory', 'kanboardPluginsUX:plugin/directory');
-        $this->template->setTemplateOverride('plugin/sidebar', 'kanboardPluginsUX:plugin/sidebar');
+        $this->template->setTemplateOverride('plugin/show', 'pluginManager:plugin/show');
+        $this->template->setTemplateOverride('plugin/directory', 'pluginManager:plugin/directory');
+        $this->template->setTemplateOverride('plugin/sidebar', 'pluginManager:plugin/sidebar');
 
         // PLUGIN PROBLEMS Page - Routes
-        $this->route->addRoute('/extensions/plugin-problems', 'KanboardPluginsUXController', 'show', 'KanboardPluginsUX');
+        $this->route->addRoute('/extensions/plugin-problems', 'PluginManagerController', 'show', 'PluginManager');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:css', array('template' => 'plugins/KanboardPluginsUX/Assets/css/kanboard-plugins-ux.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/plugin-manager.css'));
 
         // JS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux.js'));
+        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager.js'));
         if (!file_exists('plugins/Glancer')) {
-            $this->hook->on('template:layout:js', array('template' => 'plugins/KanboardPluginsUX/Assets/js/kanboard-plugins-ux-top-btn.js'));
+            $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager-top-btn.js'));
         }
         
         // Helper
-        $this->helper->register('ageHelper', '\Kanboard\Plugin\KanboardPluginsUX\Helper\AgeHelper');
+        $this->helper->register('ageHelper', '\Kanboard\Plugin\PluginManager\Helper\AgeHelper');
     }
 
     public function onStartup()
@@ -41,12 +41,12 @@ class Plugin extends Base
 
     public function getPluginName()
     {
-        return 'KanboardPluginsUX';
+        return 'PluginManager';
     }
 
     public function getPluginDescription()
     {
-        return t('Replace the Installed Plugins and Plugins Directory section within the Kanboard interface.');
+        return t('Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.');
     }
 
     public function getPluginAuthor()
@@ -70,6 +70,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/aljawaid/KanboardPluginsUX';
+        return 'https://github.com/aljawaid/PluginManager';
     }
 }

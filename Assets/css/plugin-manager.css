@@ -1,4 +1,4 @@
-/* KANBOARD PLUGIN - KANBOARD PLUGINS UX CSS FILE */
+/* KANBOARD PLUGIN - PLUGIN MANAGER CSS FILE */
 
 :root {
     --pp-blue: #007AC9;
@@ -278,8 +278,23 @@ td .btn-uninstall:hover a {
 }
 
 .tooltip-content .tooltip-link {}
+
 .tooltip-link {}
 
 .not-specified {
     font-style: italic;
 }
+
+.directory-info-wrapper {}
+
+.directory-info {}
+
+.directory-info ul {}
+
+.directory-info ul li {}
+
+.kb-app-info {}
+
+.kb-app-info ul {}
+
+.kb-app-info ul li {}

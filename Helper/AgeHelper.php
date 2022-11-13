@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\KanboardPluginsUX\Helper;
+namespace Kanboard\Plugin\PluginManager\Helper;
 
 use DateTime;
 use Kanboard\Core\Base;

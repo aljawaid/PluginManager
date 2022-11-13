@@ -1,21 +1,22 @@
-# KanboardPluginsUX
+# Plugin Manager
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Replace the Installed Plugins section within the Kanboard interface. The new Plugin Manager and revamped Plugins Directory provides users and developers with an improved comprehensive interface. With a new section for troubleshooting plugins featuring common issues with old or outdated plugins, you can further improve your Kanboard setup using the new plugin structure as your guide.
+Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.
 
 
 Features
 -------------
 
-- Add [Bootstrap Twitter](https://icons.getbootstrap.com) icons and better styling for an improved user experience
+- Add [Bootstrap Twitter](https://icons.getbootstrap.com) icons and better clarity and an improved user experience
 - All plugins, installed and available are now sorted alphabetically
-- Fixed table headers
+- Add `Back to Top` and `Bottom` buttons for easier screen navigation
 
 **Plugin Manager**
 - Installed Plugins
   - Renamed as **`Plugin Manager`**
   - Show installed plugin count
+  - Fixed table headers
   - Searchable user friendly filter for quickly finding installed plugins
     - Hover over input box to focus without clicking
   - Show icon if plugin has database changes
@@ -114,6 +115,7 @@ Authors & Contributors
 
 - @aljawaid - Author
 - [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
+- [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
 License

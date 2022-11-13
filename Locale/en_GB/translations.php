@@ -1,6 +1,7 @@
 <?php
 return array(
   'Plugin Manager' => 'Plugin Manager',
+  'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.' => 'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.',
   'Plugin Directory' => 'Plugin Directory',
   'Plugin Problems' => 'Plugin Problems',
   'Incompatible Plugins' => 'Incompatible Plugins',
