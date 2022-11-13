@@ -22,6 +22,7 @@ Features
   - Show icon if plugin has database changes
   - Show icon for plugin homepage if set
   - Show Kanboard compatible version if set
+  - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
 
 **Plugin Directory**
 - NEW: Show plugin structure
