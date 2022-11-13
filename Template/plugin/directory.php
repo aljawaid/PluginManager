@@ -59,7 +59,16 @@
             <td class="column-30">
                 <?= $this->text->e($plugin['version']) ?>
             </td>
-            <td>
+            <td class="available-plugin-last-updated">
+                <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
+                    <span class="dir-plugin-last-updated" title="<?= ($plugin['last_updated']) ?>">
+                        <?php $pluginAge = strtotime($plugin['last_updated']) ?>
+                        <?= $this->helper->ageHelper->newAge($pluginAge) ?>
+                    </span>
+                <?php else: ?>
+                    <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>"><?= t('Not Specified') ?></span>
+                <?php endif ?>
+            </td>
                 <?php if ($is_configured): ?>
                     <?php if (! isset($installed_plugins[$plugin['title']])): ?>
                         <?= $this->url->icon('cloud-download', t('Install'), 'PluginController', 'install', array('archive_url' => urlencode($plugin['download'])), true) ?>
