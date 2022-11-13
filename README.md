@@ -8,7 +8,7 @@ Replace the Installed Plugins section within the Kanboard interface with a new P
 Features
 -------------
 
-- Add [Bootstrap Twitter](https://icons.getbootstrap.com) icons and better clarity and an improved user experience
+- Add [Bootstrap Twitter](https://icons.getbootstrap.com) and [GitHub Octicons](https://primer.style/octicons/) for better clarity and an improved end user experience
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation
 
