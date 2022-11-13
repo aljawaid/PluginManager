@@ -51,15 +51,26 @@
             </table>
         </div>
     <?php foreach ($available_plugins as $plugin): ?>
-    <table>
-        <tr>
-            <th colspan="3">
-                <a href="<?= $plugin['homepage'] ?>" target="_blank" rel="noopener noreferrer"><?= $this->text->e($plugin['title']) ?></a>
+    <table class="available-plugins-table">
+        <tr class="">
+            <th class="available-plugins-author" colspan="2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                </svg>
+                <span title="<?= t('Plugin Author(s)') ?>"><?= $this->text->e($plugin['author']) ?></span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-law">
+                    <title><?= $this->text->e($plugin['license']) ?> <?= t('License') ?></title>
+                    <path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                </svg>
             </th>
+            <th class="text-center"><?= t('Last Updated') ?></th>
+            <th class="text-center"><?= t('Plugin Structure') ?></th>
+            <th class="text-center"><?= t('Status') ?></th>
         </tr>
-        <tr>
-            <td class="column-40">
-                <?= $this->text->e($plugin['author']) ?>
+        <tr class="">
+            <td class="column-40 available-plugins-title">
+                <?= $this->text->e($plugin['title']) ?>
             </td>
             <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
                 <?= $this->text->e($plugin['version']) ?>
