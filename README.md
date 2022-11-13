@@ -31,6 +31,8 @@ Features
   - Show when the plugin was last updated
   - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
 - Show Directory source e.g. official or custom
+- Show available plugins count
+- Show external weblink for official directory
 - Show current application version
 - Show icon for Readme file if set
 - Searchable user friendly filter for quickly finding available plugins

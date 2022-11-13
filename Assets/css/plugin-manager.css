@@ -33,6 +33,18 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     display: none !important;
 }
 
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
 #main .page-header {
     margin: var(--header-page-margin);
 }
@@ -285,16 +297,65 @@ td .btn-uninstall:hover a {
     font-style: italic;
 }
 
-.directory-info-wrapper {}
+.directory-info-wrapper {
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
 
-.directory-info {}
+.directory-info {
+    text-align: center;
+}
 
-.directory-info ul {}
+.available-count {
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: context-menu;
+}
 
-.directory-info ul li {}
+#DirectoryInfo {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
 
-.kb-app-info {}
+#DirectoryInfo > thead > tr > th {
+    padding: var(--table-head-padding);
+    background-color: var(--color-light);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border: 2px inset var(--pp-grey);
+    font-weight: 600;
+    cursor: context-menu;
+}
 
-.kb-app-info ul {}
+#DirectoryInfo > tbody > tr > td {
+    padding: var(--table-head-padding);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border: 2px inset var(--pp-grey);
+}
 
-.kb-app-info ul li {}
+.plugin-dir-view {}
+
+.plugin-dir-url {
+    font-weight: 300;
+    cursor: context-menu;
+}
+
+.kb-app-version {
+    cursor: context-menu;
+    font-size: 1.1em;
+}
+
+#DirectoryInfo td.plugin-dir-view a {
+    text-decoration: none !important;
+}
+
+#DirectoryInfo td.plugin-dir-view a svg {
+    vertical-align: bottom;
+    margin-right: 3px;
+}
