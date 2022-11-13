@@ -374,3 +374,16 @@ i.fa-cubes::before {
     font-style: italic;
 }
 
+
+.available-plugin-version {
+    width: 80px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+.available-plugin-version:before {
+    content: 'v';
+    margin: -6px;
+}
+

@@ -56,7 +56,7 @@
             <td class="column-40">
                 <?= $this->text->e($plugin['author']) ?>
             </td>
-            <td class="column-30">
+            <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
                 <?= $this->text->e($plugin['version']) ?>
             </td>
             <td class="available-plugin-last-updated">
