@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\PluginManager;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 use Kanboard\Plugin\PluginManager\AgeHelper;
+use Kanboard\Plugin\PluginManager\PluginManagerHelper;
 
 class Plugin extends Base
 {
@@ -32,6 +33,7 @@ class Plugin extends Base
         
         // Helper
         $this->helper->register('ageHelper', '\Kanboard\Plugin\PluginManager\Helper\AgeHelper');
+        $this->helper->register('pluginManagerHelper', '\Kanboard\Plugin\PluginManager\Helper\PluginManagerHelper');
     }
 
     public function onStartup()
