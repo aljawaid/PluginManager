@@ -392,3 +392,7 @@ i.fa-cubes::before {
     margin: -6px;
 }
 
+td.available-plugin-description  .markdown p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

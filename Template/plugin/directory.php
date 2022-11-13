@@ -89,8 +89,8 @@
                 <?php endif ?>
             </td>
         </tr>
-        <tr>
-            <td colspan="3">
+        <tr class="">
+            <td class="available-plugin-description" colspan="5">
                 <div class="markdown">
                     <?= $this->text->markdown($plugin['description']) ?>
                 </div>
