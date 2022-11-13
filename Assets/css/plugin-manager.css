@@ -57,6 +57,11 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     padding-top: 5px;
 }
 
+.page-header h2 svg {
+    top: 2px;
+    position: relative;
+}
+
 .page-margin {
     margin: var(--page-margin);
 }
