@@ -178,7 +178,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall {
     margin: auto 2px;
 }
 
-.plugin-homepage {
+.plugin-homepage, .plugin-readme {
     vertical-align: middle;
     margin: auto 2px;
 }
@@ -379,6 +379,10 @@ i.fa-cubes::before {
     font-style: italic;
 }
 
+table.available-plugins-table > thead > tr > th, table.available-plugins-table > tbody > tr > td, table.available-plugins-table > tbody > tr > th {
+    padding: 4px 10px;
+    vertical-align: middle;
+}
 
 .available-plugin-version {
     width: 80px;
