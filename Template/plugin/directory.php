@@ -86,18 +86,17 @@
                     <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>"><?= t('Not Specified') ?></span>
                 <?php endif ?>
             </td>
+            <td class="available-plugin-status text-center">
                 <?php if ($is_configured): ?>
                     <?php if (! isset($installed_plugins[$plugin['title']])): ?>
                         <?= $this->url->icon('cloud-download', t('Install'), 'PluginController', 'install', array('archive_url' => urlencode($plugin['download'])), true, 'install-plugin', t('Install this plugin')) ?>
                     <?php elseif ($installed_plugins[$plugin['title']] < $plugin['version']): ?>
                         <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array('archive_url' => urlencode($plugin['download'])), true, 'update-plugin', t('Update this plugin')) ?>
                     <?php else: ?>
-                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                        <?= t('Up to date') ?>
+                        <div class="tick">&#10004;</div> <?= t('Up to date') ?>
                     <?php endif ?>
                 <?php else: ?>
-                    <i class="fa fa-ban fa-fw" aria-hidden="true"></i>
-                    <?= t('Not available') ?>
+                    <div class="cross">&#10008;</div> <?= t('Not available') ?>
                 <?php endif ?>
             </td>
         </tr>
