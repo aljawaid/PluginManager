@@ -116,7 +116,7 @@ Translations
 Authors & Contributors
 ----------------------
 
-- @aljawaid - Author
+- [@aljawaid](https://github.com/aljawaid) - Author
 - [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_

@@ -1,6 +1,6 @@
 <?php
 function sortPlugins(&$arr) {
-  uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
+    uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 ?>
     <div class="page-header">
@@ -130,7 +130,6 @@ function sortPlugins(&$arr) {
                                     $pluginReadme = $this->helper->pluginManagerHelper->checkRootDomain($plugin->getPluginHomepage());
                                     $homepage = $plugin->getPluginHomepage();
                                 ?>
-
                                 <a href="<?= "$homepage$pluginReadme" ?>" class="btn-action" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Readme') ?> &#8663; <?= t('Opens in a new window') ?>">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
                                         <title>Readme</title>
