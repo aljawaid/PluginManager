@@ -50,6 +50,7 @@
                 </tbody>
             </table>
         </div>
+    <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
     <?php foreach ($available_plugins as $plugin): ?>
     <table class="available-plugins-table">
         <tr class="">
@@ -109,4 +110,5 @@
         </tr>
     </table>
     <?php endforeach ?>
+    <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
 <?php endif ?>
