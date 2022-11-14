@@ -30,6 +30,7 @@ Features
   - Show if plugin contains template overrides
   - Show if plugin uses hooks
   - Show when the plugin was last updated
+    - Show relative date with exact date in tooltip (toggles to exact date when clicked)
   - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
 - Show Directory source e.g. official or custom
 - Show available plugins count

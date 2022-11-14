@@ -169,6 +169,7 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall, svg {
 
 .not-specified {
     vertical-align: middle;
+    cursor: context-menu;
 }
 
 .plugin-schema {
@@ -554,4 +555,8 @@ table > tbody > tr > td {
 table.available-plugins-table {
     border: 2px solid var(--pp-grey);
     border-radius: 5px;
+}
+
+.date-toggle:not(span) {
+    cursor: pointer;
 }

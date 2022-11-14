@@ -76,12 +76,25 @@
             <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
                 <?= $this->text->e($plugin['version']) ?>
             </td>
-            <td class="available-plugin-last-updated">
+            <td class="date-toggle available-plugin-last-updated">
                 <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
-                    <span class="dir-plugin-last-updated" title="<?= ($plugin['last_updated']) ?>">
+                    <?php
+                    $dateFormatplugin = date_create($plugin['last_updated']);
+                    $dateFormat = date_format($dateFormatplugin, 'd F Y');
+                    ?>
+                    <div class="relative-date dir-plugin-last-updated" title="<?= $dateFormat ?>">
                         <?php $pluginAge = strtotime($plugin['last_updated']) ?>
                         <?= $this->helper->ageHelper->newAge($pluginAge) ?>
+                    </div>
+                    <div class="exact-date dir-plugin-last-updated" title="<?= $this->helper->ageHelper->newAge($pluginAge) ?>" style="display: none;">
+                        <?= $dateFormat ?>
+                    </div>
+                <?php else: ?>
+                    <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>">
+                        <?= t('Not Specified') ?>
                     </span>
+                <?php endif ?>
+            </td>
                 <?php else: ?>
                     <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>"><?= t('Not Specified') ?></span>
                 <?php endif ?>
