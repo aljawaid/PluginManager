@@ -70,9 +70,21 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall, svg {
     margin: var(--title-margin);
 }
 
-.plugin-menu svg, .plugin-name svg {
+.plugin-name svg {
     vertical-align: sub;
 }
+
+#PluginSidebar {}
+
+#PluginMenu {}
+
+#PluginMenu ul li {}
+
+#PluginMenu ul li svg {
+    vertical-align: sub;
+}
+
+#PluginMenu ul li .plugin-menu-item {}
 
 .installed-title {}
 
