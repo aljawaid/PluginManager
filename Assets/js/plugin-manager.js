@@ -9,12 +9,16 @@ $(document).ready(function(){
     });
 });
 
-const input = document.getElementById("InstalledPluginsFilterInput");
-if (input !== null) {
-    input.addEventListener('mouseover', () => {
-        input.select();
-    })
-}
+// SELECT INPUT ON MOUSOVER
+$(document).ready(function() {
+    const input = document.getElementById("InstalledPluginsFilterInput");
+    if (input !== null) {
+        input.addEventListener('mouseover', () => {
+            input.select();
+        })
+    }
+});
+
 
 // TOGGLE DATES FOR PLUGIN LAST UPDATED
 $(document).ready(function() {
