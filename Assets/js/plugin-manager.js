@@ -1,5 +1,6 @@
 // KANBOARD PLUGIN ASSET FILE
 
+// FILTER TABLES IN THE INSTALLED PLUGINS PAGE
 $(document).ready(function(){
     $("#InstalledPluginsFilterInput").on("keyup", function() {
         var value = $(this).val().toLowerCase();
@@ -19,6 +20,15 @@ $(document).ready(function() {
     }
 });
 
+// SELECT INPUT ON MOUSOVER
+$(document).ready(function() {
+    const input = document.getElementById("AvailablePluginsFilterInput");
+    if (input !== null) {
+        input.addEventListener('mouseover', () => {
+            input.select();
+        })
+    }
+});
 
 // TOGGLE DATES FOR PLUGIN LAST UPDATED
 $(document).ready(function() {
