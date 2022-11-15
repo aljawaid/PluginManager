@@ -245,15 +245,28 @@ a:hover {
 .has-overrides, .has-hooks {
     vertical-align: middle;
     margin: 2px;
+    height: 18px;
+    /*display: inline-block;*/
 }
 
-.plugin-homepage a {
-    padding-bottom: 0px;
-    padding-top: 3px;
+.plugin-homepage a, .plugin-schema .tooltip {
+    padding-bottom: 1px;
+    padding-top: 2px;
     padding-right: 5px;
 }
 
-.plugin-homepage a svg {}
+.plugin-schema .tooltip {
+    border: 1px solid var(--pp-grey);
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    border-radius: var(--border-radius);
+}
+
+.plugin-homepage a svg, .plugin-readme a svg {
+    padding: 3px 0px;
+    padding-bottom: 5px;
+}
 
 .plugin-action {
     width: 100px;
@@ -352,8 +365,9 @@ td .btn-uninstall:hover a {
     font-weight: normal;
 }
 
-.tooltip-title i {
+.tooltip-title svg {
     color: var(--pp-orange);
+    fill: var(--pp-orange);
     margin-right: 3px;
 }
 
@@ -520,8 +534,8 @@ td.available-plugin-description  .markdown p {
 }
 
 .bi-database, .bi-database-check, .bi-database-add {
-    padding-top: 1px !important;
-    padding-bottom: 2px !important;
+    padding-top: 3px !important;
+    padding-bottom: 0px !important;
 }
 
 .tick {
