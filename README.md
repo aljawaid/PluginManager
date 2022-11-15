@@ -39,6 +39,7 @@ Features
 - Show icon for Readme file if set
 - Searchable user friendly filter for quickly finding available plugins
     - Hover over input box to focus without clicking
+- Highlight last updated dates to reflect the development activity of a plugin
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
