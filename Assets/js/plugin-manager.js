@@ -27,3 +27,13 @@ $(document).ready(function() {
         $('.relative-date').toggle();
     });
 });
+
+// FILTER TABLES IN THE PLUGIN DIRECTORY
+$(document).ready(function(){
+    $("#AvailablePluginsFilterInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".available-plugins-table").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});

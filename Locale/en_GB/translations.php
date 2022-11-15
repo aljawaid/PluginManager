@@ -31,6 +31,8 @@ return array(
   'Learn more' => 'Learn more',
   'Go to Plugin Problems' => 'Go to Plugin Problems',
   'You have %s plugins installed' => 'You have %s plugins installed',
+  'Filter Available Plugins' => 'Filter Available Plugins',
+  'Search available plugins' => 'Search available plugins',
   '' => '',
   '' => '',
   '' => '',

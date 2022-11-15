@@ -86,22 +86,25 @@ div, a, details, summary, i, img, table, tr, .btn-uninstall, svg {
     text-align: center;
 }
 
-.plugin-installed-filter label {
+.plugin-available-filter {}
+
+.plugin-installed-filter label, .plugin-available-filter label {
     display: inline;
 }
 
-.plugin-installed-filter label svg {
+.plugin-installed-filter label svg, .plugin-available-filter label svg {
     vertical-align: text-bottom;
     margin-right: 5px;
 }
 
-.plugin-installed-filter input {
+.plugin-installed-filter input, .plugin-available-filter input {
     width: 375px;
     padding: 3px 3px 4px 3px;
     font-size: 1em;
     border: 2px solid var(--blue-border-gradient-match);
 }
 
+#AvailablePluginsFilterInput {}
 
 #InstalledPluginsTable {
     margin-bottom: 0;

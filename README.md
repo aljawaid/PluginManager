@@ -38,6 +38,7 @@ Features
 - Show current application version
 - Show icon for Readme file if set
 - Searchable user friendly filter for quickly finding available plugins
+    - Hover over input box to focus without clicking
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
