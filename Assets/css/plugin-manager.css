@@ -514,6 +514,20 @@ td.available-plugin-description  .markdown p {
     text-align: center;
 }
 
+.available-plugin-structure .plugin-homepage {
+    padding-top: 2px;
+    padding-bottom: 7px;
+}
+
+.available-plugin-structure .bi-database, .available-plugin-structure .bi-database-check, .available-plugin-structure .bi-database-add {
+    padding-top: 1px !important;
+    padding-bottom: 2px !important;
+}
+
+.dir-plugin-readme svg, .plugin-book svg {
+    fill: var(--pp-grey);
+}
+
 .available-plugin-status {
     width: 200px;
 }
