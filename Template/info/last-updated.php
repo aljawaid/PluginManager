@@ -6,7 +6,7 @@
         </svg>
         <?= t('Last Updated') ?>
     </div>
-    <hr>
+    <hr class="tooltip-hr">
     <p class="info-tooltip-text"><?= t('The last updated date helps you decide whether a plugin is actively developed and is appropriate for your use case.') ?></p>
     <p class="info-tooltip-text"><?= t('Plugin Manager will highlight the last updated date based on the date specified by the plugin developer in the Plugins Directory.') ?></p>
     <ul class="info-tooltip-list">
