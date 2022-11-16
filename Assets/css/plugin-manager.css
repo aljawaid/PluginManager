@@ -536,9 +536,15 @@ td.available-plugin-description  .markdown p {
     padding-bottom: 7px;
 }
 
-.available-plugin-structure .bi-database, .available-plugin-structure .bi-database-check, .available-plugin-structure .bi-database-add {
+.available-plugin-structure .bi-database, .available-plugin-structure .bi-database-check {
     padding-top: 1px !important;
     padding-bottom: 2px !important;
+}
+
+.has-overrides {
+    padding: 2px 4px 2px 5px;
+    width: 24px;
+    height: 24px;
 }
 
 .dir-plugin-readme svg, .plugin-book svg {
@@ -547,6 +553,12 @@ td.available-plugin-description  .markdown p {
 
 .available-plugin-status {
     width: 200px;
+}
+
+.available-plugin-structure .bi-database-add {
+    padding: 0px 4px 1px 5px;
+    width: 24px;
+    height: 26px;
 }
 
 .has-schema, .has-overrides, .has-hooks {
@@ -564,7 +576,7 @@ td.available-plugin-description  .markdown p {
     fill: var(--pp-green);
 }
 
-.bi-database, .bi-database-check, .bi-database-add {
+.bi-database, .bi-database-check {
     padding-top: 3px !important;
     padding-bottom: 0px !important;
 }
