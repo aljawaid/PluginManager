@@ -505,7 +505,7 @@ th.available-plugins-author {
 }
 
 table.available-plugins-table > thead > tr > th, table.available-plugins-table > tbody > tr > td, table.available-plugins-table > tbody > tr > th {
-    padding: 4px 10px;
+    padding: 4px 5px;
     vertical-align: middle;
 }
 
