@@ -788,3 +788,18 @@ figure.notice {
     margin-top: 0;
     font-style: italic;
 }
+
+.plugin-type {
+}
+
+.v-sub {
+    vertical-align: sub;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.plugin-type svg {
+    color: var(--blue-border-gradient-match);
+}
