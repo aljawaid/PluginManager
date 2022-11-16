@@ -6,7 +6,7 @@
         <?= t('Plugin Directory') ?>
     </h2>
 </div>
-
+<?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
 <?php if (! $is_configured): ?>
 <p class="alert alert-error">
     <?= t('Your Kanboard instance is not configured to install plugins from the user interface.') ?>
@@ -22,6 +22,9 @@
             <thead class="">
                 <tr class="">
                     <th scope="col" class=""><?= t('Available Plugins') ?></th>
+                    <th scope="col" class=""><?= t('Type Plugin') ?></th>
+                    <th scope="col" class=""><?= t('Type Action') ?></th>
+                    <th scope="col" class=""><?= t('Type Theme') ?></th>
                     <th scope="col" colspan="2" class="text-center"><?= t('Directory Source') ?></th>
                     <th scope="col" class=""><?= t('Your Application Version') ?></th>
                     <th scope="col" class=""><?= t('Currently Installed') ?></th>
@@ -30,6 +33,9 @@
             <tbody>
                 <tr class="">
                     <td scope="row" class="available-count pp-green">&#10004; <?= count($available_plugins) ?></td>
+                    <td scope="row" class="available-count pp-green">&#10004; <?= isset($countTypes['plugin']) ? $countTypes['plugin'] : '0' ?></td>
+                    <td scope="row" class="available-count pp-green">&#10004; <?= isset($countTypes['action']) ? $countTypes['action'] : '0' ?></td>
+                    <td scope="row" class="available-count pp-green">&#10004; <?= isset($countTypes['theme']) ? $countTypes['theme'] : '0' ?></td>
                     <td class="plugin-dir-view">
                         <?php $dirURL = 'https://kanboard.org/plugins.html'; ?>
                         <?php if (!defined(PLUGIN_API_URL)): ?>
@@ -194,10 +200,7 @@
                         <?= t('Not Specified') ?>
                     </span>
                 <?php endif ?>
-            </td>
-                <?php else: ?>
-                    <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>"><?= t('Not Specified') ?></span>
-                <?php endif ?>
+
             </td>
             <td class="available-plugin-status text-center">
                 <?php if ($is_configured): ?>

@@ -22,4 +22,19 @@ class PluginManagerHelper extends Base
             return false;
         }
     }
+    public function countTypes($available_plugins)
+    {
+        $types = array();
+        foreach ($available_plugins as $plugin) {
+            if (isset($plugin['is_type'])) {
+                if ($plugin['is_type'] == 'plugin') { array_push($types, 'plugin'); }
+                elseif ($plugin['is_type'] == 'action') { array_push($types, 'action'); }
+                elseif ($plugin['is_type'] == 'theme') { array_push($types, 'theme'); }
+                elseif ($plugin['is_type'] == 'multi') { array_push($types, 'multi'); }
+                elseif ($plugin['is_type'] == 'connector') { array_push($types, 'connector'); }
+            }
+        }
+        $count_types = array_count_values($types);
+        return $count_types;
+    }
 }
