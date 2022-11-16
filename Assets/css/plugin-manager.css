@@ -738,3 +738,53 @@ table.available-plugins-table {
     font-style: italic;
     font-weight: normal;
 }
+
+.info-type-section {
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.info-type-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    margin: 10px;
+    box-shadow: 1px 1px 2px 2px var(--blue-border-gradient-match);
+}
+
+.info-type-icon {
+    float: left;
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    color: var(--blue-border-gradient-match);
+}
+
+.info-type-title {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.info-type-text {
+    padding: 5px 0;
+    font-size: .9em;
+    width: 340px;
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.info-type-box {
+    margin-left: 59px;
+}
+
+figure.notice {
+    text-align: center;
+    margin-top: 0;
+    font-style: italic;
+}
