@@ -234,7 +234,6 @@
                         </svg>
                     <?php endif ?>
                  <?php else: ?>
-                    <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>"><?= t('Not Specified') ?></span>
                     <!-- NOT SPECIFIED / ASSUME FALSE -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="btn-action bi bi-database x-has-schema" fill="currentColor" viewBox="0 0 16 16">
                         <title><?= t('This plugin has not specified any database changes') ?></title>
