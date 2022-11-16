@@ -219,10 +219,11 @@ a:hover {
     font-weight: bold;
     font-size: 1em;
     vertical-align: middle;
+    display: flex;
 }
 
 .plugin-name svg {
-    margin-right: 4px;
+    margin-right: 5px;
     color: var(--pp-grey);
     fill: var(--pp-grey);
 }
