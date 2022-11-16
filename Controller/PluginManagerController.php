@@ -14,7 +14,7 @@ use Kanboard\Controller\BaseController;
 class PluginManagerController extends \Kanboard\Controller\PluginController
 {
 	/**
-     * Display the Problem Plugins Page
+     * Display the Plugin Problems Page
      *
      * @access public
      */
