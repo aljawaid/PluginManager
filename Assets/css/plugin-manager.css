@@ -254,11 +254,16 @@ a:hover {
 }
 
 .plugin-homepage, .plugin-readme, .has-schema,
-.has-overrides, .has-hooks {
+.has-overrides {
     vertical-align: middle;
     margin: 2px;
     height: 18px;
     /*display: inline-block;*/
+}
+
+.has-hooks {
+    vertical-align: middle;
+    margin: 2px;
 }
 
 .plugin-homepage a, .plugin-schema .tooltip {
