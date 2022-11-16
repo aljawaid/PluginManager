@@ -25,6 +25,7 @@
     --table-blue-border-gradient-match: #476E9E;
     --table-head-padding: 4px 15px;
     --link-color-primary: #36C;
+    --blue-icon-dark: #034CA6;
 }
 
 div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, .sidebar > ul li {
@@ -489,7 +490,6 @@ th.available-plugins-author {
 .available-plugins-author svg.bi-code-square {
     vertical-align: bottom;
     margin-right: 5px;
-    fill: var(--pp-grey);
 }
 
 .available-plugins-author svg.octicon-law {
@@ -777,7 +777,7 @@ table.available-plugins-table {
     position: absolute;
     left: 3px;
     top: 12px;
-    color: var(--blue-border-gradient-match);
+    color: var(--blue-icon-dark);
 }
 
 .info-type-title {
@@ -818,5 +818,5 @@ figure.notice {
 }
 
 .plugin-type svg {
-    color: var(--blue-border-gradient-match);
+    color: var(--blue-icon-dark);
 }
