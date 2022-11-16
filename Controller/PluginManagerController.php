@@ -26,4 +26,16 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
         )));
     }
 
+    /**
+     * Display the Plugin Info Page
+     *
+     * @access public
+     */
+
+    public function showPluginInfo()
+    {
+        $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-info', array(
+            'title' => t('Plugins').' &#10562; '.t('Plugin Info'),
+        )));
+    }
 }

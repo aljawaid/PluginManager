@@ -19,6 +19,8 @@ class Plugin extends Base
 
         // PLUGIN PROBLEMS Page - Routes
         $this->route->addRoute('/extensions/plugin-problems', 'PluginManagerController', 'show', 'PluginManager');
+        // PLUGIN INFO Page - Routes
+        $this->route->addRoute('/extensions/plugin-info', 'PluginManagerController', 'showPluginInfo', 'PluginManager');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
