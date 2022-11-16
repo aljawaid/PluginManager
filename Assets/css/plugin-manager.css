@@ -287,7 +287,8 @@ a:hover {
 
 .plugin-action {
     width: 100px;
-    padding: 4px 5px 4px 5px !important;
+    display: inline;
+    padding: 4px 0px 4px 0px !important;
 }
 
 .plugin-uninstall {
