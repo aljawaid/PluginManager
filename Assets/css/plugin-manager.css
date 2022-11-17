@@ -28,6 +28,18 @@
     --blue-icon-dark: #034CA6;
 }
 
+.pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
+.pp-blue-alt { color: var(--pp-blue-alt); fill: var(--pp-blue-alt); }
+.pp-red { color: var(--pp-red); fill: var(--pp-red); }
+.pp-red-alt { color: var(--pp-red-alt); fill: var(--pp-red-alt); }
+.pp-red-alt-2 { color: var(--pp-red-alt-2); fill: var(--pp-red-alt-2); }
+.pp-black { color: var(--pp-black); fill: var(--pp-black); }
+.pp-light-grey { color: var(--pp-light-grey); fill: var(--pp-light-grey); }
+.pp-grey { color: var(--pp-grey); fill: var(--pp-grey); }
+.pp-white { color: var(--pp-white); fill: var(--pp-white); }
+.pp-green { color: var(--pp-green); fill: var(--pp-green); }
+.pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
+
 div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, .sidebar > ul li, figure {
     transition: ease-in-out all .3s;
 }
@@ -902,3 +914,74 @@ figure.notice a, figure.notice a:visited {
     top: 6px;
     right: -23px;
 }
+
+#PluginStructure {
+    margin-top: 20px;
+}
+
+.structure-info-wrapper {
+    padding: 3px;
+    border: 1px solid var(--pp-light-grey);
+    display: block;
+    margin: auto auto 20px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 2px;
+}
+
+.structure-p {
+    margin-bottom: 25px;
+}
+
+.structure-info-section {
+    display: inline-flex;
+    border: 2px solid var(--pp-grey);
+    width: 520px;
+    height: 60px;
+    margin: 3px 10px;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.structure-info-3-section {
+    display: inline-flex;
+    border: 2px solid var(--pp-grey);
+    width: 500px;
+    height: 60px;
+    margin: 3px 10px;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.structure-info-heading {
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.structure-info-icon {
+    padding: 3px 4px;
+    display: inline-flex;
+    margin: auto 5px auto 0px;
+}
+
+.structure-info-text {
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+.structure-info-unknown {
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid red;
+    margin: auto 0 auto 0;
+    height: 40px;
+    align-items: end;
+}
+
+.icon-normal {}
+
+.icon-active {}
