@@ -102,7 +102,9 @@
             </div>
             <div class="info-type-title"><?= t('Multi Plugin') ?></div>
         </div>
-        <div class="info-type-wrapper">
+        <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes)) ) : '0' ?>
+        <?php if ($totalOthers > 0): ?>
+            <div class="info-type-wrapper">
                 <div class="info-type-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
                         <title><?= t('Other Plugin') ?></title>
@@ -112,9 +114,10 @@
                 </div>
             <div class="info-type-box">
                 <div class="info-type-text"><?= t('A plugin which has not been set a plugin type by the developer') ?></div>
+                </div>
+                <div class="info-type-title"><?= t('Other Plugin') ?></div>
             </div>
-            <div class="info-type-title"><?= t('Other Plugin') ?></div>
-        </div>
+        <?php endif ?>
     </div>
     <figure class="notice"><?= t('Plugin types are only shown in the')?> <?= $this->url->link(t('Plugin Directory'), 'PluginController', 'directory', array(), false, 'plugin-directory-item') ?> </figure>
     <h3 id="PluginStructure" class=""><?= t('Plugin Structure') ?></h3>

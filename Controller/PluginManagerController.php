@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\PluginManager\Controller;
 
 use Kanboard\Controller\BaseController;
+use Kanboard\Core\Plugin\Directory;
 
 /**
  * Class PluginManager
@@ -36,6 +37,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-info', array(
             'title' => t('Plugins').' &#10562; '.t('Plugin Info'),
+            'available_plugins' => Directory::getInstance($this->container)->getAvailablePlugins()
         )));
     }
 }
