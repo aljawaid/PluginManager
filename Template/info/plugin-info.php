@@ -111,7 +111,7 @@
                     </svg>
                 </div>
             <div class="info-type-box">
-                <div class="info-type-text"><?= t('A plugin which has not been set a plugin type') ?></div>
+                <div class="info-type-text"><?= t('A plugin which has not been set a plugin type by the developer') ?></div>
             </div>
             <div class="info-type-title"><?= t('Other Plugin') ?></div>
         </div>
