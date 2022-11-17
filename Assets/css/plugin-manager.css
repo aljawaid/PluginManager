@@ -160,7 +160,10 @@ a:hover {
     text-align: center;
 }
 
-.plugin-available-filter {}
+.plugin-available-filter {
+    display: inline-block;
+    position: relative;
+}
 
 .plugin-installed-filter label, .plugin-available-filter label {
     display: inline;
@@ -171,8 +174,15 @@ a:hover {
     margin-right: 5px;
 }
 
-.plugin-installed-filter input, .plugin-available-filter input {
+.plugin-installed-filter input{
     width: 375px;
+}
+
+.plugin-available-filter input {
+    width: 235px;
+}
+
+.plugin-installed-filter input, .plugin-available-filter input {
     padding: 3px 3px 4px 3px;
     font-size: 1em;
     border: 2px solid var(--blue-border-gradient-match);
@@ -819,4 +829,61 @@ figure.notice {
 
 .plugin-type svg {
     color: var(--blue-icon-dark);
+}
+
+.plugin-available-filter-wrapper {
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+
+.plugin-type-counts, .plugin-type-counts label {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+}
+
+.plugin-available-filter label {
+    position: absolute;
+    right: 0;
+    top: 0.21875em;
+    margin-top: 0;
+}
+
+.plugin-type-count-section {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    border: 1px solid var(--blue-border-gradient-match);
+    padding: 0px 0px 0px 5px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.plugin-type-count-icon {
+    display: inline;
+}
+
+.plugin-type-count-icon svg {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-top: -3px;
+    color: var(--blue-icon-dark);
+}
+
+.plugin-type-count-total {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    background-color: var(--blue-border-gradient-match);
+    padding: 4px 0px 4px 0px;
+    color: var(--pp-white);
+
+}
+
+.plugin-type-count-text {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
 }

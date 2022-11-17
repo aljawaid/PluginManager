@@ -40,6 +40,7 @@ Features
 - Searchable user friendly filter for quickly finding available plugins
     - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
+- Show plugin totals by type
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
