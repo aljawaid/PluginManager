@@ -288,10 +288,14 @@ a:hover {
 
 .plugin-schema .tooltip {
     border: 1px solid var(--pp-grey);
-    padding-top: 7px;
-    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 6px;
     padding-left: 3px;
     border-radius: var(--border-radius);
+}
+
+.plugin-schema .tooltip svg {
+    vertical-align: bottom;
 }
 
 .plugin-homepage a svg, .plugin-readme a svg {
