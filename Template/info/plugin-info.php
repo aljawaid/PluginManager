@@ -72,7 +72,7 @@
         </div>
         <div class="info-type-wrapper">
                 <div class="info-type-icon">
-                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px"  viewBox="0 0 32 32" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px"  viewBox="0 0 32 32" xml:space="preserve">
                         <title><?= t('Connector Plugin') ?></title>
                         <style type="text/css">.st0 {fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:10;}</style>
                         <path class="st0" d="M5.5,26.5L5.5,26.5c1.9,1.9,5.1,1.9,7,0L16,23l-7-7l-3.5,3.5C3.5,21.5,3.5,24.6,5.5,26.5z"/>
