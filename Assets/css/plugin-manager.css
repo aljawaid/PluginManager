@@ -892,3 +892,9 @@ figure.notice a, figure.notice a:visited {
     width: 80px;
     text-align: center;
 }
+
+.plugin-type-counts .tooltip {
+    position: absolute;
+    top: 6px;
+    right: -23px;
+}
