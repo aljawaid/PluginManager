@@ -28,7 +28,7 @@
     --blue-icon-dark: #034CA6;
 }
 
-div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, .sidebar > ul li {
+div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, .sidebar > ul li, figure {
     transition: ease-in-out all .3s;
 }
 
@@ -814,6 +814,11 @@ figure.notice {
     text-align: center;
     margin-top: 0;
     font-style: italic;
+}
+
+figure.notice a, figure.notice a:visited {
+    color: var(--blue-icon-dark);
+    font-weight: bold;
 }
 
 .plugin-type {
