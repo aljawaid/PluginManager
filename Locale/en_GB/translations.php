@@ -136,6 +136,9 @@ return array(
   'Hooks' => 'Hooks',
   'Hooks are files which attach to existing templates or core functions. Hooks do not alter any core structure but add to it.' => 'Hooks are files which attach to existing templates or core functions. Hooks do not alter any core structure but add to it.',
   'No hooks are detected when this icon shows.' => 'No hooks are detected when this icon shows.',
+  //
+  // helper/AgeHelp.php
+  //
   'less than a minute ago' => 'less than a minute ago',
   'less than 5 minutes ago' => 'less than 5 minutes ago',
   'less than 10 minutes ago' => 'less than 10 minutes ago',
