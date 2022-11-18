@@ -200,7 +200,9 @@ a:hover {
     border: 2px solid var(--blue-border-gradient-match);
 }
 
-#AvailablePluginsFilterInput {}
+#AvailablePluginsFilterInput {
+    margin-bottom: 10px;
+}
 
 #InstalledPluginsTable {
     margin-bottom: 0;
