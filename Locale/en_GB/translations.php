@@ -99,7 +99,7 @@ return array(
   'Plugins fall into one of 6 types of categories' => 'Plugins fall into one of 6 types of categories',
   'Go to Plugin Information' => 'Go to Plugin Information',
   //
-  // info/last-updated.php
+  // info/info-last-updated.php
   //
   'The last updated date helps you decide whether a plugin is actively developed and is appropriate for your use case.' => 'The last updated date helps you decide whether a plugin is actively developed and is appropriate for your use case.',
   'Plugin Manager will highlight the last updated date based on the date specified by the plugin developer in the Plugins Directory.' => 'Plugin Manager will highlight the last updated date based on the date specified by the plugin developer in the Plugins Directory.',
