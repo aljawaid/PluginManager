@@ -86,6 +86,12 @@ return array(
   'Update this plugin' => 'Update this plugin',
   'Up to date' => 'Up to date',
   'Not available' => 'Not available',
+  //
+  // info/db-info.php
+  //
+  'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.' => 'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.',
+  'Learn more' => 'Learn more',
+  'Go to Plugin Problems' => 'Go to Plugin Problems',
   '' => '',
   '' => '',
   '' => '',
