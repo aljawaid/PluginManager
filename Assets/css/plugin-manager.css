@@ -735,7 +735,7 @@ table.available-plugins-table {
     font-weight: 500;
 }
 
-.plugin-last-updated .tooltip {
+.plugin-last-updated .tooltip, .plugin-structure .tooltip {
     position: absolute;
     right: 3px;
     top: 3px;

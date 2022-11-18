@@ -99,6 +99,10 @@ return array(
   'Plugins fall into one of 6 types of categories' => 'Plugins fall into one of 6 types of categories',
   'Go to Plugin Information' => 'Go to Plugin Information',
   //
+  // info/info-structure.php
+  //
+  'The building blocks of a plugin help define it to complete a structure which works with your application.' => 'The building blocks of a plugin help define it to complete a structure which works with your application.',
+  //
   // info/info-last-updated.php
   //
   'The last updated date helps you decide whether a plugin is actively developed and is appropriate for your use case.' => 'The last updated date helps you decide whether a plugin is actively developed and is appropriate for your use case.',
