@@ -1,9 +1,17 @@
 <?php
 return array(
+  //
+  // GENERAL
+  //
+  'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins, breaking them down into types and new indicators for each plugin.' => 'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins, breaking them down into types and new indicators for each plugin.',
+  'Plugins' => 'Plugins',
+  //
+  // plugin/sidebar.php
+  //
   'Plugin Manager' => 'Plugin Manager',
-  'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.' => 'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.',
   'Plugin Directory' => 'Plugin Directory',
   'Plugin Problems' => 'Plugin Problems',
+  'Plugin Info' => 'Plugin Info',
   'Incompatible Plugins' => 'Incompatible Plugins',
   'Name' => 'Name',
   'Author' => 'Author',
