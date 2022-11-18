@@ -92,6 +92,12 @@ return array(
   'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.' => 'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.',
   'Learn more' => 'Learn more',
   'Go to Plugin Problems' => 'Go to Plugin Problems',
+  //
+  // info/info-tooltip.php
+  //
+  'Plugin Types' => 'Plugin Types',
+  'Plugins fall into one of 6 types of categories' => 'Plugins fall into one of 6 types of categories',
+  'Go to Plugin Information' => 'Go to Plugin Information',
   '' => '',
   '' => '',
   '' => '',
