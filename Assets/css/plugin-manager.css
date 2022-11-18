@@ -976,7 +976,6 @@ figure.notice a, figure.notice a:visited {
 .structure-info-unknown {
     display: inline-flex;
     padding: 3px;
-    border: 1px solid red;
     margin: auto 0 auto 0;
     height: 40px;
     align-items: end;
