@@ -102,6 +102,7 @@
             </div>
             <div class="info-type-title"><?= t('Multi Plugin') ?></div>
         </div>
+        <?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
         <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes)) ) : '0' ?>
         <?php if ($totalOthers > 0): ?>
             <div class="info-type-wrapper">
