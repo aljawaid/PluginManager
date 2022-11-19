@@ -313,8 +313,8 @@ a:hover {
 
 .plugin-schema .tooltip {
     border: 1px solid var(--pp-grey);
-    padding-top: 9px;
-    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
     padding-left: 3px;
     border-radius: var(--border-radius);
 }
@@ -361,8 +361,8 @@ a.btn-action:hover, svg.btn-action:hover {
 .btn-uninstall {
     vertical-align: middle;
     background: var(--button-background-delete);
-    padding: 4px 4px 4px 2px;
-    margin: auto 2px;
+    padding: 5px 4px 6px 2px;
+    margin: 3px 2px auto 2px;
     border-radius: var(--border-radius);
     border: 1px solid var(--pp-grey);
     display: inline-block;
@@ -535,7 +535,7 @@ th.available-plugins-author {
 
 .available-plugins-author svg.octicon-law {
     position: absolute;
-    right: 7px;
+    right: 3px;
     fill: var(--pp-grey);
 }
 
@@ -760,7 +760,7 @@ table.available-plugins-table:last-of-type {
 }
 
 .info-tooltip-wrapper {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .info-tooltip-title {
