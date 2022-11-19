@@ -6,9 +6,6 @@
         <li <?= $this->app->checkMenuSelection('PluginController', 'directory') ?>>
             <?= $this->url->link(t('Plugin Directory'), 'PluginController', 'directory', array(), false, 'plugin-directory-item') ?>
         </li>
-        <li <?= $this->app->checkMenuSelection('PluginManagerController', 'show') ?>>
-            <?= $this->url->link(t('Plugin Problems'), 'PluginManagerController', 'show', array('plugin' => 'PluginManager'), false, 'plugin-problems-item') ?>
-        </li>
         <li <?= $this->app->checkMenuSelection('PluginManagerController', 'showPluginInfo') ?>>
             <?= $this->url->link(t('Plugin Info'), 'PluginManagerController', 'showPluginInfo', array('plugin' => 'PluginManager'), false, 'plugin-info-item') ?>
         </li>
@@ -17,5 +14,8 @@
                 <?= $this->url->link(t('Technical Info'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support') ?>
             </li>
         <?php endif ?>
+        <li <?= $this->app->checkMenuSelection('PluginManagerController', 'show') ?>>
+            <?= $this->url->link(t('Plugin Problems'), 'PluginManagerController', 'show', array('plugin' => 'PluginManager'), false, 'plugin-problems-item') ?>
+        </li>
     </ul>
 </div>
