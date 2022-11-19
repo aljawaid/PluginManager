@@ -96,7 +96,7 @@ return array(
   // info/info-tooltip.php
   //
   'Plugin Types' => 'Plugin Types',
-  'Plugins fall into one of 6 types of categories' => 'Plugins fall into one of 6 types of categories',
+  'Plugins fall into one of 5 types of categories' => 'Plugins fall into one of 5 types of categories',
   'Go to Plugin Information' => 'Go to Plugin Information',
   //
   // info/info-structure.php
