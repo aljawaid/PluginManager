@@ -278,7 +278,7 @@ a:hover {
     vertical-align: middle;
     display: inline-block;
     color: var(--pp-orange);
-    margin: auto 2px;
+    /*margin: auto 2px;*/
 }
 
 .plugin-homepage, .plugin-readme, .has-schema,
@@ -302,8 +302,8 @@ a:hover {
 
 .plugin-schema .tooltip {
     border: 1px solid var(--pp-grey);
-    padding-top: 5px;
-    padding-bottom: 6px;
+    padding-top: 9px;
+    padding-bottom: 5px;
     padding-left: 3px;
     border-radius: var(--border-radius);
 }
@@ -913,7 +913,7 @@ figure.notice a, figure.notice a:visited {
 
 .plugin-type-count-text {
     display: inline-block;
-    width: 80px;
+    width: 85px;
     text-align: center;
 }
 
@@ -944,7 +944,7 @@ figure.notice a, figure.notice a:visited {
 .structure-info-section {
     display: inline-flex;
     border: 2px solid var(--pp-grey);
-    width: 520px;
+    width: 515px;
     height: 60px;
     margin: 3px 10px;
     padding: 3px 5px;
@@ -954,7 +954,7 @@ figure.notice a, figure.notice a:visited {
 .structure-info-3-section {
     display: inline-flex;
     border: 2px solid var(--pp-grey);
-    width: 500px;
+    width: 490px;
     height: 60px;
     margin: 3px 10px;
     padding: 3px 5px;
