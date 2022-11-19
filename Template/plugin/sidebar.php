@@ -12,5 +12,10 @@
         <li <?= $this->app->checkMenuSelection('PluginManagerController', 'showPluginInfo') ?>>
             <?= $this->url->link(t('Plugin Info'), 'PluginManagerController', 'showPluginInfo', array('plugin' => 'PluginManager'), false, 'plugin-info-item') ?>
         </li>
+        <?php if (file_exists('plugins/KanboardSupport')): ?>
+            <li <?= $this->app->checkMenuSelection('TechnicalSupportController', 'show') ?>>
+                <?= $this->url->link(t('Technical Info'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support') ?>
+            </li>
+        <?php endif ?>
     </ul>
 </div>

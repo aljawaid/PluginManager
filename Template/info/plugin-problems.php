@@ -8,5 +8,10 @@
 </div>
 <h3>When Plugins Go Wrong <span class="lead"> Some Useful Information</span></h3>
 <p>
+        <p class="">
+            <?php if (file_exists('plugins/KanboardSupport')): ?>
+                <?= t('All information related to your setup can be easily found in the Support menu.') ?>
+            <?php endif ?>
+        </p>
 
 </p>
