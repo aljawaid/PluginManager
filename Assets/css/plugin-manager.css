@@ -403,6 +403,8 @@ td .btn-uninstall:hover a {
     float: right;
     margin-bottom: 4px;
     color: var(--pp-grey);
+    margin-top: 3px;
+    margin-left: 5px;
 }
 
 .tooltip-section {
@@ -710,6 +712,10 @@ table.available-plugins-table {
     border-radius: 5px;
 }
 
+table.available-plugins-table:last-of-type {
+    margin-bottom: 0;
+}
+
 .date-toggle:not(span) {
     cursor: pointer;
 }
@@ -986,3 +992,7 @@ figure.notice a, figure.notice a:visited {
 .icon-normal {}
 
 .icon-active {}
+
+section > div > table {
+    border-collapse: unset;
+}
