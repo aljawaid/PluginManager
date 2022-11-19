@@ -1007,3 +1007,66 @@ figure.notice a, figure.notice a:visited {
 section > div > table {
     border-collapse: unset;
 }
+
+.available-plugin-description code, section code {
+    background-color: rgba(27, 31, 35, 0.22) !important;
+    font-size: 0.9rem !important;
+    font-family: Monospace !important;
+    letter-spacing: 0.08rem;
+    color: #bb092d !important;
+    margin: auto 3px !important;
+    padding: 1px 3px 2px 3px !important;
+    border-radius: 2px;
+    display: inline;
+}
+
+section code {
+    color: var(--color-primary) !important;
+}
+.markdown p a, td a {
+    text-decoration: underline !important;
+    text-decoration-color: #B71234 !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.markdown p a:hover, td a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: #000 !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.plugin-problems-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.plugin-problems-section h3 {}
+
+.plugin-problems-section h3 svg {
+    vertical-align: sub;
+}
+
+.plugin-problems-section .panel {}
+
+.plugin-problems-section .panel ul {}
+
+.plugin-problems-section .panel ul li {
+    list-style-type: none;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.plugin-problems-section .panel ul li svg {
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.plugin-problems-section p, .page-margin p {
+    line-height: 1.4;
+    color: var(--color-primary);
+}
+
+.mt-5 {
+    margin-top: 10px;
+}
+
