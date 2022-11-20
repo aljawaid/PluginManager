@@ -8,7 +8,7 @@ Replace the Installed Plugins section within the Kanboard interface with a new P
 Features
 -------------
 
-- Add selected [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
+- Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
 - Clean coded icons - no images
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
@@ -35,7 +35,7 @@ Features
   - Show if plugin uses hooks
   - Show when the plugin was last updated
     - Show relative date with exact date in tooltip (toggles to exact date when clicked)
-  - _Plugin structures are extracted through properties in the Kanboard Plugins Directory_
+  - _Plugin structures are extracted through new properties in the Kanboard Plugins Directory_
 - Show Directory source e.g. official or custom
   - Show url of plugins directory
 - Show available plugins count
