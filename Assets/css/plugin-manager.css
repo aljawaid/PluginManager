@@ -27,6 +27,7 @@
     --table-head-padding: 4px 15px;
     --link-color-primary: #36C;
     --blue-icon-dark: #034CA6;
+    --panel-background: #EEEEEE;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -1048,7 +1049,12 @@ code.code {
     margin-right: 5px;
 }
 
-.plugin-problems-section .panel {}
+.plugin-problems-section .panel {
+    border-radius: var(--border-radius);
+    padding: 10px 35px 8px 10px;
+    border: 1px solid var(--blue-border-gradient-match);
+    background-color: var(--panel-background);
+}
 
 .plugin-problems-section .panel ul {}
 
