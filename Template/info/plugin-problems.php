@@ -34,7 +34,7 @@
                         <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
                         <path d="M7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
                     </svg>
-                    <?= t('Look for models in ') ?> <code>plugin.php</code>
+                    <?= t('Look for models in ') ?> <code class="code">plugin.php</code>
                 </li>
             </ul>
         </div>
@@ -123,7 +123,7 @@
             <?= t('In the Plugin Manager, all plugins are identified if they contain potential database changes. This is your indication to check for extra tables in the plugin\'s name. If you decide to remove the plugin which causes you issues, the default the tables in the database will remain. You will need to carefully delete them according to your setup.') ?>
         </p>
         <p class="mt-5">
-            <?= t('Plugins which affect the database also register into the ') ?> <code>plugin_schema_versions</code> <?= t('table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.') ?>
+            <?= t('Plugins which affect the database also register into the ') ?> <code class="code">plugin_schema_versions</code> <?= t('table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.') ?>
         </p>
     </section>
     <section class="plugin-problems-section">
@@ -147,10 +147,7 @@
             </ul>
         </div>
         <p class="">
-            <?= t('Delete the offending plugin. If you dont know which plugin is causing your issue, check the ') ?> <code>/plugins</code> <?= t('folder. Each folder represents each plugin in the same name.') ?>
-        </p>
-        <p class="">
-            <?= t('What\'s affected by this move? Just the (plugin) folder you have deleted.') ?>
+            <?= t('Delete the offending plugin. If you dont know which plugin is causing your issue, check the ') ?> <code class="code">/plugins</code> <?= t('folder. Each folder represents each plugin in the same name.') ?>
         </p>
     </section>
 
