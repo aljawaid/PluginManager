@@ -64,6 +64,10 @@ Screenshots
 
 ![Plugin Directory](../master/Screenshots/screenshot-plugin-directory-main.png "View more screenshots of this plugin using the link below")
 
+**Plugin Problems**
+
+![Plugin Problems](../master/Screenshots/screenshot-plugin-problems.png "View more screenshots of this plugin using the link below")
+
 
 **_[More screenshots](../master/screenshots.md)_**
 
