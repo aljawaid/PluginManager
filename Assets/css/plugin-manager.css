@@ -1008,7 +1008,7 @@ section > div > table {
     border-collapse: unset;
 }
 
-.available-plugin-description code, section code {
+.available-plugin-description code, code.code {
     background-color: rgba(27, 31, 35, 0.22) !important;
     font-size: 0.9rem !important;
     font-family: Monospace !important;
@@ -1020,7 +1020,7 @@ section > div > table {
     display: inline;
 }
 
-section code {
+code.code {
     color: var(--color-primary) !important;
 }
 .markdown p a, td a {
