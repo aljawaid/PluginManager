@@ -2,15 +2,18 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and new indicators for each plugin.
+Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and a new plugin structure breakdown for each plugin.
 
 
 Features
 -------------
 
 - Add [Bootstrap Twitter](https://icons.getbootstrap.com) and [GitHub Octicons](https://primer.style/octicons/) for better clarity and an improved end user experience
+- Clean coded icons - no images
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation
+- Fully translatable
+
 
 **Plugin Manager**
 - Installed Plugins
@@ -23,16 +26,18 @@ Features
   - Show icon for plugin homepage if set
   - Show Kanboard compatible version if set
   - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
+- Add direct link in Kanboard Settings menu
 
 **Plugin Directory**
 - NEW: Show plugin structure
   - Show if plugin has database changes
-  - Show if plugin contains template overrides
+  - Show if plugin contains template or model overrides
   - Show if plugin uses hooks
   - Show when the plugin was last updated
     - Show relative date with exact date in tooltip (toggles to exact date when clicked)
-  - _Plugin structures will gradually show as the Plugins Directory is updated for all existing plugins_
+  - _Plugin structures are extracted through properties in the Kanboard Plugins Directory_
 - Show Directory source e.g. official or custom
+  - Show url of plugins directory
 - Show available plugins count
 - Show external weblink for official directory
 - Show current application version
@@ -44,30 +49,32 @@ Features
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
+- Direct links to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin if installed to display technical information
+- Useful links to further troubleshoot plugin issues all in one place
 
 Screenshots
 ----------
 
-**Side Menu**
-
-![Plugin Manager Side Menu](../master/Screenshots/screenshot-plugin-manager-side-menu.png "Plugin Manager Side Menu")
 
 **Plugin Manager**
 
-![Plugin Manager](../master/Screenshots/screenshot-plugin-manager.png "Installed Plugins becomes Plugin Manager")
+![Plugin Manager](../master/Screenshots/screenshot-plugin-manager-main.png "View more screenshots of this plugin using the link below")
 
-**Plugin Manager - Filter**
+**Plugin Directory**
 
-![Plugin Manager Filter](../master/Screenshots/screenshot-plugin-manager-filter.png "Plugin Manager Filter")
+![Plugin Directory](../master/Screenshots/screenshot-plugin-directory-main.png "View more screenshots of this plugin using the link below")
 
-**Plugin Manager - Database Notice**
 
-![Plugin Manager Database Notice](../master/Screenshots/screenshot-plugin-manager-schema-tooltip.png "Database Notice")
+_[More screenshots](../master/screenshots.md)_
 
 Usage
 -------------
 
 Go to `Plugins` &#10562;
+
+**_or_**
+
+`Settings` &#10562; `Plugin Manager`
 
 Compatibility
 -------------
@@ -76,6 +83,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
+- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration _(optional)_
 #### Core Files & Templates
 - `03` Template overrides
 - _No database changes_
