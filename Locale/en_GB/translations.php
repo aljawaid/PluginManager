@@ -8,6 +8,8 @@ return array(
   'Support' => 'Support',
   'Technical Information' => 'Technical Information',
   'Technical Info' => 'Technical Info',
+  'Installed Plugins' => 'Plugin Manager',
+  ' Installed Plugins' => 'Installed Plugins',
   //
   // plugin/sidebar.php
   //
@@ -200,4 +202,32 @@ return array(
   //
   // info/plugin-problems.php
   //
+  'Plugins are extensions to your application. They do not take over your application, they just alter the application\'s performance or output. Use this page as a quick reference to problems which may be caused by a recent plugin installation.' => 'Plugins are extensions to your application. They do not take over your application, they just alter the application\'s performance or output. Use this page as a quick reference to problems which may be caused by a recent plugin installation.',
+  'Check the overrides' => 'Check the overrides',
+  'Look for templates' => 'Look for templates',
+  'Look for models in ' => 'Look for models in ',
+  'Overriding templates and models are the most common way to affect the way your application functions. It can be possible that a particular template could be conflicting with another plugin overriding the same template. It is also possible that a certain model is being used by another plugin. For any plugin that is not working or causing issues, this is the area to look into first.' => 'Overriding templates and models are the most common way to affect the way your application functions. It can be possible that a particular template could be conflicting with another plugin overriding the same template. It is also possible that a certain model is being used by another plugin. For any plugin that is not working or causing issues, this is the area to look into first.',
+  'Check the application setup' => 'Check the application setup',
+  'Check your folder permissions' => 'Check your folder permissions',
+  'Check server logs' => 'Check server logs',
+  'Check the browser console for any blocked files' => 'Check the browser console for any blocked files',
+  'All information related to your setup can be easily found in the menu.' => 'All information related to your setup can be easily found in the menu.',
+  'Check the database' => 'Check the database',
+  'Check that your database contains data' => 'Check that your database contains data',
+  'Check the database tables' => 'Check the database tables',
+  'Plugin database tables are not automatically deleted when a plugin is uninstalled' => 'Plugin database tables are not automatically deleted when a plugin is uninstalled',
+  'In the Plugin Manager, all plugins are identified if they contain potential database changes. This is your indication to check for extra tables in the plugin\'s name. If you decide to remove the plugin which causes you issues, the default the tables in the database will remain. You will need to carefully delete them according to your setup.' => 'In the Plugin Manager, all plugins are identified if they contain potential database changes. This is your indication to check for extra tables in the plugin\'s name. If you decide to remove the plugin which causes you issues, the default the tables in the database will remain. You will need to carefully delete them according to your setup.',
+  'Plugins which affect the database also register into the ' => 'Plugins which affect the database also register into the ',
+  'table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.' => 'table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.',
+  'If everything fails' => 'If everything fails',
+  'Delete the folder for the plugin. It is highly likely that the last updated folder will be the offending plugin.' => 'Delete the folder for the plugin. It is highly likely that the last updated folder will be the offending plugin.',
+  'Delete the offending plugin. If you dont know which plugin is causing your issue, check the ' => 'Delete the offending plugin. If you dont know which plugin is causing your issue, check the ',
+  'folder. Each folder represents each plugin in the same name.' => 'folder. Each folder represents each plugin in the same name.',
+  'Further Reading' => 'Further Reading',
+  'About Application' => 'About Application',
+  'Kanboard Forum' => 'Kanboard Forum',
+  'Contributing' => 'Contributing',
+  'Developing Plugins' => 'Developing Plugins',
+  'Source Code' => 'Source Code',
+  'Kanboard Plugins' => 'Kanboard Plugins',
 );
