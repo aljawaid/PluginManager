@@ -1056,7 +1056,15 @@ code.code {
     background-color: var(--panel-background);
 }
 
-.plugin-problems-section .panel ul {}
+.plugin-problems-section .panel a, .plugin-problems-section p a {
+    font-weight: bold;
+}
+
+.plugin-problems-section .panel a svg.bi-journal-code, .plugin-problems-section p a svg.bi-journal-code {
+    vertical-align: sub;
+    margin-left: 4px;
+    margin-right: 3px;
+}
 
 .plugin-problems-section .panel ul li {
     list-style-type: none;
