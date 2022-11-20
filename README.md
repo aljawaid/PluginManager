@@ -8,7 +8,7 @@ Replace the Installed Plugins section within the Kanboard interface with a new P
 Features
 -------------
 
-- Add [Bootstrap Twitter](https://icons.getbootstrap.com) and [GitHub Octicons](https://primer.style/octicons/) for better clarity and an improved end user experience
+- Add selected [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
 - Clean coded icons - no images
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
@@ -83,7 +83,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included _(optional)_
+- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included
 #### Core Files & Templates
 - `03` Template overrides
 - _No database changes_
@@ -98,7 +98,7 @@ Installation
 ------------
 
 - **Install via [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
-  - _Go to_ Kanboard: `Settings` -> `Plugins` -> `Plugin Directory`
+  - _Go to_ Kanboard: `Settings` &#10562; `Plugins` &#10562; `Plugin Directory`
 
 **_or_**
 
