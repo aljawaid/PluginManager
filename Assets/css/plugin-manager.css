@@ -1105,3 +1105,8 @@ code.code {
     width: 20px;
     height: 20px;
 }
+
+.sidebar > ul li.active > a svg {
+    color: var(--pp-red);
+    fill: var(--pp-red);
+}
