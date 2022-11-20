@@ -244,7 +244,7 @@ a:hover {
     font-weight: bold;
     font-size: 1em;
     vertical-align: middle;
-    display: flex;
+    /*display: flex;*/
 }
 
 .plugin-name svg {
@@ -316,8 +316,8 @@ a:hover {
 }
 
 .plugin-action {
-    width: 100px;
-    display: inline;
+    width: 120px;
+    /*display: inline;*/
     padding: 4px 0px 4px 0px !important;
 }
 
@@ -1016,11 +1016,11 @@ code.code {
     text-decoration-thickness: 2px !important;
 }
 
-.markdown p a:hover, td a:hover {
+/*.markdown p a:hover, td a:hover {
     text-decoration: underline !important;
     text-decoration-color: #000 !important;
     text-decoration-thickness: 2px !important;
-}
+}*/
 
 .plugin-problems-section {
     margin-top: 25px;
