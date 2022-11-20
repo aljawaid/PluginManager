@@ -11,7 +11,7 @@ Features
 - Add [Bootstrap Twitter](https://icons.getbootstrap.com) and [GitHub Octicons](https://primer.style/octicons/) for better clarity and an improved end user experience
 - Clean coded icons - no images
 - All plugins, installed and available are now sorted alphabetically
-- Add `Back to Top` and `Bottom` buttons for easier screen navigation
+- Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
 - Fully translatable
 
 
@@ -49,7 +49,7 @@ Features
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
-- Direct links to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin if installed to display technical information
+- Direct links to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin (if installed) to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
 Screenshots
@@ -65,12 +65,12 @@ Screenshots
 ![Plugin Directory](../master/Screenshots/screenshot-plugin-directory-main.png "View more screenshots of this plugin using the link below")
 
 
-_[More screenshots](../master/screenshots.md)_
+**_[More screenshots](../master/screenshots.md)_**
 
 Usage
 -------------
 
-Go to `Plugins` &#10562;
+Go to `Plugins`
 
 **_or_**
 
@@ -83,7 +83,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration _(optional)_
+- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included _(optional)_
 #### Core Files & Templates
 - `03` Template overrides
 - _No database changes_
@@ -123,6 +123,7 @@ Translations
 
 - English (UK)
 - _Contributors welcome_
+- _Translation starter template included_
 
 
 Authors & Contributors
