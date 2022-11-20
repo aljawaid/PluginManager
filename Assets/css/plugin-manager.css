@@ -11,6 +11,7 @@
     --pp-grey: #4D4D4D;
     --pp-white: #FFFFFF;
     --pp-green: #2EA02E;
+    --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --border-radius: 3px;
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
@@ -748,7 +749,7 @@ table.available-plugins-table:last-of-type {
 }
 
 .age-pass {
-    color: var(--pp-green);
+    color: var(--pp-green-dark);
     font-weight: 500;
 }
 
