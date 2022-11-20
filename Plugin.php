@@ -17,6 +17,10 @@ class Plugin extends Base
         $this->template->setTemplateOverride('plugin/directory', 'pluginManager:plugin/directory');
         $this->template->setTemplateOverride('plugin/sidebar', 'pluginManager:plugin/sidebar');
 
+        // Views - Template Hook
+        //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
+        $this->template->hook->attach('template:config:sidebar', 'pluginManager:config/sidebar');
+
         // PLUGIN PROBLEMS Page - Routes
         $this->route->addRoute('/extensions/plugin-problems', 'PluginManagerController', 'show', 'PluginManager');
         // PLUGIN INFO Page - Routes
