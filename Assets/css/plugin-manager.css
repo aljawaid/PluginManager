@@ -1071,3 +1071,22 @@ code.code {
     margin-top: 10px;
 }
 
+.plugin-problems-section .further-reading {
+    font-size: 1.2em;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.plugin-problems-section .further-reading li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 15px 25px 10px 25px;
+}
+
+.plugin-problems-section .further-reading li svg {
+    vertical-align: sub;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
