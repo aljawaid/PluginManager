@@ -101,12 +101,12 @@ Read the full [**Changelog**](../master/changelog.md "See changes")
 Installation
 ------------
 
-- **Install via [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
+- **Install via the [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
   - _Go to_ Kanboard: `Plugins` &#10562; `Plugin Directory`
 
 **_or_**
 
-- **Install via [Releases](../master/Releases/ "A copy of each release is saved in the folder") folder**
+- **Install via the [Releases](../master/Releases/ "A copy of each release is saved in the folder") folder**
  - A copy of each release is saved in the `/Releases` folder of the repository
  - Simply extract the `.zip` file into the `/plugins` directory
 
