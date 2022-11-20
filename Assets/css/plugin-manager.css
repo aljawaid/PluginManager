@@ -1044,6 +1044,7 @@ code.code {
 
 .plugin-problems-section h3 svg {
     vertical-align: sub;
+    margin-right: 5px;
 }
 
 .plugin-problems-section .panel {}
