@@ -13,20 +13,20 @@ Features
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
 - Fully translatable
+- Add direct link in Kanboard Settings menu
 
 
 **Plugin Manager**
 - Installed Plugins
   - Renamed as **`Plugin Manager`**
-  - Show installed plugin count
-  - Fixed table headers
-  - Searchable user friendly filter for quickly finding installed plugins
-    - Hover over input box to focus without clicking
-  - Show icon if plugin has database changes
-  - Show icon for plugin homepage if set
-  - Show Kanboard compatible version if set
-  - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
-- Add direct link in Kanboard Settings menu
+- Show installed plugin count
+- Fixed table headers
+- Searchable user friendly filter for quickly finding installed plugins
+  - Hover over input box to focus without clicking
+- Show icon if plugin has database changes
+- Show icon for plugin homepage if set
+- Show Kanboard compatible version if set
+- Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
 
 **Plugin Directory**
 - NEW: Show plugin structure
@@ -49,7 +49,7 @@ Features
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
-- Direct links to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin (if installed) to display technical information
+- Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin (if installed) to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
 Screenshots
