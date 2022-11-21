@@ -92,6 +92,8 @@ return array(
   'Update this plugin' => 'Update this plugin',
   'Up to date' => 'Up to date',
   'Not available' => 'Not available',
+  'Currently Installed' => 'Currently Installed',
+  'Updated plugin version available' => 'Updated plugin version available',
   //
   // info/db-info.php
   //

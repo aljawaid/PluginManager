@@ -294,9 +294,19 @@
             <td class="column-40 available-plugins-title">
                 <?= $this->text->e($plugin['title']) ?>
             </td>
-            <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
-                <?= $this->text->e($plugin['version']) ?>
-            </td>
+                <?php if (! isset($installed_plugins[$plugin['title']])): ?>
+                    <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
+                        <?= $this->text->e($plugin['version']) ?>
+                    </td>
+                <?php elseif ($installed_plugins[$plugin['title']] < $plugin['version']): ?>
+                    <td class="available-plugin-version font-weight-bold" title="<?= t('Updated plugin version available') ?>">
+                        <?= $this->text->e($plugin['version']) ?>
+                    </td>
+                <?php else: ?>
+                    <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
+                        <?= $this->text->e($plugin['version']) ?>
+                    </td>
+                <?php endif ?>
             <td class="date-toggle available-plugin-last-updated">
                 <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
                     <?php
@@ -408,6 +418,9 @@
                     <?php if (! isset($installed_plugins[$plugin['title']])): ?>
                         <?= $this->url->icon('cloud-download', t('Install'), 'PluginController', 'install', array('archive_url' => urlencode($plugin['download'])), true, 'install-plugin', t('Install this plugin')) ?>
                     <?php elseif ($installed_plugins[$plugin['title']] < $plugin['version']): ?>
+                        <div class="currently-installed-v pp-grey" title="<?= t('Currently Installed') ?>">
+                            <?= ($installed_plugins[$plugin['title']]) ?>
+                        </div>
                         <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array('archive_url' => urlencode($plugin['download'])), true, 'update-plugin', t('Update this plugin')) ?>
                     <?php else: ?>
                         <div class="tick">&#10004;</div> <?= t('Up to date') ?>

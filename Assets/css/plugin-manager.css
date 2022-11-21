@@ -548,9 +548,10 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
     text-align: center;
     font-family: monospace;
     font-size: 1.2em;
+    cursor: context-menu;
 }
 
-.available-plugin-version:before {
+.available-plugin-version:before, .currently-installed-v:before {
     content: 'v';
     margin: -6px;
 }
@@ -1121,4 +1122,13 @@ code.code {
     background-repeat: no-repeat;
     margin-right: 5px;
     vertical-align: sub;
+}
+
+.currently-installed-v {
+    font-family: monospace;
+    font-style: italic;
+    position: absolute;
+    left: 10px;
+    top: -29px;
+    cursor: context-menu;
 }
