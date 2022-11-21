@@ -215,6 +215,7 @@ a:hover {
 #InstalledPluginsTable > tbody > tr > td {
     border: 0 !important;
     padding: 4px 15px;
+    line-height: 1.4;
 }
 
 #InstalledPluginsTable > thead > tr > th {
@@ -539,6 +540,7 @@ th.available-plugins-author {
 table.available-plugins-table > thead > tr > th, table.available-plugins-table > tbody > tr > td, table.available-plugins-table > tbody > tr > th {
     padding: 4px 5px;
     vertical-align: middle;
+    position: relative;
 }
 
 .available-plugin-version {
@@ -1094,4 +1096,29 @@ code.code {
 .sidebar > ul li.active > a svg {
     color: var(--pp-red);
     fill: var(--pp-red);
+}
+
+.install-date {
+    display: block;
+    max-width: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .75em;
+    padding: 2px 3px 0px 3px;
+    border: 1px solid var(--pp-green-dark);
+    border-radius: var(--border-radius);
+    background-color: var(--pp-green-dark);
+    color: var(--pp-white);
+    cursor: context-menu;
+    opacity: .7;
+    position: relative;
+    float: right;
+    right: -7px;
+}
+
+.install-date:before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='white' class='bi bi-calendar-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z'/%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    vertical-align: sub;
 }

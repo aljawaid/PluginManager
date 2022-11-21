@@ -27,6 +27,7 @@ Features
 - Show icon for plugin homepage if set
 - Show Kanboard compatible version if set
 - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
+- Show plugin installation date
 
 **Plugin Directory**
 - NEW: Show plugin structure

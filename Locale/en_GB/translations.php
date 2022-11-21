@@ -44,6 +44,7 @@ return array(
   'Readme' => 'Readme',
   'Go to the top of the page' => 'Go to the top of the page',
   'Top' => 'Top',
+  'Installed' => 'Installed',
   //
   // plugin/directory.php
   //

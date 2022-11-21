@@ -146,7 +146,11 @@ function sortPlugins(&$arr) {
                         </td>
                     </tr>
                     <tr class="plugin-description">
-                        <td class="" colspan="<?= $is_configured ? 6 : 5 ?>"><?= $this->text->e($plugin->getPluginDescription()) ?></td>
+                        <td class="" colspan="<?= $is_configured ? 6 : 5 ?>">
+                            <?= $this->text->e($plugin->getPluginDescription()) ?>
+                        <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR.'/'.$pluginFolder.'/.')); ?>
+                            <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
+                        </td>
                     </tr>
             </tbody>
                 <?php endforeach ?>
