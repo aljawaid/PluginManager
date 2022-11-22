@@ -94,6 +94,7 @@ return array(
   'Not available' => '',
   'Currently Installed' => 'Currently Installed',
   'Updated plugin version available' => 'Updated plugin version available',
+  'View in Plugin Manager' => 'View in Plugin Manager',
   //
   // info/db-info.php
   //

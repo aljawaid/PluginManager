@@ -83,7 +83,7 @@ function sortPlugins(&$arr) {
             </thead>
                 <?php sortPlugins($plugins); ?>
                 <?php foreach ($plugins as $pluginFolder => $plugin): ?>
-            <tbody class="">
+            <tbody id="installed<?= str_replace(" ", "", $plugin->getPluginName()) ?>" class="">
                     <tr class="plugin-info">
                         <td class="plugin-name">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">

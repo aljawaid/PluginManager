@@ -47,6 +47,7 @@ Features
     - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
 - Show plugin totals by type
+- Show link to installed plugin
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them

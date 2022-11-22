@@ -1132,3 +1132,8 @@ code.code {
     top: -29px;
     cursor: context-menu;
 }
+
+.plugin-manager-view {
+    float: right;
+    margin-top: 5px;
+}
