@@ -29,6 +29,7 @@ Features
 - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
 - Show plugin installation date
 
+
 **Plugin Directory**
 - NEW: Show plugin structure
   - Show if plugin has database changes
@@ -54,6 +55,7 @@ Features
 - Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin (if installed) to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
+
 Screenshots
 ----------
 
@@ -73,6 +75,7 @@ Screenshots
 
 **_[More screenshots](../master/screenshots.md)_**
 
+
 Usage
 -------------
 
@@ -81,6 +84,7 @@ Go to `Plugins`
 **_or_**
 
 `Settings` &#10562; `Plugin Manager`
+
 
 Compatibility
 -------------
@@ -94,6 +98,7 @@ Compatibility
 - `03` Template overrides
 - _No database changes_
 
+
 Changelog
 ---------
 
@@ -104,26 +109,27 @@ Installation
 ------------
 
 - **Install via the [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
-  - _Go to_ Kanboard: `Plugins` &#10562; `Plugin Directory`
+  - _Go to:_
+    - Kanboard: `Plugins` &#10562; `Plugin Directory`
 
 **_or_**
 
 - **Install via the [Releases](../master/Releases/ "A copy of each release is saved in the folder") folder**
- - A copy of each release is saved in the `/Releases` folder of the repository
- - Simply extract the `.zip` file into the `/plugins` directory
+  - A copy of each release is saved in the `/Releases` folder of the repository
+  - Simply extract the `.zip` file into the `/plugins` directory
 
 **_or_**
 
 - **Install via [GitHub](https://github.com/aljawaid "Find the correct plugin from the list of repositories")**
-- Download the `.zip` file and decompress everything under the directory `/plugins`
- - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
+  - Download the `.zip` file and decompress everything under the directory `/plugins`
+  - The folder inside the `.zip` must not contain any branch names and must be exact case (matching the plugin name)
 
 _Note: The `/plugins` folder is case-sensitive._
 
 **_or_**
 
 - **Install using Git CLI**
-- `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
+  - `git clone` (_or ftp upload_) and extract the `.zip` file into this folder: `.\plugins\` (must be exact case)
 
 
 Translations
@@ -142,6 +148,7 @@ Authors & Contributors
 - [Craig Crosby](https://github.com/creecros) - Contributor
 - _Contributors welcome_
 
+
 License
 -------
-- This project is distributed under [The MIT License](../master/LICENSE "Read The MIT license")
+- This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
