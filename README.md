@@ -14,6 +14,8 @@ Features
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
 - Fully translatable
 - Add direct link in Kanboard Settings menu
+- Add New Plugin Sidebar Menu Hook
+  - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 
 
 **Plugin Manager**
