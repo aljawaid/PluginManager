@@ -38,6 +38,7 @@ Features
   - Show if plugin contains template or model overrides
   - Show if plugin uses hooks
   - Show when the plugin was last updated
+    - [Time Ago Relative Dates _- 51 translatable calculations_](../master/time-ago.md "View table of calculations")
     - Show relative date with exact date in tooltip (toggles to exact date when clicked)
   - _Plugin structures are extracted through new properties in the Kanboard Plugins Directory_
 - Show Directory source e.g. official or custom
