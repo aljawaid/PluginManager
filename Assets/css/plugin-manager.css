@@ -1013,17 +1013,6 @@ figure.notice a, figure.notice a:visited {
 code.code {
     color: var(--color-primary) !important;
 }
-/*.markdown p a, td a {
-    text-decoration: underline !important;
-    text-decoration-color: #B71234 !important;
-    text-decoration-thickness: 2px !important;
-}*/
-
-/*.markdown p a:hover, td a:hover {
-    text-decoration: underline !important;
-    text-decoration-color: #000 !important;
-    text-decoration-thickness: 2px !important;
-}*/
 
 .plugin-problems-section {
     margin-top: 25px;
