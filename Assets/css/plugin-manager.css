@@ -704,9 +704,9 @@ table.available-plugins-table > tbody > tr:last-child > td:last-child, table.ava
     border-bottom-right-radius: var(--border-radius);
 }
 
-table > tbody > tr > td {
+/*table > tbody > tr > td {
     border: 1px solid var(--pp-grey);
-}
+}*/
 
 table.available-plugins-table {
     border: 2px solid var(--pp-grey);
@@ -1013,11 +1013,11 @@ figure.notice a, figure.notice a:visited {
 code.code {
     color: var(--color-primary) !important;
 }
-.markdown p a, td a {
+/*.markdown p a, td a {
     text-decoration: underline !important;
     text-decoration-color: #B71234 !important;
     text-decoration-thickness: 2px !important;
-}
+}*/
 
 /*.markdown p a:hover, td a:hover {
     text-decoration: underline !important;
