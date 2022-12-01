@@ -66,11 +66,11 @@ a:hover {
     position: relative;
 }
 
-#main .page-header {
+#main .pm-page-header {
     margin: var(--header-page-margin);
 }
 
-.page-header h2 {
+.pm-page-header h2 {
     border-bottom: 2px outset var(--blue-border-gradient-match) !important;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -78,7 +78,7 @@ a:hover {
     padding-top: 5px;
 }
 
-.page-header h2 svg {
+.pm-page-header h2 svg {
     top: 2px;
     position: relative;
 }
@@ -994,7 +994,7 @@ figure.notice a, figure.notice a:visited {
 
 .icon-active {}
 
-section > div > table {
+.available-plugins-table {
     border-collapse: unset;
 }
 
