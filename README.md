@@ -8,14 +8,14 @@ Replace the Installed Plugins section within the Kanboard interface with a new P
 Features
 -------------
 
-- Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
-- Clean coded icons - no images
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
 - Fully translatable
 - Add direct link in Kanboard Settings menu
 - Add New Plugin Sidebar Menu Hook
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
+- Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
+- Clean coded icons - no images
 
 
 **Plugin Manager**
