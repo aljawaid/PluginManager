@@ -1054,7 +1054,7 @@ code.code {
     margin-right: 5px;
 }
 
-.plugin-problems-section p, .page-margin p {
+.plugin-problems-section p, .pm-page-margin p {
     line-height: 1.4;
     color: var(--color-primary);
 }

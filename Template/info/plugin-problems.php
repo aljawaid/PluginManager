@@ -6,7 +6,7 @@
         <?= t('Plugin Problems') ?>
     </h2>
 </div>
-<div class="page-margin">
+<div class="page-margin pm-page-margin">
     <p class="">
         <?= t('Plugins are extensions to your application. They do not take over your application, they just alter the application\'s performance or output. Use this page as a quick reference to problems which may be caused by a recent plugin installation.') ?>
     </p>

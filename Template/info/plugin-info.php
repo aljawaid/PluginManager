@@ -7,7 +7,7 @@
         <?= t('Plugin Information') ?>
     </h2>
 </div>
-<div class="page-margin">
+<div class="page-margin pm-page-margin">
     <h3 id="TypesOfPlugins" class=""><?= t('Types of Plugins') ?></h3>
     <p class=""><?= t('All plugins do the same basic job of extending the features of the application. Different functions require different ways of coding which is why all plugins fall into one of the types below.') ?></p>
     <div class="info-type-section">
