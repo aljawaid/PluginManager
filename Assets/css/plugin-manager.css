@@ -102,7 +102,9 @@ a:hover {
     border-bottom: 0;
 }
 
-#PluginSidebar {}
+#PluginSideBar + .sidebar-content {
+    margin-bottom: 30px;
+}
 
 #PluginSideBar ul li {
     /*line-height: 30px;*/
