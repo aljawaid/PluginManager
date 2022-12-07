@@ -162,7 +162,7 @@ return array(
   'around 2 hours ago' => 'around 2 hours ago',
   'around 3 hours ago' => 'around 3 hours ago',
   'around 4 hours ago' => 'around 4 hours ago',
-  'around 5 hours ago' => 'around 5 hours ago ago',
+  'around 5 hours ago' => 'around 5 hours ago',
   'around 6 hours ago' => 'around 6 hours ago',
   'around 12 hours ago' => 'around 12 hours ago',
   'earlier today' => 'earlier today',
