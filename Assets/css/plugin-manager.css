@@ -13,7 +13,7 @@
     --pp-green: #2EA02E;
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
-    --border-radius: 3px;
+    --border-radius-pm: 3px;
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
     --blue-border-gradient-match: #476E9E;
     --header-page-margin: 5px 15px 10px 15px;
@@ -306,7 +306,7 @@ a:hover {
     padding-top: 5px;
     padding-bottom: 6px;
     padding-left: 3px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
 }
 
 .plugin-schema .tooltip svg {
@@ -332,7 +332,7 @@ a:hover {
 .btn-action, .btn-action:visited, span.btn-uninstall a {
     text-align: center;
     display: inline-flex;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     text-decoration: none !important;
 }
 
@@ -353,7 +353,7 @@ a.btn-action:hover, svg.btn-action:hover {
     background: var(--button-background-delete);
     padding: 5px 4px 6px 2px;
     margin: 3px 2px auto 2px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     border: 1px solid var(--pp-grey);
     display: inline-block;
     width: 100px;
@@ -466,10 +466,10 @@ td .btn-uninstall:hover a {
 #DirectoryInfo > thead > tr > th {
     padding: var(--table-head-padding);
     background-color: var(--color-light);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius-pm);
+    border-top-right-radius: var(--border-radius-pm);
+    border-bottom-left-radius: var(--border-radius-pm);
+    border-bottom-right-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
     font-weight: 600;
     cursor: context-menu;
@@ -477,10 +477,10 @@ td .btn-uninstall:hover a {
 
 #DirectoryInfo > tbody > tr > td {
     padding: var(--table-head-padding);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius-pm);
+    border-top-right-radius: var(--border-radius-pm);
+    border-bottom-left-radius: var(--border-radius-pm);
+    border-bottom-right-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
 }
 
@@ -641,7 +641,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
     font-weight: bold;
     padding: 3px 5px;
     border: 2px solid var(--pp-grey);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     background-color: var(--pp-orange);
 }
 
@@ -650,7 +650,7 @@ a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
     font-weight: bold;
     padding: 3px 5px;
     border: 2px solid var(--pp-light-grey);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
 }
 
 .install-plugin:hover, .update-plugin:hover {
@@ -691,19 +691,19 @@ td.available-plugin-structure, td.available-plugin-status, td.available-plugin-l
 }
 
 table.available-plugins-table > tbody > tr > th:first-child, table.available-plugins-table > thead > tr > th:first-child {
-    border-top-left-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius-pm);
 }
 
 table.available-plugins-table > tbody > tr > th:last-child, table.available-plugins-table > thead > tr > th:last-child {
-    border-top-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius-pm);
 }
 
 table.available-plugins-table > tbody > tr:last-child > td:first-child, table.available-plugins-table > thead > tr:last-child > td:first-child {
-    border-bottom-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius-pm);
 }
 
 table.available-plugins-table > tbody > tr:last-child > td:last-child, table.available-plugins-table > thead > tr:last-child > td:last-child {
-    border-bottom-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius-pm);
 }
 
 /*table > tbody > tr > td {
@@ -888,7 +888,7 @@ figure.notice a, figure.notice a:visited {
     margin-left: 10px;
     border: 1px solid var(--blue-border-gradient-match);
     padding: 0px 0px 0px 5px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     margin-bottom: 20px;
 }
 
@@ -1029,7 +1029,7 @@ code.code {
 }
 
 .plugin-problems-section .panel {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     padding: 10px 35px 8px 10px;
     border: 1px solid var(--blue-border-gradient-match);
     background-color: var(--panel-background);
@@ -1098,7 +1098,7 @@ code.code {
     font-size: .75em;
     padding: 2px 3px 0px 3px;
     border: 1px solid var(--pp-green-dark);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-pm);
     background-color: var(--pp-green-dark);
     color: var(--pp-white);
     cursor: context-menu;
