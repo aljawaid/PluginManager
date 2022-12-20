@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     // Click event for any anchor tag that's href starts with #
-    $('a[href^="#"]').click(function(event) {
+    $('a[href^="#main"], a[href^="#PluginTop"]').click(function(event) {
 
         // The id of the section we want to go to.
         var id = $(this).attr("href");
@@ -21,4 +21,3 @@ $(document).ready(function() {
         event.preventDefault();
     });
 });
-

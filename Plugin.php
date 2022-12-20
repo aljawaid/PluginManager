@@ -33,9 +33,7 @@ class Plugin extends Base
         // JS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager.js'));
-        if (!file_exists('plugins/Glancer')) {
-            $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager-top-btn.js'));
-        }
+        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager-top-btn.js'));
         
         // Helper
         $this->helper->register('ageHelper', '\Kanboard\Plugin\PluginManager\Helper\AgeHelper');
