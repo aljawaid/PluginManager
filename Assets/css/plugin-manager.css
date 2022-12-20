@@ -17,8 +17,8 @@
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
     --blue-border-gradient-match: #476E9E;
     --header-page-margin-pm: 5px 15px 10px 15px;
-    --page-margin: 0px 15px 0px 15px;
-    --title-margin: 0px 15px 0px 15px;
+    --page-margin-pm: 0px 15px 0px 15px;
+    --title-margin-pm: 0px 15px 0px 15px;
     --table-head-box-shadow: 0px 0px 5px 0px #000;
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
@@ -27,7 +27,7 @@
     --table-head-padding: 4px 15px;
     --link-color-primary: #36C;
     --blue-icon-dark: #034CA6;
-    --panel-background: #EEEEEE;
+    --panel-background-pm: #EEEEEE;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -84,11 +84,11 @@ a:hover {
 }
 
 .page-margin {
-    margin: var(--page-margin);
+    margin: var(--page-margin-pm);
 }
 
 .page-title {
-    margin: var(--title-margin);
+    margin: var(--title-margin-pm);
 }
 
 .plugin-name svg {
@@ -1032,7 +1032,7 @@ code.code {
     border-radius: var(--border-radius-pm);
     padding: 10px 35px 8px 10px;
     border: 1px solid var(--blue-border-gradient-match);
-    background-color: var(--panel-background);
+    background-color: var(--panel-background-pm);
 }
 
 .plugin-problems-section .panel a, .plugin-problems-section p a {
