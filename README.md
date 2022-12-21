@@ -97,6 +97,7 @@ Compatibility
 #### Other Plugins & Action Plugins
 - _No known issues_
 - [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included
+- [Glancer](https://github.com/aljawaid/Glancer) compatibility included
 #### Core Files & Templates
 - `03` Template overrides
 - _No database changes_

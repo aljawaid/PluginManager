@@ -1,16 +1,28 @@
 # Changelog
 
 
+## v1.6
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Target Selected Anchor Instead of All Anchors
+- Glancer Compatibility: Switch `if` statement for Glancer plugin compatibility
+- FIX: Translations
+- FIX: CSS Conflict for Glancer Plugin
+- Bug fixes and general improvements
+
+
 ## v1.5
 
 ### What's Changed
 
 _(most recent changes are listed on top):_
-e8102d8 FIX: Remove test code - Fixes #27
-e70ab23 NEW: Add Time Ago in README.md
-555ad47 FIX: Translation Starter Template
-3f30921 FIX: The stylesheet leaks into all pages - Fixes #27
-58bccd9 - Add New Plugin Sidebar Menu Hook  - `'template:plugin:sidebar'`
+- FIX: Remove test code - Fixes #27
+- NEW: Add Time Ago in README.md
+- FIX: Translation Starter Template
+- FIX: The stylesheet leaks into all pages - Fixes #27
+- Add New Plugin Sidebar Menu Hook  - `'template:plugin:sidebar'`
 
 
 ## v1.0
