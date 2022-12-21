@@ -12,10 +12,10 @@ function sortPlugins(&$arr) {
     </div>
 
 <?php if (! empty($incompatible_plugins)): ?>
-    <div class="page-title">
+    <div class="pm-page-title">
         <h3 class=""><i class="fa fa-cubes"></i> <?= t('Incompatible Plugins') ?></h3>
     </div>
-    <span class="page-margin">
+    <span class="pm-page-margin">
         <table class="">
             <tr class="">
                 <th class="column-35"><?= t('Name') ?></th>
@@ -55,9 +55,9 @@ function sortPlugins(&$arr) {
 <?php endif ?>
 
 <?php if (empty($plugins)): ?>
-    <p class="alert page-margin"><?= t('There is no plugin loaded.') ?></p>
+    <p class="alert pm-page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
-    <div class="page-margin">
+    <div class="pm-page-margin">
         <?php $installedCount = count($plugins) ?>
         <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
         <form class="plugin-installed-filter">

@@ -83,11 +83,11 @@ a:hover {
     position: relative;
 }
 
-.page-margin {
+.pm-page-margin {
     margin: var(--page-margin-pm);
 }
 
-.page-title {
+.pm-page-title {
     margin: var(--title-margin-pm);
 }
 
@@ -95,7 +95,7 @@ a:hover {
     vertical-align: sub;
 }
 
-.sidebar > ul li {
+#PluginSideBar > ul li {
     border-left: 5px solid white;
     padding-left: 8px;
     padding-right: 8px;
