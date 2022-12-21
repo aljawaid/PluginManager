@@ -558,7 +558,7 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
     margin: -6px;
 }
 
-td.available-plugin-description  .markdown p {
+td.available-plugin-description .markdown p {
     margin-top: 5px;
     margin-bottom: 5px;
 }
