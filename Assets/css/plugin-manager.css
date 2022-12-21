@@ -282,8 +282,7 @@ a:hover {
     /*margin: auto 2px;*/
 }
 
-.plugin-homepage, .plugin-readme, .has-schema,
-.has-overrides {
+.plugin-homepage, .plugin-readme, .has-schema, .has-overrides {
     vertical-align: middle;
     margin: 2px;
     height: 18px;
@@ -848,8 +847,7 @@ figure.notice a, figure.notice a:visited {
     font-weight: bold;
 }
 
-.plugin-type {
-}
+.plugin-type {}
 
 .v-sub {
     vertical-align: sub;
