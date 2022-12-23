@@ -42,7 +42,7 @@
 .pp-green { color: var(--pp-green); fill: var(--pp-green); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, .sidebar > ul li, figure {
+div, a, details, summary, i, img, table, tr, .btn-uninstall, svg, #PluginSideBar > ul li, figure {
     transition: ease-in-out all .3s;
 }
 
