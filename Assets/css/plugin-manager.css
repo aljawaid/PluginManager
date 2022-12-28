@@ -1094,8 +1094,8 @@ code.code {
 }
 
 .install-date {
-    display: block;
-    max-width: 125px;
+    /*display: block;*/
+    /*max-width: 125px;*/
     text-align: center;
     text-transform: uppercase;
     font-size: .75em;
@@ -1109,6 +1109,7 @@ code.code {
     position: relative;
     float: right;
     right: -7px;
+    bottom: -7px;
 }
 
 .install-date:before {
