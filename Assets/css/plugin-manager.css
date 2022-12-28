@@ -368,6 +368,7 @@ td .btn-uninstall a, td .btn-uninstall a i {
 
 td .btn-uninstall:hover a {
     color: var(--pp-red-alt-2) !important;
+    text-decoration: none !important;
 }
 
 .btn-uninstall:hover {
