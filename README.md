@@ -98,6 +98,7 @@ Compatibility
 - _No known issues_
 - [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included
 - [Glancer](https://github.com/aljawaid/Glancer) compatibility included
+- Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
 #### Core Files & Templates
 - `03` Template overrides
 - _No database changes_
