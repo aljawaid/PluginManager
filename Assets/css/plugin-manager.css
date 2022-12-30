@@ -44,12 +44,8 @@
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
 
-a, details, summary, i, img, table, tr, .btn-uninstall, svg, #PluginSideBar > ul li, figure {
+.btn-uninstall, #PluginSideBar > ul li {
     transition: var(--transition-pm);
-}
-
-a:hover {
-    color: var(--pp-red-alt-2) !important;
 }
 
 .display-none, .d-none {
