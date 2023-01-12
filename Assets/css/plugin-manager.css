@@ -109,7 +109,7 @@
     margin-bottom: 10px;
 }
 
-#PluginMenu {}
+/*#PluginMenu {}*/
 
 #PluginMenu li {
     position: relative;
@@ -158,7 +158,7 @@
     margin-bottom: 0;
 }
 
-.installed-title {}
+/*.installed-title {}*/
 
 .plugin-count {
     font-style: italic;
@@ -206,7 +206,7 @@
     margin-bottom: 0;
 }
 
-#InstalledPluginsTable thead {}
+/*#InstalledPluginsTable thead {}*/
 
 #InstalledPluginsTable tbody {
     border: 2px inset var(--blue-border-gradient-match) !important;
@@ -229,7 +229,7 @@
     padding: var(--table-head-padding);
 }
 
-.installed-plugins {}
+/*.installed-plugins {}*/
 
 .installed-plugins th {
     position: sticky;
@@ -239,7 +239,7 @@
     border: 2px solid var(--blue-border-gradient-match) !important;
 }
 
-.plugin-info {}
+/*.plugin-info {}*/
 
 .plugin-name {
     font-weight: bold;
@@ -430,9 +430,9 @@ td .btn-uninstall:hover a {
     font-size: .8em;
 }
 
-.tooltip-content .tooltip-link {}
+/*.tooltip-content .tooltip-link {}*/
 
-.tooltip-link {}
+/*.tooltip-link {}*/
 
 .not-specified {
     font-style: italic;
@@ -482,7 +482,7 @@ td .btn-uninstall:hover a {
     border: 2px inset var(--pp-grey);
 }
 
-.plugin-dir-view {}
+/*.plugin-dir-view {}*/
 
 .plugin-dir-url {
     font-weight: 300;
@@ -846,7 +846,7 @@ figure.notice a, figure.notice a:visited {
     font-weight: bold;
 }
 
-.plugin-type {}
+/*.plugin-type {}*/
 
 .v-sub {
     vertical-align: sub;
@@ -989,9 +989,9 @@ figure.notice a, figure.notice a:visited {
     align-items: end;
 }
 
-.icon-normal {}
+/*.icon-normal {}*/
 
-.icon-active {}
+/*.icon-active {}*/
 
 .available-plugins-table {
     border-collapse: unset;
@@ -1018,7 +1018,7 @@ code.code {
     margin-bottom: 25px;
 }
 
-.plugin-problems-section h3 {}
+/*.plugin-problems-section h3 {}*/
 
 .plugin-problems-section h3 svg {
     vertical-align: sub;
