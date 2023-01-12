@@ -234,7 +234,7 @@
 .installed-plugins th {
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
+    top: 0;
     z-index: 2;
     border: 2px solid var(--blue-border-gradient-match) !important;
 }
@@ -311,14 +311,14 @@
 }
 
 .plugin-homepage a svg, .plugin-readme a svg {
-    padding: 3px 0px;
+    padding: 3px 0;
     padding-bottom: 5px;
 }
 
 .plugin-action {
     width: 120px;
     /*display: inline;*/
-    padding: 4px 0px 4px 0px !important;
+    padding: 4px 0 4px 0 !important;
 }
 
 .plugin-uninstall {
@@ -591,7 +591,7 @@ td.available-plugin-description .markdown p {
 }
 
 .available-plugin-structure .bi-database-add {
-    padding: 0px 4px 1px 5px;
+    padding: 0 4px 1px 5px;
     width: 24px;
     height: 26px;
 }
@@ -613,7 +613,7 @@ td.available-plugin-description .markdown p {
 
 .bi-database, .bi-database-check {
     padding-top: 3px !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 0 !important;
 }
 
 .tick {
@@ -884,7 +884,7 @@ figure.notice a, figure.notice a:visited {
     position: relative;
     margin-left: 10px;
     border: 1px solid var(--blue-border-gradient-match);
-    padding: 0px 0px 0px 5px;
+    padding: 0 0 0 5px;
     border-radius: var(--border-radius-pm);
     margin-bottom: 20px;
 }
@@ -906,7 +906,7 @@ figure.notice a, figure.notice a:visited {
     width: 25px;
     text-align: center;
     background-color: var(--blue-border-gradient-match);
-    padding: 4px 0px 4px 0px;
+    padding: 4px 0 4px 0;
     color: var(--pp-white);
 
 }
@@ -971,7 +971,7 @@ figure.notice a, figure.notice a:visited {
 .structure-info-icon {
     padding: 3px 4px;
     display: inline-flex;
-    margin: auto 5px auto 0px;
+    margin: auto 5px auto 0;
 }
 
 .structure-info-text {
@@ -1093,7 +1093,7 @@ code.code {
     text-align: center;
     text-transform: uppercase;
     font-size: .75em;
-    padding: 2px 3px 0px 3px;
+    padding: 2px 3px 0 3px;
     border: 1px solid var(--pp-green-dark);
     border-radius: var(--border-radius-pm);
     background-color: var(--pp-green-dark);
