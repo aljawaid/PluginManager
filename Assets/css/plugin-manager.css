@@ -1092,7 +1092,7 @@ code.code {
     fill: var(--pp-red);
 }
 
-.install-date {
+td span.install-date {
     /*display: block;*/
     /*max-width: 125px;*/
     text-align: center;
