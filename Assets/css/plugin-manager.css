@@ -929,7 +929,7 @@ figure.notice a, figure.notice a:visited {
 }
 
 .structure-info-wrapper {
-    padding: 3px;
+    padding: 10px 5px 15px 5px;
     border: 1px solid var(--pp-light-grey);
     display: block;
     margin: auto auto 20px auto;
@@ -956,10 +956,12 @@ figure.notice a, figure.notice a:visited {
     display: inline-flex;
     border: 2px solid var(--pp-grey);
     width: 490px;
-    height: 60px;
+    /*height: 60px;*/
     margin: 3px 10px;
     padding: 3px 5px;
     border-radius: 2px;
+    flex: min-content;
+    height: auto;
 }
 
 .structure-info-heading {
@@ -967,6 +969,7 @@ figure.notice a, figure.notice a:visited {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .structure-info-icon {
@@ -980,6 +983,7 @@ figure.notice a, figure.notice a:visited {
     margin: auto;
     text-align: center;
     font-size: .9em;
+    flex-wrap: wrap;
 }
 
 .structure-info-unknown {
@@ -1126,4 +1130,8 @@ code.code {
 .plugin-manager-view {
     float: right;
     margin-top: 5px;
+}
+
+.structure-icon-wrapper {
+    display: flex;
 }
