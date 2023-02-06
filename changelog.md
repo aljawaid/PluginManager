@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.7
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Make installation date higher priority - should fix the date font sizing issue #29
+- FIX:  Align Plugin Structure Boxes #30 - thanks @JustFxDev - Fixes #30f
+- FIX: Title Top Margin
+- FIX: Unix (LF) Line Endings and Tabs > Spaces
+- FIX: No unit for zero needed
+- FIX: Do not use empty rulesets
+- FIX: Remove CSS Global Selectors - fixes #31
+- FIX: Button Hover
+- FIX: Transition affecting other pages - fixes #28
+- Fix CSS Jumping Side Menu
+- CSS - Undo Dropdown Menu Hack
+- CSS Fix Extra Space - extra space (error) - possibly causing issue in reading complete css file
+- Scope CSS Classes & Variables to this Plugin Only
+
+
 ## v1.6
 
 ### What's Changed
