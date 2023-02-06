@@ -10,6 +10,19 @@ $(document).ready(function(){
     });
 });
 
+// PREVENTS ENTER KEY FROM BEING USED FOR THIS FORM
+$(document).ready(function() {
+    $("#InstalledPluginsFilterInput").on("keypress", function (event) {
+        //console.log("Enter key pressed on input field inside form");
+        var keyPressed = event.keyCode || event.which;
+        if (keyPressed === 13) {
+            alert("The enter key is ignored as it is not required in this filter");
+            event.preventDefault();
+            return false;
+        }
+    });
+});
+
 // SELECT INPUT ON MOUSOVER
 $(document).ready(function() {
     const input = document.getElementById("InstalledPluginsFilterInput");
@@ -45,5 +58,18 @@ $(document).ready(function(){
         $(".available-plugins-table").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+    });
+});
+
+// PREVENTS ENTER KEY FROM BEING USED FOR THIS FORM
+$(document).ready(function() {
+    $("#AvailablePluginsFilterInput").on("keypress", function (event) {
+        //console.log("Enter key pressed on input field inside form");
+        var keyPressed = event.keyCode || event.which;
+        if (keyPressed === 13) {
+            alert("The enter key is ignored as it is not required in this filter");
+            event.preventDefault();
+            return false;
+        }
     });
 });
