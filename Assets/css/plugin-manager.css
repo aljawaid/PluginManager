@@ -43,6 +43,7 @@
 .pp-green { color: var(--pp-green); fill: var(--pp-green); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
+svg { pointer-events: none; }
 
 .btn-uninstall, #PluginSideBar > ul li {
     transition: var(--transition-pm);
