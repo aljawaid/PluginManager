@@ -14,7 +14,7 @@
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --blue-icon-dark: #034CA6;
-    --link-color-primary: #36C;
+    --link-color-pm: #36C;
     --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
     --blue-border-gradient-match: #476E9E;
     --table-blue-border-gradient-match: #476E9E;
@@ -657,7 +657,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
 }
 
 a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
-    color: var(--link-color-primary);
+    color: var(--link-color-pm);
     font-weight: bold;
     padding: 3px 5px;
     border: 2px solid var(--pp-light-grey);
