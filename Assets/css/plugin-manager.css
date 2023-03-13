@@ -111,8 +111,6 @@
     margin-bottom: 10px;
 }
 
-/*#PluginMenu {}*/
-
 #PluginMenu li {
     position: relative;
     padding-top: 10px;
@@ -164,8 +162,6 @@
     margin-bottom: 0;
     pointer-events: none;
 }
-
-/*.installed-title {}*/
 
 .plugin-count {
     font-style: italic;
@@ -1045,8 +1041,6 @@ code.code {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
-/*.plugin-problems-section h3 {}*/
 
 .plugin-problems-section h3 svg {
     vertical-align: sub;
