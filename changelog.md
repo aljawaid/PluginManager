@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.8
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Anchor Underline Should Not Show on Hover
+- FIX: Compact Side Menu - fixes useless whitespace breaking consistency in menu click
+- FIX: Replace Global CSS Target
+- FIX: Missing Menu Indicator
+- FIX: Conflicting Global Variable - fixes https://github.com/greyaz/ThemeRevision/issues/20 - #34 - thanks @greyaz
+- FIX: SVG Pointer Events Conflicting with Links - replaces 16f1691
+- NEW: Prevent `Enter` Key Being Used on Filter Input - fixes #33 Pressing Enter on Filter Input Redirects Page to Dashboard - thanks @axb21
+- Cleanup code
+- Improve package size - reduce screenshots' resolution
+
+
 ## v1.7
 
 ### What's Changed
