@@ -1114,6 +1114,10 @@ code.code {
     pointer-events: none;
 }
 
+#PluginSideBar > ul li.active {
+    border-left-color: var(--pp-black);
+}
+
 td span.install-date {
     /*display: block;*/
     /*max-width: 125px;*/
