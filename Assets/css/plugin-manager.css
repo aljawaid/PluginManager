@@ -107,13 +107,14 @@
 }
 
 #PluginSideBar ul li {
-    /*line-height: 30px;*/
+    line-height: 16px;
     margin-bottom: 10px;
 }
 
 #PluginMenu li {
     position: relative;
     padding-top: 10px;
+    padding-bottom: 10px;
     cursor: pointer;
     text-align: center;
 }
