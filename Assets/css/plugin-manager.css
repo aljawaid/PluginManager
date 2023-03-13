@@ -657,6 +657,7 @@ a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
     color: var(--pp-red-alt-2);
     fill: var(--pp-red-alt-2);
     border-color: var(--pp-red-alt-2) !important;
+    text-decoration: none !important;
 }
 
 .install-plugin i.fa-cloud-download {
