@@ -1,0 +1,181 @@
+/*
+ =====================================================================
+ CSS Messages by Ron Pelt | Adjusted for Kanboard by @aljawaid
+ =====================================================================
+ https://codepen.io/Peltos/pen/OGPMxK
+ =====================================================================
+ HTML FORMAT:
+ <section class="message error|warning|neutral|success|uhm">
+    <header></header>
+    <i class=""></i>
+    <h3 class="">
+        <span class="message-title">Warning</span>
+        Using this tool deletes data from the database permanently
+    </h3>
+ </section>
+ =====================================================================
+*/
+
+/**,
+*:after,
+*:before {
+  box-sizing: border-box;
+}*/
+
+.message,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.message {
+    background: #eee;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.31);
+    border-radius: 1em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    /*max-width: 40em;*/
+    margin: 1em auto 2em auto;
+    width: fit-content;
+}
+
+.message header {
+    background: #9E9E9E;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.message i:after {
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: "";
+    font-style: normal;
+    color: #eee;
+    background: #353535;
+    padding: 1em 0.75em;
+    font-size: 1.25em;
+    display: block;
+    width: 2.5em;
+    height: 100%;
+    text-align: center;
+}
+
+.message h3 {
+    margin: 0.75em;
+    font-size: 1.25em;
+    position: relative;
+    display: block;
+    width: calc(100% - 2.5em - 1.5em);
+}
+
+.message h3 span.message-title {
+    color: #9E9E9E;
+    font-weight: 700;
+}
+
+.message h3 span.message-text {
+    font-size: .8em;
+    margin-left: 5px;
+    vertical-align: unset;
+}
+
+.message h3:after {
+    content: "";
+    border-bottom: 0.1em solid #9E9E9E;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.error header {
+    background: #D50000;
+}
+
+.error i:after {
+    background: #3d1d1d;
+    color: #ff5656;
+    content: "";
+}
+
+.error h3 span.message-title {
+    color: #D50000;
+}
+
+.error h3:after {
+    border-bottom: 0.1em solid #D50000;
+}
+
+.warning header {
+    background: #FF6F00;
+}
+
+.warning i:after {
+    background: #432e1d;
+    color: #ffb780;
+    content: "";
+}
+
+.warning h3 span.message-title {
+    color: #FF6F00;
+}
+
+.warning h3:after {
+    border-bottom: 0.1em solid #FF6F00;
+}
+
+.neutral header {
+    background: #448AFF;
+}
+
+.neutral i:after {
+    background: #273243;
+    color: #c4daff;
+    content: "";
+}
+
+.neutral h3 span.message-title {
+    color: #448AFF;
+}
+
+.neutral h3:after {
+    border-bottom: 0.1em solid #448AFF;
+}
+
+.success header {
+    background: #388E3C;
+}
+
+.success i:after {
+    background: #253226;
+    color: #7bcb7e;
+    content: "";
+}
+
+.success h3 span.message-title {
+    color: #388E3C;
+}
+
+.success h3:after {
+    border-bottom: 0.1em solid #388E3C;
+}
+
+.uhm header {
+    background: #c1610d;
+}
+
+.uhm i:after {
+    background: #3a2b1f;
+    color: #f4a25a;
+    content: "";
+}
+
+.uhm h3 span.message-title {
+    color: #c1610d;
+}
+
+.uhm h3:after {
+    border-bottom: 0.1em solid #c1610d;
+}

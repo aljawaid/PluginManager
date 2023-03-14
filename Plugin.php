@@ -29,6 +29,9 @@ class Plugin extends Base
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/plugin-manager.css'));
+        if (!file_exists('plugins/ContentCleaner')) {
+            $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/messages.css'));
+        }
 
         // JS - Asset Hook
         //  - Keep filename lowercase
