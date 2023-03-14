@@ -40,4 +40,17 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
             'available_plugins' => Directory::getInstance($this->container)->getAvailablePlugins()
         )));
     }
+
+    /**
+     * Display the Manual Plugins Page
+     *
+     * @access public
+     */
+
+    public function showManualPlugins()
+    {
+        $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
+            'title' => t('Plugins').' &#10562; '.t('Manual Plugins'),
+        )));
+    }
 }
