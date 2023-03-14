@@ -5,7 +5,7 @@
         </svg>
         <?= t('Plugin Directory') ?>
     </h2>
-</div>
+
 
 <?php if (! $is_configured): ?>
 <p class="alert alert-error">
@@ -447,3 +447,4 @@
     <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
 <?php endif ?>
 
+</div>
