@@ -19,6 +19,12 @@
                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                 </svg>'.t('Plugin Info'), 'PluginManagerController', 'showPluginInfo', array('plugin' => 'PluginManager'), false, 'plugin-info-item') ?>
         </li>
+        <li <?= $this->app->checkMenuSelection('PluginManagerController', 'show') ?>>
+            <?= $this->url->link('
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
+                    <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
+                </svg>'.t('Plugin Problems'), 'PluginManagerController', 'show', array('plugin' => 'PluginManager'), false, 'plugin-problems-item') ?>
+        </li>
         <?php if (file_exists('plugins/KanboardSupport')): ?>
             <li <?= $this->app->checkMenuSelection('TechnicalSupportController', 'show') ?>>
                 <?= $this->url->link('
@@ -29,12 +35,6 @@
                     </svg>'.t('Technical Info'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support') ?>
             </li>
         <?php endif ?>
-        <li <?= $this->app->checkMenuSelection('PluginManagerController', 'show') ?>>
-            <?= $this->url->link('
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
-                    <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
-                </svg>'.t('Plugin Problems'), 'PluginManagerController', 'show', array('plugin' => 'PluginManager'), false, 'plugin-problems-item') ?>
-        </li>
         <?= $this->hook->render('template:plugin:sidebar') ?>
     </ul>
 </div>
