@@ -96,8 +96,7 @@ Compatibility
 
 #### Other Plugins & Action Plugins
 - _No known issues_
-- [KanboardSupport](https://github.com/aljawaid/KanboardSupport) integration included
-- [Glancer](https://github.com/aljawaid/Glancer) compatibility included
+- Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner)
 - Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
 #### Core Files & Templates
 - `03` Template overrides
