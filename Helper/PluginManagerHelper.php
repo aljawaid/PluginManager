@@ -3,6 +3,8 @@
 namespace Kanboard\Plugin\PluginManager\Helper;
 
 use Kanboard\Core\Base;
+use Kanboard\Core\Http\Client;
+use Kanboard\Core\Plugin\Directory;
 
 class PluginManagerHelper extends Base
 {
@@ -22,6 +24,7 @@ class PluginManagerHelper extends Base
             return false;
         }
     }
+
     public function countTypes($available_plugins)
     {
         $types = array();
@@ -36,5 +39,18 @@ class PluginManagerHelper extends Base
         }
         $count_types = array_count_values($types);
         return $count_types;
+    }
+
+    public function getAllPlugins($url = PLUGIN_API_URL)
+    {
+        $manual_plugins = $this->httpClient->getJson($url);
+        $manual_plugins = array_filter($manual_plugins, array($this, 'isNotInstallable'));
+        return $manual_plugins;
+
+    }
+
+    public function isNotInstallable(array $plugin)
+    {
+        return $plugin['remote_install'] == false;
     }
 }
