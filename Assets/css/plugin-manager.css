@@ -390,6 +390,16 @@ td .btn-uninstall:hover a {
     padding-bottom: .5em;
 }
 
+.plugin-dir-last-updated {
+    float: left;
+    margin-bottom: 4px;
+    margin-top: 3px;
+    padding: 2px 4px 1px 0;
+    font-weight: 400;
+    color: var(--pp-grey);
+    font-style: italic;
+}
+
 #PluginTop {
     display: block;
     right: 0;
