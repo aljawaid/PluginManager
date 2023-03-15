@@ -50,7 +50,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function showManualPlugins()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
-            'title' => t('Plugins').' &#10562; '.t('Manual Plugins'),
+            'title' => t('Manual Plugins'),
         )));
     }
 }
