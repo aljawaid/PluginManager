@@ -80,6 +80,8 @@
     top: 2px;
     position: relative;
     pointer-events: none;
+    width: 23px;
+    height: 23px;
 }
 
 .pm-page-margin {
