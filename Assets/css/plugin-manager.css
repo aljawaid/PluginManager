@@ -705,6 +705,13 @@ a.download-archive, a.download-archive:link, a.download-archive:visited {
     transition: var(--transition-pm);
 }
 
+.download-archive svg {
+    vertical-align: bottom;
+    margin-right: 4px;
+    margin-left: 1px;
+    pointer-events: none;
+}
+
 th.plugin-structure, th.plugin-status, th.plugin-last-updated {
     border-bottom: 0 !important;
     font-weight: 600;
