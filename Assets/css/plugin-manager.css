@@ -655,6 +655,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
     border: 2px solid var(--pp-grey);
     border-radius: var(--border-radius-pm);
     background-color: var(--pp-orange);
+    transition: var(--transition-pm);
 }
 
 a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
@@ -663,6 +664,7 @@ a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
     padding: 3px 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
+    transition: var(--transition-pm);
 }
 
 .install-plugin:hover, .update-plugin:hover {
