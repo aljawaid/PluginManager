@@ -16,6 +16,10 @@ Features
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 - Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
 - Clean coded icons - no images
+- NEW: Manual Plugins Page
+  - Show a list of plugins which can be manually downloaded and installed
+  - Manual Plugins are part or completely functional but not suitable for general Kanboard installation
+  - These plugins only show in PluginManager
 
 
 **Plugin Manager**
