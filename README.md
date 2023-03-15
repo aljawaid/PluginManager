@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins and a new plugin structure breakdown for each plugin.
+Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
 
 Features
@@ -16,10 +16,6 @@ Features
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 - Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
 - Clean coded icons - no images
-- NEW: Manual Plugins Page
-  - Show a list of plugins which can be manually downloaded and installed
-  - Manual Plugins are part or completely functional but not suitable for general Kanboard installation
-  - These plugins only show in PluginManager
 
 
 **Plugin Manager**
@@ -34,7 +30,6 @@ Features
 - Show Kanboard compatible version if set
 - Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
 - Show plugin installation date
-
 
 **Plugin Directory**
 - NEW: Show plugin structure
@@ -56,6 +51,16 @@ Features
 - Highlight last updated dates to reflect the development activity of a plugin
 - Show plugin totals by type
 - Show link to installed plugin
+
+**Manual Plugins**
+- NEW: Show plugins which have not been released
+- Manual Plugins are part or completely functional but not suitable for general Kanboard installation
+- Show a list of plugins which can be manually downloaded and installed
+- These plugins only show in PluginManager
+
+**Plugin Info**
+- A page detailing the breakdown of a plugin with valuable information about core components of a Kanboard plugin
+- Details explaining the plugin structure as displayed in the _Plugin Directory_ and _Plugin Manager_ pages
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
