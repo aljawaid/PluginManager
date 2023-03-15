@@ -650,7 +650,7 @@ td a.install-plugin, td a.update-plugin {
 
 a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
     color: var(--pp-white);
-    font-weight: bold;
+    font-weight: 600;
     padding: 3px 5px;
     border: 2px solid var(--pp-grey);
     border-radius: var(--border-radius-pm);
@@ -659,7 +659,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
 
 a.install-plugin, a.install-plugin:link, a.install-plugin:visited {
     color: var(--link-color-pm);
-    font-weight: bold;
+    font-weight: 600;
     padding: 3px 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
