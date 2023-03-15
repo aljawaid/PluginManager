@@ -57,6 +57,7 @@ Features
 - Manual Plugins are part or completely functional but not suitable for general Kanboard installation
 - Show a list of plugins which can be manually downloaded and installed
 - These plugins only show in PluginManager
+- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
 
 **Plugin Info**
 - A page detailing the breakdown of a plugin with valuable information about core components of a Kanboard plugin
@@ -79,6 +80,10 @@ Screenshots
 **Plugin Directory**
 
 ![Plugin Directory](../master/Screenshots/screenshot-plugin-directory-main.png "View more screenshots of this plugin using the link below")
+
+**Manual Plugins**
+
+![Manual Plugins](../master/Screenshots/screenshot-manual-plugins.png "View more screenshots of this plugin using the link below")
 
 **Plugin Problems**
 
