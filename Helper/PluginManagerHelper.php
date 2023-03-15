@@ -53,4 +53,31 @@ class PluginManagerHelper extends Base
     {
         return $plugin['remote_install'] == false;
     }
+
+    public function lastUpdatedDirectory()
+    {
+        // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
+        $curl = curl_init(PLUGIN_API_URL);
+
+        //don't fetch the actual page, you only want headers
+        curl_setopt($curl, CURLOPT_NOBODY, true);
+
+        //stop it from outputting stuff to stdout
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        // attempt to retrieve the modification date
+        curl_setopt($curl, CURLOPT_FILETIME, true);
+
+        $result = curl_exec($curl);
+
+        if ($result === false) {
+            die (curl_error($curl));
+        }
+
+        $timestamp = curl_getinfo($curl, CURLINFO_FILETIME);
+
+        if ($timestamp != -1) { //otherwise unknown
+            return date("d F Y H:i", $timestamp); //etc
+        }
+    }
 }
