@@ -730,6 +730,10 @@ table.available-plugins-table:last-of-type {
     margin-bottom: 0;
 }
 
+.available-plugins-table {
+    border-collapse: unset;
+}
+
 .date-toggle:not(span) {
     cursor: pointer;
 }
@@ -1006,10 +1010,6 @@ figure.notice a, figure.notice a:visited {
     margin: auto 0 auto 0;
     height: 40px;
     align-items: end;
-}
-
-.available-plugins-table {
-    border-collapse: unset;
 }
 
 .available-plugin-description code, code.code {
