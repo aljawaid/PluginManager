@@ -18,6 +18,7 @@ return array(
     'Plugin Directory' => '',
     'Plugin Problems' => '',
     'Plugin Info' => '',
+    'Manual Plugins' => '',
     //
     // plugin/show.php
     //
@@ -59,6 +60,7 @@ return array(
     'Custom Directory' => '',
     'Filter Available Plugins' => '',
     'Search available plugins' => '',
+    'Directory Last Updated' => '',
     'General Plugin' => '',
     'General' => '',
     'Action Plugin' => '',
@@ -151,7 +153,7 @@ return array(
     'Hooks are files which attach to existing templates or core functions. Hooks do not alter any core structure but add to it.' => '',
     'No hooks are detected when this icon shows.' => '',
     //
-    // helper/AgeHelp.php
+    // helper/AgeHelper.php
     //
     'less than a minute ago' => '',
     'less than 5 minutes ago' => '',
@@ -236,4 +238,12 @@ return array(
     'Developing Plugins' => '',
     'Source Code' => '',
     'Kanboard Plugins' => '',
+    //
+    // plugin/manual-plugins.php
+    //
+    'Warning' => '',
+    'Use these plugins with great caution and check their functionality with the plugin developer before installing' => '',
+    'Download Plugin' => '',
+    'Download' => '',
+    'There are no manual plugins listed at the moment' => '',
 );
