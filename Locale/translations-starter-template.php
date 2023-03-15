@@ -4,7 +4,7 @@ return array(
     //
     // GENERAL
     //
-    'Replace the Installed Plugins section within the Kanboard interface with a new Plugin Manager and revamped Plugins Directory. Plugin Manager provides both users and developers with an improved comprehensive interface displaying a new section for troubleshooting plugins, breaking them down into types and new indicators for each plugin.' => '',
+    'Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.' => '',
     'Plugins' => '',
     'Support' => '',
     'Technical Information' => '',
