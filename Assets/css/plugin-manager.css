@@ -1176,3 +1176,17 @@ td span.install-date {
 #TypesOfPlugins, #PluginStructure {
     font-weight: 600;
 }
+
+.manual-plugin-count {
+    vertical-align: super;
+    font-size: .6em;
+    margin-left: 3px;
+    padding: 0px 4px;
+    border: 1px solid #d50000;
+    border-radius: var(--border-radius-pm);
+    background-color: #D50000;
+    color: var(--pp-white);
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+}
