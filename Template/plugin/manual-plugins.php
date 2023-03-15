@@ -18,7 +18,7 @@
             </h3>
         </section>
         <?php foreach ($this->helper->pluginManagerHelper->getAllPlugins() as $plugin): ?>
-            <table class="available-plugins-table">
+            <table class="manual-plugins-table available-plugins-table">
             <tr class="">
                 <th class="available-plugins-author" colspan="2">
                     <?php if (isset($plugin['is_type'])): ?>

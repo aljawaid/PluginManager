@@ -728,6 +728,10 @@ table.available-plugins-table {
     border-radius: 5px;
 }
 
+table.manual-plugins-table {
+    border-color: #d50000;
+}
+
 table.available-plugins-table:last-of-type {
     margin-bottom: 0;
 }
