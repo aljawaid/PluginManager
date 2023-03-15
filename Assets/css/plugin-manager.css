@@ -1039,6 +1039,10 @@ code.code {
     pointer-events: none;
 }
 
+.plugin-problems-section h3 span {
+    font-weight: 600;
+}
+
 .plugin-problems-section .panel {
     border-radius: var(--border-radius-pm);
     padding: 10px 35px 8px 10px;
@@ -1152,4 +1156,8 @@ td span.install-date {
 
 .structure-icon-wrapper {
     display: flex;
+}
+
+#TypesOfPlugins, #PluginStructure {
+    font-weight: 600;
 }
