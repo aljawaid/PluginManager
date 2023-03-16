@@ -494,8 +494,9 @@ td .btn-uninstall:hover a {
 }
 
 .plugin-dir-url {
-    font-weight: 300;
+    font-weight: 400;
     cursor: context-menu;
+    color: var(--pp-grey);
 }
 
 .kb-app-version {
