@@ -142,19 +142,9 @@
                 <td class="column-40 available-plugins-title">
                     <?= $this->text->e($plugin['title']) ?>
                 </td>
-                    <?php if (! isset($installed_plugins[$plugin['title']])): ?>
-                        <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
-                            <?= $this->text->e($plugin['version']) ?>
-                        </td>
-                    <?php elseif ($installed_plugins[$plugin['title']] < $plugin['version']): ?>
-                        <td class="available-plugin-version font-weight-bold" title="<?= t('Updated plugin version available') ?>">
-                            <?= $this->text->e($plugin['version']) ?>
-                        </td>
-                    <?php else: ?>
-                        <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
-                            <?= $this->text->e($plugin['version']) ?>
-                        </td>
-                    <?php endif ?>
+                <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
+                    <?= $this->text->e($plugin['version']) ?>
+                </td>
                 <td class="date-toggle available-plugin-last-updated">
                     <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
                         <?php
