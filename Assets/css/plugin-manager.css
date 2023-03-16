@@ -1197,3 +1197,22 @@ td span.install-date {
     line-height: 16px;
     display: inline-block;
 }
+
+.manual-plugin-note {
+    font-size: .9em;
+    color: var(--pp-grey);
+    border-color: #D50000;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+td.manual-plugin-note.developer-plugin {
+    background-color: rgba(213, 0, 0, .3);
+    color: #8B0000;
+}
+.manual-plugin-note svg.warning {
+    color: #FF6500;
+    pointer-events: none;
+    vertical-align: sub;
+}
