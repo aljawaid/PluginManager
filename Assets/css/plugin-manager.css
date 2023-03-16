@@ -525,6 +525,7 @@ th.available-plugins-author {
     font-weight: normal;
     font-style: italic;
     font-size: 0.9em;
+    border-bottom: 0;
 }
 
 .available-plugins-author svg.bi-code-square {
@@ -740,16 +741,24 @@ table.available-plugins-table > tbody > tr:last-child > td:last-child, table.ava
 }
 
 table.available-plugins-table {
-    border: 2px solid var(--pp-grey);
+    border: 2px outset var(--pp-grey);
     border-radius: 5px;
 }
 
 table.manual-plugins-table {
-    border-color: #d50000;
+    border-color: #D50000;
+    border-style: outset;
 }
 
 table.available-plugins-table:last-of-type {
     margin-bottom: 0;
+}
+
+td.manual-plugin-description {
+    border-color: #D50000;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 }
 
 .available-plugins-table {
@@ -1189,7 +1198,7 @@ td span.install-date {
     font-size: .6em;
     margin-left: 3px;
     padding: 0px 4px;
-    border: 1px solid #d50000;
+    border: 1px solid #D50000;
     border-radius: var(--border-radius-pm);
     background-color: #D50000;
     color: var(--pp-white);
@@ -1211,6 +1220,62 @@ td.manual-plugin-note.developer-plugin {
     background-color: rgba(213, 0, 0, .3);
     color: #8B0000;
 }
+
+.manual-plugins-table th.available-plugins-author {
+    position: relative;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+    background: var(--pp-white);
+    border-color: #D50000;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.manual-plugins-table td.available-plugins-title {
+    border-color: #D50000;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.manual-plugins-table td.available-plugin-version {
+    border-color: #D50000;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.manual-plugins-table .available-plugin-last-updated, .manual-plugins-table .available-plugin-structure {
+    border-color: #D50000;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.manual-plugins-table .plugin-last-updated, .manual-plugins-table .plugin-structure {
+    border-color: #D50000;
+    border-left: 0;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.manual-plugins-table .available-plugin-status, .manual-plugins-table .plugin-status {
+    border: 0;
+}
+
+.manual-plugins-table .plugin-status {
+    padding-bottom: 0;
+}
+
+.manual-plugins-table .available-plugin-status {
+    padding-top: 0;
+}
+
+td.manual-plugin-description .markdown p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 .manual-plugin-note svg.warning {
     color: #FF6500;
     pointer-events: none;

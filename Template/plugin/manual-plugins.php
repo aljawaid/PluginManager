@@ -265,7 +265,7 @@
                 </td>
             </tr>
             <tr class="">
-                <td class="available-plugin-description" colspan="5">
+                <td class="manual-plugin-description" colspan="5">
                     <div class="markdown">
                         <?= $this->text->markdown($plugin['description']) ?>
                     </div>
