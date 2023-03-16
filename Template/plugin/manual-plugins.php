@@ -7,7 +7,6 @@
         </svg>
         <?= t('Manual Plugins') ?> <span class="manual-plugin-count"><?= count($this->helper->pluginManagerHelper->getAllPlugins()) ?></span>
     </h2>
-
     <?php if (!empty($this->helper->pluginManagerHelper->getAllPlugins())): ?>
         <section class="message error cleaner-warning">
             <header></header>
@@ -17,6 +16,10 @@
                 <span class="message-text"><?= t('Use these plugins with great caution and check their functionality with the plugin developer before installing') ?></span>
             </h3>
         </section>
+        <?php
+            $manualPlugins = $this->helper->pluginManagerHelper->getAllPlugins();
+            usort($manualPlugins, fn ($a, $b) => strtolower($a['title']) <=> strtolower($b['title']));
+        ?>
         <?php foreach ($this->helper->pluginManagerHelper->getAllPlugins() as $plugin): ?>
             <table class="manual-plugins-table available-plugins-table">
             <tr class="">
