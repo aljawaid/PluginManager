@@ -245,5 +245,7 @@ return array(
     'Use these plugins with great caution and check their functionality with the plugin developer before installing' => 'Use these plugins with great caution and check their functionality with the plugin developer before installing',
     'Download Plugin' => 'Download Plugin',
     'Download' => 'Download',
+    'This plugin is for developers' => 'This plugin is for developers',
+    'This plugin is for translators and developers' => 'This plugin is for translators and developers',
     'There are no manual plugins listed at the moment' => 'There are no manual plugins listed at the moment',
 );

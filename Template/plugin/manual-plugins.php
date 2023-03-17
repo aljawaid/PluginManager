@@ -274,11 +274,11 @@
             <tr class="">
                 <?php if ($this->text->e($plugin['title']) == 'KanboardSkeletonPlugin'): ?>
                     <td class="manual-plugin-note developer-plugin" colspan="5">
-                        <?= t('This is a plugin for developers') ?>
+                        <?= t('This plugin is for developers') ?>
                     </td>
                 <?php elseif ($this->text->e($plugin['title']) == 'php_Translation_Helper' || $this->text->e($plugin['title']) == 'PHP Translation Helper'): ?>
                     <td class="manual-plugin-note developer-plugin" colspan="5">
-                        <?= t('This is a plugin for translators and developers') ?>
+                        <?= t('This plugin is for translators and developers') ?>
                     </td>
                 <?php else: ?>
                     <td class="manual-plugin-note" colspan="5">
