@@ -1264,11 +1264,11 @@ td.manual-plugin-note.developer-plugin {
     border: 0;
 }
 
-.manual-plugins-table .plugin-status {
+.manual-plugins-table .plugin-last-updated, .manual-plugins-table .plugin-structure, .manual-plugins-table .plugin-status {
     padding-bottom: 0;
 }
 
-.manual-plugins-table .available-plugin-status {
+.manual-plugins-table .available-plugin-structure, .manual-plugins-table .available-plugin-status {
     padding-top: 0;
 }
 
