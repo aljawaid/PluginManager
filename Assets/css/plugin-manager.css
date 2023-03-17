@@ -742,7 +742,7 @@ table.available-plugins-table > tbody > tr:last-child > td:last-child, table.ava
 }
 
 table.available-plugins-table {
-    border: 2px outset var(--pp-grey);
+    border: 2px outset var(--blue-border-gradient-match);
     border-radius: 5px;
 }
 
@@ -1281,4 +1281,57 @@ td.manual-plugin-description .markdown p {
     color: #FF6500;
     pointer-events: none;
     vertical-align: sub;
+}
+
+#AvailablePluginsTable th.available-plugins-author {
+    background: var(--pp-white);
+    border-color: var(--blue-border-gradient-match);
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#AvailablePluginsTable td.available-plugins-title {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: var(--blue-border-gradient-match);
+}
+
+#AvailablePluginsTable td.available-plugin-version {
+    border-left: 0;
+    border-bottom: 0;
+    border-color: var(--blue-border-gradient-match);
+}
+
+#AvailablePluginsTable .available-plugin-last-updated, #AvailablePluginsTable .available-plugin-structure {
+    border-color: var(--blue-border-gradient-match);
+    border-left: 0;
+    border-bottom: 0;
+}
+
+#AvailablePluginsTable .plugin-last-updated, #AvailablePluginsTable .plugin-structure {
+    border-color: var(--blue-border-gradient-match);
+    border-left: 0;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+#AvailablePluginsTable td.available-plugin-description {
+    border-color: var(--blue-border-gradient-match);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+#AvailablePluginsTable .available-plugin-status, #AvailablePluginsTable .plugin-status {
+    border: 0;
+}
+
+#AvailablePluginsTable .plugin-status, #AvailablePluginsTable .plugin-structure, #AvailablePluginsTable .plugin-last-updated {
+    padding-bottom: 0;
+}
+
+#AvailablePluginsTable .available-plugin-status, #AvailablePluginsTable .available-plugin-structure {
+    padding-top: 0;
 }
