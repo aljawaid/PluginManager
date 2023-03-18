@@ -16,6 +16,11 @@
                 <span class="message-text"><?= t('Use these plugins with great caution and check their functionality with the plugin developer before installing') ?></span>
             </h3>
         </section>
+        <div class="top-detail-bar">
+            <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action">
+                <i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?>
+            </a>
+        </div>
         <?php
             $manualPlugins = $this->helper->pluginManagerHelper->getAllPlugins();
             usort($manualPlugins, fn ($a, $b) => strtolower($a['title']) <=> strtolower($b['title']));
@@ -291,6 +296,9 @@
             </tr>
         </table>
         <?php endforeach ?>
+        <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action">
+            <i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?>
+        </a>
     <?php else: ?>
         <?= t('There are no manual plugins listed at the moment') ?>
     <?php endif ?>
