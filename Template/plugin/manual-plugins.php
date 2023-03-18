@@ -17,6 +17,9 @@
             </h3>
         </section>
         <div class="top-detail-bar">
+            <div class="plugin-dir-last-updated">
+                <?= t('Directory Last Updated') ?>: <?=$this->helper->pluginManagerHelper->lastUpdatedDirectory() ?>
+            </div>
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action">
                 <i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?>
             </a>
