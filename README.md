@@ -16,6 +16,7 @@ Features
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 - Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
 - Clean coded icons - no images
+- Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) from the PluginManager sidebar
 
 
 **Plugin Manager**

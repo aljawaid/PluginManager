@@ -166,6 +166,19 @@
     pointer-events: none;
 }
 
+#PluginMenu li .plugin-content-cleaner-item svg {
+    display: block;
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+#PluginMenu li.content-cleaner-menu-link {
+    padding-top: 0;
+}
+
 .plugin-count {
     font-style: italic;
 }
