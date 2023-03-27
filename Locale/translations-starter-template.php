@@ -16,9 +16,11 @@ return array(
     //
     'Plugin Manager' => '',
     'Plugin Directory' => '',
-    'Plugin Problems' => '',
-    'Plugin Info' => '',
     'Manual Plugins' => '',
+    'Plugin Info' => '',
+    'Plugin Problems' => '',
+    'Technical Info' => '',
+    'Content Cleaner' => '',
     //
     // plugin/show.php
     //
