@@ -48,7 +48,9 @@ return array(
     'Readme' => '',
     'Go to the top of the page' => '',
     'Top' => '',
-    'Installed' => 'Installed',
+    'Installed' => '',
+    'Copy to Clipboard' => '',
+    'Copy List' => '',
     //
     // plugin/directory.php
     //
