@@ -91,7 +91,7 @@ $( document ).ready(function() {
         }, 3500);
     });
     clipboard.on('error', function(e) {
-        $(e.trigger).html("<strong>&#10008;</strong>");
+        $(e.trigger).html("<strong style='font-size:28px; line-height: 1.2;'>&#10008;</strong>");
         console.info('Action:', e.action);
         console.info('Text:', e.text);
         console.info('Trigger:', e.trigger);
