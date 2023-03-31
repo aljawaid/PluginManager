@@ -181,6 +181,33 @@
 
 .plugin-count {
     font-style: italic;
+    display: inline-block;
+}
+
+.plugin-list-clipboard {
+    position: absolute;
+    right: 0;
+    top: -7px;
+}
+
+.plugin-list-clipboard span svg {
+    pointer-events: none;
+}
+
+.copy-installed-list-format {
+    background-color: var(--pp-green-dark);
+    color: var(--pp-white);
+    border: 1px solid var(--pp-green-dark);
+    border-radius: var(--border-radius-pm);
+    padding-right: 5px;
+    padding-bottom: 0;
+    transition: var(--transition-pm);
+    width: 30px;
+}
+
+.copy-installed-list-format:hover {
+    border-color: var(--pp-green-dark);
+    color: var(--pp-green-dark);
 }
 
 .plugin-installed-filter {

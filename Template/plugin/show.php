@@ -57,7 +57,7 @@ function sortPlugins(&$arr) {
 <?php if (empty($plugins)): ?>
     <p class="alert pm-page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
-    <div class="pm-page-margin">
+    <div class="pm-page-margin relative">
         <?php $installedCount = count($plugins) ?>
         <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
         <div class="plugin-list-clipboard">
