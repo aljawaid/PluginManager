@@ -51,6 +51,8 @@ return array(
     'Installed' => 'Installed',
     'Copy to Clipboard' => 'Copy to Clipboard',
     'Copy List' => 'Copy List',
+    'by' => 'by',
+    'Copy plugin list' => 'Copy plugin list',
     //
     // plugin/directory.php
     //
