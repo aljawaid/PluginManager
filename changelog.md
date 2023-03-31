@@ -1,6 +1,36 @@
 # Changelog
 
 
+## v2.0
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- NEW: Copy Installed Plugins List to Clipboard - List output shows plugin name, version and author - fixes #38
+- NEW: Add ContentCleaner Link in Sidebar
+- NEW: Show Last Updated for Manual Plugins
+- FIX: Remove CSS ID
+- FIX: Restyle Borders - Available Plugins
+- FIX: Disabled URL Color Consistency
+- NEW: Add Manual Plugin Count
+- FIX: Download Button for Manual Plugins
+- NEW: Add Smooth Transition to Install/Update Buttons
+- FIX: Button Styling - Font
+- FIX: Page Title Consistence- for Manual Plugins
+- FIX: Manual Plugins Menu Order
+- FIX: Section Titles Styling
+- FIX: Update Plugin Description
+- NEW: Show Last Updated for Extensions Directory
+- FIX: Page Header Icon Size
+- NEW: Pull ALL Plugins for Manual Plugins Page
+- NEW: Add Manual Plugins Page
+- NEW: Add Alert Message Box
+- FIX: Page Margins for Directory Page
+- Revert FIX: Page Header Left Margin
+- FIX: Menu Order
+- FIX: Page Header Left Margin
+
+
 ## v1.8
 
 ### What's Changed
