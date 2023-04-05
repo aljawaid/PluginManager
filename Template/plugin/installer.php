@@ -5,7 +5,7 @@
             array('plugin' => 'PluginManager'))?> ' enctype='multipart/form-data' autocomplete='off' >
         <?= $this->form->csrf() ?>
         <?= $this->form->label(t('From File'), 'pluginfile') ?>
-        <?= $this->form->file('pluginfile') ?>
+        <input type='file' accept='application/zip' name='pluginfile' id='form-pluginfile'>
         <?= $this->form->label(t('From URL'), 'pluginfile') ?>
         <input type='url' id='plugin_url' name='plugin_url' placeholder='https://whatever/plugin.zip'/>
         <div class="form-actions">
