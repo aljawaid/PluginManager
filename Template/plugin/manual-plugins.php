@@ -7,6 +7,7 @@
         </svg>
         <?= t('Manual Plugins') ?> <span class="manual-plugin-count"><?= count($this->helper->pluginManagerHelper->getAllPlugins()) ?></span>
     </h2>
+    <?= $this->render('PluginManager:plugin/installer') ?>
     <?php if (!empty($this->helper->pluginManagerHelper->getAllPlugins())): ?>
         <section class="message error cleaner-warning">
             <header></header>
