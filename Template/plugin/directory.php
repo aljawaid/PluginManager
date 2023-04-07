@@ -175,7 +175,7 @@
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         </div>
         <?php foreach ($available_plugins as $plugin): ?>
-        <table class="available-plugins-table">
+        <table id="Plugin-<?= preg_replace('/\s+/', '',($this->text->e($plugin['title']))) ?>" class="available-plugins-table">
             <tr class="">
                 <th class="available-plugins-author" colspan="2">
                     <?php if (isset($plugin['is_type'])): ?>
