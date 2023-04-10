@@ -260,7 +260,7 @@
 #InstalledPluginsTable > tbody > tr > td {
     border: 0 !important;
     padding: 4px 15px;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
 }
 
 #InstalledPluginsTable > thead > tr > th {
@@ -319,7 +319,9 @@
     vertical-align: middle;
     display: inline-block;
     color: var(--pp-orange);
-    /*margin: auto 2px;*/
+    margin: auto 2px;
+    flex: 1;
+    height: 15px;
 }
 
 .plugin-homepage, .plugin-readme, .has-schema, .has-overrides {
@@ -327,6 +329,7 @@
     margin: 2px;
     height: 18px;
     /*display: inline-block;*/
+    flex: 1 0;
 }
 
 .has-hooks {
@@ -361,7 +364,7 @@
 
 .plugin-action {
     width: 120px;
-    /*display: inline;*/
+    display: flex;
     padding: 4px 0 4px 0 !important;
 }
 
