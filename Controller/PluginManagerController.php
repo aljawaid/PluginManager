@@ -56,7 +56,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
         try {
             $installer = new Installer($this->container);
             $installer->install($archiveUrl);
-            $this->flash->success(t('Plugin installed successfully.'));
+            $this->flash->success(t('Plugin installed successfully'));
         } catch (PluginInstallerException $e) {
             $this->flash->failure($e->getMessage());
         }
@@ -74,27 +74,27 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
 
             try {
                 if ($zip->open($archiveFile) !== true) {
-                    throw new PluginInstallerException(t('Unable to open plugin archive.'));
+                    throw new PluginInstallerException(t('Unable to open plugin archive'));
                 }
 
                 if ($zip->numFiles === 0) {
-                    throw new PluginInstallerException(t('There is no file in the plugin archive.'));
+                    throw new PluginInstallerException(t('There is no file in the plugin archive'));
                 }
 
                 if (!$zip->extractTo(PLUGINS_DIR)) {
                     $zip->close();
-                    throw new PluginInstallerException(t('Unable to extract plugin archive.'));
+                    throw new PluginInstallerException(t('Unable to extract plugin archive'));
                 }
 
                 $zip->close();
-                $this->flash->success(t('Plugin installed successfully.'));
+                $this->flash->success(t('Plugin installed successfully'));
             } catch (PluginInstallerException $e) {
                 $this->flash->failure($e->getMessage());
             }
 
             unlink($archiveFile);
         } else {
-            $this->flash->failure(t('Plugin archive file not found.'));
+            $this->flash->failure(t('Plugin archive file not found'));
         }
     }
 

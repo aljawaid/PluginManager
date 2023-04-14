@@ -12,6 +12,15 @@ return array(
     'Installed Plugins' => 'Plugin Manager',
     ' Installed Plugins' => 'Installed Plugins',
     //
+    // Controller/PluginManagerController.php
+    //
+    'Plugin installed successfully' => 'Plugin installed successfully',
+    'Unable to open plugin archive' => 'Unable to open plugin archive',
+    'There is no file in the plugin archive' => 'There is no file in the plugin archive',
+    'Unable to extract plugin archive' => 'Unable to extract plugin archive',
+    'Plugin installed successfully' => 'Plugin installed successfully',
+    'Plugin archive file not found' => 'Plugin archive file not found',
+    //
     // plugin/sidebar.php
     //
     'Plugin Manager' => 'Plugin Manager',
@@ -104,6 +113,12 @@ return array(
     'Currently Installed' => 'Currently Installed',
     'Updated plugin version available' => 'Updated plugin version available',
     'View in Plugin Manager' => 'View in Plugin Manager',
+    //
+    // plugin/directory.php
+    //
+    'Manually Install Plugin' => 'Manually Install Plugin',
+    'From File' => 'From File',
+    'From URL' => 'From URL',
     //
     // info/db-info.php
     //
