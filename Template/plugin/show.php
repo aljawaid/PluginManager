@@ -77,7 +77,7 @@ function sortPlugins(&$arr) {
                     <path d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
                 </svg>
             </label>
-            <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
+            <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for installed plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
         </form>
         <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         <table id="InstalledPluginsTable" class="installed-plugins">

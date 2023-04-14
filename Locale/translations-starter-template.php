@@ -34,7 +34,7 @@ return array(
     'There is no plugin loaded.' => '',
     'You have %s plugins installed' => '',
     'Filter Installed Plugins' => '',
-    'Search for plugin...' => '',
+    'Search for installed plugin...' => '',
     'Search installed plugins' => '',
     'Go to the bottom of the page' => '',
     'Bottom' => '',
