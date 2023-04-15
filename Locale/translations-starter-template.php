@@ -17,6 +17,7 @@ return array(
     'Plugin installed successfully' => '',
     'Unable to open plugin archive' => '',
     'There is no file in the plugin archive' => '',
+    'This file is not recognised as a plugin' => '',
     'Unable to extract plugin archive' => '',
     'Plugin installed successfully' => '',
     'Plugin archive file not found' => '',
