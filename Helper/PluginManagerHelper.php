@@ -56,28 +56,36 @@ class PluginManagerHelper extends Base
 
     public function lastUpdatedDirectory()
     {
-        // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
-        $curl = curl_init(PLUGIN_API_URL);
+        $curlCheck = $this->httpClient->backend();
 
-        //don't fetch the actual page, you only want headers
-        curl_setopt($curl, CURLOPT_NOBODY, true);
 
-        //stop it from outputting stuff to stdout
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        if ($curlCheck == 'cURL') {
+            // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
+            $curl = curl_init(PLUGIN_API_URL);
 
-        // attempt to retrieve the modification date
-        curl_setopt($curl, CURLOPT_FILETIME, true);
+            //don't fetch the actual page, you only want headers
+            curl_setopt($curl, CURLOPT_NOBODY, true);
 
-        $result = curl_exec($curl);
+            //stop it from outputting stuff to stdout
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        if ($result === false) {
-            die (curl_error($curl));
-        }
+            // attempt to retrieve the modification date
+            curl_setopt($curl, CURLOPT_FILETIME, true);
 
-        $timestamp = curl_getinfo($curl, CURLINFO_FILETIME);
+            $result = curl_exec($curl);
 
-        if ($timestamp != -1) { //otherwise unknown
-            return date("d F Y H:i", $timestamp); //etc
+            if ($result === false) {
+                die (curl_error($curl));
+            }
+
+            $timestamp = curl_getinfo($curl, CURLINFO_FILETIME);
+
+            if ($timestamp != -1) { //otherwise unknown
+                return date("d F Y H:i", $timestamp); //etc
+            }
+
+        } else {
+            return t('Not Available');
         }
     }
 }
