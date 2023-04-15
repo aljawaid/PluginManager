@@ -69,7 +69,7 @@
 
 .pm-page-header h2 {
     border-bottom: 2px outset var(--blue-border-gradient-match) !important;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding-bottom: 5px;
     font-size: 1.6em;
     padding-top: 5px;
@@ -1377,4 +1377,60 @@ td.manual-plugin-description .markdown p {
 
 #AvailablePluginsTable .available-plugin-status, #AvailablePluginsTable .available-plugin-structure {
     padding-top: 0;
+}
+
+.install-section {
+    display: inline-block;
+}
+
+.install-section label {
+    font-weight: 600;
+}
+
+input.plugin-file[type="file"] {
+    min-width: 300px;
+    margin-right: 10px;
+}
+
+input.plugin-file[type="file"]::file-selector-button {
+  border: 1px solid var(--pp-grey);;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: var(--pp-light-grey);
+  transition: var(--transition-pm);
+}
+
+input.plugin-file[type="file"]::-ms-browse:hover {
+  background-color: RGB(213, 0, 0, .6);
+  border: 1px solid var(--pp-grey);;
+}
+
+input.plugin-file[type="file"]::-webkit-file-upload-button:hover {
+  background-color: RGB(213, 0, 0, .6);
+  border: 1px solid var(--pp-grey);;
+}
+
+input.plugin-file[type="file"]::file-selector-button:hover {
+  background-color: RGB(213, 0, 0, .6);
+  border: 1px solid var(--pp-grey);;
+}
+
+
+input.plugin-url[type="url"] {
+    color: var(--pp-black);
+    border: 1px solid #D50000;
+    width: 600px;
+    max-width: 95%;
+    font-size: 1em;
+    height: 25px;
+    padding-bottom: 0;
+    padding-left: 4px;
+    font-family: sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+fieldset.manual-install {
+    border: 1px solid #D50000;
+    border-radius: var(--border-radius-pm);
 }
