@@ -12,7 +12,7 @@
             <?= $this->form->input('url', 'plugin_url', $values, array(), array('id="plugin_url" placeholder="https://mydomain.com/plugin.zip"'), 'plugin-url') ?>
         </section>
         <div class="form-actions">
-            <button type="submit" class="btn btn-blue"><?= t('Install') ?></button>
+            <button type="submit" class="btn install-plugin-btn install-plugin"><i class="fa fa-cloud-download"></i><?= t('Install') ?></button>
         </div>
     </form>
 </fieldset>
