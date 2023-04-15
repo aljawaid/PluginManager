@@ -1,6 +1,6 @@
 # Plugin Manager
 
-#### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
+#### _Plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
@@ -54,11 +54,11 @@ Features
 - Show link to installed plugin
 
 **Manual Plugins**
-- NEW: Show plugins which have not been released
+- Manually install plugins from local archive files or remote locations
 - Manual Plugins are part or completely functional but not suitable for general Kanboard installation
 - Show a list of plugins which can be manually downloaded and installed
+- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins
 - These plugins only show in PluginManager
-- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
 
 **Plugin Info**
 - A page detailing the breakdown of a plugin with valuable information about core components of a Kanboard plugin
@@ -107,7 +107,7 @@ Go to `Plugins`
 Compatibility
 -------------
 
-- Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 
 #### Other Plugins & Action Plugins
 - _No known issues_
@@ -127,7 +127,7 @@ Read the full [**Changelog**](../master/changelog.md "See changes")
 Installation
 ------------
 
-- **Install via the [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
+- **Install via the [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory**
   - _Go to:_
     - Kanboard: `Plugins` &#10562; `Plugin Directory`
 
