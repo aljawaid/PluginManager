@@ -115,12 +115,6 @@ return array(
     'Updated plugin version available' => '',
     'View in Plugin Manager' => '',
     //
-    // plugin/directory.php
-    //
-    'Manually Install Plugin' => '',
-    'From File' => '',
-    'From URL' => '',
-    //
     // info/db-info.php
     //
     'This plugin makes changes to your database, usually by adding more tables. Read more about the possible effects of this plugin.' => '',
@@ -267,7 +261,15 @@ return array(
     'Use these plugins with great caution and check their functionality with the plugin developer before installing' => '',
     'Download Plugin' => '',
     'Download' => '',
+    'Copy download link' => '',
     'This plugin is for developers' => '',
     'This plugin is for translators and developers' => '',
     'There are no manual plugins listed at the moment' => '',
+    //
+    // plugin/installer.php
+    //
+    'Manually Install Plugin' => '',
+    'From File' => '',
+    'From URL' => '',
+    'Choose to install from a local archive (.zip) file or a remote location' => '',
 );
