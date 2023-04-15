@@ -4,8 +4,8 @@
         <?= $this->form->csrf() ?>
         <p class=""><?= t('Choose to install from a local archive (.zip) file or a remote location') ?></p>
         <section class="install-section">
-            <?= $this->form->label(t('From File'), 'pluginfile') ?>
-            <input type="file" accept="application/zip" class="plugin-file" name="pluginfile" id="form-pluginfile">
+            <?= $this->form->label(t('From File'), 'plugin_file') ?>
+            <?= $this->form->input('file', 'plugin_file', $values, array(), array('id="form-pluginfile" accept="application/zip"'), 'plugin-file') ?>
         </section>
         <section class="install-section">
             <?= $this->form->label(t('From URL'), 'plugin_url') ?>

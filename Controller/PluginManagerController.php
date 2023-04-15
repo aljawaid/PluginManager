@@ -39,7 +39,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
             $this->installByURL($archiveURL);
         }
 
-        if (strlen($archiveFile = $this->request->getFilePath('pluginfile')) > 0) {
+        if (strlen($archiveFile = $this->request->getFilePath('plugin_file')) > 0) {
             $this->installByFile($archiveFile);
         }
 
