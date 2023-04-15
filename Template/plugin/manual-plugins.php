@@ -268,6 +268,12 @@
                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                             </svg> <?= t('Download') ?>
                         </a>
+                        <span class="copy-url-link-format btn" title="<?= t('Copy download link') ?>" data-clipboard-text="<?= $plugin['download'] ?>">
+                            <svg height="24px" class="clippy-icon" fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                                <title><?= t('Copy to Clipboard') ?></title>
+                                <path xmlns="http://www.w3.org/2000/svg" d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"/>
+                            </svg>
+                        </span>
                     <?php else: ?>
                         <div class="cross">&#10008;</div> <?= t('Not available') ?>
                     <?php endif ?>
