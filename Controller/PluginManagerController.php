@@ -43,7 +43,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
             $this->installByFile($archiveFile);
         }
 
-        $this->response->redirect($this->helper->url->to('PluginController', 'show'));
+        //$this->response->redirect($this->helper->url->to('PluginController', 'show'));
     }
 
     /**
@@ -56,6 +56,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
         try {
             $installer = new Installer($this->container);
             $installer->install($archiveUrl);
+            $this->response->redirect($this->helper->url->to('PluginController', 'show'));
             $this->flash->success(t('Plugin installed successfully'));
         } catch (PluginInstallerException $e) {
             $this->flash->failure($e->getMessage());
@@ -74,23 +75,28 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
 
             try {
                 if ($zip->open($archiveFile) !== true) {
+                    $this->response->redirect($this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
                     throw new PluginInstallerException(t('Unable to open plugin archive'));
                 }
 
                 if ($zip->numFiles === 0) {
+                    $this->response->redirect($this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
                     throw new PluginInstallerException(t('There is no file in the plugin archive'));
                 }
 
                 if ($zip->locateName('Plugin.php', ZipArchive::FL_NODIR) === false) {
+                    $this->response->redirect($this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
                     throw new PluginInstallerException(t('This file is not recognised as a plugin'));
                 }
 
                 if (!$zip->extractTo(PLUGINS_DIR)) {
                     $zip->close();
+                    $this->response->redirect($this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
                     throw new PluginInstallerException(t('Unable to extract plugin archive'));
                 }
 
                 $zip->close();
+                $this->response->redirect($this->helper->url->to('PluginController', 'show'));
                 $this->flash->success(t('Plugin installed successfully'));
             } catch (PluginInstallerException $e) {
                 $this->flash->failure($e->getMessage());
@@ -98,6 +104,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
 
             unlink($archiveFile);
         } else {
+            $this->response->redirect($this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
             $this->flash->failure(t('Plugin archive file not found'));
         }
     }
