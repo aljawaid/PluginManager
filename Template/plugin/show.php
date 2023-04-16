@@ -77,8 +77,13 @@ function sortPlugins(&$arr) {
             </label>
             <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for installed plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
         </form>
-        <?php $installedCount = count($plugins) ?>
-        <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
+        <?php
+        $installedCount = count($plugins);
+        $incompatibleCount = count($incompatible_plugins);
+        ?>
+        <div class="plugin-count">
+            <?= t('You have %s plugins installed', $installedCount) ?>&nbsp;<?= t('and %s incompatible plugin(s)', $incompatibleCount) ?>
+        </div>
         <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         <table id="InstalledPluginsTable" class="installed-plugins">
             <thead class="">
