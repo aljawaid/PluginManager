@@ -58,8 +58,6 @@ function sortPlugins(&$arr) {
     <p class="alert pm-page-margin"><?= t('There is no plugin loaded.') ?></p>
 <?php else: ?>
     <div class="pm-page-margin relative">
-        <?php $installedCount = count($plugins) ?>
-        <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
         <div class="plugin-list-clipboard">
             <?php sortPlugins($plugins); ?>
             <span class="copy-installed-list-format btn" title="<?= t('Copy plugin list') ?>" data-clipboard-text="<?php foreach ($plugins as $pluginFolder => $plugin): ?><?= '- '. $this->text->e($plugin->getPluginName()) .' v'. $this->text->e($plugin->getPluginVersion()) . ' ' . t('by').' ' . $this->text->e($plugin->getPluginAuthor()) . PHP_EOL ?><?php endforeach ?>">
@@ -79,6 +77,8 @@ function sortPlugins(&$arr) {
             </label>
             <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for installed plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
         </form>
+        <?php $installedCount = count($plugins) ?>
+        <div class="plugin-count"><?= t('You have %s plugins installed', $installedCount) ?></div>
         <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         <table id="InstalledPluginsTable" class="installed-plugins">
             <thead class="">
