@@ -268,7 +268,7 @@ return array(
     //
     // plugin/installer.php
     //
-    'Manually Install Plugin' => 'Manually Install Plugin',
+    'Install Manual Plugin' => 'Install Manual Plugin',
     'From File' => 'From File',
     'From URL' => 'From URL',
     'Choose to install from a local archive (.zip) file or a remote location' => 'Choose to install from a local archive (.zip) file or a remote location',

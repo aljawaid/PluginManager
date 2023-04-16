@@ -1,5 +1,5 @@
 <fieldset class="manual-install">
-    <legend><?= t('Manually Install Plugin') ?></legend>
+    <legend><?= t('Install Manual Plugin') ?></legend>
     <form method="post" class="file-url-form" action="<?=$this->url->href('PluginManagerController', 'installPlugin', array('plugin' => 'PluginManager'))?>" enctype="multipart/form-data" autocomplete="on" >
         <?= $this->form->csrf() ?>
         <p class=""><?= t('Choose to install from a local archive (.zip) file or a remote location') ?></p>
