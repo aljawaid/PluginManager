@@ -35,7 +35,7 @@
                 <th class="available-plugins-author" colspan="2">
                     <?php if (isset($plugin['is_type'])): ?>
                         <?php if ($plugin['is_type'] == 'plugin'): ?>
-                            <span class="plugin-type v-top">
+                            <span class="plugin-type v-sub">
                                 <!-- GENERAL PLUGIN -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
                                     <title><?= t('General Plugin') ?></title>

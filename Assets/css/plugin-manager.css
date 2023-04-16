@@ -290,16 +290,15 @@
 }
 
 .plugin-name {
-    font-weight: bold;
-    font-size: 1em;
+    font-weight: 600;
+    font-size: .9em;
     vertical-align: middle;
-    /*display: flex;*/
 }
 
 .plugin-name svg {
     margin-right: 5px;
-    color: var(--pp-grey);
-    fill: var(--pp-grey);
+    color: var(--blue-icon-dark);
+    fill: var(--blue-icon-dark);
     pointer-events: none;
 }
 
@@ -350,10 +349,10 @@
     padding-right: 5px;
 }
 
-.plugin-schema .tooltip {
+.plugin-action .plugin-schema .tooltip {
     border: 1px solid var(--pp-grey);
-    padding-top: 5px;
-    padding-bottom: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 3px;
     border-radius: var(--border-radius-pm);
 }
@@ -385,6 +384,7 @@
     display: inline-flex;
     border-radius: var(--border-radius-pm);
     text-decoration: none !important;
+    transition: var(--transition-pm);
 }
 
 .btn-action {
@@ -430,14 +430,10 @@ td .btn-uninstall:hover a {
     color: var(--pp-red-alt-2) !important;
 }
 
-.plugin-description td {
+tr.plugin-description td {
     padding-top: 10px !important;
     padding-bottom: 15px !important;
-}
-
-.plugin-description td {
-    padding-top: 1em;
-    padding-bottom: .5em;
+    font-size: .95em;
 }
 
 .plugin-dir-last-updated {
@@ -448,6 +444,7 @@ td .btn-uninstall:hover a {
     font-weight: 400;
     color: var(--pp-grey);
     font-style: italic;
+    font-size: .9em;
 }
 
 #PluginTop {
@@ -457,6 +454,7 @@ td .btn-uninstall:hover a {
     float: right;
     margin-top: 3px;
     color: var(--pp-grey);
+    font-size: .9em;
 }
 
 #PluginBottom {
@@ -468,6 +466,7 @@ td .btn-uninstall:hover a {
     color: var(--pp-grey);
     margin-top: 3px;
     margin-left: 5px;
+    font-size: .9em;
 }
 
 .tooltip-section {
@@ -592,8 +591,8 @@ th.available-plugins-author {
     pointer-events: none;
 }
 
-.available-plugins-title{
-    font-weight: bold;
+.available-plugins-title {
+    font-weight: 600;
 }
 
 .available-plugin-last-updated {
@@ -603,7 +602,7 @@ th.available-plugins-author {
 }
 
 table.available-plugins-table > thead > tr > th, table.available-plugins-table > tbody > tr > td, table.available-plugins-table > tbody > tr > th {
-    padding: 4px 5px;
+    padding: 3px 3px;
     vertical-align: middle;
     position: relative;
 }
@@ -713,7 +712,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
 .install-plugin, .install-plugin:link, .install-plugin:visited {
     color: var(--link-color-pm);
     font-weight: 600;
-    padding: 3px 5px;
+    padding: 6px 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
@@ -756,7 +755,7 @@ button.install-plugin-btn {
 a.download-archive, a.download-archive:link, a.download-archive:visited {
     color: var(--link-color-pm);
     font-weight: 600;
-    padding: 5px 5px 3px 5px;
+    padding: 8px 5px 3px 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
@@ -950,7 +949,8 @@ figure.notice {
 
 figure.notice a, figure.notice a:visited {
     color: var(--blue-icon-dark);
-    font-weight: bold;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .v-sub {
@@ -1138,7 +1138,9 @@ code.code {
 }
 
 .plugin-problems-section .panel a, .plugin-problems-section p a {
-    font-weight: bold;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-pm);
 }
 
 .plugin-problems-section .panel a svg.bi-journal-code, .plugin-problems-section p a svg.bi-journal-code {
@@ -1174,6 +1176,11 @@ code.code {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+.further-reading li a {
+    text-decoration: none;
+    transition: var(--transition-pm);
 }
 
 .plugin-problems-section .further-reading li {
@@ -1257,7 +1264,7 @@ td span.install-date {
     vertical-align: super;
     font-size: .6em;
     margin-left: 3px;
-    padding: 0px 4px;
+    padding: 0 2px 0 0;
     border: 1px solid #D50000;
     border-radius: var(--border-radius-pm);
     background-color: #D50000;
