@@ -43,7 +43,7 @@
 .pp-green { color: var(--pp-green); fill: var(--pp-green); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
-.btn-uninstall, #PluginSideBar > ul li {
+.btn-uninstall, #PluginSideBar ul li a {
     transition: var(--transition-pm);
 }
 
@@ -99,18 +99,25 @@
 
 #PluginSideBar > ul li {
     border-left: 5px solid white;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-bottom: 0;
+    line-height: 16px;
+    margin-bottom: 10px;
+    font-size: .9em;
+
+}
+
+#PluginSideBar ul li a {
+    color: var(--pp-grey);
+}
+
+#PluginSideBar ul li a:hover {
+    color: var(--pp-red);
 }
 
 #PluginSideBar + .sidebar-content {
     margin-bottom: 30px;
-}
-
-#PluginSideBar ul li {
-    line-height: 16px;
-    margin-bottom: 10px;
 }
 
 #PluginMenu li {
@@ -126,8 +133,8 @@
     margin: auto;
     width: 26px;
     height: 26px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li .plugin-directory-item svg {
@@ -135,8 +142,8 @@
     margin: auto;
     width: 24px;
     height: 24px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li .plugin-problems-item svg {
@@ -144,8 +151,8 @@
     margin: auto;
     width: 26px;
     height: 26px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li .plugin-info-item svg {
@@ -153,8 +160,8 @@
     margin: auto;
     width: 26px;
     height: 26px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li .plugin-problems-support svg {
@@ -162,8 +169,8 @@
     margin: auto;
     width: 26px;
     height: 26px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li .plugin-content-cleaner-item svg {
@@ -171,8 +178,8 @@
     margin: auto;
     width: 36px;
     height: 36px;
-    margin-bottom: 0;
     pointer-events: none;
+    padding-bottom: 5px;
 }
 
 #PluginMenu li.content-cleaner-menu-link {
@@ -1189,6 +1196,10 @@ code.code {
     pointer-events: none;
 }
 
+#PluginSideBar > ul li > a svg {
+    margin-bottom: 5px;
+}
+
 #PluginSideBar > ul li.active {
     border-left-color: var(--pp-black);
 }
@@ -1454,4 +1465,8 @@ fieldset.manual-install {
 
 .copy-url-link-format svg {
     vertical-align: bottom;
+}
+
+#PluginSideBar {
+    min-width: fit-content;
 }
