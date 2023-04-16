@@ -81,7 +81,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
                     throw new PluginInstallerException(t('There is no file in the plugin archive'));
                 }
 
-                if ($zip->locateName('Plugin.php') === false) {
+                if ($zip->locateName('Plugin.php', ZipArchive::FL_NODIR) === false) {
                     throw new PluginInstallerException(t('This file is not recognised as a plugin'));
                 }
 
