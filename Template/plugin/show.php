@@ -135,7 +135,7 @@ function sortPlugins(&$arr) {
         $incompatibleCount = count($incompatible_plugins);
         ?>
         <div class="plugin-count">
-            <?= t('You have %s plugins installed', $installedCount) ?>&nbsp;<?= t('and %s incompatible plugin(s)', $incompatibleCount) ?>
+            <?= t('You have %s plugins installed', $installedCount) ?>&nbsp;<?= ($incompatibleCount > 0) ? t('and %s incompatible plugin(s)', $incompatibleCount) : '' ?>
         </div>
         <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         <table id="InstalledPluginsTable" class="installed-plugins">
