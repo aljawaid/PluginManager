@@ -779,10 +779,12 @@ button.install-plugin-btn {
 a.download-archive, a.download-archive:link, a.download-archive:visited {
     color: var(--link-color-pm);
     font-weight: 600;
-    padding: 8px 5px 3px 5px;
+    padding: 5px 5px 3px 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
+    height: 20px;
+    display: inline-block;
 }
 
 .download-archive svg {
@@ -1487,11 +1489,12 @@ fieldset.manual-install {
 }
 
 .copy-url-link-format {
-    padding: 2px 5px 2px 5px;
+    padding: 3px 5px 5px 5px;
     margin: auto 5px;
     border: 2px solid var(--pp-light-grey);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
+    height: 20px;
 }
 
 .copy-url-link-format svg {
