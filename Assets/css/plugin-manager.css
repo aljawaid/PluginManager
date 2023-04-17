@@ -88,8 +88,21 @@
     margin: var(--page-margin-pm);
 }
 
+.pm-page-margin p {
+    margin-block: 10px;
+}
+
 .pm-page-title {
     margin: var(--title-margin-pm);
+}
+
+.pm-page-title h3 {
+    margin-bottom: 0;
+    color: var(--pp-red);
+}
+
+.pm-page-title h3 svg {
+    vertical-align: text-top;
 }
 
 .plugin-name svg {
@@ -256,26 +269,37 @@
     margin-bottom: 10px;
 }
 
-#InstalledPluginsTable {
+#InstalledPluginsTable, #InstalledIncompatiblePluginsTable {
     margin-bottom: 0;
 }
 
 #InstalledPluginsTable tbody {
-    border: 2px inset var(--blue-border-gradient-match) !important;
+    border: 2px inset var(--blue-border-gradient-match);
 }
 
-#InstalledPluginsTable > tbody > tr > td {
+#InstalledIncompatiblePluginsTable tbody {
+    border: 2px inset rgba(183, 18, 52, .5);
+}
+
+#InstalledPluginsTable > tbody > tr > td, #InstalledIncompatiblePluginsTable > tbody > tr > td {
     border: 0 !important;
     padding: 4px 15px;
-    /*line-height: 1.4;*/
 }
 
 #InstalledPluginsTable > thead > tr > th {
-    border: 2px inset var(--blue-border-gradient-match) !important;
-    box-shadow: var(--table-head-box-shadow);
-    background: var(--table-blue-border-gradient-match) !important;
-    color: var(--pp-white);
+    border: 2px inset var(--blue-border-gradient-match);
+    background: var(--table-blue-border-gradient-match);
     text-shadow: var(--table-head-text-shadow);
+    color: var(--pp-white);
+}
+
+#InstalledIncompatiblePluginsTable thead > tr > th {
+    border: 2px inset rgba(183, 18, 52, .5);
+    background: rgba(183, 18, 52, .5);
+    color: var(--pp-red-alt-2);
+}
+
+#InstalledPluginsTable > thead > tr > th, #InstalledIncompatiblePluginsTable thead > tr > th {
     font-weight: 600;
     letter-spacing: 0.04125em;
     padding: var(--table-head-padding);

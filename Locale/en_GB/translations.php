@@ -35,6 +35,7 @@ return array(
     // plugin/show.php
     //
     'Incompatible Plugins' => 'Incompatible Plugins',
+    'Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using' => 'Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using',
     'Name' => 'Name',
     'Author' => 'Author',
     'Version' => 'Version',
@@ -43,6 +44,7 @@ return array(
     'Uninstall' => 'Uninstall',
     'There is no plugin loaded.' => 'There is no plugin loaded.',
     'You have %s plugins installed' => 'You have %s plugins installed',
+    'and %s incompatible plugin(s)' => 'and %s incompatible plugin(s)',
     'Filter Installed Plugins' => 'Filter Installed Plugins',
     'Search for installed plugin...' => 'Search for installed plugin...',
     'Search installed plugins' => 'Search installed plugins',
