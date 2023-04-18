@@ -536,7 +536,7 @@ tr.plugin-description td {
 
 .available-count {
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: 700;
     cursor: context-menu;
 }
 
@@ -707,14 +707,14 @@ td.available-plugin-description .markdown p {
 
 .tick {
     color: var(--pp-green);
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.3em;
     display: inline;
 }
 
 .cross {
     color: var(--pp-red-alt-2);
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.3em;
     display: inline;
 }
@@ -886,7 +886,7 @@ td.manual-plugin-description {
 
 .info-tooltip-title {
     vertical-align: middle;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .info-tooltip-text {
@@ -899,7 +899,7 @@ td.manual-plugin-description {
 }
 
 .info-tooltip-item {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.8em;
     display: inline-block;
     width: 150px;
@@ -913,7 +913,7 @@ td.manual-plugin-description {
 
 .info-tooltip-item .age-pass, .info-tooltip-item .age-warning, .info-tooltip-item .age-danger {
     width: 100px;
-    font-weight: bold;
+    font-weight: 700;
     /*vertical-align: middle;*/
 }
 
@@ -949,7 +949,7 @@ td.manual-plugin-description {
 
 .info-type-title {
     display: block;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 1.5;
 }
@@ -1097,7 +1097,7 @@ figure.notice a, figure.notice a:visited {
 
 .structure-info-heading {
     display: block;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 5px;
