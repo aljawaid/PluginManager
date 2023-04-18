@@ -1,6 +1,39 @@
 # Changelog
 
 
+## v3.0
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: CSS Property - change `bold` to `700`
+- NEW: Delay Alert Flash Messages- change from default 7s to 10s
+- FIX: Installer: Add more tests for namespace, directory and plugin name - thanks @alfredbuehler
+- FIX: Download Button Styling
+- FIX: Manual Plugins: `installByURL()` uses the same tests - thanks @alfredbuehler
+- FIX: Hide Incompatible Plugin Count if Zero
+- FIX: Incompatible Plugins Layout & Styling
+- FIX: Major CSS Fixes
+- FIX: Message Styling
+- FIX: Better Wording
+- FIX: Make Plugin Sidebar Menu Neater
+- NEW: Show Incompatible Installed Plugins Count
+- FIX: Installed Plugins Count Page Position - count looked confusing if incompatible plugins were detected
+- FIX: Page Redirects for Manually Installed Plugins (by file) - #44
+- FIX: Detect Kanboard Structure in Any Folder in Archive File - fixes #44  Bug: All zip types are accepted
+- FIX: Duplicate `id` for `input` - #44
+- FIX: Check for cURL - resolves #45
+- FIX: Undefined Variable `$values` - #44
+- NEW: Add Copy Download Link to Clipboard Button - fixes #41 - thanks @alfredbuehler
+- NEW: Manually install plugins from local archive files or remote locations - thanks @alfredbuehler
+- FIX: Detect Kanboard Structure in Archive File - fixes #44 Bug: All zip types are accepted - thanks @creecros
+- FIX: Better Wording for Placeholder
+- FIX: Plugin Action Icons' Spacing
+- NEW: Add Unique Table IDs per Plugin
+- FIX: Set fileselector to accept 'application/zip' - thanks @alfredbuehler
+- NEW: Install plugins by file or URL - thanks @alfredbuehler
+
+
 ## v2.0
 
 ### What's Changed
