@@ -72,6 +72,12 @@ class PluginManagerHelper extends Base
             // attempt to retrieve the modification date
             curl_setopt($curl, CURLOPT_FILETIME, true);
 
+            // set HTTP_VERIFY_SSL_CERTIFICATE from config.php
+            if (HTTP_VERIFY_SSL_CERTIFICATE === false) {
+                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            }
+
             $result = curl_exec($curl);
 
             if ($result === false) {
