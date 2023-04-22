@@ -1450,17 +1450,17 @@ input.plugin-file[type="file"]::file-selector-button {
 }
 
 input.plugin-file[type="file"]::-ms-browse:hover {
-  background-color: RGB(213, 0, 0, .6);
+  background-color: RGBA(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);;
 }
 
 input.plugin-file[type="file"]::-webkit-file-upload-button:hover {
-  background-color: RGB(213, 0, 0, .6);
+  background-color: RGBA(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);;
 }
 
 input.plugin-file[type="file"]::file-selector-button:hover {
-  background-color: RGB(213, 0, 0, .6);
+  background-color: RGBA(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);;
 }
 
