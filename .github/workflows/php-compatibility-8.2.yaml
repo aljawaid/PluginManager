@@ -1,4 +1,4 @@
-name: PHP Compatibility 5.7
+name: PHP Compatibility 8.2
 
 on:
   push:
@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   setup:
-    name: php compatibility 5.7
+    name: php compatibility 8.2
     runs-on: ubuntu-latest
     permissions:
       contents: read # for checkout to fetch code
@@ -21,11 +21,11 @@ jobs:
       - name: PHP Setup 
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '5.7-'
+          php-version: '8.2-'
           coverage: none
 
       - name: php-compatibility run
         uses: pantheon-systems/phpcompatibility-action@v1
         with:
-          test-versions: '5.7-'
+          test-versions: '8.2-'
           paths: ${{ github.workspace }}/Plugin.php ${{ github.workspace }}/Controller/ ${{ github.workspace }}/Locale/ 
