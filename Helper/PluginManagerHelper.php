@@ -14,14 +14,11 @@ class PluginManagerHelper extends Base
             $url = "http://" . $url;
         }
         $domain = implode('.', array_slice(explode('.', parse_url($url, PHP_URL_HOST)), -2));
-        if ($domain == 'github.com') {
-            return '/blob/master/README.md';
-        } elseif ($domain == 'gitlab.com') {
-            return '/-/blob/master/README.md';
-        } elseif ($domain == 'gitea.com') {
-            return '/src/branch/main/README.md';
-        } else {
-            return false;
+        switch ( $domain ){
+            case 'github.com' : return '/blob/master/README.md';
+            case 'gitlab.com' : return '/-/blob/master/README.md';
+            case 'gitea.com' : return '/src/branch/main/README.md';
+            default: return false;
         }
     }
 
@@ -29,12 +26,8 @@ class PluginManagerHelper extends Base
     {
         $types = array();
         foreach ($available_plugins as $plugin) {
-            if (isset($plugin['is_type'])) {
-                if ($plugin['is_type'] == 'plugin') { array_push($types, 'plugin'); }
-                elseif ($plugin['is_type'] == 'action') { array_push($types, 'action'); }
-                elseif ($plugin['is_type'] == 'theme') { array_push($types, 'theme'); }
-                elseif ($plugin['is_type'] == 'multi') { array_push($types, 'multi'); }
-                elseif ($plugin['is_type'] == 'connector') { array_push($types, 'connector'); }
+            if ( isset($plugin['is_type']) && in_array($plugin['is_type'], ['plugin', 'action', 'theme', 'multi', 'connector'], false) ) {
+                array_push($types, $plugin['is_type']);
             }
         }
         $count_types = array_count_values($types);
@@ -43,21 +36,17 @@ class PluginManagerHelper extends Base
 
     public function getAllPlugins($url = PLUGIN_API_URL)
     {
-        $manual_plugins = $this->httpClient->getJson($url);
-        $manual_plugins = array_filter($manual_plugins, array($this, 'isNotInstallable'));
-        return $manual_plugins;
-
+        return array_filter($this->httpClient->getJson($url), array($this, 'isNotInstallable'));
     }
 
     public function isNotInstallable(array $plugin)
     {
-        return $plugin['remote_install'] == false;
+        return $plugin['remote_install'] === false;
     }
 
     public function lastUpdatedDirectory()
     {
         $curlCheck = $this->httpClient->backend();
-
 
         if ($curlCheck == 'cURL') {
             // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
