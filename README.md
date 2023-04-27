@@ -37,16 +37,14 @@ Features
   - Show if plugin has database changes
   - Show if plugin contains template or model overrides
   - Show if plugin uses hooks
-  - Show when the plugin was last updated
-    - [Time Ago Relative Dates _- 51 translatable calculations_](../master/time-ago.md "View table of calculations")
+  - Show when the plugin was last updated using Time Ago relative dates
     - Show relative date with exact date in tooltip (toggles to exact date when clicked)
   - _Plugin structures are extracted through new properties in the Kanboard Plugins Directory_
-- Show Directory source e.g. official or custom
-  - Show url of plugins directory
+- Show directory source e.g. official or custom including the URL of the source
 - Show available plugins count
 - Show external weblink for official directory
 - Show current application version
-- Show icon for Readme file if set
+- Show direct link for each plugin Readme file (if available)
 - Searchable user friendly filter for quickly finding available plugins
     - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
@@ -73,7 +71,6 @@ Features
 Screenshots
 ----------
 
-
 **Plugin Manager**
 
 ![Plugin Manager](../master/Screenshots/screenshot-plugin-manager-main.png "View more screenshots of this plugin using the link below")
@@ -96,7 +93,6 @@ Screenshots
 
 Usage
 -------------
-
 Go to `Plugins`
 
 **_or_**
@@ -106,7 +102,6 @@ Go to `Plugins`
 
 Compatibility
 -------------
-
 - Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 - PHP Compatibility [![PHP 7.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml) [![PHP 7.4 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml) [![PHP 8.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml) [![PHP 8.2 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml)
 
@@ -121,25 +116,22 @@ Compatibility
 
 Changelog
 ---------
-
 Read the full [**Changelog**](../master/changelog.md "See changes")
  
 
 Installation
 ------------
-
 - Install via the **[Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory** or see [INSTALL.md](../master/INSTALL.md)
+
 
 Translations
 ------------
-
 - English (UK)
 - _Translation starter template included_
 
 
 Authors & Contributors
 ----------------------
-
 - [@aljawaid](https://github.com/aljawaid) - Author
 - [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
 - [Craig Crosby](https://github.com/creecros) - Contributor
