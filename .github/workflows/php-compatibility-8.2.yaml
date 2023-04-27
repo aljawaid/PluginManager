@@ -1,4 +1,4 @@
-name: PHP Compatibility 8.2
+name: PHP 8.2 
 
 on:
   push:
