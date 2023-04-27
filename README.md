@@ -37,8 +37,8 @@ Features
   - Show if plugin has database changes
   - Show if plugin contains template or model overrides
   - Show if plugin uses hooks
-  - Show when the plugin was last updated using Time Ago relative dates
-    - Show relative date with exact date in tooltip (toggles to exact date when clicked)
+  - Show when the plugin was last updated using _Time Ago_ relative dates
+    - Show relative date with exact date in tooltip (toggles to the exact date when clicked)
   - _Plugin structures are extracted through new properties in the Kanboard Plugins Directory_
 - Show directory source e.g. official or custom including the URL of the source
 - Show available plugins count
