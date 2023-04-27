@@ -66,7 +66,7 @@ Features
 
 **Plugin Problems**
 - A page dedicated to common issues with plugins and how to resolve them
-- Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin (if installed) to display technical information
+- Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
 
@@ -134,7 +134,6 @@ Translations
 ------------
 
 - English (UK)
-- _Contributors welcome_
 - _Translation starter template included_
 
 
