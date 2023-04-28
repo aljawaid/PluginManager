@@ -117,7 +117,7 @@ Go to `Plugins`
   - Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
 - **Core Files & Templates**
   - `03` Template override
-    - _No database changes_
+  - _No database changes_
 
 </details>
 <details>
