@@ -1,12 +1,10 @@
 # Plugin Manager
-![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads")
-#### _Plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_
+![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads") - **_A Plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
 
-Features
--------------
+## Features
 
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
@@ -68,8 +66,7 @@ Features
 - Useful links to further troubleshoot plugin issues all in one place
 
 
-Screenshots
-----------
+## Screenshots
 
 **Plugin Manager**
 
@@ -91,8 +88,8 @@ Screenshots
 **_[More screenshots](../master/screenshots.md)_**
 
 
-Usage
--------------
+## Usage
+
 Go to `Plugins`
 
 **_or_**
@@ -100,38 +97,40 @@ Go to `Plugins`
 `Settings` &#10562; `Plugin Manager`
 
 
-Compatibility
--------------
+## Installation & Compatibility
+
+<details>
+    <summary><strong>Installation</strong></summary>
+
+- Install via the **[Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory** or see [INSTALL.md](../master/INSTALL.md)
+- Read the full [**Changelog**](../master/changelog.md "See changes") to see the latest updates
+
+</details>
+<details>
+    <summary><strong>Compatibility</strong></summary>
+
 - Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 - PHP Compatibility [![PHP 7.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml) [![PHP 7.4 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml) [![PHP 8.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml) [![PHP 8.2 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml)
+- **Other Plugins & Action Plugins**
+  - _No known issues_
+  - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner)
+  - Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
+- **Core Files & Templates**
+  - `03` Template override
+    - _No database changes_
 
-#### Other Plugins & Action Plugins
-- _No known issues_
-- Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner)
-- Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
-#### Core Files & Templates
-- `03` Template overrides
-- _No database changes_
+</details>
+<details>
+    <summary><strong>Translations</strong></summary>
 
-
-Changelog
----------
-Read the full [**Changelog**](../master/changelog.md "See changes")
- 
-
-Installation
-------------
-- Install via the **[Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") Plugin Directory** or see [INSTALL.md](../master/INSTALL.md)
-
-
-Translations
-------------
 - English (UK)
-- _Translation starter template included_
+- _Starter template available_
+
+</details>
 
 
-Authors & Contributors
-----------------------
+## Authors & Contributors
+
 - [@aljawaid](https://github.com/aljawaid) - Author
 - [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
 - [Craig Crosby](https://github.com/creecros) - Contributor
@@ -139,6 +138,6 @@ Authors & Contributors
 - _Contributors welcome_
 
 
-License
--------
+## License
+
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
