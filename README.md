@@ -1,7 +1,8 @@
 <a name="readme-top"></a>
 
 # Plugin Manager
-![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
+![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads") ![GitHub release (latest by date)](https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge)  ![GitHub Commits Since Release](https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge) ![GitHub File Count](https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge "GitHub Repository File Count") ![GitHub Repository Size](https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge "GitHub Repository Size") ![GitHub Code Size](https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge "GitHub Code Size")  
+**_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
