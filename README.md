@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 # Plugin Manager
 ![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads") - **_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
 
@@ -65,6 +67,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Screenshots
 
@@ -87,6 +90,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 
 **_[More screenshots](../master/screenshots.md)_**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
@@ -96,6 +100,7 @@ Go to `Plugins`
 
 `Settings` &#10562; `Plugin Manager`
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation & Compatibility
 
@@ -128,6 +133,7 @@ Go to `Plugins`
 
 </details>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors & Contributors
 
@@ -137,6 +143,7 @@ Go to `Plugins`
 - [Captain Sanifair](https://github.com/cptsanifair) - Contributor
 - _Contributors welcome_
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
