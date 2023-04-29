@@ -1,7 +1,17 @@
 <h1 name="readme-top">PluginManager</h1>
-
-![GitHub All Releases](https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge "GitHub All Downloads") ![GitHub release (latest by date)](https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge)  ![GitHub Commits Since Release](https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge) ![GitHub File Count](https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge "GitHub Repository File Count") ![GitHub Repository Size](https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge "GitHub Repository Size") ![GitHub Code Size](https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge "GitHub Code Size")  
-**_A plugin for [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software")_**
+<p align="center">
+    <img src="https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
+    <img src="https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
+    <img src="https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
+    <img src="https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
+    <img src="https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+</p>
+<p align="center">
+    <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions">
+    <img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
+    <img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
+    <a href="https://github.com/kanboard/kanboard" title="Kanban Project Management Software"><img src="https://img.shields.io/badge/A%20plugin%20for-kanboard-D40000?style=for-the-badge" alt="Kanboard"></a>
+</p>
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
