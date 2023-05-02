@@ -30,6 +30,7 @@
       }
     ],
     "value-list-comma-space-after": "always",
-    "color-function-notation": "legacy"
+    "color-function-notation": "legacy",
+    "number-max-precision": 5
   }
 }
