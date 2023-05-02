@@ -19,10 +19,10 @@
     --blue-border-gradient-match: #476E9E;
     --table-blue-border-gradient-match: #476E9E;
     --table-head-padding: 4px 15px;
-    --table-head-box-shadow: 0 0 5px 0 #000;
+    --table-head-box-shadow: 0 0 5px 0 #000000;
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
-    --tooltip-box-shadow: 1px 1px 1px 0px #000;
+    --tooltip-box-shadow: 1px 1px 1px 0 #000000;
     --header-page-margin-pm: 5px 15px 10px 15px;
     --page-margin-pm: 0 15px 0 15px;
     --title-margin-pm: 0 15px 0 15px;
@@ -52,7 +52,7 @@
 }
 
 .font-weight-bold {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .text-center {
@@ -500,7 +500,7 @@ tr.plugin-description td {
 .tooltip-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .tooltip-title svg {
@@ -596,7 +596,7 @@ i.fa-cubes::before {
 
 th.available-plugins-author {
     position: relative;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     font-size: .9em;
     border-bottom: 0;
@@ -639,7 +639,7 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
     cursor: context-menu;
 }
 
-.available-plugin-version:before, .currently-installed-v:before {
+.available-plugin-version::before, .currently-installed-v::before {
     content: 'v';
     margin: -6px;
 }
