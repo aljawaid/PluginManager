@@ -31,6 +31,12 @@
     ],
     "value-list-comma-space-after": "always",
     "color-function-notation": "legacy",
-    "number-max-precision": 5
+    "number-max-precision": 5,
+    "value-no-vendor-prefix": [
+      false,
+      {
+        "severity": "warning"
+      }
+    ]
   }
 }
