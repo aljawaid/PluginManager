@@ -2,13 +2,15 @@ name: PHP 7.4
 
 on:
   push:
+  pull_request:
+    branches: [master, main]
 
 permissions:
   contents: read
 
 jobs:
   setup:
-    name: php compatibility 7.4
+    name: PHP Compatibility 7.4
     runs-on: ubuntu-latest
     permissions:
       contents: read # for checkout to fetch code
@@ -22,10 +24,11 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4-'
+          ini-values: short_open_tag=On
           coverage: none
 
-      - name: php-compatibility run
+      - name: Run PHP Compatibility
         uses: pantheon-systems/phpcompatibility-action@v1
         with:
           test-versions: '7.4-'
-          paths: ${{ github.workspace }}/Plugin.php ${{ github.workspace }}/Controller/ ${{ github.workspace }}/Locale/ 
+          paths: ${{ github.workspace }}/Plugin.php ${{ github.workspace }}/Controller/ ${{ github.workspace }}/Locale/ ${{ github.workspace }}/Helper/ ${{ github.workspace }}/Template/
