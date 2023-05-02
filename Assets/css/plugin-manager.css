@@ -358,7 +358,6 @@
     vertical-align: middle;
     margin: 2px;
     height: 18px;
-    /*display: inline-block;*/
     flex: 1 0;
 }
 
@@ -462,7 +461,6 @@ tr.plugin-description td {
 
 .plugin-dir-last-updated {
     float: left;
-    /*margin-bottom: 4px;*/
     margin-top: 9px;
     padding: 2px 4px 1px 0;
     font-weight: 400;
@@ -640,7 +638,7 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
 }
 
 .available-plugin-version::before, .currently-installed-v::before {
-    content: 'v';
+    content: "v";
     margin: -6px;
 }
 
@@ -914,13 +912,12 @@ td.manual-plugin-description {
 .info-tooltip-item .age-pass, .info-tooltip-item .age-warning, .info-tooltip-item .age-danger {
     width: 100px;
     font-weight: 700;
-    /*vertical-align: middle;*/
 }
 
 .info-tooltip-item .timeframe {
     margin-left: 10px;
     font-style: italic;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .info-type-section {
@@ -1087,7 +1084,6 @@ figure.notice a, figure.notice a:visited {
     display: inline-flex;
     border: 2px solid var(--pp-grey);
     width: 490px;
-    /*height: 60px;*/
     margin: 3px 10px;
     padding: 3px 5px;
     border-radius: 2px;
@@ -1238,7 +1234,6 @@ code.code {
 }
 
 td span.install-date {
-    /*display: block;*/
     /*max-width: 125px;*/
     text-align: center;
     text-transform: uppercase;
@@ -1316,7 +1311,7 @@ td.manual-plugin-note.developer-plugin {
 
 .manual-plugins-table th.available-plugins-author {
     position: relative;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     font-size: .9em;
     background: var(--pp-white);
