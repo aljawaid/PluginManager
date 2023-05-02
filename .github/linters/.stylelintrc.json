@@ -25,7 +25,8 @@
     "selector-id-pattern": [
       "([A-Z][a-z0-9]+)((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?",
       {
-        "message": "Expected CSS Selector ID pattern to be CamelCase"
+        "message": "Expected CSS Selector ID pattern to be CamelCase",
+        "severity": "warning"
       }
     ],
     "value-list-comma-space-after": "always",
