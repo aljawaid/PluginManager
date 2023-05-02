@@ -14,18 +14,18 @@
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --blue-icon-dark: #034CA6;
-    --link-color-pm: #36C;
-    --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
+    --link-color-pm: #3366CC;
+    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
     --blue-border-gradient-match: #476E9E;
     --table-blue-border-gradient-match: #476E9E;
     --table-head-padding: 4px 15px;
-    --table-head-box-shadow: 0px 0px 5px 0px #000;
+    --table-head-box-shadow: 0 0 5px 0 #000;
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
     --tooltip-box-shadow: 1px 1px 1px 0px #000;
     --header-page-margin-pm: 5px 15px 10px 15px;
-    --page-margin-pm: 0px 15px 0px 15px;
-    --title-margin-pm: 0px 15px 0px 15px;
+    --page-margin-pm: 0 15px 0 15px;
+    --title-margin-pm: 0 15px 0 15px;
     --panel-background-pm: #EEEEEE;
     --border-radius-pm: 3px;
     --transition-pm: ease-in-out all .3s;
@@ -301,7 +301,7 @@
 
 #InstalledPluginsTable > thead > tr > th, #InstalledIncompatiblePluginsTable thead > tr > th {
     font-weight: 600;
-    letter-spacing: 0.04125em;
+    letter-spacing: .04125em;
     padding: var(--table-head-padding);
 }
 
@@ -598,7 +598,7 @@ th.available-plugins-author {
     position: relative;
     font-weight: normal;
     font-style: italic;
-    font-size: 0.9em;
+    font-size: .9em;
     border-bottom: 0;
 }
 
@@ -900,7 +900,7 @@ td.manual-plugin-description {
 
 .info-tooltip-item {
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: .8em;
     display: inline-block;
     width: 150px;
     vertical-align: middle;
@@ -1007,7 +1007,7 @@ figure.notice a, figure.notice a:visited {
 .plugin-available-filter label {
     position: absolute;
     right: 0;
-    top: 0.21875em;
+    top: .21875em;
     margin-top: 0;
 }
 
@@ -1126,10 +1126,10 @@ figure.notice a, figure.notice a:visited {
 }
 
 .available-plugin-description code, code.code {
-    background-color: rgba(27, 31, 35, 0.22) !important;
-    font-size: 0.9rem !important;
+    background-color: rgba(27, 31, 35, .22) !important;
+    font-size: .9rem !important;
     font-family: Monospace !important;
-    letter-spacing: 0.08rem;
+    letter-spacing: .08rem;
     color: #bb092d !important;
     margin: auto 3px !important;
     padding: 1px 3px 2px 3px !important;
@@ -1318,7 +1318,7 @@ td.manual-plugin-note.developer-plugin {
     position: relative;
     font-weight: normal;
     font-style: italic;
-    font-size: 0.9em;
+    font-size: .9em;
     background: var(--pp-white);
     border-color: #D50000;
     border-left: 0;
@@ -1443,8 +1443,8 @@ input.plugin-file[type="file"] {
 
 input.plugin-file[type="file"]::file-selector-button {
   border: 1px solid var(--pp-grey);
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+  padding: .2em .4em;
+  border-radius: .2em;
   background-color: var(--pp-light-grey);
   transition: var(--transition-pm);
 }
