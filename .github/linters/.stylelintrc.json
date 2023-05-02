@@ -4,17 +4,26 @@
     "no-extra-semicolons": true,
     "number-leading-zero": "never",
     "shorthand-property-no-redundant-values": null,
-    "comment-whitespace-inside": "always",
+    "comment-whitespace-inside": [
+      "always",
+      {
+        "severity": "warning"
+      }
+    ],
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": [
       "numeric",
-      { "severity": "warning" }
+      {
+        "severity": "warning"
+      }
     ],
     "color-no-invalid-hex": true,
     "color-hex-case": "upper",
     "color-hex-length": [
       "long",
-      { "severity": "warning" }
+      {
+        "severity": "warning"
+      }
     ],
     "alpha-value-notation": "number",
     "value-list-comma-newline-after": null,
@@ -33,7 +42,7 @@
     "color-function-notation": "legacy",
     "number-max-precision": 5,
     "value-no-vendor-prefix": [
-      false,
+      true,
       {
         "severity": "warning"
       }
