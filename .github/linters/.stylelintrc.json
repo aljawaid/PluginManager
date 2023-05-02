@@ -58,6 +58,12 @@
       {
         "severity": "warning"
       }
+    ],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "severity": "warning"
+      }
     ]
   }
 }
