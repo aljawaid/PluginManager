@@ -37,6 +37,18 @@
       {
         "severity": "warning"
       }
+    ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "severity": "warning"
+      }
     ]
   }
 }
