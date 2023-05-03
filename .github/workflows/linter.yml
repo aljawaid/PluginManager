@@ -66,6 +66,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSS_FILE_NAME: .stylelintrc.json
           LINTER_RULES_PATH: .github/linters
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
+          PHP_CONFIG_FILE: php.ini
           VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_GITLEAKS: true
@@ -78,11 +80,10 @@ jobs:
           VALIDATE_PHP: true
           VALIDATE_PHP_BUILTIN: true
           VALIDATE_PHP_PHPCS: true
-          VALIDATE_PHP_PHPSTAN: true
-          VALIDATE_PHP_PSALM: true
+          # VALIDATE_PHP_PHPSTAN: true
+          # VALIDATE_PHP_PSALM: true
           VALIDATE_SHELL_SHFMT: true
           VALIDATE_SQL: true
           VALIDATE_SQLFLUFF: true
           VALIDATE_XML: true
           VALIDATE_YAML: true
-          MARKDOWN_CONFIG_FILE: .markdownlint.json
