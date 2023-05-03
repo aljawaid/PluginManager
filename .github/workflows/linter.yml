@@ -56,7 +56,7 @@ jobs:
       ################################
       # Run Linter against code base #
       ################################
-      - name: Lint Code Base
+      - name: Check Code
         uses: github/super-linter/slim@v5
         # https://github.com/marketplace/actions/super-linter#environment-variables
         env:
