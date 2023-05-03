@@ -85,3 +85,4 @@ jobs:
           VALIDATE_SQLFLUFF: true
           VALIDATE_XML: true
           VALIDATE_YAML: true
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
