@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   setup:
-    name: PHP Compatibility 8.0
+    name: Scan Code
     runs-on: ubuntu-latest
     permissions:
       contents: read # for checkout to fetch code
