@@ -57,7 +57,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show current application version
 - Show direct link for each plugin Readme file (if available)
 - Searchable user friendly filter for quickly finding available plugins
-    - Hover over input box to focus without clicking
+  - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
 - Show plugin totals by type
 - Show link to installed plugin
@@ -174,4 +174,3 @@ Go to `Plugins`
 </h3>
 <a name="readme-bottom"></a>
 <p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
-test
