@@ -4,7 +4,7 @@
 ## Super Linter GitHub Actions ##
 #################################
 #################################
-name: Code Scanning
+name: Code Scan
 
 #
 # Documentation:
