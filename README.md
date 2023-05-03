@@ -1,15 +1,15 @@
 <h1 name="readme-top">PluginManager</h1>
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
-    <img src="https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
-    <img src="https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
-    <img src="https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
-    <img src="https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    <a href="https://github.com/aljawaid/PluginManager/releases" title="View Releases"><img src="https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)"></a>
+    <a href="https://github.com/aljawaid/PluginManager/releases" title="View Releases"><img src="https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads"></a>
+    <a href="https://github.com/aljawaid/PluginManager/releases" title="View Releases"><img src="https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count"></a>
+    <a href="https://github.com/aljawaid/PluginManager/releases" title="View Releases"><img src="https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size"></a>
+    <a href="https://github.com/aljawaid/PluginManager/releases" title="View Releases"><img src="https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size"></a>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions">
-    <img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
-    <img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
+    <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions"><img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions"></a>
+    <a href="https://github.com/aljawaid/PluginManager/compare" title="Latest Commits"><img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release"></a>
+    <a href="https://github.com/aljawaid/PluginManager/compare" title="Latest Commits"><img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity"></a>
     <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software"><img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge" alt="Kanboard"></a>
 </p>
 
@@ -170,7 +170,7 @@ Go to `Plugins`
     <a href="https://github.com/aljawaid/PluginManager/issues" title="Open Issues"><img src="https://img.shields.io/github/issues-raw/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
     <a href="https://github.com/aljawaid/PluginManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues"><img src="https://img.shields.io/github/issues-closed/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
     <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions"><img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/compare/" title="Latest Commites"><img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square"></a>
+    <a href="https://github.com/aljawaid/PluginManager/compare/" title="Latest Commits"><img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square"></a>
 </h3>
 <a name="readme-bottom"></a>
 <p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
