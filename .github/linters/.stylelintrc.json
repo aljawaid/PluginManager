@@ -64,6 +64,13 @@
       {
         "severity": "warning"
       }
+    ],
+    "declaration-no-important": [
+      true,
+      {
+        "message": "Try not to use !important in your declaration",
+        "severity": "warning"
+      }
     ]
   }
 }
