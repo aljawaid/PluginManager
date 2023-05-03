@@ -339,6 +339,9 @@
 .not-specified {
     vertical-align: middle;
     cursor: context-menu;
+    font-style: italic;
+    font-size: .9em;
+    color: var(--pp-orange);
 }
 
 .plugin-schema {
@@ -510,12 +513,6 @@ tr.plugin-description td {
 
 .tooltip-content {
     font-size: .8em;
-}
-
-.not-specified {
-    font-style: italic;
-    font-size: .9em;
-    color: var(--pp-orange);
 }
 
 .directory-info-wrapper {
