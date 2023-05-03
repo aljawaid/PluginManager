@@ -195,13 +195,27 @@ Go to `Plugins`
 ---
 
 <h3 align="center">
-    <a href="https://github.com/aljawaid/PluginManager/stargazers" title="View Stargazers"><img src="https://img.shields.io/github/stars/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/forks" title="See Forks"><img src="https://img.shields.io/github/forks/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/blob/master/LICENSE" title="Read License"><img src="https://img.shields.io/github/license/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/issues" title="Open Issues"><img src="https://img.shields.io/github/issues-raw/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues"><img src="https://img.shields.io/github/issues-closed/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions"><img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=flat-square" alt="PluginManager"></a>
-    <a href="https://github.com/aljawaid/PluginManager/compare/" title="Latest Commits"><img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square"></a>
+    <a href="https://github.com/aljawaid/PluginManager/stargazers" title="View Stargazers">
+        <img src="https://img.shields.io/github/stars/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/forks" title="See Forks">
+        <img src="https://img.shields.io/github/forks/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/blob/master/LICENSE" title="Read License">
+        <img src="https://img.shields.io/github/license/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/issues" title="Open Issues">
+        <img src="https://img.shields.io/github/issues-raw/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
+        <img src="https://img.shields.io/github/issues-closed/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions">
+        <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/compare/" title="Latest Commits">
+        <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square">
+    </a>
 </h3>
 <a name="readme-bottom"></a>
 <p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
