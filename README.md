@@ -17,12 +17,6 @@
     </a>
 </p>
 <p align="center">
-<<<<<<< Updated upstream
-    <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions"><img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions"></a>
-    <a href="https://github.com/aljawaid/PluginManager/compare" title="Latest Commits"><img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release"></a>
-    <a href="https://github.com/aljawaid/PluginManager/compare" title="Latest Commits"><img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity"></a>
-    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software"><img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge&labelColor=000000" alt="Kanboard"></a>
-=======
     <a href="https://github.com/aljawaid/PluginManager/discussions">
         <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="Read Discussions">
     </a>
@@ -35,7 +29,6 @@
     <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software">
         <img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge&labelColor=000000" alt="Kanboard">
     </a>
->>>>>>> Stashed changes
 </p>
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
