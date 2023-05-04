@@ -2,8 +2,6 @@
 
 ## v3.5
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Exclude `Releases` `Screenshots` Folder in Tests
 - FIX: Badge Link
