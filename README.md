@@ -183,7 +183,7 @@ Go to `Plugins`
 - [@aljawaid](https://github.com/aljawaid) - Author
 - [Alfred Bühler](https://github.com/alfredbuehler) - Contributor
 - [Craig Crosby](https://github.com/creecros) - Contributor
-- [Captain Sanifair](https://github.com/cptsanifair) - Contributor
+- [CptSanifair](https://github.com/cptsanifair) - Contributor
 - _Contributors welcome_
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
