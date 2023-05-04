@@ -96,7 +96,7 @@ _(most recent changes are listed on top):_
 - FIX: Compact Side Menu - fixes useless whitespace breaking consistency in menu click
 - FIX: Replace Global CSS Target
 - FIX: Missing Menu Indicator
-- FIX: Conflicting Global Variable - fixes https://github.com/greyaz/ThemeRevision/issues/20 - #34 - thanks @greyaz
+- FIX: Conflicting Global Variable - fixes [ThemeRevision Issue 20](https://github.com/greyaz/ThemeRevision/issues/20) - #34 - thanks @greyaz
 - FIX: SVG Pointer Events Conflicting with Links - replaces 16f1691
 - NEW: Prevent `Enter` Key Being Used on Filter Input - fixes #33 Pressing Enter on Filter Input Redirects Page to Dashboard - thanks @axb21
 - Cleanup code
