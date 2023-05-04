@@ -68,6 +68,11 @@ jobs:
           LINTER_RULES_PATH: .github/linters
           MARKDOWN_CONFIG_FILE: .markdownlint.json
           PHP_CONFIG_FILE: php.ini
+          # ACTIONS_RUNNER_DEBUG: true
+          # CREATE_LOG_FILE: true
+          # LOG_FILE: code-linter.log
+          # LOG_LEVEL: WARN
+          ACTIONS_STEP_DEBUG: true
           VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_GITLEAKS: true

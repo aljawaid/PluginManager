@@ -217,5 +217,5 @@ Go to `Plugins`
         <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square">
     </a>
 </h3>
-<a name="readme-bottom"></a>
 <p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
+<a name="readme-bottom"></a>
