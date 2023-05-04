@@ -1,5 +1,34 @@
 # Changelog
 
+## v3.5
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- FIX: Exclude `Releases` `Screenshots` Folder in Tests
+- FIX: Badge Link
+- NEW: Add Footer Badges
+- NEW: Add Compatibility Badges to README.me
+- FIX: Merge Duplicate CSS Class
+- CSS Fixes
+- CSS Fixes
+- CSS Fixes
+- FIX: Reduce Severity for Code Scanning
+- CSS Fixes
+- FIX PHP Compatibility Tests
+- NEW: Add Section Navigation Links to README.md
+- NEW: Badges for README.md
+- NEW: Add README Page Navigation Links
+- FIX: Content Flow for INSTALL.md
+- FIX: Content Flow for README.md
+- NEW: Plugin Code Optimisation - thanks @cptsanifair
+- FIX: Code Cleanup - remove multiple if-else - use variables for translations - thanks @cptsanifair
+- FIX: Code Cleanup - remove multiple if-else - thanks @cptsanifair
+- FIX: CSS Syntax - thanks @cptsanifair
+- FIX: CSS Syntax - thanks @cptsanifair
+- FIX: CSS RBA to RGBA if Alpha is used - thanks @cptsanifair
+- NEW: Add Support for SSL Certificate Check in Last Updated Directory - Disabling SSL Certificate Checks in `config.php` will now respected by PluginManager - thanks @cptsanifair
+
 
 ## v3.0
 
