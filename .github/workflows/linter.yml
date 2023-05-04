@@ -68,7 +68,7 @@ jobs:
           LINTER_RULES_PATH: .github/linters
           MARKDOWN_CONFIG_FILE: .markdownlint.json
           PHP_CONFIG_FILE: php.ini
-          FILTER_REGEX_EXCLUDE: (Releases/.*|Screenshots/.*)
+          FILTER_REGEX_EXCLUDE: (Releases.*|Screenshots.*)
           # ACTIONS_RUNNER_DEBUG: true
           # CREATE_LOG_FILE: true
           # LOG_FILE: code-linter.log
