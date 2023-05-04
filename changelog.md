@@ -1,9 +1,34 @@
 # Changelog
 
+## v3.5
+
+_(most recent changes are listed on top):_
+- FIX: Exclude `Releases` `Screenshots` Folder in Tests
+- FIX: Badge Link
+- NEW: Add Footer Badges
+- NEW: Add Compatibility Badges to README.me
+- FIX: Merge Duplicate CSS Class
+- CSS Fixes
+- CSS Fixes
+- CSS Fixes
+- FIX: Reduce Severity for Code Scanning
+- CSS Fixes
+- FIX PHP Compatibility Tests
+- NEW: Add Section Navigation Links to README.md
+- NEW: Badges for README.md
+- NEW: Add README Page Navigation Links
+- FIX: Content Flow for INSTALL.md
+- FIX: Content Flow for README.md
+- NEW: Plugin Code Optimisation - thanks @cptsanifair
+- FIX: Code Cleanup - remove multiple if-else - use variables for translations - thanks @cptsanifair
+- FIX: Code Cleanup - remove multiple if-else - thanks @cptsanifair
+- FIX: CSS Syntax - thanks @cptsanifair
+- FIX: CSS Syntax - thanks @cptsanifair
+- FIX: CSS RBA to RGBA if Alpha is used - thanks @cptsanifair
+- NEW: Add Support for SSL Certificate Check in Last Updated Directory - Disabling SSL Certificate Checks in `config.php` will now respected by PluginManager - thanks @cptsanifair
+
 
 ## v3.0
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - FIX: CSS Property - change `bold` to `700`
@@ -36,8 +61,6 @@ _(most recent changes are listed on top):_
 
 ## v2.0
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - NEW: Copy Installed Plugins List to Clipboard - List output shows plugin name, version and author - fixes #38
 - NEW: Add ContentCleaner Link in Sidebar
@@ -66,14 +89,12 @@ _(most recent changes are listed on top):_
 
 ## v1.8
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Anchor Underline Should Not Show on Hover
 - FIX: Compact Side Menu - fixes useless whitespace breaking consistency in menu click
 - FIX: Replace Global CSS Target
 - FIX: Missing Menu Indicator
-- FIX: Conflicting Global Variable - fixes https://github.com/greyaz/ThemeRevision/issues/20 - #34 - thanks @greyaz
+- FIX: Conflicting Global Variable - fixes [ThemeRevision Issue 20](https://github.com/greyaz/ThemeRevision/issues/20) - #34 - thanks @greyaz
 - FIX: SVG Pointer Events Conflicting with Links - replaces 16f1691
 - NEW: Prevent `Enter` Key Being Used on Filter Input - fixes #33 Pressing Enter on Filter Input Redirects Page to Dashboard - thanks @axb21
 - Cleanup code
@@ -81,8 +102,6 @@ _(most recent changes are listed on top):_
 
 
 ## v1.7
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Make installation date higher priority - should fix the date font sizing issue #29
@@ -102,8 +121,6 @@ _(most recent changes are listed on top):_
 
 ## v1.6
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Target Selected Anchor Instead of All Anchors
 - Glancer Compatibility: Switch `if` statement for Glancer plugin compatibility
@@ -114,8 +131,6 @@ _(most recent changes are listed on top):_
 
 ## v1.5
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Remove test code - Fixes #27
 - NEW: Add Time Ago in README.md
@@ -125,8 +140,6 @@ _(most recent changes are listed on top):_
 
 
 ## v1.0
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Initial release

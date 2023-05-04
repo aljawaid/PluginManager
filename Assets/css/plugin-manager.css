@@ -14,18 +14,18 @@
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
     --blue-icon-dark: #034CA6;
-    --link-color-pm: #36C;
-    --button-blue-gradient: linear-gradient(to bottom, #7892c2 80%, #476e9e 100%);
+    --link-color-pm: #3366CC;
+    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
     --blue-border-gradient-match: #476E9E;
     --table-blue-border-gradient-match: #476E9E;
     --table-head-padding: 4px 15px;
-    --table-head-box-shadow: 0px 0px 5px 0px #000;
+    --table-head-box-shadow: 0 0 5px 0 #000000;
     --table-head-text-shadow: 2px 2px #373737;
     --button-background-delete: #D05C84;
-    --tooltip-box-shadow: 1px 1px 1px 0px #000;
+    --tooltip-box-shadow: 1px 1px 1px 0 #000000;
     --header-page-margin-pm: 5px 15px 10px 15px;
-    --page-margin-pm: 0px 15px 0px 15px;
-    --title-margin-pm: 0px 15px 0px 15px;
+    --page-margin-pm: 0 15px 0 15px;
+    --title-margin-pm: 0 15px 0 15px;
     --panel-background-pm: #EEEEEE;
     --border-radius-pm: 3px;
     --transition-pm: ease-in-out all .3s;
@@ -52,7 +52,7 @@
 }
 
 .font-weight-bold {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .text-center {
@@ -108,6 +108,9 @@
 .plugin-name svg {
     vertical-align: sub;
     pointer-events: none;
+    margin-right: 5px;
+    color: var(--blue-icon-dark);
+    fill: var(--blue-icon-dark);
 }
 
 #PluginSideBar > ul li {
@@ -301,7 +304,7 @@
 
 #InstalledPluginsTable > thead > tr > th, #InstalledIncompatiblePluginsTable thead > tr > th {
     font-weight: 600;
-    letter-spacing: 0.04125em;
+    letter-spacing: .04125em;
     padding: var(--table-head-padding);
 }
 
@@ -317,13 +320,6 @@
     font-weight: 600;
     font-size: .9em;
     vertical-align: middle;
-}
-
-.plugin-name svg {
-    margin-right: 5px;
-    color: var(--blue-icon-dark);
-    fill: var(--blue-icon-dark);
-    pointer-events: none;
 }
 
 .plugin-author {
@@ -343,6 +339,9 @@
 .not-specified {
     vertical-align: middle;
     cursor: context-menu;
+    font-style: italic;
+    font-size: .9em;
+    color: var(--pp-orange);
 }
 
 .plugin-schema {
@@ -358,7 +357,6 @@
     vertical-align: middle;
     margin: 2px;
     height: 18px;
-    /*display: inline-block;*/
     flex: 1 0;
 }
 
@@ -462,7 +460,6 @@ tr.plugin-description td {
 
 .plugin-dir-last-updated {
     float: left;
-    /*margin-bottom: 4px;*/
     margin-top: 9px;
     padding: 2px 4px 1px 0;
     font-weight: 400;
@@ -500,7 +497,7 @@ tr.plugin-description td {
 .tooltip-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .tooltip-title svg {
@@ -516,12 +513,6 @@ tr.plugin-description td {
 
 .tooltip-content {
     font-size: .8em;
-}
-
-.not-specified {
-    font-style: italic;
-    font-size: .9em;
-    color: var(--pp-orange);
 }
 
 .directory-info-wrapper {
@@ -596,9 +587,9 @@ i.fa-cubes::before {
 
 th.available-plugins-author {
     position: relative;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
-    font-size: 0.9em;
+    font-size: .9em;
     border-bottom: 0;
 }
 
@@ -639,8 +630,8 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
     cursor: context-menu;
 }
 
-.available-plugin-version:before, .currently-installed-v:before {
-    content: 'v';
+.available-plugin-version::before, .currently-installed-v::before {
+    content: "v";
     margin: -6px;
 }
 
@@ -850,14 +841,14 @@ td.manual-plugin-description {
     cursor: pointer;
 }
 
-.age-warning:before {
+.age-warning::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23FF6500' class='bi bi-exclamation-diamond' viewBox='0 0 16 16'%3E%3Cpath d='M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z'/%3E%3Cpath d='M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z'/%3E%3C/svg%3E");
     vertical-align: middle;
     margin-right: 5px;
     pointer-events: none;
 }
 
-.age-danger:before {
+.age-danger::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23DA004C' class='bi bi-exclamation-diamond-fill' viewBox='0 0 16 16'%3E%3Cpath d='M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/%3E%3C/svg%3E");
     vertical-align: middle;
     margin-right: 5px;
@@ -900,7 +891,7 @@ td.manual-plugin-description {
 
 .info-tooltip-item {
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: .8em;
     display: inline-block;
     width: 150px;
     vertical-align: middle;
@@ -914,13 +905,12 @@ td.manual-plugin-description {
 .info-tooltip-item .age-pass, .info-tooltip-item .age-warning, .info-tooltip-item .age-danger {
     width: 100px;
     font-weight: 700;
-    /*vertical-align: middle;*/
 }
 
 .info-tooltip-item .timeframe {
     margin-left: 10px;
     font-style: italic;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .info-type-section {
@@ -1007,7 +997,7 @@ figure.notice a, figure.notice a:visited {
 .plugin-available-filter label {
     position: absolute;
     right: 0;
-    top: 0.21875em;
+    top: .21875em;
     margin-top: 0;
 }
 
@@ -1087,7 +1077,6 @@ figure.notice a, figure.notice a:visited {
     display: inline-flex;
     border: 2px solid var(--pp-grey);
     width: 490px;
-    /*height: 60px;*/
     margin: 3px 10px;
     padding: 3px 5px;
     border-radius: 2px;
@@ -1126,11 +1115,11 @@ figure.notice a, figure.notice a:visited {
 }
 
 .available-plugin-description code, code.code {
-    background-color: rgba(27, 31, 35, 0.22) !important;
-    font-size: 0.9rem !important;
-    font-family: Monospace !important;
-    letter-spacing: 0.08rem;
-    color: #bb092d !important;
+    background-color: rgba(27, 31, 35, .22) !important;
+    font-size: .9rem !important;
+    font-family: monospace !important;
+    letter-spacing: .08rem;
+    color: #BB092D !important;
     margin: auto 3px !important;
     padding: 1px 3px 2px 3px !important;
     border-radius: 2px;
@@ -1238,8 +1227,6 @@ code.code {
 }
 
 td span.install-date {
-    /*display: block;*/
-    /*max-width: 125px;*/
     text-align: center;
     text-transform: uppercase;
     font-size: .75em;
@@ -1256,7 +1243,7 @@ td span.install-date {
     bottom: -7px;
 }
 
-.install-date:before {
+.install-date::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='white' class='bi bi-calendar-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z'/%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     margin-right: 5px;
@@ -1316,9 +1303,9 @@ td.manual-plugin-note.developer-plugin {
 
 .manual-plugins-table th.available-plugins-author {
     position: relative;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
-    font-size: 0.9em;
+    font-size: .9em;
     background: var(--pp-white);
     border-color: #D50000;
     border-left: 0;
@@ -1443,24 +1430,24 @@ input.plugin-file[type="file"] {
 
 input.plugin-file[type="file"]::file-selector-button {
   border: 1px solid var(--pp-grey);
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+  padding: .2em .4em;
+  border-radius: .2em;
   background-color: var(--pp-light-grey);
   transition: var(--transition-pm);
 }
 
 input.plugin-file[type="file"]::-ms-browse:hover {
-  background-color: RGBA(213, 0, 0, .6);
+  background-color: rgba(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::-webkit-file-upload-button:hover {
-  background-color: RGBA(213, 0, 0, .6);
+  background-color: rgba(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::file-selector-button:hover {
-  background-color: RGBA(213, 0, 0, .6);
+  background-color: rgba(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 

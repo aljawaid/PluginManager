@@ -1,21 +1,39 @@
-<h1 name="readme-top">PluginManager</h1>
+<h1 name="user-content-readme-top">PluginManager</h1>
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
-    <img src="https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
-    <img src="https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
-    <img src="https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
-    <img src="https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    <a href="https://github.com/aljawaid/PluginManager/releases">
+        <img src="https://img.shields.io/github/v/release/aljawaid/PluginManager?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/releases">
+        <img src="https://img.shields.io/github/downloads/aljawaid/PluginManager/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/releases">
+        <img src="https://img.shields.io/github/directory-file-count/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/releases">
+        <img src="https://img.shields.io/github/repo-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/releases">
+        <img src="https://img.shields.io/github/languages/code-size/aljawaid/PluginManager?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    </a>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="GitHub Discussions">
-    <img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
-    <img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
-    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software"><img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge" alt="Kanboard"></a>
+    <a href="https://github.com/aljawaid/PluginManager/discussions">
+        <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Discussions" title="Read Discussions">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/compare">
+        <img src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/compare">
+        <img src="https://img.shields.io/github/commit-activity/m/aljawaid/PluginManager?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
+    </a>
+    <a href="https://github.com/kanboard/kanboard" title="Kanboard - Kanban Project Management Software">
+        <img src="https://img.shields.io/badge/Plugin%20for-kanboard-D40000?style=for-the-badge&labelColor=000000" alt="Kanboard">
+    </a>
 </p>
 
 Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Features
 
@@ -57,7 +75,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show current application version
 - Show direct link for each plugin Readme file (if available)
 - Searchable user friendly filter for quickly finding available plugins
-    - Hover over input box to focus without clicking
+  - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
 - Show plugin totals by type
 - Show link to installed plugin
@@ -78,7 +96,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Screenshots
 
@@ -101,7 +119,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 
 **_[More screenshots](../master/screenshots.md)_**
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#installation--compatibility">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#installation--compatibility">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Usage
 
@@ -111,9 +129,24 @@ Go to `Plugins`
 
 `Settings` &#10562; `Plugin Manager`
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8592; Previous</a>] [<a href="#authors--contributors">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Installation & Compatibility
+
+<p align="left">
+    <a href="https://github.com/aljawaid/PluginManager/actions/workflows/linter.yml">
+        <img src="https://github.com/aljawaid/PluginManager/actions/workflows/linter.yml/badge.svg?branch=master&event=push" alt="Code Scanning" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml">
+        <img src="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml">
+        <img src="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml">
+        <img src="https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml/badge.svg?branch=master&event=push" alt="PHP Compatibility Test" title="View Test">
+    </a>
+</p>
 
 <details>
     <summary><strong>Installation</strong></summary>
@@ -126,7 +159,6 @@ Go to `Plugins`
     <summary><strong>Compatibility</strong></summary>
 
 - Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
-- PHP Compatibility [![PHP 7.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.0.yaml) [![PHP 7.4 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-7.4.yaml) [![PHP 8.0 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.0.yaml) [![PHP 8.2 ](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml/badge.svg?branch=master&event=push)](https://github.com/aljawaid/PluginManager/actions/workflows/php-compatibility-8.2.yaml)
 - **Other Plugins & Action Plugins**
   - _No known issues_
   - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner)
@@ -144,7 +176,7 @@ Go to `Plugins`
 
 </details>
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#usage">&#8592; Previous</a>] [<a href="#license">&#8594; Next</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#usage">&#8592; Previous</a>] [<a href="#license">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## Authors & Contributors
 
@@ -154,11 +186,36 @@ Go to `Plugins`
 - [CptSanifair](https://github.com/cptsanifair) - Contributor
 - _Contributors welcome_
 
-<p align="right">[<a href="#readme-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#readme-top">&#8593; Top</a>]</p>
+<p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#installation--compatibility">&#8592; Previous</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
 ## License
 
 - This project is distributed under the [MIT License](../master/LICENSE "Read The MIT license")
 
-<a name="readme-bottom"></a>
-<p align="right">[<a href="#readme-top">&#8593; Top</a>]</p>
+---
+
+<p align="center">
+    <a href="https://github.com/aljawaid/PluginManager/stargazers" title="View Stargazers">
+        <img src="https://img.shields.io/github/stars/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/forks" title="See Forks">
+        <img src="https://img.shields.io/github/forks/aljawaid/PluginManager?logo=github&style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/blob/master/LICENSE" title="Read License">
+        <img src="https://img.shields.io/github/license/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/issues" title="Open Issues">
+        <img src="https://img.shields.io/github/issues-raw/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
+        <img src="https://img.shields.io/github/issues-closed/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/discussions" title="Read Discussions">
+        <img src="https://img.shields.io/github/discussions/aljawaid/PluginManager?style=flat-square" alt="PluginManager">
+    </a>
+    <a href="https://github.com/aljawaid/PluginManager/compare/" title="Latest Commits">
+        <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/aljawaid/PluginManager/latest?style=flat-square">
+    </a>
+</p>
+<p align="right">[<a href="#user-content-readme-top">&#8593; Top</a>]</p>
+<a name="user-content-readme-bottom"></a>

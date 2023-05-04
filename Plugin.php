@@ -42,7 +42,7 @@ class Plugin extends Base
         if (!file_exists('plugins/Glancer')) {
             $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/clipboard-v2.0.11.min.js'));
         }
-        
+
         // Helper
         $this->helper->register('ageHelper', '\Kanboard\Plugin\PluginManager\Helper\AgeHelper');
         $this->helper->register('pluginManagerHelper', '\Kanboard\Plugin\PluginManager\Helper\PluginManagerHelper');
@@ -50,7 +50,7 @@ class Plugin extends Base
 
     public function onStartup()
     {
-        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
     }
 
     public function getPluginName()
@@ -70,7 +70,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '3.0.0';
+        return '3.5.0';
     }
 
     public function getCompatibleVersion()
