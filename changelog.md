@@ -32,8 +32,6 @@ _(most recent changes are listed on top):_
 
 ## v3.0
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: CSS Property - change `bold` to `700`
 - NEW: Delay Alert Flash Messages- change from default 7s to 10s
@@ -65,8 +63,6 @@ _(most recent changes are listed on top):_
 
 ## v2.0
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - NEW: Copy Installed Plugins List to Clipboard - List output shows plugin name, version and author - fixes #38
 - NEW: Add ContentCleaner Link in Sidebar
@@ -95,8 +91,6 @@ _(most recent changes are listed on top):_
 
 ## v1.8
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Anchor Underline Should Not Show on Hover
 - FIX: Compact Side Menu - fixes useless whitespace breaking consistency in menu click
@@ -110,8 +104,6 @@ _(most recent changes are listed on top):_
 
 
 ## v1.7
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Make installation date higher priority - should fix the date font sizing issue #29
@@ -131,8 +123,6 @@ _(most recent changes are listed on top):_
 
 ## v1.6
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Target Selected Anchor Instead of All Anchors
 - Glancer Compatibility: Switch `if` statement for Glancer plugin compatibility
@@ -143,8 +133,6 @@ _(most recent changes are listed on top):_
 
 ## v1.5
 
-### What's Changed
-
 _(most recent changes are listed on top):_
 - FIX: Remove test code - Fixes #27
 - NEW: Add Time Ago in README.md
@@ -154,8 +142,6 @@ _(most recent changes are listed on top):_
 
 
 ## v1.0
-
-### What's Changed
 
 _(most recent changes are listed on top):_
 - Initial release
