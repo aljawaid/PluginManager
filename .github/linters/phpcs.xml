@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ruleset name="super-linter">
+    <description>The default coding standard for usage with GitHub Super-Linter. It just includes PSR12.</description>
+    <arg name="colors"/>
+    <arg name="encoding" value="utf-8"/>
+    <rule ref="PSR12" />
+    <rule ref="Generic.Files.LineLength.MaxExceeded">
+        <type>warning</type>
+        <severity>3</severity>
+    </rule>
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <type>warning</type>
+        <severity>3</severity>
+    </rule>
+    <rule ref="Generic.Formatting.SpaceAfterCast">
+        <properties>
+            <property name="ignoreNewlines" value="true" />
+        </properties>
+    </rule>
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <properties>
+            <property name="spacing" value="0" />
+            <property name="ignoreNewlines" value="true" />
+            <type>warning</type>
+        </properties>
+    </rule>
+    <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true" />
+        </properties>
+    </rule>
+</ruleset>
