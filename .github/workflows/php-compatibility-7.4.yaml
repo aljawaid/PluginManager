@@ -1,3 +1,4 @@
+---
 name: PHP 7.4
 
 on:
@@ -20,7 +21,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: PHP Setup 
+      - name: PHP Setup
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4-'
