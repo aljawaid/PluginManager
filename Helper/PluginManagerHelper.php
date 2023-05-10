@@ -83,4 +83,28 @@ class PluginManagerHelper extends Base
             return t('Not Available');
         }
     }
+
+    /**
+     * Create list of updatable plugins.
+     *
+     * @return array with plugin titles
+     */
+    public function getPluginUpdates(): array
+    {
+        $installed_plugins = array();
+        $updatables = array();
+
+        foreach ($this->pluginLoader->getPlugins() as $plugin) {
+            $installed_plugins[$plugin->getPluginName()] = $plugin->getPluginVersion();
+        }
+
+        foreach (Directory::getInstance($this->container)->getAvailablePlugins() as $plugin) {
+            $proband = &$installed_plugins[$plugin['title']];
+            if (isset($proband) && $proband < $plugin['version']) {
+                $updatables[] = $plugin['title'];
+            }
+        }
+
+        return $updatables;
+    }
 }
