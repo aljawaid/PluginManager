@@ -15,6 +15,7 @@
     <?php if (empty($available_plugins)): ?>
         <p class="alert"><?= t('There is no plugin available.') ?></p>
     <?php else: ?>
+        <?php $updates = $this->helper->pluginManagerHelper->getPluginUpdates() ?>
         <?php usort($available_plugins, fn ($a, $b) => strtolower($a['title']) <=> strtolower($b['title'])); ?>
         <div class="directory-info-wrapper">
             <table id="DirectoryInfo" class="directory-info">
@@ -24,6 +25,7 @@
                         <th scope="col" colspan="2" class="text-center"><?= t('Directory Source') ?></th>
                         <th scope="col" class=""><?= t('Your Application Version') ?></th>
                         <th scope="col" class=""><?= t('Currently Installed') ?></th>
+                        <th scope="col" class=""><?= t('Available Updates') ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +47,7 @@
                         <td class="plugin-dir-url"><?= PLUGIN_API_URL ?></td>
                         <td class="kb-app-version"><?= APP_VERSION ?></td>
                         <td scope="row" class="total-count"><?= count($installed_plugins) ?></td>
+                        <td scope="row" class="total-count"><?= count($updates) ?></td>
                     </tr>
                 </tbody>
             </table>
