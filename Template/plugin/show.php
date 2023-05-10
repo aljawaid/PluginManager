@@ -2,6 +2,7 @@
 function sortPlugins(&$arr) {
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
+$updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
 ?>
     <div class="pm-page-header">
         <h2 class="">
@@ -145,7 +146,7 @@ function sortPlugins(&$arr) {
                     <th class="column-30"><?= t('Author') ?></th>
                     <th class="column-5 text-center"><?= t('Plugin Version') ?></th>
                     <th class="column-10 text-center"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-25" colspan="2"><?= t('Actions') ?></th>
+                    <th class="column-25" colspan="3"><?= t('Actions') ?></th>
                 </tr>
             </thead>
             <?php sortPlugins($plugins); ?>
@@ -205,6 +206,13 @@ function sortPlugins(&$arr) {
                             </span>
                         </td>
                         <td class="plugin-uninstall">
+                            <?php if ($is_configured && in_array($plugin->getPluginName(), $updatables, true)): ?>
+                                <button class="btn-uninstall" disabled>
+                                <?= t('Update') ?>
+                                </button>
+                            <?php endif ?>
+                        </td>
+                        <td class="plugin-uninstall">
                             <?php if ($is_configured): ?>
                                 <button class="btn-uninstall">
                                     <?= $this->modal->confirm('trash-o', t('Uninstall'), 'PluginController', 'confirm', array('pluginId' => $pluginFolder)) ?>
@@ -213,7 +221,7 @@ function sortPlugins(&$arr) {
                         </td>
                     </tr>
                     <tr class="plugin-description">
-                        <td class="" colspan="<?= $is_configured ? 6 : 5 ?>">
+                        <td class="" colspan="<?= $is_configured ? 7 : 6 ?>">
                             <?= $this->text->e($plugin->getPluginDescription()) ?>
                             <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR.'/'.$pluginFolder.'/.')); ?>
                             <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
