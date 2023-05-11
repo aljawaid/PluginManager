@@ -66,7 +66,7 @@
             <?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
             <div class="plugin-type-counts">
                 <label for="AvailablePluginsFilterInput">
-                    <div class="plugin-type-count-section">
+                    <div class="plugin-type-count-section" data-type='plugin'>
                         <div class="plugin-type-count-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
                                 <title><?= t('General Plugin') ?></title>
@@ -76,7 +76,7 @@
                         <div class="plugin-type-count-text"><?= t('General') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['plugin']) ? $countTypes['plugin'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section">
+                    <div class="plugin-type-count-section" data-type='action'>
                         <div class="plugin-type-count-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 52 52"  fill="currentColor" enable-background="new 0 0 52 52" xml:space="preserve">
                                 <title><?= t('Action Plugin') ?></title>
@@ -106,7 +106,7 @@
                         <div class="plugin-type-count-text" title="<?= t('Automatic Actions') ?>"><?= t('Actions') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['action']) ? $countTypes['action'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section">
+                    <div class="plugin-type-count-section" data-type='theme'>
                         <div class="plugin-type-count-icon">
                             <svg width="50px" height="50px" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <title><?= t('Theme Plugin') ?></title>
@@ -119,7 +119,7 @@
                         <div class="plugin-type-count-text"><?= t('Themes') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['theme']) ? $countTypes['theme'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section">
+                    <div class="plugin-type-count-section" data-type='connector'>
                         <div class="plugin-type-count-icon">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px"  viewBox="0 0 32 32" xml:space="preserve">
                                 <title><?= t('Connector Plugin') ?></title>
@@ -136,7 +136,7 @@
                         <div class="plugin-type-count-text"><?= t('Connectors') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['connector']) ? $countTypes['connector'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section">
+                    <div class="plugin-type-count-section" data-type='multi'>
                         <div class="plugin-type-count-icon">
                             <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <title><?= t('Multi Plugin') ?></title>
@@ -149,7 +149,7 @@
                     </div>
                     <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?>
                     <?php if ($totalOthers > 0): ?>
-                        <div class="plugin-type-count-section">
+                        <div class="plugin-type-count-section" data-type='other'>
                             <div class="plugin-type-count-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
                                     <title><?= t('Others') ?></title>
@@ -178,7 +178,7 @@
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         </div>
         <?php foreach ($available_plugins as $plugin): ?>
-        <table id="Plugin-<?= preg_replace('/\s+/', '', ($this->text->e($plugin['title']))) ?>" class="available-plugins-table">
+        <table id="Plugin-<?= preg_replace('/\s+/', '', ($this->text->e($plugin['title']))) ?>" class="available-plugins-table" data-type="<?= $plugin['is_type'] ?>">
             <tr class="">
                 <th class="available-plugins-author" colspan="2">
                     <?php if (isset($plugin['is_type'])): ?>

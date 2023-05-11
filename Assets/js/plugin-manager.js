@@ -1,5 +1,16 @@
 // KANBOARD PLUGIN ASSET FILE
 
+// Dynamic filtering of the plugin directory list on plugin types.
+$(document).ready(function(){
+
+    $('div.plugin-type-count-section').click(function(ev){
+        const type = $(this).data('type');
+
+        $(`table.available-plugins-table[data-type='${type}']`).show();
+        $(`table.available-plugins-table[data-type!='${type}']`).hide();
+    });
+});
+
 // FILTER TABLES IN THE INSTALLED PLUGINS PAGE
 $(document).ready(function(){
     $("#InstalledPluginsFilterInput").on("keyup", function() {
