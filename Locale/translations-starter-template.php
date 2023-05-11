@@ -65,6 +65,7 @@ return array(
     'Copy List' => '',
     'by' => '',
     'Copy plugin list' => '',
+    'This feature is currently unavailable' => '',
     //
     // plugin/directory.php
     //

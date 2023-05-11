@@ -207,7 +207,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                         </td>
                         <td class="plugin-uninstall">
                             <?php if ($is_configured && in_array($plugin->getPluginName(), $updatables, true)): ?>
-                                <button class="btn-uninstall" disabled>
+                                <button class="btn-uninstall" disabled title="<?= t('This feature is currently unavailable') ?>">
                                 <?= t('Update') ?>
                                 </button>
                             <?php endif ?>
