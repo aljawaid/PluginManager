@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 function sortPlugins(&$arr)
 {
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
@@ -13,7 +13,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
             <?= t('Plugin Manager') ?></h2>
     </div>
 
-<?php if (! empty($incompatible_plugins)): ?>
+<?php if (!empty($incompatible_plugins)): ?>
     <div class="pm-page-title">
         <h3 class="">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
