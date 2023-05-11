@@ -8,6 +8,9 @@ $(document).ready(function(){
 
         $(`table.available-plugins-table[data-type='${type}']`).show();
         $(`table.available-plugins-table[data-type!='${type}']`).hide();
+
+        $(`div.plugin-type-count-section[data-type='${type}']`).css('background-color', 'LightGray');
+        $(`div.plugin-type-count-section[data-type!='${type}']`).css('background-color', '');
     });
 });
 
