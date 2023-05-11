@@ -1,5 +1,6 @@
 <?php
-function sortPlugins(&$arr) {
+function sortPlugins(&$arr)
+{
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
@@ -97,7 +98,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                     <tr class="plugin-description">
                         <td colspan="<?= $is_configured ? 6 : 5 ?>">
                             <?= $this->text->e($plugin->getPluginDescription()) ?>
-                            <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR.'/'.$pluginFolder.'/.')); ?>
+                            <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR . '/' . $pluginFolder . '/.')); ?>
                             <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
                         </td>
                     </tr>
@@ -114,7 +115,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
     <div class="pm-page-margin relative">
         <div class="plugin-list-clipboard">
             <?php sortPlugins($plugins); ?>
-            <span class="copy-installed-list-format btn" title="<?= t('Copy plugin list') ?>" data-clipboard-text="<?php foreach ($plugins as $pluginFolder => $plugin): ?><?= '- '. $this->text->e($plugin->getPluginName()) .' v'. $this->text->e($plugin->getPluginVersion()) . ' ' . t('by').' ' . $this->text->e($plugin->getPluginAuthor()) . PHP_EOL ?><?php endforeach ?>">
+            <span class="copy-installed-list-format btn" title="<?= t('Copy plugin list') ?>" data-clipboard-text="<?php foreach ($plugins as $pluginFolder => $plugin): ?><?= '- ' . $this->text->e($plugin->getPluginName()) . ' v' . $this->text->e($plugin->getPluginVersion()) . ' ' . t('by') .' ' . $this->text->e($plugin->getPluginAuthor()) . PHP_EOL ?><?php endforeach ?>">
                 <svg height="30px" class="clippy-icon" fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                     <title><?= t('Copy to Clipboard') ?></title>
                     <path xmlns="http://www.w3.org/2000/svg" d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"/>
@@ -223,7 +224,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                     <tr class="plugin-description">
                         <td class="" colspan="<?= $is_configured ? 7 : 6 ?>">
                             <?= $this->text->e($plugin->getPluginDescription()) ?>
-                            <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR.'/'.$pluginFolder.'/.')); ?>
+                            <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR . '/' . $pluginFolder . '/.')); ?>
                             <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
                         </td>
                     </tr>
