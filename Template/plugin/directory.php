@@ -147,7 +147,7 @@
                         <div class="plugin-type-count-text"><?= t('Multi') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['multi']) ? $countTypes['multi'] : '0' ?></div>
                     </div>
-                    <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes)) ) : '0' ?>
+                    <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))): '0' ?>
                     <?php if ($totalOthers > 0): ?>
                         <div class="plugin-type-count-section">
                             <div class="plugin-type-count-icon">
@@ -158,7 +158,7 @@
                                 </svg>
                             </div>
                             <div class="plugin-type-count-text"><?= t('Others') ?></div>
-                            <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes)) ) : '0' ?></div>
+                            <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))): '0' ?></div>
                         </div>
                     <?php endif ?>
                 </label>
@@ -178,7 +178,7 @@
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         </div>
         <?php foreach ($available_plugins as $plugin): ?>
-        <table id="Plugin-<?= preg_replace('/\s+/', '',($this->text->e($plugin['title']))) ?>" class="available-plugins-table">
+        <table id="Plugin-<?= preg_replace('/\s+/', '', ($this->text->e($plugin['title']))) ?>" class="available-plugins-table">
             <tr class="">
                 <th class="available-plugins-author" colspan="2">
                     <?php if (isset($plugin['is_type'])): ?>
@@ -416,7 +416,7 @@
                             <title><?= t('This plugin has not specified any hooks') ?></title>
                             <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/>
                         </svg>
-                     <?php endif ?>
+                    <?php endif ?>
                 </td>
                 <td class="available-plugin-status text-center">
                     <?php if ($is_configured): ?>
@@ -433,7 +433,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye pp-grey" viewBox="0 0 16 16">
                                     <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
                                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                                </svg>', 'PluginController', 'show', array(), false, 'plugin-manager-view', t('View in Plugin Manager'), false, str_replace(" ", "", 'installed'.$this->text->e($plugin['title']))) ?>
+                                </svg>', 'PluginController', 'show', array(), false, 'plugin-manager-view', t('View in Plugin Manager'), false, str_replace(" ", "", 'installed' . $this->text->e($plugin['title']))) ?>
                         <?php endif ?>
                     <?php else: ?>
                         <div class="cross">&#10008;</div> <?= t('Not available') ?>
