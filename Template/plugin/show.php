@@ -4,6 +4,7 @@ function sortPlugins(&$arr)
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
+// phpcs:enable
 ?>
     <div class="pm-page-header">
         <h2 class="">
