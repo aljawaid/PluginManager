@@ -147,7 +147,7 @@
                         <div class="plugin-type-count-text"><?= t('Multi') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['multi']) ? $countTypes['multi'] : '0' ?></div>
                     </div>
-                    <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))): '0' ?>
+                    <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?>
                     <?php if ($totalOthers > 0): ?>
                         <div class="plugin-type-count-section">
                             <div class="plugin-type-count-icon">
@@ -158,7 +158,7 @@
                                 </svg>
                             </div>
                             <div class="plugin-type-count-text"><?= t('Others') ?></div>
-                            <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))): '0' ?></div>
+                            <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?></div>
                         </div>
                     <?php endif ?>
                 </label>
