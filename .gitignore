@@ -6,7 +6,6 @@
 /nbproject/
 .DS_Store
 ehthumbs.db
-Icon?
 Thumbs.db
 *.swp
 .*.swp
@@ -17,3 +16,4 @@ Thumbs.db
 *.bak
 node_modules
 .phpunit.result.cache
+
