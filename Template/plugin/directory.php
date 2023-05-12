@@ -6,7 +6,7 @@
         <?= t('Plugin Directory') ?>
     </h2>
 
-    <?php if (! $is_configured): ?>
+    <?php if (!$is_configured): ?>
     <p class="alert alert-error">
         <?= t('Your application instance is not configured to install plugins from the user interface.') ?>
     </p>
@@ -299,7 +299,7 @@
                 <td class="column-40 available-plugins-title">
                     <?= $this->text->e($plugin['title']) ?>
                 </td>
-                    <?php if (! isset($installed_plugins[$plugin['title']])): ?>
+                    <?php if (!isset($installed_plugins[$plugin['title']])): ?>
                         <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
                             <?= $this->text->e($plugin['version']) ?>
                         </td>
@@ -420,7 +420,7 @@
                 </td>
                 <td class="available-plugin-status text-center">
                     <?php if ($is_configured): ?>
-                        <?php if (! isset($installed_plugins[$plugin['title']])): ?>
+                        <?php if (!isset($installed_plugins[$plugin['title']])): ?>
                             <?= $this->url->icon('cloud-download', t('Install'), 'PluginController', 'install', array('archive_url' => urlencode($plugin['download'])), true, 'install-plugin', t('Install this plugin')) ?>
                         <?php elseif ($installed_plugins[$plugin['title']] < $plugin['version']): ?>
                             <div class="currently-installed-v pp-grey" title="<?= t('Currently Installed') ?>">
