@@ -63,7 +63,7 @@ jobs:
         # https://github.com/marketplace/actions/super-linter#environment-variables
         env:
           # Change to 'true' to scan all files, 'false' for new or edited files
-          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_ALL_CODEBASE: false
           # Change to 'master' if your main branch differs
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

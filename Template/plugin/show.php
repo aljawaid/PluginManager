@@ -1,5 +1,4 @@
-<?php
-// phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
+<?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 function sortPlugins(&$arr)
 {
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
