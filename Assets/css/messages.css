@@ -16,26 +16,26 @@
  =====================================================================
 */
 
-/**,
+/* *,
 *:after,
 *:before {
   box-sizing: border-box;
-}*/
+} */
 
 .message,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 .message {
-    background: #eee;
-    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, .31);
+    /* max-width: 40em; */
+    background: #EEEEEE;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .31);
     border-radius: 1em;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    /*max-width: 40em;*/
     margin: 1em auto 2em auto;
     width: fit-content;
 }
@@ -43,19 +43,19 @@
 .message header {
     background: #9E9E9E;
     width: 100%;
-    padding: 0.5em;
+    padding: .5em;
     margin-bottom: 0;
     border-bottom: 0;
 }
 
-.message i:after {
-    font-family: "FontAwesome";
+.message i::after {
+    font-family: FontAwesome;
     font-weight: 900;
     content: "";
     font-style: normal;
-    color: #eee;
+    color: #EEEEEE;
     background: #353535;
-    padding: 1em 0.75em;
+    padding: 1em .75em;
     font-size: 1.25em;
     display: block;
     width: 2.5em;
@@ -64,7 +64,7 @@
 }
 
 .message h3 {
-    margin: 0.75em;
+    margin: .75em;
     font-size: 1.25em;
     position: relative;
     display: block;
@@ -73,7 +73,7 @@
 
 .message h3 span.message-title {
     color: #9E9E9E;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .message h3 span.message-text {
@@ -82,7 +82,7 @@
     vertical-align: unset;
 }
 
-.message h3:after {
+.message h3::after {
     content: "";
     border-bottom: .1em solid #9E9E9E;
     width: 100%;
@@ -96,9 +96,9 @@
     background: #D50000;
 }
 
-.error i:after {
-    background: #3d1d1d;
-    color: #ff5656;
+.error i::after {
+    background: #3D1D1D;
+    color: #FF5656;
     content: "";
 }
 
@@ -106,7 +106,7 @@
     color: #D50000;
 }
 
-.error h3:after {
+.error h3::after {
     border-bottom: .1em solid #D50000;
 }
 
@@ -114,9 +114,9 @@
     background: #FF6F00;
 }
 
-.warning i:after {
-    background: #432e1d;
-    color: #ffb780;
+.warning i::after {
+    background: #432E1D;
+    color: #FFB780;
     content: "";
 }
 
@@ -124,7 +124,7 @@
     color: #FF6F00;
 }
 
-.warning h3:after {
+.warning h3::after {
     border-bottom: .1em solid #FF6F00;
 }
 
@@ -132,9 +132,9 @@
     background: #448AFF;
 }
 
-.neutral i:after {
+.neutral i::after {
     background: #273243;
-    color: #c4daff;
+    color: #C4DAFF;
     content: "";
 }
 
@@ -142,7 +142,7 @@
     color: #448AFF;
 }
 
-.neutral h3:after {
+.neutral h3::after {
     border-bottom: .1em solid #448AFF;
 }
 
@@ -150,9 +150,9 @@
     background: #388E3C;
 }
 
-.success i:after {
+.success i::after {
     background: #253226;
-    color: #7bcb7e;
+    color: #7BCB7E;
     content: "";
 }
 
@@ -160,24 +160,24 @@
     color: #388E3C;
 }
 
-.success h3:after {
+.success h3::after {
     border-bottom: .1em solid #388E3C;
 }
 
 .uhm header {
-    background: #c1610d;
+    background: #C1610D;
 }
 
-.uhm i:after {
-    background: #3a2b1f;
-    color: #f4a25a;
+.uhm i::after {
+    background: #3A2B1F;
+    color: #F4A25A;
     content: "";
 }
 
 .uhm h3 span.message-title {
-    color: #c1610d;
+    color: #C1610D;
 }
 
-.uhm h3:after {
-    border-bottom: .1em solid #c1610d;
+.uhm h3::after {
+    border-bottom: .1em solid #C1610D;
 }
