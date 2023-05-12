@@ -75,6 +75,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show current application version
 - Show direct link for each plugin Readme file (if available)
 - Searchable user friendly filter for quickly finding available plugins
+  - Click on each type to dynamically filter all plugins based on their type in the directory
   - Hover over input box to focus without clicking
 - Highlight last updated dates to reflect the development activity of a plugin
 - Show plugin totals by type
