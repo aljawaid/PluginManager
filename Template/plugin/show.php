@@ -1,9 +1,10 @@
-<?php
+<?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 function sortPlugins(&$arr)
 {
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
 $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
+// phpcs:enable
 ?>
     <div class="pm-page-header">
         <h2 class="">
@@ -13,7 +14,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
             <?= t('Plugin Manager') ?></h2>
     </div>
 
-<?php if (! empty($incompatible_plugins)): ?>
+<?php if (!empty($incompatible_plugins)): ?>
     <div class="pm-page-title">
         <h3 class="">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
@@ -115,12 +116,14 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
     <div class="pm-page-margin relative">
         <div class="plugin-list-clipboard">
             <?php sortPlugins($plugins); ?>
-            <span class="copy-installed-list-format btn" title="<?= t('Copy plugin list') ?>" data-clipboard-text="<?php foreach ($plugins as $pluginFolder => $plugin): ?><?= '- ' . $this->text->e($plugin->getPluginName()) . ' v' . $this->text->e($plugin->getPluginVersion()) . ' ' . t('by') .' ' . $this->text->e($plugin->getPluginAuthor()) . PHP_EOL ?><?php endforeach ?>">
+            <?php // phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace,Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore ?>
+            <span class="copy-installed-list-format btn" title="<?= t('Copy plugin list') ?>" data-clipboard-text="<?php foreach ($plugins as $pluginFolder => $plugin): ?><?= '- ' . $this->text->e($plugin->getPluginName()) . ' v' . $this->text->e($plugin->getPluginVersion()) . ' ' . t('by') . ' ' . $this->text->e($plugin->getPluginAuthor()) . PHP_EOL ?><?php endforeach ?>">
                 <svg height="30px" class="clippy-icon" fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                     <title><?= t('Copy to Clipboard') ?></title>
                     <path xmlns="http://www.w3.org/2000/svg" d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"/>
                 </svg>
             </span>
+            <?php //phpcs:enable ?>
         </div>
         <form class="plugin-installed-filter">
             <label for="InstalledPluginsFilterInput">
