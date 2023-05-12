@@ -1,13 +1,14 @@
 // KANBOARD PLUGIN ASSET FILE
 
 // Dynamic filtering of the plugin directory list on plugin types.
-$(document).ready(function(){
+$(document).ready(function() {
     "use strict";
 
     const target = 'table.available-plugins-table';
     const activator = 'div.plugin-type-count-section';
     const bgColor = 'LightGray';
     let filter = null;
+    let mode = 0;
 
     function isType(type) {
         return `[data-type='${type}']`;
@@ -17,20 +18,43 @@ $(document).ready(function(){
         return `[data-type!='${type}']`;
     }
 
-    $(activator).click(function(ev){
+    function select(cond) {
+        $(`${activator}${cond}`).css('background-color', bgColor);
+        $(`${target}${cond}`).show();
+    }
+
+    function deselect(cond) {
+        $(`${activator}${cond}`).css('background-color', '');
+        $(`${target}${cond}`).hide();
+    }
+
+    $(activator).click(function(ev) {
         const type = $(this).data('type');
 
-        if (filter == type) {
-            filter = null;
-            $(target).show();
-            $(activator).css('background-color', '');
-        } else {
-            filter = type;
-            $(`${target}${isType(type)}`).show();
-            $(`${target}${isNotType(type)}`).hide();
+        if (filter != type) {
+            mode = 1;
+        }
 
-            $(`${activator}${isType(type)}`).css('background-color', bgColor);
-            $(`${activator}${isNotType(type)}`).css('background-color', '');
+        switch(mode){
+            case 0: // Turn off
+                filter = null;
+                mode = 1;
+                $(target).show();
+                $(activator).css('background-color', '');
+                break;
+            case 1: // Select type
+                filter = type;
+                mode = 2;
+                select(isType(type));
+                deselect(isNotType(type));
+                break;
+            case 2: // Select all but type
+                filter = type;
+                mode = 0;
+                select(isNotType(type));
+                deselect(isType(type));
+                break;
+            default: // Ignore
         }
     });
 });
