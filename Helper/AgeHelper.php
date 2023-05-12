@@ -34,7 +34,7 @@ class AgeHelper extends Base
 
         switch ($diff) {
             case $diff < 60:
-                return '<span class="age-pass">' . t('less than a minute ago') .'</span>';
+                return '<span class="age-pass">' . t('less than a minute ago') . '</span>';
             case $diff < 3600:
             // <1h
                 return '<span class="age-pass">' . t('around %d minutes ago', $diff / 60) . '</span>';
@@ -54,7 +54,7 @@ class AgeHelper extends Base
             // <360D*2
                 return '<span class="age-warning">' . t('over a year ago') . '</span>';
             default:
-                return '<span class="age-danger">' . t('over %d years ago' , $diff / 31104000) . '</span>';
+                return '<span class="age-danger">' . t('over %d years ago', $diff / 31104000) . '</span>';
         }
     }
 }
