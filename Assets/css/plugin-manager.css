@@ -67,6 +67,7 @@
 #main .pm-page-header {
     margin: var(--header-page-margin-pm);
 }
+
 /* stylelint-enable selector-id-pattern, declaration-no-important */
 
 .pm-page-header h2 {
