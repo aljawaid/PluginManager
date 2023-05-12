@@ -9,6 +9,6 @@
     "extends": "eslint:recommended",
     "ignorePatterns": ["clipboard-*.min.js", "**/vendor/*.js"],
     "globals": {
-      "ClipboardJS": "readonly",
+      "ClipboardJS": "readonly"
     }
 }
