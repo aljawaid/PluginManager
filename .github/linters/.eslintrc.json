@@ -10,5 +10,5 @@
     "ignorePatterns": ["clipboard-*.min.js", "**/vendor/*.js"],
     "globals": {
       "ClipboardJS": "readonly",
-    },
+    }
 }
