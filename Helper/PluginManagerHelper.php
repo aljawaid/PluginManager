@@ -14,11 +14,15 @@ class PluginManagerHelper extends Base
             $url = "http://" . $url;
         }
         $domain = implode('.', array_slice(explode('.', parse_url($url, PHP_URL_HOST)), -2));
-        switch ( $domain ){
-            case 'github.com' : return '/blob/master/README.md';
-            case 'gitlab.com' : return '/-/blob/master/README.md';
-            case 'gitea.com' : return '/src/branch/main/README.md';
-            default: return false;
+        switch ($domain) {
+            case 'github.com':
+                return '/blob/master/README.md';
+            case 'gitlab.com':
+                return '/-/blob/master/README.md';
+            case 'gitea.com':
+                return '/src/branch/main/README.md';
+            default:
+                return false;
         }
     }
 
@@ -26,7 +30,7 @@ class PluginManagerHelper extends Base
     {
         $types = array();
         foreach ($available_plugins as $plugin) {
-            if ( isset($plugin['is_type']) && in_array($plugin['is_type'], ['plugin', 'action', 'theme', 'multi', 'connector'], false) ) {
+            if (isset($plugin['is_type']) && in_array($plugin['is_type'], ['plugin', 'action', 'theme', 'multi', 'connector'], false)) {
                 array_push($types, $plugin['is_type']);
             }
         }
@@ -78,7 +82,6 @@ class PluginManagerHelper extends Base
             if ($timestamp != -1) { //otherwise unknown
                 return date("d F Y H:i", $timestamp); //etc
             }
-
         } else {
             return t('Not Available');
         }
