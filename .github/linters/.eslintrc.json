@@ -5,7 +5,5 @@
         "jquery": true
     },
     "root": true,
-    "extends": [
-        "eslint:recommended",
-    ]
+    "extends": "eslint:recommended"
 }
