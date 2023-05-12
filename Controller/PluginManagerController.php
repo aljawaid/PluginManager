@@ -17,7 +17,7 @@ use ZipArchive;
 
 class PluginManagerController extends \Kanboard\Controller\PluginController
 {
-	/**
+    /**
      * Display the Plugin Problems Page
      *
      * @access public
@@ -26,7 +26,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function show()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-problems', array(
-            'title' => t('Plugins').' &#10562; '.t('Plugin Problems'),
+            'title' => t('Plugins') . ' &#10562; ' . t('Plugin Problems'),
         )));
     }
 
@@ -47,8 +47,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
 
         $this->response->redirect($rc
             ? $this->helper->url->to('PluginController', 'show')
-            : $this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager'))
-        );
+            : $this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
     }
 
     /**
@@ -133,7 +132,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function showPluginInfo()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-info', array(
-            'title' => t('Plugins').' &#10562; '.t('Plugin Info'),
+            'title' => t('Plugins') . ' &#10562; ' . t('Plugin Info'),
             'available_plugins' => Directory::getInstance($this->container)->getAvailablePlugins()
         )));
     }
@@ -152,6 +151,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     }
 }
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
 class Installer extends \Kanboard\Core\Plugin\Installer
 {
     /**
@@ -168,6 +168,7 @@ class Installer extends \Kanboard\Core\Plugin\Installer
         return $archiveFile;
     }
 }
+//phpcs enable
 
 /**
  * Get the directory name
