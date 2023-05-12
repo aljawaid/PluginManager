@@ -56,10 +56,10 @@ class PluginManagerHelper extends Base
             // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
             $curl = curl_init(PLUGIN_API_URL);
 
-            //don't fetch the actual page, you only want headers
+            // don't fetch the actual page, you only want headers
             curl_setopt($curl, CURLOPT_NOBODY, true);
 
-            //stop it from outputting stuff to stdout
+            // stop it from outputting stuff to stdout
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
             // attempt to retrieve the modification date
@@ -74,13 +74,13 @@ class PluginManagerHelper extends Base
             $result = curl_exec($curl);
 
             if ($result === false) {
-                die (curl_error($curl));
+                die(curl_error($curl));
             }
 
             $timestamp = curl_getinfo($curl, CURLINFO_FILETIME);
 
-            if ($timestamp != -1) { //otherwise unknown
-                return date("d F Y H:i", $timestamp); //etc
+            if ($timestamp != -1) { // otherwise unknown
+                return date("d F Y H:i", $timestamp); // etc
             }
         } else {
             return t('Not Available');
