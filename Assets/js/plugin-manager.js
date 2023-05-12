@@ -2,15 +2,36 @@
 
 // Dynamic filtering of the plugin directory list on plugin types.
 $(document).ready(function(){
+    "use strict";
 
-    $('div.plugin-type-count-section').click(function(ev){
+    const target = 'table.available-plugins-table';
+    const activator = 'div.plugin-type-count-section';
+    const bgColor = 'LightGray';
+    let filter = null;
+
+    function isType(type) {
+        return `[data-type='${type}']`;
+    }
+
+    function isNotType(type) {
+        return `[data-type!='${type}']`;
+    }
+
+    $(activator).click(function(ev){
         const type = $(this).data('type');
 
-        $(`table.available-plugins-table[data-type='${type}']`).show();
-        $(`table.available-plugins-table[data-type!='${type}']`).hide();
+        if (filter == type) {
+            filter = null;
+            $(target).show();
+            $(activator).css('background-color', '');
+        } else {
+            filter = type;
+            $(`${target}${isType(type)}`).show();
+            $(`${target}${isNotType(type)}`).hide();
 
-        $(`div.plugin-type-count-section[data-type='${type}']`).css('background-color', 'LightGray');
-        $(`div.plugin-type-count-section[data-type!='${type}']`).css('background-color', '');
+            $(`${activator}${isType(type)}`).css('background-color', bgColor);
+            $(`${activator}${isNotType(type)}`).css('background-color', '');
+        }
     });
 });
 
