@@ -1,10 +1,12 @@
 <?php
+// phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 function sortPlugins(&$arr)
 {
     uasort($arr, fn($a, $b) => strtolower($a->getPluginName()) <=> strtolower($b->getPluginName()));
 }
+$updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
+// phpcs:enable
 ?>
-<?php $updatables = $this->helper->pluginManagerHelper->getPluginUpdates(); ?>
 <div class="pm-page-header">
     <h2 class="">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
