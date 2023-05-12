@@ -28,7 +28,7 @@ $(document).ready(function() {
         $(`${target}${cond}`).hide();
     }
 
-    $(activator).click(function(ev) {
+    $(activator).click(function() {
         const type = $(this).data('type');
 
         if (filter != type) {
