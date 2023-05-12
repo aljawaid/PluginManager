@@ -48,11 +48,11 @@
 }
 
 .display-none, .d-none {
-    display: none !important;
+    display: none;
 }
 
 .font-weight-bold {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .text-center {
@@ -63,9 +63,11 @@
     position: relative;
 }
 
+/* stylelint-disable selector-id-pattern, declaration-no-important */
 #main .pm-page-header {
     margin: var(--header-page-margin-pm);
 }
+/* stylelint-enable selector-id-pattern, declaration-no-important */
 
 .pm-page-header h2 {
     border-bottom: 2px outset var(--blue-border-gradient-match) !important;
@@ -462,7 +464,7 @@ tr.plugin-description td {
     float: left;
     margin-top: 9px;
     padding: 2px 4px 1px 0;
-    font-weight: 400;
+    font-weight: normal;
     color: var(--pp-grey);
     font-style: italic;
     font-size: .9em;
@@ -497,7 +499,7 @@ tr.plugin-description td {
 .tooltip-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .tooltip-title svg {
@@ -527,7 +529,7 @@ tr.plugin-description td {
 
 .available-count {
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: bold;
     cursor: context-menu;
 }
 
@@ -539,10 +541,7 @@ tr.plugin-description td {
 #DirectoryInfo > thead > tr > th {
     padding: var(--table-head-padding);
     background-color: var(--color-light);
-    border-top-left-radius: var(--border-radius-pm);
-    border-top-right-radius: var(--border-radius-pm);
-    border-bottom-left-radius: var(--border-radius-pm);
-    border-bottom-right-radius: var(--border-radius-pm);
+    border-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
     font-weight: 600;
     cursor: context-menu;
@@ -550,15 +549,12 @@ tr.plugin-description td {
 
 #DirectoryInfo > tbody > tr > td {
     padding: var(--table-head-padding);
-    border-top-left-radius: var(--border-radius-pm);
-    border-top-right-radius: var(--border-radius-pm);
-    border-bottom-left-radius: var(--border-radius-pm);
-    border-bottom-right-radius: var(--border-radius-pm);
+    border-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
 }
 
 .plugin-dir-url {
-    font-weight: 400;
+    font-weight: normal;
     cursor: context-menu;
     color: var(--pp-grey);
 }
@@ -587,7 +583,7 @@ i.fa-cubes::before {
 
 th.available-plugins-author {
     position: relative;
-    font-weight: 400;
+    font-weight: normal;
     font-style: italic;
     font-size: .9em;
     border-bottom: 0;
@@ -698,14 +694,14 @@ td.available-plugin-description .markdown p {
 
 .tick {
     color: var(--pp-green);
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1.3em;
     display: inline;
 }
 
 .cross {
     color: var(--pp-red-alt-2);
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1.3em;
     display: inline;
 }
@@ -877,7 +873,7 @@ td.manual-plugin-description {
 
 .info-tooltip-title {
     vertical-align: middle;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .info-tooltip-text {
@@ -890,7 +886,7 @@ td.manual-plugin-description {
 }
 
 .info-tooltip-item {
-    font-weight: 700;
+    font-weight: bold;
     font-size: .8em;
     display: inline-block;
     width: 150px;
@@ -904,13 +900,13 @@ td.manual-plugin-description {
 
 .info-tooltip-item .age-pass, .info-tooltip-item .age-warning, .info-tooltip-item .age-danger {
     width: 100px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .info-tooltip-item .timeframe {
     margin-left: 10px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .info-type-section {
@@ -939,7 +935,7 @@ td.manual-plugin-description {
 
 .info-type-title {
     display: block;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
     line-height: 1.5;
 }
@@ -1086,7 +1082,7 @@ figure.notice a, figure.notice a:visited {
 
 .structure-info-heading {
     display: block;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -1303,7 +1299,7 @@ td.manual-plugin-note.developer-plugin {
 
 .manual-plugins-table th.available-plugins-author {
     position: relative;
-    font-weight: 400;
+    font-weight: normal;
     font-style: italic;
     font-size: .9em;
     background: var(--pp-white);

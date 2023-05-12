@@ -35,7 +35,7 @@
         "selector-type-case": "lower",
         "selector-class-pattern": null,
         "selector-id-pattern": [
-            "(?!main)([A-Z][a-z0-9]+)((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?",
+            "([A-Z][a-z0-9]+)((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?",
             {
                 "message": "Expected CSS Selector ID pattern to be CamelCase",
                 "severity": "warning"
