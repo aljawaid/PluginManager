@@ -47,9 +47,9 @@
                 </li>
             </ul>
         </div>
-                <?= t('All information related to your setup can be easily found through the ') ?>
         <?php if (file_exists('plugins/KanboardSupport')): ?>
             <p class="">
+                <?= t('All information related to your setup can be easily found in') ?>
                 <?= $this->url->link('<span class="pm-kanboard-support-icon"></span>' . t('Technical Information'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support', '', false, 'ServerConfig') ?>.
             </p>
         <?php endif ?>
