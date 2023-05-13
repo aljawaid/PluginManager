@@ -931,7 +931,12 @@ td.manual-plugin-description {
     position: absolute;
     left: 3px;
     top: 12px;
-    color: var(--blue-icon-dark);
+}
+
+.info-type-icon .pm-plugin-icon, .info-type-icon .pm-action-icon, .info-type-icon .pm-theme-icon, .info-type-icon .pm-connector-icon, .info-type-icon .pm-multi-icon, .info-type-icon .pm-other-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
 }
 
 .info-type-title {
@@ -1093,6 +1098,20 @@ figure.notice a, figure.notice a:visited {
     padding: 3px 4px;
     display: inline-flex;
     margin: auto 5px auto 0;
+}
+
+.structure-info-icon .pm-readme-icon, .structure-info-icon .pm-homepage-icon, .structure-info-unknown .pm-database-icon, .structure-info-icon .pm-database-add-icon, .structure-info-icon .pm-database-check-icon, .structure-info-unknown .pm-overrides-icon, .structure-info-icon .pm-overrides-add-icon, .structure-info-icon .pm-overrides-check-icon, .structure-info-unknown .pm-hooks-icon, .structure-info-icon .pm-hooks-add-icon, .structure-info-icon .pm-hooks-check-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.structure-info-unknown .pm-database-icon, .structure-info-icon .pm-database-check-icon {
+    padding-top: 3px;
+    padding-bottom: 0;
+}
+
+.structure-info-unknown .pm-overrides-icon, .structure-info-unknown .pm-hooks-icon {
+    margin-bottom: 3px;
 }
 
 .structure-info-text {
