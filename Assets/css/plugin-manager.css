@@ -79,12 +79,12 @@
     margin-top: 0;
 }
 
-.pm-page-header h2 svg {
+.pm-page-header h2 .pm-problems-icon {
     top: 2px;
     position: relative;
-    pointer-events: none;
     width: 23px;
     height: 23px;
+    display: inline-block;
 }
 
 .pm-page-margin {
@@ -1151,10 +1151,9 @@ code.code {
     margin-bottom: 25px;
 }
 
-.plugin-problems-section h3 svg {
+.plugin-problems-section h3 .pm-overrides-icon, .plugin-problems-section h3 .pm-app-settings-icon, .plugin-problems-section h3 .pm-database-icon, .plugin-problems-section h3 .pm-fix-icon, .plugin-problems-section h3 .pm-further-reading-icon {
     vertical-align: sub;
     margin-right: 5px;
-    pointer-events: none;
 }
 
 .plugin-problems-section h3 span {
@@ -1174,11 +1173,20 @@ code.code {
     transition: var(--transition-pm);
 }
 
-.plugin-problems-section .panel a svg.bi-journal-code, .plugin-problems-section p a svg.bi-journal-code {
+.plugin-problems-section .panel a span.pm-kanboard-support-icon {
+    vertical-align: sub;
+    margin-left: -3px;
+    margin-right: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+.plugin-problems-section p a span.pm-kanboard-support-icon {
     vertical-align: sub;
     margin-left: 4px;
     margin-right: 3px;
-    pointer-events: none;
+    width: 18px;
+    height: 18px;
 }
 
 .plugin-problems-section .panel ul li {
@@ -1187,10 +1195,9 @@ code.code {
     margin-bottom: 5px;
 }
 
-.plugin-problems-section .panel ul li svg {
+.plugin-problems-section .panel ul li span {
     vertical-align: sub;
     margin-right: 5px;
-    pointer-events: none;
 }
 
 .plugin-problems-section p, .pm-page-margin p {
@@ -1220,12 +1227,11 @@ code.code {
     margin: 15px 25px 10px 25px;
 }
 
-.plugin-problems-section .further-reading li svg {
+.plugin-problems-section .further-reading li span {
     vertical-align: sub;
     margin-right: 5px;
     width: 20px;
     height: 20px;
-    pointer-events: none;
 }
 
 #PluginSideBar > ul li.active > a svg {
