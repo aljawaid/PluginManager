@@ -31,6 +31,7 @@ class Plugin extends Base
         // CSS - Asset Hook
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/plugin-manager.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/plugin-manager-icons.css'));
         if (!file_exists('plugins/ContentCleaner') || !file_exists('plugins/KanboardSupport')) {
             $this->hook->on('template:layout:css', array('template' => 'plugins/PluginManager/Assets/css/messages.css'));
         }
