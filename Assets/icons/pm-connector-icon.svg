@@ -1,0 +1,9 @@
+<svg width="20px" height="20px" fill="currentColor" class="pm-connector-icon" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5.5,26.5L5.5,26.5c1.9,1.9,5.1,1.9,7,0L16,23l-7-7l-3.5,3.5C3.5,21.5,3.5,24.6,5.5,26.5z"/>
+    <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8" y1="15" x2="17" y2="24"/>
+    <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10" y1="17" x2="14" y2="13"/>
+    <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="22" x2="19" y2="18"/>
+    <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="2" y1="30" x2="5" y2="27"/>
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M26.5,5.5L26.5,5.5c-1.9-1.9-5.1-1.9-7,0L16,9l7,7l3.5-3.5C28.5,10.5,28.5,7.4,26.5,5.5z"/>
+    <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="30" y1="2" x2="27" y2="5"/>
+</svg>
