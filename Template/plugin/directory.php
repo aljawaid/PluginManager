@@ -38,7 +38,7 @@
                         <td class="plugin-dir-url"><?= PLUGIN_API_URL ?></td>
                         <td class="kb-app-version"><?= APP_VERSION ?></td>
                         <td scope="row" class="total-count"><?= count($installed_plugins) ?></td>
-                        <td scope="row" class="total-count"><?= count($updates) ?></td>
+                        <td scope="row" class="total-updates"><?= count($updates) ?></td>
                     </tr>
                 </tbody>
             </table>
