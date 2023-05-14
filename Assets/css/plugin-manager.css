@@ -627,6 +627,11 @@ td.available-plugin-description .markdown p {
     margin-bottom: 5px;
 }
 
+.available-plugin-structure .btn-action:hover {
+    border-color: var(--pp-red);
+    box-shadow: 0 0 0px 1px var(--pp-red);
+}
+
 .available-plugin-structure {
     width: 220px;
     text-align: center;
