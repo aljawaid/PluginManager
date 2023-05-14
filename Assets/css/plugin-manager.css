@@ -629,7 +629,7 @@ td.available-plugin-description .markdown p {
 
 .available-plugin-structure .btn-action:hover {
     border-color: var(--pp-red);
-    box-shadow: 0 0 0px 1px var(--pp-red);
+    box-shadow: 0 0 0 1px var(--pp-red);
 }
 
 .available-plugin-structure {
@@ -1459,5 +1459,5 @@ fieldset.manual-install {
 .total-updates {
     background-color: var(--pp-green);
     color: var(--pp-white);
-    font-weight: 700;
+    font-weight: bold;
 }
