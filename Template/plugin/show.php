@@ -23,7 +23,9 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
         </h3>
     </div>
     <div class="pm-page-margin relative">
-        <p><?= t('Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using') ?> <strong>v<?= APP_VERSION ?></strong>.</p>
+        <p class="">
+            <?= t('Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using') ?> <strong class="pp-green">v<?= APP_VERSION ?></strong>.
+        </p>
         <table id="InstalledIncompatiblePluginsTable" class="installed-incompatible-plugins">
             <thead>
                 <tr class="">
@@ -49,7 +51,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                         </td>
                         <td class="plugin-author"><?= $this->text->e($plugin->getPluginAuthor()) ?></td>
                         <td class="plugin-version text-center"><?= $this->text->e($plugin->getPluginVersion()) ?></td>
-                        <td class="plugin-compatible-version text-center"><strong><?= $this->text->e($plugin->getCompatibleVersion()) ?></strong></td>
+                        <td class="plugin-compatible-version text-center"><strong class="pp-red"><?= $this->text->e($plugin->getCompatibleVersion()) ?></strong></td>
                         <td class="plugin-action">
                             <?php $schema = Kanboard\Core\Plugin\SchemaHandler::hasSchema($plugin->getPluginName()); ?>
                             <?php if ($schema): ?>
