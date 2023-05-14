@@ -71,12 +71,16 @@
 /* stylelint-enable selector-id-pattern, declaration-no-important */
 
 .pm-page-header h2 {
-    border-bottom: 2px outset var(--blue-border-gradient-match) !important;
+    border-bottom: 2px outset var(--blue-border-gradient-match);
     margin-bottom: 15px;
     padding-bottom: 5px;
     font-size: 1.6em;
     padding-top: 5px;
     margin-top: 0;
+}
+
+.pm-page-header h2 .pm-plugin-directory-icon {
+    margin-right: 5px;
 }
 
 .pm-page-header h2 .pm-problems-icon {
@@ -251,10 +255,9 @@
     display: inline;
 }
 
-.plugin-installed-filter label svg, .plugin-available-filter label svg {
+.plugin-installed-filter label .pm-filter-icon, .plugin-available-filter label .pm-filter-icon {
     vertical-align: text-bottom;
     margin-right: 5px;
-    pointer-events: none;
 }
 
 .plugin-installed-filter input{
@@ -419,7 +422,7 @@
     vertical-align: middle;
 }
 
-a.btn-action:hover, svg.btn-action:hover {
+a.btn-action:hover {
     color: var(--pp-red-alt-2) !important;
     fill: var(--pp-red-alt-2);
 }
@@ -503,11 +506,8 @@ tr.plugin-description td {
     font-weight: normal;
 }
 
-.tooltip-title svg {
-    color: var(--pp-orange);
-    fill: var(--pp-orange);
+.tooltip-title span {
     margin-right: 3px;
-    pointer-events: none;
 }
 
 .tooltip-hr {
@@ -569,10 +569,9 @@ tr.plugin-description td {
     text-decoration: none !important;
 }
 
-#DirectoryInfo td.plugin-dir-view a svg {
+#DirectoryInfo td.plugin-dir-view a .pm-source-directory-icon {
     vertical-align: bottom;
     margin-right: 3px;
-    pointer-events: none;
 }
 
 th.available-plugins-author {
@@ -589,11 +588,9 @@ th.available-plugins-author {
     pointer-events: none;
 }
 
-.available-plugins-author svg.octicon-law {
+.available-plugins-author span.pm-license-icon {
     position: absolute;
     right: 3px;
-    fill: var(--pp-grey);
-    pointer-events: none;
 }
 
 .available-plugins-title {
@@ -640,9 +637,15 @@ td.available-plugin-description .markdown p {
     padding-bottom: 7px;
 }
 
-.available-plugin-structure .bi-database, .available-plugin-structure .bi-database-check {
+.available-plugin-structure span {
+    width: 24px;
+    height: 24px;
+}
+
+.available-plugin-structure .pm-database-icon, .available-plugin-structure .pm-database-check-icon {
     padding-top: 1px !important;
     padding-bottom: 2px !important;
+    margin-right: 2px;
 }
 
 .has-overrides {
@@ -651,37 +654,17 @@ td.available-plugin-description .markdown p {
     height: 24px;
 }
 
-.dir-plugin-readme svg, .plugin-book svg {
-    fill: var(--pp-grey);
-    pointer-events: none;
-}
-
 .available-plugin-status {
     width: 200px;
 }
 
-.available-plugin-structure .bi-database-add {
+.available-plugin-structure .pm-database-add-icon {
     padding: 0 4px 1px 5px;
     width: 24px;
     height: 26px;
 }
 
-.has-schema, .has-overrides, .has-hooks {
-    color: var(--pp-orange);
-    fill: var(--pp-orange);
-}
-
-.x-has-schema, .x-has-overrides, .x-has-hooks {
-    color: var(--pp-grey);
-    fill: var(--pp-grey);
-}
-
-.xx-has-schema, .xx-has-overrides, .xx-has-hooks {
-    color: var(--pp-green);
-    fill: var(--pp-green);
-}
-
-.bi-database, .bi-database-check {
+.pm-database-icon, .pm-database-check-icon {
     padding-top: 3px !important;
     padding-bottom: 0 !important;
 }
@@ -859,7 +842,7 @@ td.manual-plugin-description {
     vertical-align: middle;
 }
 
-.info-tooltip-title svg {
+.info-tooltip-title span {
     vertical-align: sub;
     pointer-events: none;
 }
@@ -944,11 +927,6 @@ figure.notice a, figure.notice a:visited {
     vertical-align: top;
 }
 
-.plugin-type svg {
-    color: var(--blue-icon-dark);
-    pointer-events: none;
-}
-
 .plugin-available-filter-wrapper {
     margin: auto;
     display: block;
@@ -982,13 +960,12 @@ figure.notice a, figure.notice a:visited {
     display: inline;
 }
 
-.plugin-type-count-icon svg {
+.plugin-type-count-icon span {
     width: 22px;
     height: 22px;
     vertical-align: middle;
     margin-top: -3px;
-    color: var(--blue-icon-dark);
-    pointer-events: none;
+    display: inline-block;
 }
 
 .plugin-type-count-total {
