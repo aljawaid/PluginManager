@@ -142,7 +142,9 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
         <div class="plugin-count">
             <?= t('You have %s plugins installed', $installedCount) ?>&nbsp;<?= ($incompatibleCount > 0) ? t('and %s incompatible plugin(s)', $incompatibleCount) : '' ?>
         </div>
-        <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
+        <?php if ($installedCount > 10): ?>
+            <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
+        <?php endif ?>
         <table id="InstalledPluginsTable" class="installed-plugins">
             <thead class="">
                 <tr class="">
@@ -234,6 +236,8 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                 </tbody>
             <?php endforeach ?>
         </table>
-        <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
+        <?php if ($installedCount > 10): ?>
+            <a id="PluginTop" href="#main" title="<?= t('Go to the top of the page') ?>" class="btn-action"><i class="fa fa-level-up" aria-hidden="true"></i> <?= t('Top') ?></a>
+        <?php endif ?>
     </div>
 <?php endif ?>
