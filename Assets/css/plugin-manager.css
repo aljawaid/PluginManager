@@ -84,6 +84,15 @@
     margin-right: 5px;
 }
 
+.pm-page-header h2 .pm-plugin-icon {
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: top;
+    margin-block-start: 5px;
+}
+
 .pm-page-header h2 .pm-problems-icon {
     top: 2px;
     position: relative;
@@ -109,16 +118,18 @@
     color: var(--pp-red);
 }
 
-.pm-page-title h3 svg {
-    vertical-align: text-top;
+.pm-page-title h3 span {
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    margin-top: 1px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
-.plugin-name svg {
+.plugin-name span.pm-plugin-icon {
     vertical-align: sub;
-    pointer-events: none;
     margin-right: 5px;
-    color: var(--blue-icon-dark);
-    fill: var(--blue-icon-dark);
 }
 
 #PluginSideBar > ul li {
@@ -219,10 +230,6 @@
     position: absolute;
     right: 0;
     top: -7px;
-}
-
-.plugin-list-clipboard span svg {
-    pointer-events: none;
 }
 
 .copy-installed-list-format {
@@ -352,12 +359,9 @@
 }
 
 .plugin-schema {
-    vertical-align: middle;
-    display: inline-block;
-    color: var(--pp-orange);
     margin: auto 2px;
     flex: 1;
-    height: 15px;
+    height: 18px;
 }
 
 .plugin-homepage, .plugin-readme, .has-schema, .has-overrides {
@@ -380,18 +384,18 @@
 
 .plugin-action .plugin-schema .tooltip {
     border: 1px solid var(--pp-grey);
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 5px;
+    padding-bottom: 6px;
     padding-left: 3px;
     border-radius: var(--border-radius-pm);
+    display: inline-flex;
 }
 
-.plugin-schema .tooltip svg {
+.plugin-schema .tooltip span {
     vertical-align: bottom;
-    pointer-events: none;
 }
 
-.plugin-homepage a svg, .plugin-readme a svg {
+.plugin-homepage a span, .plugin-readme a span {
     padding: 3px 0;
     padding-bottom: 5px;
     pointer-events: none;
@@ -425,7 +429,6 @@
 
 a.btn-action:hover {
     color: var(--pp-red-alt-2) !important;
-    fill: var(--pp-red-alt-2);
 }
 
 .btn-uninstall {
@@ -628,7 +631,7 @@ td.available-plugin-description .markdown p {
     margin-bottom: 5px;
 }
 
-.available-plugin-structure .btn-action:hover {
+.available-plugin-structure .btn-action:hover, .plugin-action .btn-action:hover {
     border-color: var(--pp-red);
     box-shadow: 0 0 0 1px var(--pp-red);
 }
