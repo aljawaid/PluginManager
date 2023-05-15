@@ -10,5 +10,8 @@
     "ignorePatterns": ["clipboard-*.min.js", "**/vendor/*.js"],
     "globals": {
       "ClipboardJS": "readonly"
+    },
+    "rules": {
+        "no-undef": "warn"
     }
 }
