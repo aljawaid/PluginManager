@@ -6,6 +6,7 @@
     --pp-red: #B71234;
     --pp-red-alt: #DA004C;
     --pp-red-alt-2: #AE003D;
+    --pp-red-alt-3: #D50000;
     --pp-black: #000000;
     --pp-light-grey: #8F8F8F;
     --pp-grey: #4D4D4D;
@@ -786,7 +787,7 @@ table.available-plugins-table {
 }
 
 table.manual-plugins-table {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-style: outset;
 }
 
@@ -795,7 +796,7 @@ table.available-plugins-table:last-of-type {
 }
 
 td.manual-plugin-description {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -1243,9 +1244,9 @@ td span.install-date {
     font-size: .6em;
     margin-left: 3px;
     padding: 0 2px 0 0;
-    border: 1px solid #D50000;
+    border: 1px solid var(--pp-red-alt-3);
     border-radius: var(--border-radius-pm);
-    background-color: #D50000;
+    background-color: var(--pp-red-alt-3);
     color: var(--pp-white);
     height: 16px;
     line-height: 16px;
@@ -1255,7 +1256,7 @@ td span.install-date {
 .manual-plugin-note {
     font-size: .9em;
     color: var(--pp-grey);
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
@@ -1272,33 +1273,33 @@ td.manual-plugin-note.developer-plugin {
     font-style: italic;
     font-size: .9em;
     background: var(--pp-white);
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-top: 0;
     border-bottom: 0;
 }
 
 .manual-plugins-table td.available-plugins-title {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
 }
 
 .manual-plugins-table td.available-plugin-version {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-bottom: 0;
 }
 
 .manual-plugins-table .available-plugin-last-updated, .manual-plugins-table .available-plugin-structure {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-bottom: 0;
 }
 
 .manual-plugins-table .plugin-last-updated, .manual-plugins-table .plugin-structure {
-    border-color: #D50000;
+    border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-bottom: 0;
     border-top: 0;
@@ -1418,7 +1419,7 @@ input.plugin-file[type="file"]::file-selector-button:hover {
 
 input.plugin-url[type="url"] {
     color: var(--pp-black);
-    border: 1px solid #D50000;
+    border: 1px solid var(--pp-red-alt-3);
     width: 600px;
     max-width: 95%;
     font-size: 1em;
@@ -1431,7 +1432,7 @@ input.plugin-url[type="url"] {
 }
 
 fieldset.manual-install {
-    border: 1px solid #D50000;
+    border: 1px solid var(--pp-red-alt-3);
     border-radius: var(--border-radius-pm);
 }
 
