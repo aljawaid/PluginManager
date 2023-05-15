@@ -41,6 +41,7 @@
 .pp-grey { color: var(--pp-grey); fill: var(--pp-grey); }
 .pp-white { color: var(--pp-white); fill: var(--pp-white); }
 .pp-green { color: var(--pp-green); fill: var(--pp-green); }
+.pp-green-dark { color: var(--pp-green-dark); fill: var(--pp-green-dark); }
 .pp-orange { color: var(--pp-orange); fill: var(--pp-orange); }
 
 .btn-uninstall, #PluginSideBar ul li a {
