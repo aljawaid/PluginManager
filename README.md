@@ -43,9 +43,9 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Add direct link in Kanboard Settings menu
 - Add New Plugin Sidebar Menu Hook
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
-- Add _selected_ [Bootstrap](https://icons.getbootstrap.com) and [Octicons](https://primer.style/octicons/) icons for better clarity and an improved end user experience
-- Clean coded icons - no images
+- Clean coded icons without images for faster page load times
 - Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) from the PluginManager sidebar
+- Direct link to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) from the PluginManager sidebar
 
 
 **Plugin Manager**
