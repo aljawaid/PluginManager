@@ -1,6 +1,6 @@
 // KANBOARD PLUGIN ASSET FILE
 
-// Dynamic filtering of the plugin directory list on plugin types.
+// Dynamic filtering of the plugin directory list on plugin types
 $(document).ready(function() {
     "use strict";
 
@@ -162,7 +162,7 @@ $( document ).ready(function() {
 });
 
 // INSTALLED PLUGIN LIST
-// COPY TO CLIPBOARD SCRIPT - INSTANTIATE SCRIPT - /// FORMATTED OUTPUT TO CLIPBOARD
+// COPY TO CLIPBOARD SCRIPT - INSTANTIATE SCRIPT /// FORMATTED OUTPUT TO CLIPBOARD
 $( document ).ready(function() {
     var clipboard = new ClipboardJS('.copy-url-link-format');
 
@@ -200,7 +200,7 @@ KB.onClick('.js-updates-copy-paste', function (e) {
     }
 });
 
-// FILTER TABLES IN THE INSTALLED PLUGINS PAGE
+// Filter Tables in the Installed Plugins Page on Mouseover
 $(document).ready(function(){
     $("#InstalledPluginsFilterInput").on("mouseover", function() {
         var value = $(this).val().toLowerCase();
