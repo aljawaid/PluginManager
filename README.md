@@ -39,10 +39,10 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 
 - All plugins, installed and available are now sorted alphabetically
 - Add `Back to Top` and `Bottom` buttons for easier screen navigation with smooth scrolling effect
-- Fully translatable
 - Add direct link in Kanboard Settings menu
 - Add New Plugin Sidebar Menu Hook
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
+- Fully translatable
 - Clean coded icons without images for faster page load times
 - Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) from the PluginManager sidebar
 - Direct link to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) from the PluginManager sidebar
@@ -52,49 +52,49 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Installed Plugins
   - Renamed as **`Plugin Manager`**
 - Show installed plugin count
-- Fixed table headers
-- Searchable user friendly filter for quickly finding installed plugins
-  - Hover over input box to focus without clicking
-- Show icon if plugin has database changes
-- Show icon for plugin homepage if set
-- Show Kanboard compatible version if set
-- Show direct link to plugin Readme file if hosted on GitHub, GitLab or Gitea.
-- Show plugin installation date
+- Show total count for plugins with updates
+  - Filter plugins by those requiring updates
+- Fixed table headers for easier page navigation
+- Use the user friendly search filter to quickly find installed plugins
+  - Hover over the input box to focus without clicking
+- Show a notification icon if the plugin has database changes
+- Show a notification icon if the plugin has a published homepage
+- Show the Kanboard compatible version set by the plugin
+- Show a direct link to the plugin readme file if hosted on GitHub, GitLab or Gitea.
+- Show the plugin installation date
 
 **Plugin Directory**
-- NEW: Show plugin structure
-  - Show if plugin has database changes
-  - Show if plugin contains template or model overrides
-  - Show if plugin uses hooks
-  - Show when the plugin was last updated using _Time Ago_ relative dates
-    - Show relative date with exact date in tooltip (toggles to the exact date when clicked)
-  - _Plugin structures are extracted through new properties in the Kanboard Plugins Directory_
-- Show directory source e.g. official or custom including the URL of the source
-- Show available plugins count
-- Show external weblink for official directory
+- NEW: Show a plugin structure for all plugins
+  - Each plugin shows informative icons if it has any database changes, contains template or model overrides, or uses any hooks.
+  - Show when each plugin was last updated using _Time Ago_ relative dates
+    - Display a relative date with the exact date shown in tooltip (toggles to the exact date when clicked)
+  - _The plugin structure is compiled for each plugin using properties extracted from the Kanboard Plugins Directory_
+- Show a directory source e.g. 'official' or 'custom' including the URL of the source
+  - Show external weblink for official directory
+- Show the available plugins count based on your configuration
 - Show current application version
-- Show direct link for each plugin Readme file (if available)
-- Searchable user friendly filter for quickly finding available plugins
-  - Click on each type to dynamically filter all plugins based on their type in the directory
-  - Hover over input box to focus without clicking
-- Highlight last updated dates to reflect the development activity of a plugin
+- Show a direct link for each plugin's readme file
 - Show plugin totals by type
-- Show link to installed plugin
+- Use the user friendly search filter for quickly finding available plugins
+  - Click on each type to dynamically filter all plugins
+  - Hover over the input box to focus without clicking
+- Highlight the last updated dates to reflect the development activity of a plugin
+- Show direct links to installed plugins
 
 **Manual Plugins**
-- Manually install plugins from local archive files or remote locations
-- Manual Plugins are part or completely functional but not suitable for general Kanboard installation
-- Show a list of plugins which can be manually downloaded and installed
-- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins
+- Manually install plugins in `.zip` archive files from local or remote locations
+- Manual plugins are part or completely functional plugins but not suitable for general Kanboard installation
+- Show a list of plugins which can be manually downloaded and installed based on data from the Plugin Directory
+- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
 - These plugins only show in PluginManager
 
 **Plugin Info**
-- A page detailing the breakdown of a plugin with valuable information about core components of a Kanboard plugin
-- Details explaining the plugin structure as displayed in the _Plugin Directory_ and _Plugin Manager_ pages
+- A dedicated section detailing the breakdown of a plugin with valuable information about core components of a Kanboard plugin
+- Details explaining the plugin structure as displayed in the _Plugin Directory_ and _Plugin Manager_ sections
 
 **Plugin Problems**
-- A page dedicated to common issues with plugins and how to resolve them
-- Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) plugin to display technical information
+- A dedicated section listing common issues with plugins and how to resolve them
+- Integration with [KanboardSupport](https://github.com/aljawaid/KanboardSupport) to display technical information
 - Useful links to further troubleshoot plugin issues all in one place
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#features">&#8592; Previous</a>] [<a href="#usage">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
