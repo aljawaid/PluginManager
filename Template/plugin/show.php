@@ -115,7 +115,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
             <label for="InstalledPluginsFilterInput">
                 <span class="pm-filter-icon"></span>
             </label>
-            <input type="search" id="InstalledPluginsFilterInput" class="search-input" placeholder="<?= t('Search for installed plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
+            <input type="search" id="InstalledPluginsFilterInput" name="search-plugin" class="search-input" placeholder="<?= t('Search for installed plugin...') ?>" title="<?= t('Search installed plugins') ?>" autocomplete="off">
         </form>
         <?php
         $installedCount = count($plugins);
@@ -124,7 +124,9 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
         ?>
         <div class="plugin-count">
             <?= t('You have %s plugins installed', $installedCount) ?>
-            <strong><?= ($updateCount > 0) ? t('with %s updates available', $updateCount) : '' ?></strong>
+            <a href="#" class="js-updates-copy-paste" data-update="<?= t('Update') ?>" data-update-target="input[name=search-plugin]" title="<?= t('Click this link then focus in the search box to filter plugins') ?>">
+                <?= ($updateCount > 0) ? t('with %s updates available', $updateCount) : '' ?>
+            </a>
             <?= ($incompatibleCount > 0) ? t('and %s incompatible plugin(s)', $incompatibleCount) : '' ?>
         </div>
         <?php if ($installedCount > 10): ?>

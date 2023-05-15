@@ -1464,3 +1464,8 @@ fieldset.manual-install {
     color: var(--pp-white);
     font-weight: bold;
 }
+
+.js-updates-copy-paste, .js-updates-copy-paste:focus, .js-updates-copy-paste:visited, .js-updates-copy-paste:link {
+    font-weight: 600;
+    color: var(--blue-icon-dark);
+}

@@ -66,6 +66,7 @@ return array(
     'by' => 'by',
     'Copy plugin list' => 'Copy plugin list',
     'This feature is currently unavailable' => 'This feature is currently unavailable',
+    'Click this link then focus in the search box to filter plugins' => 'Click this link then focus in the search box to filter plugins',
     //
     // plugin/directory.php
     //

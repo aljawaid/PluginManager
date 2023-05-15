@@ -188,3 +188,24 @@ $( document ).ready(function() {
         }, 3500);
     });
 });
+
+// Filter Updates in Installed Plugins
+KB.onClick('.js-updates-copy-paste', function (e) {
+    var update = KB.dom(e.target).data('update');
+    var target = KB.dom(e.target).data('updateTarget');
+    var targetField = KB.find(target);
+
+    if (targetField) {
+        targetField.build().value = update;
+    }
+});
+
+// FILTER TABLES IN THE INSTALLED PLUGINS PAGE
+$(document).ready(function(){
+    $("#InstalledPluginsFilterInput").on("mouseover", function() {
+        var value = $(this).val().toLowerCase();
+        $("#InstalledPluginsTable tbody").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
