@@ -81,7 +81,7 @@
     margin-top: 0;
 }
 
-.pm-page-header h2 .pm-plugin-directory-icon {
+.pm-page-header h2 .pm-plugin-directory-icon, .pm-page-header h2 .pm-manual-plugin-icon {
     margin-right: 5px;
 }
 
@@ -711,7 +711,7 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
     color: var(--link-color-pm);
     font-weight: 600;
     padding: 6px 5px;
-    border: 2px solid var(--pp-light-grey);
+    border: 2px solid var(--pp-orange);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
 }
@@ -740,18 +740,18 @@ a.download-archive, a.download-archive:link, a.download-archive:visited {
     color: var(--link-color-pm);
     font-weight: 600;
     padding: 5px 5px 3px 5px;
-    border: 2px solid var(--pp-light-grey);
+    border: 2px solid var(--pp-orange);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
     height: 20px;
     display: inline-block;
+    vertical-align: top;
 }
 
-.download-archive svg {
+.download-archive span.pm-download-icon {
     vertical-align: sub;
     margin-right: 4px;
     margin-left: 1px;
-    pointer-events: none;
 }
 
 th.plugin-structure, th.plugin-status, th.plugin-last-updated {
@@ -1440,6 +1440,10 @@ fieldset.manual-install {
     padding-top: 10px;
 }
 
+.copy-url-link-format:hover {
+    border-color: var(--pp-green-dark);
+}
+
 .copy-url-link-format {
     padding: 3px 5px 5px 5px;
     margin: auto 5px;
@@ -1449,8 +1453,10 @@ fieldset.manual-install {
     height: 20px;
 }
 
-.copy-url-link-format svg {
+.copy-url-link-format span.pm-clipboard-icon {
     vertical-align: bottom;
+    width: 24px;
+    height: 24px;
 }
 
 #PluginSideBar {
