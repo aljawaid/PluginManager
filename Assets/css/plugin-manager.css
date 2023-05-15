@@ -164,57 +164,63 @@
     text-align: center;
 }
 
-#PluginMenu li .plugin-manager-item svg {
+#PluginSideBar > ul li.active > a span {
+    color: var(--pp-red);
+}
+
+#PluginSideBar > ul li > a span {
+    margin-bottom: 5px;
+}
+
+#PluginSideBar > ul li.active {
+    border-left-color: var(--pp-black);
+}
+
+#PluginMenu li .plugin-manager-item span, #PluginMenu li a svg {
     display: block;
     margin: auto;
     width: 26px;
     height: 26px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
-#PluginMenu li .plugin-directory-item svg {
+#PluginMenu li .plugin-directory-item span {
     display: block;
     margin: auto;
     width: 24px;
     height: 24px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
-#PluginMenu li .plugin-problems-item svg {
+#PluginMenu li .plugin-problems-item span {
     display: block;
     margin: auto;
     width: 26px;
     height: 26px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
-#PluginMenu li .plugin-info-item svg {
+#PluginMenu li .plugin-info-item span {
     display: block;
     margin: auto;
     width: 26px;
     height: 26px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
-#PluginMenu li .plugin-problems-support svg {
+#PluginMenu li .plugin-problems-support span {
     display: block;
     margin: auto;
     width: 26px;
     height: 26px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
-#PluginMenu li .plugin-content-cleaner-item svg {
+#PluginMenu li .plugin-content-cleaner-item span {
     display: block;
     margin: auto;
     width: 36px;
     height: 36px;
-    pointer-events: none;
     padding-bottom: 5px;
 }
 
@@ -1184,20 +1190,6 @@ code.code {
     margin-right: 5px;
     width: 20px;
     height: 20px;
-}
-
-#PluginSideBar > ul li.active > a svg {
-    color: var(--pp-red);
-    fill: var(--pp-red);
-    pointer-events: none;
-}
-
-#PluginSideBar > ul li > a svg {
-    margin-bottom: 5px;
-}
-
-#PluginSideBar > ul li.active {
-    border-left-color: var(--pp-black);
 }
 
 td span.install-date {
