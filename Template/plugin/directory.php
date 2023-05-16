@@ -17,18 +17,22 @@
                 <thead class="">
                     <tr class="">
                         <th scope="col" class=""><?= t('Available Plugins') ?></th>
-                        <th scope="col" class=""><?= t('Your Application Version') ?></th>
                         <th scope="col" class=""><?= t('Currently Installed') ?></th>
-                        <th scope="col" class=""><?= t('Available Updates') ?></th>
+                        <?php if (!empty($updates)): ?>
+                            <th scope="col" class=""><?= t('Available Updates') ?></th>
+                        <?php endif ?>
+                        <th scope="col" class=""><?= t('Your Application Version') ?></th>
                         <th scope="col" colspan="2" class="text-center"><?= t('Directory Source') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="">
                         <td scope="row" class="available-count pp-green">&#10004; <?= count($available_plugins) ?></td>
-                        <td class="kb-app-version"><?= APP_VERSION ?></td>
                         <td scope="row" class="total-count"><?= count($installed_plugins) ?></td>
-                        <td scope="row" class="total-updates"><?= count($updates) ?></td>
+                        <?php if (!empty($updates)): ?>
+                            <td scope="row" class="total-updates"><?= count($updates) ?></td>
+                        <?php endif ?>
+                        <td class="kb-app-version"><?= APP_VERSION ?></td>
                         <td class="plugin-dir-view">
                             <?php if (PLUGIN_API_URL == 'https://kanboard.org/plugins.json'): ?>
                                 <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663; " rel="noopener noreferrer">
