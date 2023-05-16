@@ -85,13 +85,12 @@
     margin-right: 5px;
 }
 
-.pm-page-header h2 .pm-plugin-icon {
+.pm-page-header.plugin-manager-header h2 .pm-plugin-icon {
     margin-right: 5px;
     width: 24px;
     height: 24px;
     display: inline-block;
-    vertical-align: top;
-    margin-block-start: 5px;
+    vertical-align: text-top;
 }
 
 .pm-page-header h2 .pm-problems-icon {
@@ -563,6 +562,7 @@ tr.plugin-description td {
     padding: var(--table-head-padding);
     border-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
+    vertical-align: middle;
 }
 
 .plugin-dir-url {
@@ -1468,4 +1468,5 @@ fieldset.manual-install {
 .js-updates-copy-paste, .js-updates-copy-paste:focus, .js-updates-copy-paste:visited, .js-updates-copy-paste:link {
     font-weight: 600;
     color: var(--blue-icon-dark);
+    text-decoration: none;
 }

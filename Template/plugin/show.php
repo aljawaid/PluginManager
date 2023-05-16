@@ -6,7 +6,7 @@ function sortPlugins(&$arr)
 $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
 // phpcs:enable
 ?>
-<div class="pm-page-header">
+<div class="pm-page-header plugin-manager-header">
     <h2 class="">
         <span class="pm-plugin-icon"></span><?= t('Plugin Manager') ?></h2>
 </div>
