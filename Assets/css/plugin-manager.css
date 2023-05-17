@@ -330,10 +330,11 @@
 }
 
 .installed-plugins th {
+    /* top: 38px;  if header is also used as sticky */
+    top: 0;
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
-    z-index: 2;
+    z-index: 101;
     border: 2px solid var(--blue-border-gradient-match) !important;
 }
 
