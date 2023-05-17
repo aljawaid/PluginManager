@@ -104,7 +104,7 @@ class PluginManagerHelper extends Base
         foreach (Directory::getInstance($this->container)->getAvailablePlugins() as $plugin) {
             $proband = &$installed_plugins[$plugin['title']];
             if (isset($proband) && $proband < $plugin['version']) {
-                $updatables[] = $plugin['title'];
+                $updatables[$plugin['title']] = $plugin['download'];
             }
         }
 

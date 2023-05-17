@@ -186,10 +186,10 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                             </span>
                         </td>
                         <td class="plugin-uninstall">
-                            <?php if ($is_configured && in_array($plugin->getPluginName(), $updatables, true)): ?>
-                                <button class="btn-uninstall" disabled title="<?= t('This feature is currently unavailable') ?>">
-                                <?= t('Update') ?>
-                                </button>
+                            <?php if ($is_configured && isset($updatables[$plugin->getPluginName()]) ): ?>
+                                <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array(
+                                    'archive_url' => urlencode($updatables[$plugin->getPluginName()])
+                                ), true, 'update-plugin', t('Update this plugin')) ?>
                             <?php endif ?>
                         </td>
                         <td class="plugin-uninstall">
