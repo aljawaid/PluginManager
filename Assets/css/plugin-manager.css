@@ -1473,3 +1473,37 @@ fieldset.manual-install {
     color: var(--blue-icon-dark);
     text-decoration: none;
 }
+
+td button.btn-update {
+    vertical-align: middle;
+    background: var(--pp-orange);
+    padding: 5px 4px 6px 2px;
+    margin: 3px 2px auto 2px;
+    border-radius: var(--border-radius-pm);
+    border: 1px solid var(--pp-grey);
+    display: inline-block;
+    width: 100px;
+    font-size: .9em;
+}
+
+button.btn-update:hover a {
+    color: var(--pp-orange) !important;
+    text-decoration: none !important;
+}
+
+button.btn-update:hover a i {
+    color: var(--pp-orange);
+}
+
+td button.btn-update a {
+    text-decoration: none !important;
+    color: var(--pp-white);
+}
+
+td button.btn-update a i {
+    color: var(--pp-white);
+}
+
+button.btn-update:hover {
+    background-color: var(--pp-white);
+}
