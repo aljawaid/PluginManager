@@ -16,13 +16,13 @@
             <table id="DirectoryInfo" class="directory-info">
                 <thead class="">
                     <tr class="">
-                        <th scope="col" class=""><?= t('Available Plugins') ?></th>
-                        <th scope="col" class=""><?= t('Currently Installed') ?></th>
+                        <th scope="col" class="column-10"><?= t('Available Plugins') ?></th>
+                        <th scope="col" class="column-10"><?= t('Currently Installed') ?></th>
                         <?php if (!empty($updates)): ?>
-                            <th scope="col" class=""><?= t('Available Updates') ?></th>
+                            <th scope="col" class="column-10"><?= t('Available Updates') ?></th>
                         <?php endif ?>
-                        <th scope="col" class=""><?= t('Your Application Version') ?></th>
-                        <th scope="col" colspan="2" class="text-center"><?= t('Directory Source') ?></th>
+                        <th scope="col" class="column-15"><?= t('Your Application Version') ?></th>
+                        <th scope="col" colspan="2" class=""><?= t('Directory Source') ?></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -558,6 +558,7 @@ tr.plugin-description td {
     border: 2px inset var(--pp-grey);
     font-weight: 600;
     cursor: context-menu;
+    text-align: center;
 }
 
 #DirectoryInfo > tbody > tr > td {
