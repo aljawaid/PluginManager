@@ -1507,3 +1507,17 @@ td button.btn-update a i {
 button.btn-update:hover {
     background-color: var(--pp-white);
 }
+
+td span.refresh-notice {
+    text-align: center;
+    font-size: .85em;
+    padding: 2px 3px 0 3px;
+    border: 1px solid var(--pp-orange);
+    border-radius: var(--border-radius-pm);
+    background-color: var(--pp-orange);
+    color: var(--pp-white);
+    cursor: context-menu;
+    position: absolute;
+    right: 125px;
+    bottom: 9px;
+}

@@ -202,10 +202,13 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                             </td>
                         <?php endif ?>
                     </tr>
-                    <tr class="plugin-description">
+                    <tr class="plugin-description relative">
                         <td class="" colspan="<?= $is_configured ? 7 : 6 ?>">
                             <?= $this->text->e($plugin->getPluginDescription()) ?>
                             <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR . '/' . $pluginFolder . '/.')); ?>
+                            <?php if ($is_configured && isset($updatables[$plugin->getPluginName()])): ?>
+                                <span class="refresh-notice"><?= t('Refresh this page after updating this plugin') ?></span>
+                            <?php endif ?>
                             <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
                         </td>
                     </tr>
