@@ -136,10 +136,12 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
             <thead class="">
                 <tr class="">
                     <th class="column-35"><?= t('Name') ?></th>
-                    <th class="column-30"><?= t('Author') ?></th>
+                    <th class="column-25"><?= t('Author') ?></th>
                     <th class="column-5 text-center"><?= t('Plugin Version') ?></th>
                     <th class="column-10 text-center"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-25" colspan="3"><?= t('Actions') ?></th>
+                    <th class="column-30" colspan="<?= ($is_configured && isset($updatables[$plugin->getPluginName()])) ? 3 : 2 ?>">
+                        <?= t('Actions') ?>
+                    </th>
                 </tr>
             </thead>
             <?php sortPlugins($plugins); ?>
@@ -185,20 +187,20 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                                 </a>
                             </span>
                         </td>
-                        <td class="plugin-uninstall">
-                            <?php if ($is_configured && isset($updatables[$plugin->getPluginName()]) ): ?>
-                                <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array(
-                                    'archive_url' => urlencode($updatables[$plugin->getPluginName()])
-                                ), true, 'update-plugin', t('Update this plugin')) ?>
-                            <?php endif ?>
-                        </td>
-                        <td class="plugin-uninstall">
-                            <?php if ($is_configured): ?>
+                        <?php if ($is_configured && isset($updatables[$plugin->getPluginName()])): ?>
+                            <td class="plugin-update-btn">
+                                <button class="btn-update">
+                                    <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array('archive_url' => urlencode($updatables[$plugin->getPluginName()])), true, 'update-plugin-btn', t('Update this plugin')) ?>
+                                </button>
+                            </td>
+                        <?php endif ?>
+                        <?php if ($is_configured): ?>
+                            <td colspan="2" class="plugin-uninstall">
                                 <button class="btn-uninstall">
                                     <?= $this->modal->confirm('trash-o', t('Uninstall'), 'PluginController', 'confirm', array('pluginId' => $pluginFolder)) ?>
                                 </button>
-                            <?php endif ?>
-                        </td>
+                            </td>
+                        <?php endif ?>
                     </tr>
                     <tr class="plugin-description">
                         <td class="" colspan="<?= $is_configured ? 7 : 6 ?>">
