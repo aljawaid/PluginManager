@@ -57,7 +57,7 @@ _(most recent changes are listed on top):_
 - FIX: Code Syntax
 - NEW: Add Update Button to Installed Plugins - thanks @alfredbuehler - #42
 - NEW: Show Total Updates Count in Plugin Directory - thanks @alfredbuehler - #42
-- FIX: Typo in README.md - Contributors - thanks @cptsanifair 
+- FIX: Typo in README.md - Contributors - thanks @cptsanifair
 - FIX: README Navigation Links for GitHub
 - FIX: Changelog
 
