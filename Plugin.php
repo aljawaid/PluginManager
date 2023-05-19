@@ -38,11 +38,11 @@ class Plugin extends Base
 
         // JS - Asset Hook
         //  - Keep filename lowercase
-        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager.js'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager-top-btn.js'));
         if (!file_exists('plugins/Glancer')) {
             $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/clipboard-v2.0.11.min.js'));
         }
+        $this->hook->on('template:layout:js', array('template' => 'plugins/PluginManager/Assets/js/plugin-manager.js'));
 
         // Helper
         $this->helper->register('ageHelper', '\Kanboard\Plugin\PluginManager\Helper\AgeHelper');
