@@ -336,7 +336,7 @@
     top: 0;
     position: sticky;
     position: -webkit-sticky;
-    z-index: 101;
+    z-index: 100;
     border: 2px solid var(--blue-border-gradient-match) !important;
 }
 
