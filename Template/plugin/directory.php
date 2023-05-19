@@ -1,4 +1,4 @@
-<div class="pm-page-header">
+<div id="PluginDirectoryPage" class="pm-page-header">
     <h2 class="">
         <span class="pm-plugin-directory-icon"></span><?= t('Plugin Directory') ?>
     </h2>

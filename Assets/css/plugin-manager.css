@@ -16,6 +16,8 @@
     --pp-orange: #FF6500;
     --blue-icon-dark: #034CA6;
     --link-color-pm: #3366CC;
+    --table-header-dir-info-pm: #AFCFE6;
+    --table-header-plugin-pm: #DEF2FD;
     --color-light:#999999;
     --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
     --blue-border-gradient-match: #476E9E;
@@ -551,9 +553,9 @@ tr.plugin-description td {
     border-spacing: 5px;
 }
 
-#DirectoryInfo > thead > tr > th {
+#PluginDirectoryPage #DirectoryInfo > thead > tr > th {
     padding: var(--table-head-padding);
-    background-color: var(--color-light);
+    background-color: var(--table-header-dir-info-pm);
     border-radius: var(--border-radius-pm);
     border: 2px inset var(--pp-grey);
     font-weight: 600;
@@ -621,6 +623,15 @@ table.available-plugins-table > thead > tr > th, table.available-plugins-table >
     padding: 3px 3px;
     vertical-align: middle;
     position: relative;
+}
+
+#PluginDirectoryPage table.available-plugins-table > tbody > tr > th {
+    background: var(--table-header-plugin-pm);
+    border: 1px solid var(--table-header-plugin-pm);
+}
+
+#PluginDirectoryPage table.available-plugins-table > tbody > tr > td {
+    border: 1px solid var(--table-header-plugin-pm);
 }
 
 .available-plugin-version {
