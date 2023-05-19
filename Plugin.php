@@ -21,12 +21,12 @@ class Plugin extends Base
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
         $this->template->hook->attach('template:config:sidebar', 'pluginManager:config/sidebar');
 
-        // PLUGIN PROBLEMS Page - Routes
+        // Routes
+        // 'install' and 'update' plugin functions do not work with routes
         $this->route->addRoute('/extensions/plugin-problems', 'PluginManagerController', 'show', 'PluginManager');
-        // PLUGIN INFO Page - Routes
         $this->route->addRoute('/extensions/plugin-info', 'PluginManagerController', 'showPluginInfo', 'PluginManager');
-        // MANUAL PLUGINS Page - Routes
         $this->route->addRoute('/extensions/manual-plugins', 'PluginManagerController', 'showManualPlugins', 'PluginManager');
+        $this->route->addRoute('/extensions/:pluginId/uninstall', 'PluginController', 'confirm');
 
         // CSS - Asset Hook
         //  - Keep filename lowercase
