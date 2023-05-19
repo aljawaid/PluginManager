@@ -119,6 +119,7 @@ return array(
     'Currently Installed' => 'Currently Installed',
     'Updated plugin version available' => 'Updated plugin version available',
     'View in Plugin Manager' => 'View in Plugin Manager',
+    'Filter by type' => 'Filter by type',
     //
     // info/db-info.php
     //

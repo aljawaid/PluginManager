@@ -57,34 +57,34 @@
             <?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
             <div class="plugin-type-counts">
                 <label for="AvailablePluginsFilterInput">
-                    <div class="plugin-type-count-section" data-type='plugin'>
+                    <div class="plugin-type-count-section" data-type="plugin" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-plugin-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('General') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['plugin']) ? $countTypes['plugin'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section" data-type='action'>
+                    <div class="plugin-type-count-section" data-type="action" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-action-icon"></span></div>
                         <div class="plugin-type-count-text" title="<?= t('Automatic Actions') ?>"><?= t('Actions') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['action']) ? $countTypes['action'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section" data-type='theme'>
+                    <div class="plugin-type-count-section" data-type="theme" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-theme-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Themes') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['theme']) ? $countTypes['theme'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section" data-type='connector'>
+                    <div class="plugin-type-count-section" data-type="connector" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-connector-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Connectors') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['connector']) ? $countTypes['connector'] : '0' ?></div>
                     </div>
-                    <div class="plugin-type-count-section" data-type='multi'>
+                    <div class="plugin-type-count-section" data-type="multi" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-multi-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Multi') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['multi']) ? $countTypes['multi'] : '0' ?></div>
                     </div>
                     <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?>
                     <?php if ($totalOthers > 0): ?>
-                        <div class="plugin-type-count-section" data-type='other'>
+                        <div class="plugin-type-count-section" data-type="other" title="<?= t('Filter by type') ?>">
                             <div class="plugin-type-count-icon"><span class="pm-other-icon"></span></div>
                             <div class="plugin-type-count-text"><?= t('Others') ?></div>
                             <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?></div>
