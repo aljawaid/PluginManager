@@ -1,5 +1,67 @@
 # Changelog
 
+## v4.0
+
+_(most recent changes are listed on top):_
+- FIX: Update Screenshots to Reflect Latest Features
+- NEW: Fade Sidebar Badges When Not Active
+- NEW: Add Tooltip for Type Filters
+- FIX: Improve Styling for Links Inside Plugin Descriptions
+- NEW: Open Links Inside Plugin Descriptions in New Windows
+- FIX: JS File Loading Order - would intermittently fail to load `ClipboardJS` if Glancer plugin was not installed
+- NEW: Add Plugin Counts in Sidebar Menu
+- FIX: `Update` Color Should Not Conflict with `Available` Color
+- NEW: Add Route for `uninstall` - `install` and `update` plugin functions do not work with routes
+- FIX: Page Titles
+- FIX: Sticky Table Header Positioning for Modals - previous commit conflicted with modals - relates to: a3196b9
+- NEW: Add Blue Tint to Plugin Directory - to easily differentiate between installed plugins (solid blue) and manual plugins (red)
+- FIX: Better Wording
+- FIX: Filter Icon Color
+- FIX: Add Reminder to Refresh Page - #42
+- FIX: Styling Update Button - #42
+- FIX: Installed Plugins Spacing & Alignment - #42
+- FIX: Directory Information Spacing & Alignment
+- FIX: Sticky Table Header Positioning - in case users use the page `header` as a page sticky also, this change will ensure the table header is displayed on top of the header
+- NEW: Show Update Count Only if Updates Available
+- FIX: Missing CSS Variable
+- FIX: Move Directory Source to End - in Plugin Directory
+- FIX: Alignment Fixes
+- NEW: Filter Installed Plugins Requiring Updates - just click the link and move the mouse to the search box
+- FIX: Update README.md with the latest features - #54 #53 #42 #52
+- FIX: Code Cleanup - Isolate SVG Code - closes #54
+- FIX: Manual Plugin Colour Variable
+- FIX: Highlight Incompatible Version Numbers - use darker green
+- NEW: Highlight Incompatible Version Numbers - for incompatible plugins
+- NEW: Show Updates Count in Installed Plugins - thanks @alfredbuehler
+- FIX: CSS Code Syntax Errors
+- NEW: Hide Installed Plugins Navigation if Count Less Than 10 - thanks for the tip @alfredbuehler
+- FIX: Plugin Structure Button Hover Styling in Directory
+- NEW: Highlight Total Updates Count in Directory
+- FIX: Better Wording for Link
+- FIX: Code Structure
+- FIX: PHP Code Syntax Errors for `PluginManagerHelper.php`
+- FIX: PHP Code Syntax Errors for `PluginManagerHelper.php`
+- FIX: Code Syntax - Exclude PHP Specific Code from Test
+- FIX: PHP Code Syntax Errors
+- FIX: Code Syntax - PHP - `AgeHelper.php`
+- FIX: Code Syntax - PHP - `AgeHelper.php`
+- FIX: Code Syntax - PHP - `PluginManagerController.php`
+- FIX: Code Syntax - Markdown Content Flow
+- FIX: Removed Compatibility File - content is merged into README.md
+- FIX: Code Syntax - CSS
+- FIX: Code Syntax: Alert Messages Styling
+- NEW: Filter Plugins Based on Plugin Types in the Plugin Directory - thanks @alfredbuehler
+- FIX: Code Syntax - Exclude PHP Code Specific Test
+- FIX: Code Syntax - Exclude PHP Code Specific Test `Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore`
+- FIX: Code Syntax - Exclude PHP Code Specific Test
+- FIX: Code Syntax
+- NEW: Add Update Button to Installed Plugins - thanks @alfredbuehler - #42
+- NEW: Show Total Updates Count in Plugin Directory - thanks @alfredbuehler - #42
+- FIX: Typo in README.md - Contributors - thanks @cptsanifair 
+- FIX: README Navigation Links for GitHub
+- FIX: Changelog
+
+
 ## v3.5
 
 _(most recent changes are listed on top):_
