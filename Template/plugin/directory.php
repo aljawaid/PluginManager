@@ -21,7 +21,7 @@
                         <?php if (!empty($updates)): ?>
                             <th scope="col" class="column-10"><?= t('Available Updates') ?></th>
                         <?php endif ?>
-                        <th scope="col" class="column-15"><?= t('Your Application Version') ?></th>
+                        <th scope="col" class="column-15"><?= t('Your Application') ?></th>
                         <th scope="col" colspan="2" class=""><?= t('Directory Source') ?></th>
                     </tr>
                 </thead>
@@ -32,7 +32,7 @@
                         <?php if (!empty($updates)): ?>
                             <td scope="row" class="total-updates"><?= count($updates) ?></td>
                         <?php endif ?>
-                        <td class="kb-app-version"><?= APP_VERSION ?></td>
+                        <td class="kb-app-version">v<?= APP_VERSION ?></td>
                         <td class="plugin-dir-view">
                             <?php if (PLUGIN_API_URL == 'https://kanboard.org/plugins.json'): ?>
                                 <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663; " rel="noopener noreferrer">

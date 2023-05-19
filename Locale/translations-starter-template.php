@@ -75,7 +75,7 @@ return array(
     'There is no plugin available.' => '',
     'Available Plugins' => '',
     'Directory Source' => '',
-    'Your Application Version' => '',
+    'Your Application' => '',
     'Currently Installed' => '',
     'Official Plugin Directory' => '',
     'Custom Directory' => '',
