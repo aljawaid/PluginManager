@@ -1474,7 +1474,7 @@ fieldset.manual-install {
 }
 
 .total-updates {
-    background-color: var(--pp-green);
+    background-color: var(--pp-orange);
     color: var(--pp-white);
     font-weight: bold;
 }
