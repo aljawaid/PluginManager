@@ -1560,3 +1560,8 @@ span.count-menu-item.badge-manual {
     color: white;
     background-color: var(--pp-red-alt-3);
 }
+
+.available-plugin-description .markdown p a, .available-plugin-description .markdown p a:visited {
+    font-weight: 600;
+    text-decoration: none;
+}
