@@ -1538,9 +1538,14 @@ td span.refresh-notice {
     position: absolute;
     font-size: .75em;
     padding: 0 2px;
-    border-radius: 2px;
+    border-radius: var(--border-radius-pm);
     font-weight: bold;
     right: 0;
+    opacity: .5;
+}
+
+#PluginSideBar ul li.active span.count-menu-item {
+    opacity: 1;
 }
 
 span.count-menu-item.badge-installed {
