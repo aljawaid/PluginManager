@@ -33,6 +33,8 @@
 
 ## Screenshots
 
+_Note: Some screenshots may not show recent features_
+
 **Plugin Manager**
 
 ![Plugin Manager](../master/Screenshots/screenshot-plugin-manager.png)
