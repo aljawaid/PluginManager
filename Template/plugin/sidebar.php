@@ -1,13 +1,21 @@
+<?php
+$countAvailablePlugins = count($this->helper->pluginManagerHelper->getAllInstallablePlugins());
+$countInstalledPlugins = count($this->task->pluginLoader->getPlugins());
+$countManualPlugins = count($this->helper->pluginManagerHelper->getAllPlugins());
+?>
 <div id="PluginSideBar" class="sidebar">
     <ul id="PluginMenu" class="plugin-menu">
         <li <?= $this->app->checkMenuSelection('PluginController', 'show') ?>>
             <?= $this->url->link('<span class="pm-plugin-icon-grey"></span>' . t('Plugin Manager'), 'PluginController', 'show', array(), false, 'plugin-manager-item') ?>
+            <span class="count-menu-item badge-installed"><?= $countInstalledPlugins ?></span>
         </li>
         <li <?= $this->app->checkMenuSelection('PluginController', 'directory') ?>>
             <?= $this->url->link('<span class="pm-plugin-directory-icon-grey"></span>' . t('Plugin Directory'), 'PluginController', 'directory', array(), false, 'plugin-directory-item') ?>
+            <span class="count-menu-item badge-available"><?= $countAvailablePlugins ?></span>
         </li>
         <li <?= $this->app->checkMenuSelection('PluginManagerController', 'showManualPlugins') ?>>
             <?= $this->url->link('<span class="pm-manual-plugin-icon-grey"></span>' . t('Manual Plugins'), 'PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager'), false, 'plugin-info-item') ?>
+            <span class="count-menu-item badge-manual"><?= $countManualPlugins ?></span>
         </li>
         <li <?= $this->app->checkMenuSelection('PluginManagerController', 'showPluginInfo') ?>>
             <?= $this->url->link('<span class="pm-info-circle-icon"></span>' . t('Plugin Info'), 'PluginManagerController', 'showPluginInfo', array('plugin' => 'PluginManager'), false, 'plugin-info-item') ?>

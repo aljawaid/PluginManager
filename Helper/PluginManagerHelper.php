@@ -110,4 +110,21 @@ class PluginManagerHelper extends Base
 
         return $updatables;
     }
+
+    /**
+     * Get all plugins available
+     * Duplicate function of 'Kanboard\Core\Plugin\Directory\getAvailablePlugins()'
+     *
+     * @access public
+     * @param  string $url
+     * @return array
+     */
+    public function getAllInstallablePlugins($url = PLUGIN_API_URL)
+    {
+        $plugins = $this->httpClient->getJson($url);
+        $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isCompatible'));
+        $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isInstallable'));
+        return $plugins;
+    }
+
 }

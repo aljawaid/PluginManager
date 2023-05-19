@@ -1532,3 +1532,31 @@ td span.refresh-notice {
     right: 125px;
     bottom: 9px;
 }
+
+#PluginSideBar span.count-menu-item {
+    top: 0;
+    position: absolute;
+    font-size: .75em;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    right: 0;
+}
+
+span.count-menu-item.badge-installed {
+    border: 1px solid var(--blue-icon-dark);
+    color: white;
+    background-color: var(--blue-icon-dark);
+}
+
+span.count-menu-item.badge-available {
+    border: 1px solid var(--pp-green);
+    color: white;
+    background-color: var(--pp-green);
+}
+
+span.count-menu-item.badge-manual {
+    border: 1px solid var(--pp-red-alt-3);
+    color: white;
+    background-color: var(--pp-red-alt-3);
+}
