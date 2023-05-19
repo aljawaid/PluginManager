@@ -26,7 +26,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function show()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-problems', array(
-            'title' => t('Plugins') . ' &#10562; ' . t('Plugin Problems'),
+            'title' => t('Plugin Manager') . ' &#10562; ' . t('Plugin Problems'),
         )));
     }
 
@@ -132,7 +132,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function showPluginInfo()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-info', array(
-            'title' => t('Plugins') . ' &#10562; ' . t('Plugin Info'),
+            'title' => t('Plugin Manager') . ' &#10562; ' . t('Plugin Info'),
             'available_plugins' => Directory::getInstance($this->container)->getAvailablePlugins()
         )));
     }
@@ -146,7 +146,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     public function showManualPlugins()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
-            'title' => t('Manual Plugins'),
+            'title' => t('Plugin Manager') . ' &#10562; ' . t('Manual Plugins'),
         )));
     }
 }
