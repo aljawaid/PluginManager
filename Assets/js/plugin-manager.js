@@ -209,3 +209,10 @@ $(document).ready(function(){
         });
     });
 });
+
+// Add attributes to links in plugin descriptions
+$(document).ready(function(){
+    $('.available-plugin-description .markdown p a').attr('target', '_blank');
+    $('.available-plugin-description .markdown p a').attr('rel', 'noopener noreferrer');
+    $('.available-plugin-description .markdown p a').attr('title', 'Opens in a new window');
+});
