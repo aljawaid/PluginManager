@@ -124,7 +124,7 @@ class PluginManagerHelper extends Base
         $plugins = $this->httpClient->getJson($url);
         $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isCompatible'));
         $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isInstallable'));
+
         return $plugins;
     }
-
 }
