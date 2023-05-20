@@ -139,14 +139,14 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                     <th class="column-25"><?= t('Author') ?></th>
                     <th class="column-5 text-center"><?= t('Plugin Version') ?></th>
                     <th class="column-10 text-center"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-30" colspan="<?= ($is_configured && isset($updatables[$plugin->getPluginName()])) ? 3 : 2 ?>">
+                    <th class="column-30" colspan="3">
                         <?= t('Actions') ?>
                     </th>
                 </tr>
             </thead>
             <?php sortPlugins($plugins); ?>
             <?php foreach ($plugins as $pluginFolder => $plugin): ?>
-                <tbody id="installed<?= str_replace(" ", "", $plugin->getPluginName()) ?>" class="">
+                <tbody id="installed<?= str_replace(" ", "", $plugin->getPluginName()) ?>" class="plugin-body">
                     <tr class="plugin-info">
                         <td class="plugin-name">
                             <span class="pm-plugin-icon"></span><?= $this->text->e($plugin->getPluginName()) ?>
@@ -192,6 +192,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                                 <button class="btn-update">
                                     <?= $this->url->icon('refresh', t('Update'), 'PluginController', 'update', array('archive_url' => urlencode($updatables[$plugin->getPluginName()])), true, 'update-plugin-btn', t('Update this plugin')) ?>
                                 </button>
+                                <span id="RefreshNotice" class="refresh-notice"><?= t('Refresh this page after updating this plugin') ?></span>
                             </td>
                         <?php endif ?>
                         <?php if ($is_configured): ?>
@@ -206,9 +207,6 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                         <td class="" colspan="<?= $is_configured ? 7 : 6 ?>">
                             <?= $this->text->e($plugin->getPluginDescription()) ?>
                             <?php $installDate = date("d F Y", filemtime(PLUGINS_DIR . '/' . $pluginFolder . '/.')); ?>
-                            <?php if ($is_configured && isset($updatables[$plugin->getPluginName()])): ?>
-                                <span class="refresh-notice"><?= t('Refresh this page after updating this plugin') ?></span>
-                            <?php endif ?>
                             <span class="install-date" title="<?= t('Installed') ?>"><?= $installDate ?></span>
                         </td>
                     </tr>
