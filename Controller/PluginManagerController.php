@@ -83,7 +83,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
 
             try {
                 if ($zip->open($archiveFile) !== true) {
-                    throw new PluginInstallerException(t('Unable to open plugin archive'));
+                    throw new PluginInstallerException( t('Unable to open plugin archive') );
                 }
 
                 $dirname = getPluginDir($zip);
@@ -91,32 +91,32 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
                 $namespace = getPluginNamespace($plugin);
 
                 if ($dirname != "$namespace/") {
-                    throw new PluginInstallerException(t("The directory name ($dirname) doesn't match with the namespace ($namespace)."));
+                    throw new PluginInstallerException( t("The directory name (%s) doesn't match with the namespace (%s).", $dirname, $namespace ) );
                 }
 
                 $pluginName = getPluginName($plugin);
 
                 if ($pluginName != $namespace) {
-                    throw new PluginInstallerException(t("The plugin name ($pluginName) doesn't match with the namespace ($namespace)."));
+                    throw new PluginInstallerException( t("The plugin name (%s) doesn't match with the namespace (%s).", $pluginName, $namespace ) );
                 }
 
                 if (!$zip->extractTo(PLUGINS_DIR)) {
                     $zip->close();
-                    throw new PluginInstallerException(t('Unable to extract plugin archive.'));
+                    throw new PluginInstallerException( t('Unable to extract plugin archive.') );
                 }
 
                 // Success
 
                 $zip->close();
                 unlink($archiveFile);
-                $this->flash->success(t('Plugin installed successfully'));
+                $this->flash->success( t('Plugin installed successfully') );
             } catch (PluginInstallerException $e) {
                 unlink($archiveFile);
                 $this->flash->failure($e->getMessage());
                 return false;
             }
         } else {
-            $this->flash->failure(t('Plugin archive file not found'));
+            $this->flash->failure( t('Plugin archive file not found') );
             return false;
         }
 
@@ -180,7 +180,7 @@ function getPluginDir(ZipArchive $zip): string
 {
     $dirname = $zip->getNameIndex(0);
     if ($dirname === false) {
-        throw new PluginInstallerException(t('Plugin directory not found.'));
+        throw new PluginInstallerException( t('Plugin directory not found.') );
     }
     return $dirname;
 }
@@ -196,7 +196,7 @@ function getPluginFile(ZipArchive $zip, string $dirname): string
 {
     $plugin = $zip->getFromName($dirname . 'Plugin.php');
     if ($plugin === false) {
-        throw new PluginInstallerException(t('File Plugin.php could not get extracted.'));
+        throw new PluginInstallerException( t('File Plugin.php could not get extracted.') );
     }
     return $plugin;
 }
@@ -231,7 +231,7 @@ function getPluginName(string $plugin): string
 
     $rc = preg_match('/(public function getPluginName\(\))(.|\n)*return ["\'](.*)["\']/U', $plugin, $match);
     if ($rc == false || $rc != 1) {
-        throw new PluginInstallerException(t('The plugin name was not found.'));
+        throw new PluginInstallerException( t('The plugin name was not found.') );
     }
     $pluginName = $match[3];
     return $pluginName;

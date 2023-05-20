@@ -81,7 +81,7 @@
         <?php endif ?>
     </div>
     <figure class="notice">
-        <?= t('Plugin types are only shown in the')?> <?= $this->url->link(t('Plugin Directory'), 'PluginController', 'directory', array(), false, 'plugin-directory-item') ?>
+        <?= t('Plugin types are only shown in the') ?> <?= $this->url->link( t('Plugin Directory') , 'PluginController', 'directory', array(), false, 'plugin-directory-item') ?>
     </figure>
     <h3 id="PluginStructure" class=""><?= t('Plugin Structure') ?></h3>
     <p class="structure-p">

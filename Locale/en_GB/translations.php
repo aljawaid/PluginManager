@@ -21,6 +21,8 @@ return array(
     'Unable to extract plugin archive' => 'Unable to extract plugin archive',
     'Plugin installed successfully' => 'Plugin installed successfully',
     'Plugin archive file not found' => 'Plugin archive file not found',
+    "The directory name (%s) doesn't match with the namespace (%s)." => "The directory name (%s) doesn't match with the namespace (%s).",
+    "The plugin name (%s) doesn't match with the namespace (%s)." => "The plugin name (%s) doesn't match with the namespace (%s).",
     //
     // plugin/sidebar.php
     //
