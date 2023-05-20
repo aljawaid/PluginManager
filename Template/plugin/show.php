@@ -139,7 +139,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
                     <th class="column-25"><?= t('Author') ?></th>
                     <th class="column-5 text-center"><?= t('Plugin Version') ?></th>
                     <th class="column-10 text-center"><?= t('Kanboard Compatibility') ?></th>
-                    <th class="column-30" colspan="<?= ($is_configured && isset($updatables[$plugin->getPluginName()])) ? 3 : 2 ?>">
+                    <th class="column-30" colspan="3">
                         <?= t('Actions') ?>
                     </th>
                 </tr>
