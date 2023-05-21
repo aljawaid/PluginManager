@@ -14,13 +14,16 @@ return array(
     //
     // Controller/PluginManagerController.php
     //
-    'Plugin installed successfully' => '',
-    'Unable to open plugin archive' => '',
-    'There is no file in the plugin archive' => '',
-    'This file is not recognised as a plugin' => '',
-    'Unable to extract plugin archive' => '',
+    'Unable to open the plugin archive' => '',
+    'The directory name (%s) does not match with the namespace (%s)' => '',
+    'The plugin name (%s) does not match with the namespace (%s)' => '',
+    'Unable to extract the plugin archive' => '',
     'Plugin installed successfully' => '',
     'Plugin archive file not found' => '',
+    'Plugin directory name was not found' => '',
+    'File \'Plugin.php\' could not get extracted' => '',
+    'The namespace was not found' => '',
+    'The plugin name was not found' => '',
     //
     // plugin/sidebar.php
     //
