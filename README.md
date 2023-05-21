@@ -162,7 +162,7 @@ Go to `Plugins`
 - Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
 - **Other Plugins & Action Plugins**
   - _No known issues_
-  - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner)
+  - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner), [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
   - Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
 - **Core Files & Templates**
   - `03` Template override
