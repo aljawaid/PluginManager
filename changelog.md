@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.1
+
+_(most recent changes are listed on top):_
+- FIX: Update README.md for KanboardCSS - relates to d53870c
+- FIX: Code Cleanup - `PluginManagerController.php` - fix comments - fix code syntax - move `show` page codeblocks to top - fix language strings
+- FIX: Translations Strings - includes missing strings - thanks @cptsanifair
+- FIX: Code Syntax - thanks @cptsanifair
+- FIX: Table Header Spanning for Installed Plugins
+- FIX: Update Button Notification - now shows neatly when hovering over the installed plugin update button
+- FIX: Count Badge Positioned Too High for KanboardCSS
+- Fix Typo
+
 ## v4.0
 
 _(most recent changes are listed on top):_
