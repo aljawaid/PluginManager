@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.2
+
+_(most recent changes are listed on top):_
+- FIX: PHP 8 Compatibility Issue - fixes #59 PM not load after latest update - introduced by 1c92221 - thanks @alfredbuehler
+
 ## v4.1
 
 _(most recent changes are listed on top):_
