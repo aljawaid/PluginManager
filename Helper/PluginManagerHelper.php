@@ -121,10 +121,6 @@ class PluginManagerHelper extends Base
      */
     public function getAllInstallablePlugins($url = PLUGIN_API_URL)
     {
-        $plugins = $this->httpClient->getJson($url);
-        $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isCompatible'));
-        $plugins = array_filter($plugins, array('Kanboard\Core\Plugin\Directory', 'isInstallable'));
-
-        return $plugins;
+        return Directory::getInstance($this->container)->getAvailablePlugins($url);
     }
 }
