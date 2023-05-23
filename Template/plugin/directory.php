@@ -18,9 +18,6 @@
                     <tr class="">
                         <th scope="col" class="column-10"><?= t('Available Plugins') ?></th>
                         <th scope="col" class="column-10"><?= t('Currently Installed') ?></th>
-                        <?php if (!empty($updates)): ?>
-                            <th scope="col" class="column-10"><?= t('Available Updates') ?></th>
-                        <?php endif ?>
                         <th scope="col" class="column-15"><?= t('Your Application') ?></th>
                         <th scope="col" colspan="2" class=""><?= t('Directory Source') ?></th>
                     </tr>
@@ -29,13 +26,10 @@
                     <tr class="">
                         <td scope="row" class="available-count pp-green">&#10004; <?= count($available_plugins) ?></td>
                         <td scope="row" class="total-count"><?= count($installed_plugins) ?></td>
-                        <?php if (!empty($updates)): ?>
-                            <td scope="row" class="total-updates"><?= count($updates) ?></td>
-                        <?php endif ?>
                         <td class="kb-app-version">v<?= APP_VERSION ?></td>
                         <td class="plugin-dir-view">
                             <?php if (PLUGIN_API_URL == 'https://kanboard.org/plugins.json'): ?>
-                                <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663; " rel="noopener noreferrer">
+                                <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                                     <span class="pm-source-directory-icon"></span> <?= t('Official Plugin Directory') ?>
                                 </a>
                             <?php else: ?>
@@ -57,6 +51,13 @@
             <?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
             <div class="plugin-type-counts">
                 <label for="AvailablePluginsFilterInput">
+                    <?php if (!empty($updates)): ?>
+                        <div class="plugin-type-count-section plugin-type-count-section-updates" data-type="update" title="<?= t('Filter by type') ?>">
+                            <div class="plugin-type-count-icon"><i class="fa fa-refresh"></i></div>
+                            <div class="plugin-type-count-text"><?= t('Updates') ?></div>
+                            <div class="plugin-type-count-total-updates"><?= isset($countTypes['plugin']) ? count($updates) : '0' ?></div>
+                        </div>
+                    <?php endif ?>
                     <div class="plugin-type-count-section" data-type="plugin" title="<?= t('Filter by type') ?>">
                         <div class="plugin-type-count-icon"><span class="pm-plugin-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('General') ?></div>
@@ -104,7 +105,7 @@
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action"><i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?></a>
         </div>
         <?php foreach ($available_plugins as $plugin): ?>
-            <table id="Plugin-<?= preg_replace('/\s+/', '', ($this->text->e($plugin['title']))) ?>" class="available-plugins-table" data-type="<?= $plugin['is_type'] ?>">
+            <table id="Plugin-<?= preg_replace('/\s+/', '', ($this->text->e($plugin['title']))) ?>" class="available-plugins-table" data-type="<?= ($is_configured && isset($installed_plugins[$plugin['title']]) && ($installed_plugins[$plugin['title']] < $plugin['version'])) ? 'update' : $plugin['is_type'] ?>">
                 <tr class="">
                     <th class="available-plugins-author" colspan="2">
                         <?php if (isset($plugin['is_type'])): ?>

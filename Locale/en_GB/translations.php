@@ -123,6 +123,7 @@ return array(
     'Updated plugin version available' => 'Updated plugin version available',
     'View in Plugin Manager' => 'View in Plugin Manager',
     'Filter by type' => 'Filter by type',
+    'Updates' => 'Updates',
     //
     // info/db-info.php
     //
