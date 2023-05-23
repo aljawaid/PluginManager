@@ -44,8 +44,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 - Fully translatable
 - Clean coded icons without images for faster page load times
-- Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) from the PluginManager sidebar
-- Direct link to [KanboardSupport](https://github.com/aljawaid/KanboardSupport) from the PluginManager sidebar
+- Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) and [KanboardSupport](https://github.com/aljawaid/KanboardSupport) from the PluginManager sidebar
 
 
 **Plugin Manager**
@@ -72,11 +71,11 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show a directory source e.g. 'official' or 'custom' including the URL of the source
   - Show external weblink for official directory
 - Show the available plugins count based on your configuration
-- Show current application version
+- Show the current application version
 - Show a direct link for each plugin's readme file
 - Show plugin totals by type
 - Use the user friendly search filter for quickly finding available plugins
-  - Click on each type to dynamically filter all plugins
+  - Click on each type to dynamically filter all plugins including those with updates
   - Hover over the input box to focus without clicking
 - Highlight the last updated dates to reflect the development activity of a plugin
 - Show direct links to installed plugins
