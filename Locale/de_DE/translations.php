@@ -146,6 +146,8 @@ return array(
     "Update this plugin" => "Diese Erweiterung aktualisieren",
     "Up to date" => "Aktualität",
     "View in Plugin Manager" => "Ansicht im Plugin Manager",
+    'Filter by type' => 'Nach Typ filtern',
+    'Updates' => 'Aktualisierung',
     "Not available" => "Nicht verfügbar",
     "Go to the top of the page" => "Gehen Sie zum Anfang der Seite",
     "Top" => "Anfang",

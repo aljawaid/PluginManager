@@ -14,6 +14,7 @@
     --pp-green: #2EA02E;
     --pp-green-dark: #055D20;
     --pp-orange: #FF6500;
+    --pp-orangered: #FF4500;
     --blue-icon-dark: #034CA6;
     --link-color-pm: #3366CC;
     --table-header-dir-info-pm: #AFCFE6;
@@ -979,8 +980,18 @@ figure.notice a, figure.notice a:visited {
 .plugin-type-count-section {
     display: inline-block;
     position: relative;
-    margin-left: 10px;
+    margin-left: 5px;
     border: 1px solid var(--blue-border-gradient-match);
+    padding: 0 0 0 5px;
+    border-radius: var(--border-radius-pm);
+    margin-bottom: 20px;
+}
+
+.plugin-type-count-section.plugin-type-count-section-updates {
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    border: 1px solid var(--pp-orangered);
     padding: 0 0 0 5px;
     border-radius: var(--border-radius-pm);
     margin-bottom: 20px;
@@ -1007,10 +1018,20 @@ figure.notice a, figure.notice a:visited {
     color: var(--pp-white);
 }
 
+.plugin-type-count-total-updates {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    background-color: var(--pp-orange);
+    padding: 4px 0 4px 0;
+    color: var(--pp-white);
+}
+
 .plugin-type-count-text {
     display: inline-block;
-    width: 85px;
+    width: 75px;
     text-align: center;
+    font-size: .9em;
 }
 
 .plugin-type-counts .tooltip {
@@ -1471,12 +1492,6 @@ fieldset.manual-install {
 
 .alert-fade-out, .alert-error {
     animation: fadeout 10s linear forwards;
-}
-
-.total-updates {
-    background-color: var(--pp-orange);
-    color: var(--pp-white);
-    font-weight: bold;
 }
 
 .js-updates-copy-paste, .js-updates-copy-paste:focus, .js-updates-copy-paste:visited, .js-updates-copy-paste:link {
