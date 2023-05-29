@@ -1,4 +1,5 @@
 <?php
+
 return array(
     "Plugin Manager" => "Plugin Manager",
     "Plugin Problems" => "Plugin Probleme",
@@ -184,5 +185,5 @@ return array(
     "and %s incompatible plugin(s)" => "und %s davon sind nicht kompatibel.",
     "Refresh this page after updating this plugin" => "Aktualisieren Sie diese Seite nach der Aktualisierung des Plugins",
     "Technical Info" => "Informationen",
-    "Content Cleaner" => "Inhalte bereinigen"
+    "Content Cleaner" => "Inhalte bereinigen",
 );
