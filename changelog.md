@@ -1,5 +1,15 @@
 # Changelog
 
+
+## v4.5
+
+_(most recent changes are listed on top):_
+- FIX: Update README.md with Screenshots
+- NEW: Add Filter by Updates Button in Directory
+- FIX: Code Syntax `translations.php`
+- NEW: Add German Translation - thanks @cptsanifair - Merge pull request #61 from kanboard-ng/main
+
+
 ## v4.2
 
 _(most recent changes are listed on top):_
