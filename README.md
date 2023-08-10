@@ -84,7 +84,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Manually install plugins in `.zip` archive files from local or remote locations
 - Manual plugins are part or completely functional plugins but not suitable for general Kanboard installation
 - Show a list of plugins which can be manually downloaded and installed based on data from the Plugin Directory
-- Developers can list their plugins in the normal directory but if they set remote_install to false, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
+- Developers can list their plugins in the normal directory but if they set `remote_install` to `false`, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
 - These plugins only show in PluginManager
 
 **Plugin Info**
