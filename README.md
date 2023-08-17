@@ -59,7 +59,7 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show a notification icon if the plugin has database changes
 - Show a notification icon if the plugin has a published homepage
 - Show the Kanboard compatible version set by the plugin
-- Show a direct link to the plugin readme file if hosted on GitHub, GitLab or Gitea.
+- Show a direct link to the plugin readme file if hosted on GitHub, GitLab, Gitea or Codeberg.
 - Show the plugin installation date
 
 **Plugin Directory**
