@@ -21,6 +21,8 @@ class PluginManagerHelper extends Base
                 return '/-/blob/master/README.md';
             case 'gitea.com':
                 return '/src/branch/main/README.md';
+            case 'codeberg.org':
+                return '/src/branch/master/README.md';
             default:
                 return false;
         }
