@@ -731,7 +731,8 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
 .install-plugin, .install-plugin:link, .install-plugin:visited {
     color: var(--link-color-pm);
     font-weight: 600;
-    padding: 6px 5px;
+    padding: 5px 5px 2px 5px;
+    display: inline-block;
     border: 2px solid var(--pp-orange);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
