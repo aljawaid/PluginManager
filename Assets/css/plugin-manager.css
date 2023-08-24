@@ -1219,7 +1219,8 @@ code.code {
 .plugin-problems-section .further-reading li {
     list-style-type: none;
     display: inline-block;
-    margin: 15px 25px 10px 25px;
+    margin: 15px 15px 10px 15px;
+    font-size: .9em;
 }
 
 .plugin-problems-section .further-reading li span {
