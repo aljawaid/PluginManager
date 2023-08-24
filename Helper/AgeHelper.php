@@ -56,7 +56,7 @@ class AgeHelper extends Base
             case $diff < 82800:
                 return '<span class="age-pass">' . t('around %d hours ago', $diff / 3600) . '</span>';
             // 24hrs
-           case $diff < 86400:
+            case $diff < 86400:
                 return '<span class="age-pass">' . t('yesterday') . '</span>';
             // 1.5 days
             case $diff < 129600:
