@@ -32,7 +32,6 @@ return array(
     'Manual Plugins' => 'Manual Plugins',
     'Plugin Info' => 'Plugin Info',
     'Plugin Problems' => 'Plugin Problems',
-    'Technical Info' => 'Technical Info',
     'Content Cleaner' => 'Content Cleaner',
     //
     // plugin/show.php
@@ -119,7 +118,6 @@ return array(
     'Update this plugin' => 'Update this plugin',
     'Up to date' => 'Up to date',
     'Not available' => 'Not available',
-    'Currently Installed' => 'Currently Installed',
     'Updated plugin version available' => 'Updated plugin version available',
     'View in Plugin Manager' => 'View in Plugin Manager',
     'Filter by type' => 'Filter by type',
@@ -164,7 +162,6 @@ return array(
     'A plugin containing multiple functions and automatic actions or connectors' => 'A plugin containing multiple functions and automatic actions or connectors',
     'A plugin which has not been set a plugin type by the developer' => 'A plugin which has not been set a plugin type by the developer',
     'Plugin types are only shown in the' => 'Plugin types are only shown in the',
-    'Plugin Structure' => 'Plugin Structure',
     'The official Plugins Directory has been updated to include extra information for each plugin. This information is set by the developer to indicate the code breakdown of the plugin.' => 'The official Plugins Directory has been updated to include extra information for each plugin. This information is set by the developer to indicate the code breakdown of the plugin.',
     'Documentation' => 'Documentation',
     'All plugins should have a readme file in the root of their plugin folder. This icons should show against all plugins.' => 'All plugins should have a readme file in the root of their plugin folder. This icons should show against all plugins.',
