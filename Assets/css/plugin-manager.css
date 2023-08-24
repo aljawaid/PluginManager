@@ -584,6 +584,7 @@ tr.plugin-description td {
 
 #DirectoryInfo td.plugin-dir-view a {
     text-decoration: none !important;
+    transition: var(--transition-pm);
 }
 
 #DirectoryInfo td.plugin-dir-view a .pm-source-directory-icon {
@@ -1589,6 +1590,7 @@ span.count-menu-item.badge-manual {
 .available-plugin-description .markdown p a, .available-plugin-description .markdown p a:visited {
     font-weight: 600;
     text-decoration: none;
+    transition: var(--transition-pm);
 }
 
 button.btn-update:hover + #RefreshNotice {
