@@ -8,12 +8,22 @@ use Kanboard\Core\Plugin\Directory;
 
 class PluginManagerHelper extends Base
 {
+    /**
+     * Get README File Based on Domain
+     *
+     * @access  public
+     * @see     /plugin/show.php
+     * @return  $url
+     * @author  aljawaid
+     */
     public function checkRootDomain($url)
     {
         if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
             $url = "http://" . $url;
         }
+
         $domain = implode('.', array_slice(explode('.', parse_url($url, PHP_URL_HOST)), -2));
+
         switch ($domain) {
             case 'github.com':
                 return '/blob/master/README.md';
@@ -31,12 +41,15 @@ class PluginManagerHelper extends Base
     public function countTypes($available_plugins)
     {
         $types = array();
+
         foreach ($available_plugins as $plugin) {
             if (isset($plugin['is_type']) && in_array($plugin['is_type'], ['plugin', 'action', 'theme', 'multi', 'connector'], false)) {
                 array_push($types, $plugin['is_type']);
             }
         }
+
         $count_types = array_count_values($types);
+
         return $count_types;
     }
 
@@ -50,24 +63,32 @@ class PluginManagerHelper extends Base
         return $plugin['remote_install'] === false;
     }
 
+    /**
+     * Get Timestamp of Remote File
+     * Snippet from: https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
+     *
+     * @access  public
+     * @return  string
+     * @author  aljawaid
+     */
     public function lastUpdatedDirectory()
     {
         $curlCheck = $this->httpClient->backend();
 
         if ($curlCheck == 'cURL') {
-            // https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
+
             $curl = curl_init(PLUGIN_API_URL);
 
-            // don't fetch the actual page, you only want headers
+            // Don't fetch the actual page, we only want the headers
             curl_setopt($curl, CURLOPT_NOBODY, true);
 
-            // stop it from outputting stuff to stdout
+            // Stop it from outputting stuff to `stdout`
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-            // attempt to retrieve the modification date
+            // Attempt to retrieve the modification date
             curl_setopt($curl, CURLOPT_FILETIME, true);
 
-            // set HTTP_VERIFY_SSL_CERTIFICATE from config.php
+            // Set HTTP_VERIFY_SSL_CERTIFICATE from config.php
             if (HTTP_VERIFY_SSL_CERTIFICATE === false) {
                 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -90,9 +111,9 @@ class PluginManagerHelper extends Base
     }
 
     /**
-     * Create list of updatable plugins.
+     * Create List of Updatable Plugins
      *
-     * @return array with plugin titles
+     * @return  array with plugin titles
      */
     public function getPluginUpdates(): array
     {
@@ -114,12 +135,13 @@ class PluginManagerHelper extends Base
     }
 
     /**
-     * Get all plugins available
+     * Get All Plugins Available
      * Duplicate function of 'Kanboard\Core\Plugin\Directory\getAvailablePlugins()'
      *
-     * @access public
-     * @param  string $url
-     * @return array
+     * @see     getAvailablePlugins()
+     * @access  public
+     * @param   string $url
+     * @return  array
      */
     public function getAllInstallablePlugins($url = PLUGIN_API_URL)
     {
