@@ -32,7 +32,7 @@ class AgeHelper extends Base
         // 64800s /18hrs
         // 86400s /day
 
-        switch ($diff) {
+        switch (true) {
             case $diff < 60:
                 return '<span class="age-pass">' . t('less than a minute ago') . '</span>';
             case $diff < 3600:
