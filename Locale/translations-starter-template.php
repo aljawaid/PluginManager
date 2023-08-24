@@ -179,13 +179,30 @@ return array(
     // helper/AgeHelper.php
     //
     'less than a minute ago' => '',
+    'less than 5 minutes ago' => '',
     'around %d minutes ago' => '',
+    'around an hour ago' => '',
     'around %d hours ago' => '',
+    'yesterday' => '',
+    'almost 2 days ago' => '',
     'around %d days ago' => '',
+    'about a week ago' => '',
+    'around 2 weeks ago' => '',
     'around %d weeks ago' => '',
+    'around a month ago' => '',
+    'over a month ago' => '',
     'around %d months ago' => '',
+    'a year ago' => '',
     'over a year ago' => '',
-    'over %s years ago' => '',
+    'around 2 years ago' => '',
+    'over 2 years ago' => '',
+    'around 3 years ago' => '',
+    'over 3 years ago' => '',
+    'around 4 years ago' => '',
+    'over 4 years ago' => '',
+    'around 5 years ago' => '',
+    'over 5 years ago' => '',
+    'over 5 years ago' => '',
     //
     // info/plugin-problems.php
     //

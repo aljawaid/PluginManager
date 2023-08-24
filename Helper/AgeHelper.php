@@ -42,37 +42,37 @@ class AgeHelper extends Base
         switch (true) {
             // < 1min
             case $diff < 60:
-                return '<span class="age-pass">'. t('less than a minute ago') .'</span>';
+                return '<span class="age-pass">' . t('less than a minute ago') . '</span>';
             // < 5mins
             case $diff < 300:
-                return '<span class="age-pass">'. t('less than 5 minutes ago') .'</span>';
+                return '<span class="age-pass">' . t('less than 5 minutes ago') . '</span>';
             // < 55mins
             case $diff < 3300:
                 return '<span class="age-pass">' . t('around %d minutes ago', $diff / 60) . '</span>';
             // < 1hr
             case $diff < 3600:
-                return '<span class="age-pass">'. t('around an hour ago') .'</span>';
+                return '<span class="age-pass">' . t('around an hour ago') . '</span>';
             // < 23hrs
             case $diff < 82800:
                 return '<span class="age-pass">' . t('around %d hours ago', $diff / 3600) . '</span>';
             // 24hrs
            case $diff < 86400:
-                return '<span class="age-pass">'. t('yesterday') .'</span>';
+                return '<span class="age-pass">' . t('yesterday') . '</span>';
             // 1.5 days
             case $diff < 129600:
-                return '<span class="age-pass">'. t('almost 2 days ago') .'</span>';
+                return '<span class="age-pass">' . t('almost 2 days ago') . '</span>';
             // < 6 days
             case $diff < 518400:
                 return '<span class="age-pass">' . t('around %d days ago', $diff / 86400) . '</span>';
             // 7 days
             case $diff < 604800:
-                return '<span class="age-pass">'. t('about a week ago') .'</span>';
+                return '<span class="age-pass">' . t('about a week ago') . '</span>';
             // < 13 days
             case $diff < 1123200:
                 return '<span class="age-pass">' . t('around %d days ago', $diff / 86400) . '</span>';
             // 14 days
             case $diff < 1209600:
-                return '<span class="age-pass">'. t('around 2 weeks ago') .'</span>';
+                return '<span class="age-pass">' . t('around 2 weeks ago') . '</span>';
             // < 3 weeks
             case $diff < 1814400:
                 return '<span class="age-pass">' . t('around %d weeks ago', $diff / 604800) . '</span>';
