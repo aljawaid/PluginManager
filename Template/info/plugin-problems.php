@@ -17,7 +17,7 @@
                     <span class="pm-question-icon"></span><?= t('Look for templates') ?>
                 </li>
                 <li class="">
-                    <span class="pm-question-icon"></span><?= t('Look for models in ') ?> <code class="code">plugin.php</code>
+                    <span class="pm-question-icon"></span><?= e('Look for models in %s', '<code class="code">plugin.php</code>') ?>
                 </li>
             </ul>
         </div>
@@ -49,8 +49,7 @@
         </div>
         <?php if (file_exists('plugins/KanboardSupport')): ?>
             <p class="">
-                <?= t('All information related to your setup can be easily found in') ?>
-                <?= $this->url->link('<span class="pm-kanboard-support-icon"></span>' . t('Technical Information'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support', '', false, 'ServerConfig') ?>.
+                <?= e('All information related to your setup can be easily found in %s.', $this->url->link('<span class="pm-kanboard-support-icon"></span>' . t('Technical Information'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support', '', false, 'ServerConfig')) ?>
             </p>
         <?php endif ?>
     </section>
@@ -75,7 +74,7 @@
             <?= t('In the Plugin Manager, all plugins are identified if they contain potential database changes. This is your indication to check for extra tables in the plugin\'s name. If you decide to remove the plugin which causes you issues, the default the tables in the database will remain. You will need to carefully delete them according to your setup.') ?>
         </p>
         <p class="mt-5">
-            <?= t('Plugins which affect the database also register into the ') ?> <code class="code">plugin_schema_versions</code> <?= t('table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.') ?>
+            <?= e('Plugins which affect the database also register into the %s table. If uninstalling a plugin, you would need to delete the associated plugin entry here too besides just the specific plugin related tables.', '<code class="code">plugin_schema_versions</code>') ?>
         </p>
     </section>
     <section class="plugin-problems-section">
@@ -91,7 +90,7 @@
             </ul>
         </div>
         <p class="">
-            <?= t('Delete the offending plugin. If you dont know which plugin is causing your issue, check the ') ?> <code class="code">/plugins</code> <?= t('folder. Each folder represents each plugin in the same name.') ?>
+            <?= e('Delete the offending plugin. If you dont know which plugin is causing your issue, check the %s folder. Each folder represents each plugin in the same name.', '<code class="code">/plugins</code>') ?>
         </p>
     </section>
 
