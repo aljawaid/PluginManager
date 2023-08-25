@@ -46,6 +46,7 @@ return array(
     'Uninstall' => '',
     'There is no plugin loaded.' => '',
     'You have %s plugins installed' => '',
+    'with %s updates available' => '',
     'and %s incompatible plugin(s)' => '',
     'Filter Installed Plugins' => '',
     'Search for installed plugin...' => '',
@@ -82,6 +83,7 @@ return array(
     'Official Plugin Directory' => '',
     'Custom Directory' => '',
     'Filter Available Plugins' => '',
+    'Search for plugin...' => '',
     'Search available plugins' => '',
     'Directory Last Updated' => '',
     'General Plugin' => '',
@@ -243,6 +245,7 @@ return array(
     'Copy download link' => '',
     'This plugin is for developers' => '',
     'This plugin is for translators and developers' => '',
+    'This plugin may not be completely functional. Always check the homepage for recent developments as the download link may not show the latest version.' => '',
     'There are no manual plugins listed at the moment' => '',
     //
     // plugin/installer.php
