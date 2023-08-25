@@ -171,7 +171,7 @@ Go to `Plugins`
 <details>
     <summary><strong>Translations</strong></summary>
 
-- English (UK)
+- English (UK), French, German
 - _Starter template available_
 
 </details>
