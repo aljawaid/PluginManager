@@ -19,7 +19,7 @@ $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
     </div>
     <div class="pm-page-margin relative">
         <p class="">
-            <?= t('Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using') ?> <strong class="pp-green-dark">v<?= APP_VERSION ?></strong>.
+            <?= e('Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using %s', '<strong class="pp-green-dark">v' . APP_VERSION . '</strong>.') ?>
         </p>
         <table id="InstalledIncompatiblePluginsTable" class="installed-incompatible-plugins">
             <thead>

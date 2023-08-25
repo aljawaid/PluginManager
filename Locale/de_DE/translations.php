@@ -37,7 +37,7 @@ return array(
     // plugin/show.php
     //
     'Incompatible Plugins' => 'Inkompatible Erweiterung',
-    'Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using' => 'Die als inkompatibel aufgeführten Erweiterungen basieren auf der vom Entwickler festgelegten Versionsgrenze der Anwendung. Sie verwenden',
+    'Plugins listed as incompatible are based on the application version limit set by the plugin developer. You are using %s' => 'Die als inkompatibel aufgeführten Erweiterungen basieren auf der vom Entwickler festgelegten Versionsgrenze der Anwendung. Sie verwenden %s',
     'Name' => 'Name',
     'Author' => 'Autor',
     'Version' => 'Ausführung',
