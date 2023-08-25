@@ -202,7 +202,6 @@ return array(
     'over 4 years ago' => 'vor über 4 Jahren',
     'around 5 years ago' => 'Vor etwa 5 Jahren',
     'over 5 years ago' => 'vor über 5 Jahren',
-    'over 5 years ago' => 'vor über 5 Jahren',
     "Refresh this page after updating this plugin" => "Aktualisieren Sie diese Seite nach der Aktualisierung des Plugins",
     "Technical Info" => "Informationen",
     "Content Cleaner" => "Inhalte bereinigen",

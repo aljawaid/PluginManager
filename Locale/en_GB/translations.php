@@ -202,7 +202,6 @@ return array(
     'over 4 years ago' => 'over 4 years ago',
     'around 5 years ago' => 'around 5 years ago',
     'over 5 years ago' => 'over 5 years ago',
-    'over 5 years ago' => 'over 5 years ago',
     //
     // info/plugin-problems.php
     //
