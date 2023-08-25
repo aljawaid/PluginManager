@@ -4,7 +4,7 @@ return array(
     //
     // GENERAL
     //
-    'Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.' => '',
+    'Plugin Manager provides an improved user-friendly layout for handling plugins. All plugins are broken down into a new structure to help users troubleshoot plugin-related problems. New features include listing and installing Manual Plugins both locally and remotely. The new Plugin Problems section lists information on how to troubleshoot issues with plugins adding quick links to KanboardSupport and ContentCleaner to extend troubleshooting the whole application.' => '',
     'Plugins' => '',
     'Support' => '',
     'Technical Information' => '',
