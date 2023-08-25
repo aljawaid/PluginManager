@@ -103,27 +103,27 @@
                 <?= $this->url->link('<span class="pm-app-settings-icon"></span>' . t('About Application'), 'ConfigController', 'index') ?>
             </li>
             <li class="">
-                <a href="https://kanboard.discourse.group" target="_blank" title="Opens in a new window" rel="noopener noreferrer">
+                <a href="https://kanboard.discourse.group" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                     <span class="pm-kanboard-forum-icon"></span><?= t('Kanboard Forum') ?>
                 </a>
             </li>
             <li class="">
-                <a href="https://docs.kanboard.org/v1/dev/" target="_blank" title="Opens in a new window" rel="noopener noreferrer">
+                <a href="https://docs.kanboard.org/v1/dev/" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                     <span class="pm-contributing-icon"></span><?= t('Contributing') ?>
                 </a>
             </li>
             <li class="">
-                <a href="https://docs.kanboard.org/v1/plugins/" target="_blank" title="Opens in a new window" rel="noopener noreferrer">
+                <a href="https://docs.kanboard.org/v1/plugins/" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                     <span class="pm-contributing-icon"></span><?= t('Developing Plugins') ?>
                 </a>
             </li>
             <li class="">
-                <a href="https://github.com/kanboard/kanboard" target="_blank" title="Opens in a new window" rel="noopener noreferrer">
+                <a href="https://github.com/kanboard/kanboard" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                     <span class="pm-github-icon"></span><?= t('Source Code') ?>
                 </a>
             </li>
             <li class="">
-                <a href="https://kanboard.org/plugins.html" target="_blank" title="Opens in a new window" rel="noopener noreferrer">
+                <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                     <span class="pm-further-reading-icon"></span><?= t('Kanboard Plugins') ?>
                 </a>
             </li>
