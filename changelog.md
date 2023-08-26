@@ -1,5 +1,29 @@
 # Changelog
 
+## v4.6
+
+_(most recent changes are listed on top):_
+- FIX: Plugin Description Grammar
+- NEW: Improved Uninstall Modal with ContentCleaner Integration - show install date and reminder to clean database
+- FIX: Message Alerts Bottom Border
+- FIX: Code Styling in Plugin Description
+- NEW: Add Spanish Translations
+- FIX: Better Plugin Description
+- NEW: Add French Translations
+- FIX: Missing Translation Strings in Plugin Problems
+- FIX: Incompatibility Language String Syntax
+- FIX: Translation Syntax
+- FIX: Reformat `de_DU` Translations - reformat and add missing translations
+- FIX: Missing Translations
+- FIX: Duplicate Translations
+- FIX: Syntax Error - #68
+- FIX: Improve Time-Ago Logic - fixes #68 Bug: Plurals Are Ignored in Age Breakdown
+- FIX: Switch Statement in AgeHelper Function - relates to [a4ba3cd](https://github.com/aljawaid/PluginManager/commit/a4ba3cdca7e6375fefd696b8b383c20b9fa4aafe#commitcomment-125410897) - thanks @alfredbuehler
+- FIX: 'Further Reading' Link Spacing
+- FIX: Anchor Transitions
+- FIX: Button Alignment & Spacing
+- FIX: Detection for Repositories Hosted on Codeberg - relates to 8a61031 - thanks @alfredbuehler
+
 
 ## v4.5
 
