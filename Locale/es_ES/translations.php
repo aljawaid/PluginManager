@@ -252,4 +252,16 @@ return array(
     'From File' => 'Desde archivo',
     'From URL' => 'Desde URL',
     'Choose to install from a local archive (.zip) file or a remote location' => 'Elija instalar desde un archivo local (.zip) o una ubicación remota',
+    //
+    // plugin/remove.php
+    //
+    'Uninstall Plugin' => 'Desinstalar el Plugin',
+    'Important' => 'Importante',
+    '%s After uninstalling, you should run the relevant cleaning jobs using ContentCleaner.' => '%s Después de desinstalar, debe ejecutar los trabajos de limpieza pertinentes usando ContentCleaner.',
+    'This plugin contains database changes.' => 'Este plugin contiene cambios en la base de datos.',
+    'Tip' => 'Consejo',
+    'Use ContentCleaner to keep your application clean after uninstalling plugins.' => 'Utilice ContentCleaner para mantener su aplicación limpia después de desinstalar plugins.',
+    'Changes made to the application database by plugins are not restored or removed by default. %s After uninstalling, you should run the relevant cleaning jobs using ContentCleaner.' => 'Los cambios realizados en la base de datos de la aplicación por los plugins no se restauran ni se eliminan por defecto. %s Después de desinstalar, debería ejecutar los trabajos de limpieza relevantes usando ContentCleaner.',
+    'Install the ContentCleaner plugin to keep your application clean after uninstalling plugins.' => 'Instale el plugin ContentCleaner para mantener su aplicación limpia después de desinstalar plugins.',
+    'Do you really want to remove %s which was installed on %s?' => '¿Realmente quieres eliminar %s que fue instalado en %s?',
 );
