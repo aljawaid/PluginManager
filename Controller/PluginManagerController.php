@@ -10,10 +10,12 @@ use ZipArchive;
 
 /**
  * Plugin PluginManager
- * Class PluginManagerController
  *
- * @author aljawaid
- * @author alfredbuehler
+ * Class PluginManagerController
+ * @package  Kanboard\Controller
+ * @author   Frederic Guillot
+ * @author   aljawaid
+ * @author   alfredbuehler
  */
 
 class PluginManagerController extends \Kanboard\Controller\PluginController
@@ -21,9 +23,9 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     /**
      * Display the Plugin Problems Page
      *
-     * @access public
+     * @access  public
+     * @author  aljawaid
      */
-
     public function show()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-problems', array(
@@ -34,9 +36,9 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     /**
      * Display the Plugin Info Page
      *
-     * @access public
+     * @access  public
+     * @author  aljawaid
      */
-
     public function showPluginInfo()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:info/plugin-info', array(
@@ -48,9 +50,9 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     /**
      * Display the Manual Plugins Page
      *
-     * @access public
+     * @access  public
+     * @author  aljawaid
      */
-
     public function showManualPlugins()
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
@@ -59,9 +61,9 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     }
 
     /**
-     * Install a plugin
+     * Install a Plugin
      *
-     * @author alfredbuehler
+     * @author  alfredbuehler
      */
     public function installPlugin()
     {
@@ -81,11 +83,11 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     }
 
     /**
-     * Install a plugin from URL
+     * Install a Plugin from URL
      *
-     * @param string $archiveUrl
-     * @return bool
-     * @author alfredbuehler
+     * @param   string          $archiveUrl
+     * @return  bool
+     * @author  alfredbuehler
      */
     private function installByURL(string $archiveUrl): bool
     {
@@ -103,11 +105,11 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     }
 
     /**
-     * Install a plugin from file
+     * Install a Plugin from File
      *
-     * @param string $archiveFile
-     * @return bool
-     * @author alfredbuehler
+     * @param   string          $archiveFile
+     * @return  bool
+     * @author  alfredbuehler
      */
     private function installByFile(string $archiveFile): bool
     {
@@ -163,16 +165,16 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
  * Different class in file
  * Added by @author
  *
- * @author alfredbuehler
+ * @author  alfredbuehler
  */
 class Installer extends \Kanboard\Core\Plugin\Installer
 {
     /**
-     *  Download archive
+     *  Download Archive
      *
-     * @param string $archiveUrl
-     * @return string  Downloaded $archiveFile
-     * @author alfredbuehler
+     * @param   string                  $archiveUrl
+     * @return  string      Downloaded  $archiveFile
+     * @author  alfredbuehler
      */
     public function downloadPluginArchive($archiveUrl): string
     {
@@ -186,11 +188,11 @@ class Installer extends \Kanboard\Core\Plugin\Installer
 //phpcs enable
 
 /**
- * Get the directory name
+ * Get the Directory Name
  *
- * @param ZipArchive open zip
- * @return string directory name in archive
- * @author alfredbuehler
+ * @param   ZipArchive      open zip
+ * @return  string          directory name in archive
+ * @author  alfredbuehler
  */
 function getPluginDir(ZipArchive $zip): string
 {
@@ -205,10 +207,10 @@ function getPluginDir(ZipArchive $zip): string
 /**
  * Get the Plugin.php
  *
- * @param ZipArchive open zip
- * @param string directory name in archive
- * @return string content of Plugin.php
- * @author alfredbuehler
+ * @param   ZipArchive      Open zip
+ * @param   string          Directory name in archive
+ * @return  string          Content of Plugin.php
+ * @author  alfredbuehler
  */
 function getPluginFile(ZipArchive $zip, string $dirname): string
 {
@@ -221,11 +223,11 @@ function getPluginFile(ZipArchive $zip, string $dirname): string
 }
 
 /**
- * Get the namespace
+ * Get the Namespace
  *
- * @param string content of Plugin.php
- * @return string namespace of plugin
- * @author alfredbuehler
+ * @param   string          Content of Plugin.php
+ * @return  string          Namespace of plugin
+ * @author  alfredbuehler
  */
 function getPluginNamespace(string $plugin): string
 {
@@ -241,11 +243,11 @@ function getPluginNamespace(string $plugin): string
 }
 
 /**
- * Get the plugin's name
+ * Get the Plugin's Name
  *
- * @param string content of Plugin.php
- * @return string name of plugin
- * @author alfredbuehler
+ * @param   string          Content of Plugin.php
+ * @return  string          Name of plugin
+ * @author  alfredbuehler
  */
 function getPluginName(string $plugin): string
 {
