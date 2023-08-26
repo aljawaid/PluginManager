@@ -34,6 +34,7 @@
     --panel-background-pm: #EEEEEE;
     --border-radius-pm: 3px;
     --transition-pm: ease-in-out all .3s;
+    --modal-page-header-pm: 5px 5px 10px 5px;
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -1600,4 +1601,67 @@ button.btn-update:hover + #RefreshNotice {
 
 tbody.plugin-body {
     position: relative;
+}
+
+#UninstallModal .modal-contents {
+    padding: 0 15px 0 0;
+}
+
+#UninstallModal .modal-page-header {
+
+}
+
+#UninstallModal .modal-page-header h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.plugin-manager-modal .modal-actions {
+    text-align: right;
+    margin-top: 20px;
+    clear: both;
+}
+
+.plugin-manager-modal .modal-actions .form-actions {
+    padding-top: 5px;
+    color: var(--pp-white);
+    cursor: default;
+}
+
+.plugin-manager-modal .modal-actions .form-actions button {
+    background: #D14836;
+    border-radius: var(--border-radius-pm);
+    transition: var(--transition-pm);
+    border: 1px solid #D14836;
+    color: var(--pp-white) !important;
+    vertical-align: middle;
+}
+
+.plugin-manager-modal .modal-actions .form-actions a {
+    vertical-align: middle;
+    transition: var(--transition-pm);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1.2em;
+    font-weight: normal;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: var(--border-radius-pm);
+    padding: 4px 10px 3px 10px;
+    margin: 0 0 0 -15px;
+    border: 1px solid #AEAEAE;
+    background: #F5F5F5;
+    color: #333333;
+    text-decoration: none;
+}
+
+.plugin-manager-modal .modal-actions .form-actions a:hover {
+    border: 1px solid #D14836;
+    color: #D14836 !important;
+}
+
+.plugin-manager-modal .modal-actions .form-actions button:focus, .plugin-manager-modal .modal-actions .form-actions button:hover {
+    border: 1px solid #D14836;
+    color: #D14836 !important;
+    background: var(--pp-white);
 }
