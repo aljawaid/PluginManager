@@ -164,7 +164,7 @@ Go to `Plugins`
   - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner), [KanboardCSS](https://github.com/aljawaid/KanboardCSS)
   - Other plugins can use the `'template:plugin:sidebar'` hook after installing PluginManager
 - **Core Files & Templates**
-  - `03` Template override
+  - `04` Template override
   - _No database changes_
 
 </details>

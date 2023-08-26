@@ -16,6 +16,7 @@ class Plugin extends Base
         $this->template->setTemplateOverride('plugin/show', 'pluginManager:plugin/show');
         $this->template->setTemplateOverride('plugin/directory', 'pluginManager:plugin/directory');
         $this->template->setTemplateOverride('plugin/sidebar', 'pluginManager:plugin/sidebar');
+        $this->template->setTemplateOverride('plugin/remove', 'pluginManager:plugin/remove');
 
         // Views - Template Hook
         //  - Override name should start lowercase e.g. pluginNameExampleCamelCase
