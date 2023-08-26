@@ -62,7 +62,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('Plugin Manager provides an improved user-friendly layout for handling plugins. All plugins are broken down into a new structure to help users troubleshoot plugin-related problems. New features include listing and installing Manual Plugins both locally and remotely. The new Plugin Problems section lists information on how to troubleshoot issues with plugins adding quick links to KanboardSupport and ContentCleaner to extend troubleshooting the whole application.');
+        return t('Plugin Manager provides an improved user-friendly layout for handling plugins. All plugins are broken down into a new structure to help users troubleshoot plugin-related problems. New features include listing and installing Manual Plugins both locally and remotely. The new Plugin Problems section lists information on how to troubleshoot issues with plugins adding quick links to KanboardSupport and ContentCleaner to extend troubleshooting to the whole application.');
     }
 
     public function getPluginAuthor()
