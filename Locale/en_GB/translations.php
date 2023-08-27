@@ -243,7 +243,7 @@ return array(
     'Copy download link' => 'Copy download link',
     'This plugin is for developers' => 'This plugin is for developers',
     'This plugin is for translators and developers' => 'This plugin is for translators and developers',
-    'This plugin may not be completely functional. Always check the homepage for recent developments as the download link may not show the latest version.' => '',
+    'This plugin may not be completely functional. Always check the homepage for recent developments as the download link may not show the latest version.' => 'This plugin may not be completely functional. Always check the homepage for recent developments as the download link may not show the latest version.',
     'There are no manual plugins listed at the moment' => 'There are no manual plugins listed at the moment',
     //
     // plugin/installer.php
