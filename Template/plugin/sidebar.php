@@ -25,7 +25,7 @@ $countManualPlugins = count($this->helper->pluginManagerHelper->getAllPlugins())
         </li>
         <?php if (file_exists('plugins/KanboardSupport')): ?>
             <li <?= $this->app->checkMenuSelection('TechnicalSupportController', 'show') ?>>
-                <?= $this->url->link('<span class="pm-kanboard-support-icon"></span>' . t('Technical Info'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support') ?>
+                <?= $this->url->link('<span class="pm-kanboard-support-icon"></span>' . t('Configuration'), 'TechnicalSupportController', 'show', array('plugin' => 'KanboardSupport'), false, 'plugin-problems-support') ?>
             </li>
         <?php endif ?>
         <?php if (file_exists('plugins/ContentCleaner')): ?>

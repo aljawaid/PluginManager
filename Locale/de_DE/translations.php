@@ -31,6 +31,7 @@ return array(
     'Plugin Directory' => 'Quelle',
     'Manual Plugins' => 'Manuelle Plugins',
     'Plugin Info' => 'Plugin Informationen',
+    'Configuration' => 'Konfiguration',
     'Plugin Problems' => 'Plugin Probleme',
     'Content Cleaner' => 'Inhalte bereinigen',
     //
