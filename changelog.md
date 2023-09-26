@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.7
+
+_(most recent changes are listed on top):_
+- FIX: Rename Sidebar for KanboardSupport - relates to [KanboardSupport Issue #17](https://github.com/aljawaid/KanboardSupport/issues/17) - [Commit 502216](https://github.com/aljawaid/KanboardSupport/commit/5022165c35c8bd1aa86bf8b90672cf54cc55de17)
+- FIX: Missing Translation String in Manual Plugins
+
+
 ## v4.6
 
 _(most recent changes are listed on top):_
