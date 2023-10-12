@@ -9,6 +9,29 @@ use Kanboard\Core\Plugin\Directory;
 class PluginManagerHelper extends Base
 {
     /**
+     * Get SVG Icons for Inline Markup and CSS Styling (Embed SVG Fly Method)
+     *
+     * Include filename as class inside SVG file
+     * Set 'color' as 'currentColor' to use CSS or define a color
+     * Style using normal CSS
+     * @uses    $this->helper->myHelper->embedSVGIcon('icon-filename-without-extension')
+     * @var     $svgFilename
+     * @return  svg
+     * @author  Erik Moberg https://www.erikmoberg.net/article/embed-svg-icons-in-html-with-php
+     * @author  aljawaid
+     */
+    public function embedSVGIcon($icon_filename)
+    {
+        if ($this->router->getPlugin()) {
+            // For plugin templates
+            return file_get_contents('plugins/' . $this->helper->app->getPluginName() . '/Assets/icons/' . $icon_filename . '.svg');
+        } else {
+            // For core templates
+            return file_get_contents('plugins/PluginManager/Assets/icons/' . $icon_filename . '.svg');
+        }
+    }
+
+    /**
      * Get README File Based on Domain
      *
      * @access  public
