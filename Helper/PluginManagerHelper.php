@@ -13,7 +13,8 @@ class PluginManagerHelper extends Base
      *
      * @access  public
      * @see     /plugin/show.php
-     * @return  $url
+     * @var     $url
+     * @return  string
      * @author  aljawaid
      */
     public function checkRootDomain($url)
@@ -65,8 +66,8 @@ class PluginManagerHelper extends Base
 
     /**
      * Get Timestamp of Remote File
-     * Snippet from: https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
      *
+     * Snippet from: https://www.appsloveworld.com/php/12/get-the-last-modified-date-of-a-remote-file
      * @access  public
      * @return  string
      * @author  aljawaid
@@ -136,11 +137,12 @@ class PluginManagerHelper extends Base
 
     /**
      * Get All Plugins Available
-     * Duplicate function of 'Kanboard\Core\Plugin\Directory\getAvailablePlugins()'
      *
+     * Duplicate function of 'Kanboard\Core\Plugin\Directory\getAvailablePlugins()'
      * @see     getAvailablePlugins()
      * @access  public
-     * @param   string $url
+     * @var     $url
+     * @param   string
      * @return  array
      */
     public function getAllInstallablePlugins($url = PLUGIN_API_URL)
