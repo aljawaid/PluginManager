@@ -14,6 +14,7 @@ use Kanboard\Core\Plugin\Directory;
  * @author   aljawaid
  * @author   creecros       Craig Crosby
  * @author   alfredbuehler  Alfred Bühler
+ * @author   cptsanifair    Cpt. Sanifair
  */
 class PluginManagerHelper extends Base
 {
@@ -48,6 +49,7 @@ class PluginManagerHelper extends Base
      * @var     $url
      * @return  string
      * @author  aljawaid
+     * @author  cptsanifair     Cpt. Sanifair
      */
     public function checkRootDomain($url)
     {
@@ -71,6 +73,14 @@ class PluginManagerHelper extends Base
         }
     }
 
+    /**
+     * Count Total Types
+     *
+     * @var     $available_plugins
+     * @return  int
+     * @author  creecros       Craig Crosby
+     * @author  cptsanifair    Cpt. Sanifair
+     */
     public function countTypes($available_plugins)
     {
         $types = array();
@@ -86,11 +96,26 @@ class PluginManagerHelper extends Base
         return $count_types;
     }
 
+    /**
+     * Get All Plugins
+     *
+     * @var     $url            string
+     * @return  int
+     * @author  aljawaid
+     * @author  cptsanifair     Cpt. Sanifair
+     */
     public function getAllPlugins($url = PLUGIN_API_URL)
     {
         return array_filter($this->httpClient->getJson($url), array($this, 'isNotInstallable'));
     }
 
+    /**
+     * Get Not Installable Plugins
+     *
+     * @return  int
+     * @author  aljawaid
+     * @author  cptsanifair     Cpt. Sanifair
+     */
     public function isNotInstallable(array $plugin)
     {
         return $plugin['remote_install'] === false;
@@ -146,7 +171,7 @@ class PluginManagerHelper extends Base
      * Create List of Updatable Plugins
      *
      * @return  array with plugin titles
-     * @author  creecros Craig Crosby
+     * @author  creecros    Craig Crosby
      */
     public function getPluginUpdates(): array
     {
