@@ -63,7 +63,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     /**
      * Install a Plugin
      *
-     * @author  alfredbuehler Alfred Bühler
+     * @author  alfredbuehler   Alfred Bühler
      */
     public function installPlugin()
     {
@@ -165,7 +165,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
  * Different class in file
  * Added by @author
  *
- * @author  alfredbuehler Alfred Bühler
+ * @author  alfredbuehler   Alfred Bühler
  */
 class Installer extends \Kanboard\Core\Plugin\Installer
 {
