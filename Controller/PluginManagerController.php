@@ -15,7 +15,7 @@ use ZipArchive;
  * @package  Kanboard\Controller
  * @author   Frederic Guillot
  * @author   aljawaid
- * @author   alfredbuehler
+ * @author   alfredbuehler Alfred Bühler
  */
 
 class PluginManagerController extends \Kanboard\Controller\PluginController
@@ -63,7 +63,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     /**
      * Install a Plugin
      *
-     * @author  alfredbuehler
+     * @author  alfredbuehler Alfred Bühler
      */
     public function installPlugin()
     {
@@ -87,7 +87,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
      *
      * @param   string          $archiveUrl
      * @return  bool
-     * @author  alfredbuehler
+     * @author  alfredbuehler   Alfred Bühler
      */
     private function installByURL(string $archiveUrl): bool
     {
@@ -109,7 +109,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
      *
      * @param   string          $archiveFile
      * @return  bool
-     * @author  alfredbuehler
+     * @author  alfredbuehler   Alfred Bühler
      */
     private function installByFile(string $archiveFile): bool
     {
@@ -165,7 +165,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
  * Different class in file
  * Added by @author
  *
- * @author  alfredbuehler
+ * @author  alfredbuehler Alfred Bühler
  */
 class Installer extends \Kanboard\Core\Plugin\Installer
 {
@@ -174,7 +174,7 @@ class Installer extends \Kanboard\Core\Plugin\Installer
      *
      * @param   string                  $archiveUrl
      * @return  string      Downloaded  $archiveFile
-     * @author  alfredbuehler
+     * @author  alfredbuehler           Alfred Bühler
      */
     public function downloadPluginArchive($archiveUrl): string
     {
@@ -192,7 +192,7 @@ class Installer extends \Kanboard\Core\Plugin\Installer
  *
  * @param   ZipArchive      open zip
  * @return  string          directory name in archive
- * @author  alfredbuehler
+ * @author  alfredbuehler   Alfred Bühler
  */
 function getPluginDir(ZipArchive $zip): string
 {
@@ -210,7 +210,7 @@ function getPluginDir(ZipArchive $zip): string
  * @param   ZipArchive      Open zip
  * @param   string          Directory name in archive
  * @return  string          Content of Plugin.php
- * @author  alfredbuehler
+ * @author  alfredbuehler   Alfred Bühler
  */
 function getPluginFile(ZipArchive $zip, string $dirname): string
 {
@@ -227,7 +227,7 @@ function getPluginFile(ZipArchive $zip, string $dirname): string
  *
  * @param   string          Content of Plugin.php
  * @return  string          Namespace of plugin
- * @author  alfredbuehler
+ * @author  alfredbuehler   Alfred Bühler
  */
 function getPluginNamespace(string $plugin): string
 {
@@ -247,7 +247,7 @@ function getPluginNamespace(string $plugin): string
  *
  * @param   string          Content of Plugin.php
  * @return  string          Name of plugin
- * @author  alfredbuehler
+ * @author  alfredbuehler   Alfred Bühler
  */
 function getPluginName(string $plugin): string
 {
