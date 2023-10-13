@@ -6,6 +6,15 @@ use Kanboard\Core\Base;
 use Kanboard\Core\Http\Client;
 use Kanboard\Core\Plugin\Directory;
 
+/**
+ * Plugin PluginManager
+ * Class PluginManagerHelper
+ *
+ * @package  Plugin\PluginManager\Helper
+ * @author   aljawaid
+ * @author   creecros       Craig Crosby
+ * @author   alfredbuehler  Alfred Bühler
+ */
 class PluginManagerHelper extends Base
 {
     /**
@@ -100,7 +109,6 @@ class PluginManagerHelper extends Base
         $curlCheck = $this->httpClient->backend();
 
         if ($curlCheck == 'cURL') {
-
             $curl = curl_init(PLUGIN_API_URL);
 
             // Don't fetch the actual page, we only want the headers
@@ -138,6 +146,7 @@ class PluginManagerHelper extends Base
      * Create List of Updatable Plugins
      *
      * @return  array with plugin titles
+     * @author  creecros Craig Crosby
      */
     public function getPluginUpdates(): array
     {
