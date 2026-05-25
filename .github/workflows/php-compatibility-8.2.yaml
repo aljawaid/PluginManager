@@ -24,7 +24,7 @@ jobs:
       - name: PHP Setup
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2-'
+          php-version: '8.2'
           ini-values: short_open_tag=On
           coverage: none
 
