@@ -16,4 +16,5 @@ Thumbs.db
 *.bak
 node_modules
 .phpunit.result.cache
+*.sublime-workspace
 
