@@ -68,7 +68,8 @@ jobs:
         working-directory: kanboard
         shell: bash
         run: |
-          php -d error_reporting=E_ALL -d display_errors=1 -r '
+          php -d error_reporting=E_ALL -d display_errors=1 <<'PHP'
+          <?php
           define("PLUGINS_DIR", getcwd()."/plugins");
           define("DB_FILENAME", getcwd()."/data/ci.sqlite");
           require "app/common.php";
@@ -84,4 +85,4 @@ jobs:
               exit(1);
           }
           echo $pluginName." loaded on Kanboard ".APP_VERSION." with PHP ".PHP_VERSION.PHP_EOL;
-          '
+          PHP
