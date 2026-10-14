@@ -306,7 +306,7 @@
 }
 
 #InstalledIncompatiblePluginsTable tbody {
-    border: 2px inset rgba(183, 18, 52, .5);
+    border: 2px inset rgb(183, 18, 52, .5);
 }
 
 #InstalledPluginsTable > tbody > tr > td, #InstalledIncompatiblePluginsTable > tbody > tr > td {
@@ -322,8 +322,8 @@
 }
 
 #InstalledIncompatiblePluginsTable thead > tr > th {
-    border: 2px inset rgba(183, 18, 52, .5);
-    background: rgba(183, 18, 52, .5);
+    border: 2px inset rgb(183, 18, 52, .5);
+    background: rgb(183, 18, 52, .5);
     color: var(--pp-red-alt-2);
 }
 
@@ -1127,7 +1127,7 @@ figure.notice a, figure.notice a:visited {
 }
 
 .available-plugin-description code, code.code {
-    background-color: rgba(27, 31, 35, .22) !important;
+    background-color: rgb(27, 31, 35, .22) !important;
     font-size: .9rem !important;
     font-family: monospace !important;
     letter-spacing: .08rem;
@@ -1294,7 +1294,7 @@ td span.install-date {
 }
 
 td.manual-plugin-note.developer-plugin {
-    background-color: rgba(213, 0, 0, .3);
+    background-color: rgb(213, 0, 0, .3);
     color: #8B0000;
 }
 
@@ -1434,17 +1434,17 @@ input.plugin-file[type="file"]::file-selector-button {
 }
 
 input.plugin-file[type="file"]::-ms-browse:hover {
-  background-color: rgba(213, 0, 0, .6);
+  background-color: rgb(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::-webkit-file-upload-button:hover {
-  background-color: rgba(213, 0, 0, .6);
+  background-color: rgb(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::file-selector-button:hover {
-  background-color: rgba(213, 0, 0, .6);
+  background-color: rgb(213, 0, 0, .6);
   border: 1px solid var(--pp-grey);
 }
 
@@ -1605,10 +1605,6 @@ tbody.plugin-body {
 
 #UninstallModal .modal-contents {
     padding: 0 15px 0 0;
-}
-
-#UninstallModal .modal-page-header {
-
 }
 
 #UninstallModal .modal-page-header h2 {

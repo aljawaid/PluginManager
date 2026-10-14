@@ -31,7 +31,7 @@
 .message {
     /* max-width: 40em; */
     background: #EEEEEE;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .31);
+    box-shadow: 4px 4px 8px 0 rgb(0, 0, 0, .31);
     border-radius: 1em;
     overflow: hidden;
     display: flex;
