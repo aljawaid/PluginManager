@@ -253,6 +253,12 @@ return array(
     'From File' => '',
     'From URL' => '',
     'Choose to install from a local archive (.zip) file or a remote location' => '',
+    'Choose either a local archive or a remote URL' => '',
+    'The uploaded plugin archive could not be read' => '',
+    'The plugin archive exceeds the installation limits' => '',
+    'The plugin archive contains unsafe files' => '',
+    'The plugin is already installed' => '',
+    'Unable to prepare the plugin installation' => '',
     //
     // plugin/remove.php
     //

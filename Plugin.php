@@ -3,14 +3,23 @@
 namespace Kanboard\Plugin\PluginManager;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Security\Role;
 use Kanboard\Core\Translator;
 use Kanboard\Plugin\PluginManager\AgeHelper;
 use Kanboard\Plugin\PluginManager\PluginManagerHelper;
 
+/**
+ * Registers PluginManager routes, assets, helpers and administrator-only access.
+ *
+ * Related test file: tests/SecurityBoundaryTest.php.
+ */
 class Plugin extends Base
 {
     public function initialize()
     {
+        // Keep every PluginManager page and action inside Kanboard's administrator boundary.
+        $this->applicationAccessMap->add('PluginManagerController', '*', Role::APP_ADMIN);
+
         // Template Override
         //  - Override name should be camelCase e.g. pluginNameExampleCamelCase
         $this->template->setTemplateOverride('plugin/show', 'pluginManager:plugin/show');

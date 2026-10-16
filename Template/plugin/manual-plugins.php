@@ -3,7 +3,11 @@
         <span class="pm-manual-plugin-icon"></span><?= t('Manual Plugins') ?>
         <span class="manual-plugin-count"><?= count($this->helper->pluginManagerHelper->getAllPlugins()) ?></span>
     </h2>
-    <?= $this->render('PluginManager:plugin/installer') ?>
+    <?php if ($is_configured): ?>
+        <?= $this->render('PluginManager:plugin/installer') ?>
+    <?php else: ?>
+        <p class="alert"><?= t('Your application instance is not configured to install plugins from the user interface.') ?></p>
+    <?php endif ?>
     <?php if (!empty($this->helper->pluginManagerHelper->getAllPlugins())): ?>
         <section class="message error cleaner-warning">
             <header></header>

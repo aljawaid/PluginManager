@@ -3,10 +3,11 @@
 namespace Kanboard\Plugin\PluginManager\Controller;
 
 use Kanboard\Controller\BaseController;
+use Kanboard\Core\Controller\AccessForbiddenException;
 use Kanboard\Core\Plugin\Directory;
+use Kanboard\Core\Plugin\Installer;
 use Kanboard\Core\Plugin\PluginInstallerException;
-use Kanboard\Plugin\PluginManager\Controller\Installer;
-use ZipArchive;
+use Kanboard\Plugin\PluginManager\Core\ManualPluginInstaller;
 
 /**
  * Plugin PluginManager
@@ -16,9 +17,11 @@ use ZipArchive;
  * @author   Frederic Guillot
  * @author   aljawaid
  * @author   alfredbuehler Alfred Bühler
+ *
+ * Related test file: tests/SecurityBoundaryTest.php.
  */
 
-class PluginManagerController extends \Kanboard\Controller\PluginController
+class PluginManagerController extends BaseController
 {
     /**
      * Display the Plugin Problems Page
@@ -57,6 +60,7 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
     {
         $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
             'title' => t('Plugin Manager') . ' &#10562; ' . t('Manual Plugins'),
+            'is_configured' => Installer::isConfigured(),
         )));
     }
 
@@ -67,197 +71,57 @@ class PluginManagerController extends \Kanboard\Controller\PluginController
      */
     public function installPlugin()
     {
-        $rc = false;
-
-        if (strlen($archiveURL = urldecode($this->request->getValue('plugin_url'))) > 0) {
-            $rc = $this->installByURL($archiveURL);
+        if (! $this->request->isPost() || ! Installer::isConfigured()) {
+            throw new AccessForbiddenException();
         }
 
-        if (strlen($archiveFile = $this->request->getFilePath('plugin_file')) > 0) {
-            $rc = $this->installByFile($archiveFile);
+        $this->checkCSRFForm();
+
+        $archiveUrl = trim((string) $this->request->getRawValue('plugin_url'));
+        $archiveFile = $this->request->getFilePath('plugin_file');
+        $upload = $this->request->getFileInfo('plugin_file');
+        $uploadAttempted = ! empty($upload) && (int) ($upload['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_NO_FILE;
+
+        $hasArchiveUrl = $archiveUrl !== '';
+
+        if ($hasArchiveUrl === $uploadAttempted) {
+            $this->flash->failure(t('Choose either a local archive or a remote URL'));
+            $this->redirectToManualInstaller();
+            return;
         }
 
-        $this->response->redirect($rc
-            ? $this->helper->url->to('PluginController', 'show')
-            : $this->helper->url->to('PluginManagerController', 'showManualPlugins', array('plugin' => 'PluginManager')));
-    }
+        if ($uploadAttempted && ((int) ($upload['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK || ! is_uploaded_file($archiveFile))) {
+            $this->flash->failure(t('The uploaded plugin archive could not be read'));
+            $this->redirectToManualInstaller();
+            return;
+        }
 
-    /**
-     * Install a Plugin from URL
-     *
-     * @param   string          $archiveUrl
-     * @return  bool
-     * @author  alfredbuehler   Alfred Bühler
-     */
-    private function installByURL(string $archiveUrl): bool
-    {
         try {
-            $installer = new Installer($this->container);
-            $archiveFile = $installer->downloadPluginArchive($archiveUrl);
-            $this->installByFile($archiveFile);
+            $installer = new ManualPluginInstaller($this->container);
+
+            if ($hasArchiveUrl) {
+                $installer->installFromUrl($archiveUrl);
+            } else {
+                $installer->installFromFile($archiveFile);
+            }
+
+            $this->flash->success(t('Plugin installed successfully'));
+            $this->response->redirect($this->helper->url->to('PluginController', 'show'));
         } catch (PluginInstallerException $e) {
             $this->flash->failure($e->getMessage());
-
-            return false;
+            $this->redirectToManualInstaller();
         }
-
-        return true;
     }
 
     /**
-     * Install a Plugin from File
-     *
-     * @param   string          $archiveFile
-     * @return  bool
-     * @author  alfredbuehler   Alfred Bühler
+     * Return failed manual installations to their source form.
      */
-    private function installByFile(string $archiveFile): bool
+    private function redirectToManualInstaller(): void
     {
-        if (file_exists($archiveFile)) {
-            $zip = new ZipArchive();
-
-            try {
-                if ($zip->open($archiveFile) !== true) {
-                    throw new PluginInstallerException(t('Unable to open the plugin archive'));
-                }
-
-                $dirname = getPluginDir($zip);
-                $plugin = getPluginFile($zip, $dirname);
-                $namespace = getPluginNamespace($plugin);
-
-                if ($dirname != "$namespace/") {
-                    throw new PluginInstallerException(t('The directory name (%s) does not match with the namespace (%s)', $dirname, $namespace));
-                }
-
-                $pluginName = getPluginName($plugin);
-
-                if ($pluginName != $namespace) {
-                    throw new PluginInstallerException(t('The plugin name (%s) does not match with the namespace (%s)', $pluginName, $namespace));
-                }
-
-                if (!$zip->extractTo(PLUGINS_DIR)) {
-                    $zip->close();
-                    throw new PluginInstallerException(t('Unable to extract the plugin archive'));
-                }
-
-                // Success
-                $zip->close();
-                unlink($archiveFile);
-                $this->flash->success(t('Plugin installed successfully'));
-            } catch (PluginInstallerException $e) {
-                unlink($archiveFile);
-                $this->flash->failure($e->getMessage());
-
-                return false;
-            }
-        } else {
-            $this->flash->failure(t('Plugin archive file not found'));
-
-            return false;
-        }
-
-        return true;
+        $this->response->redirect($this->helper->url->to(
+            'PluginManagerController',
+            'showManualPlugins',
+            array('plugin' => 'PluginManager')
+        ));
     }
-}
-
-// phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
-/**
- * Different class in file
- * Added by @author
- *
- * @author  alfredbuehler   Alfred Bühler
- */
-class Installer extends \Kanboard\Core\Plugin\Installer
-{
-    /**
-     *  Download Archive
-     *
-     * @param   string                  $archiveUrl
-     * @return  string      Downloaded  $archiveFile
-     * @author  alfredbuehler           Alfred Bühler
-     */
-    public function downloadPluginArchive($archiveUrl): string
-    {
-        $zip = parent::downloadPluginArchive($archiveUrl); // zip is open!
-        $archiveFile = $zip->filename;
-        $zip->close();
-
-        return $archiveFile;
-    }
-}
-//phpcs enable
-
-/**
- * Get the Directory Name
- *
- * @param   ZipArchive      open zip
- * @return  string          directory name in archive
- * @author  alfredbuehler   Alfred Bühler
- */
-function getPluginDir(ZipArchive $zip): string
-{
-    $dirname = $zip->getNameIndex(0);
-    if ($dirname === false) {
-        throw new PluginInstallerException(t('Plugin directory name was not found'));
-    }
-
-    return $dirname;
-}
-
-/**
- * Get the Plugin.php
- *
- * @param   ZipArchive      Open zip
- * @param   string          Directory name in archive
- * @return  string          Content of Plugin.php
- * @author  alfredbuehler   Alfred Bühler
- */
-function getPluginFile(ZipArchive $zip, string $dirname): string
-{
-    $plugin = $zip->getFromName($dirname . 'Plugin.php');
-    if ($plugin === false) {
-        throw new PluginInstallerException(t('File \'Plugin.php\' could not get extracted'));
-    }
-
-    return $plugin;
-}
-
-/**
- * Get the Namespace
- *
- * @param   string          Content of Plugin.php
- * @return  string          Namespace of plugin
- * @author  alfredbuehler   Alfred Bühler
- */
-function getPluginNamespace(string $plugin): string
-{
-    $match = [];
-
-    $rc = preg_match("/^namespace Kanboard\\\\Plugin\\\\(\w{1,});/m", $plugin, $match);
-    if ($rc == false || $rc != 1) {
-        throw new PluginInstallerException('The namespace was not found');
-    }
-    $namespace = $match[1];
-
-    return $namespace;
-}
-
-/**
- * Get the Plugin's Name
- *
- * @param   string          Content of Plugin.php
- * @return  string          Name of plugin
- * @author  alfredbuehler   Alfred Bühler
- */
-function getPluginName(string $plugin): string
-{
-    $match = [];
-
-    $rc = preg_match('/(public function getPluginName\(\))(.|\n)*return ["\'](.*)["\']/U', $plugin, $match);
-    if ($rc == false || $rc != 1) {
-        throw new PluginInstallerException(t('The plugin name was not found'));
-    }
-    $pluginName = $match[3];
-
-    return $pluginName;
 }

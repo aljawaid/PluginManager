@@ -44,7 +44,7 @@ jobs:
         uses: shivammathur/setup-php@4424c9aab975b57bd706ee5a39c6b4334d6e4f60 # 2.40.0
         with:
           php-version: ${{ matrix.php }}
-          extensions: ctype, dom, filter, gd, json, mbstring, openssl, pdo_sqlite, session, simplexml, sqlite3, xml
+          extensions: ctype, dom, filter, gd, json, mbstring, openssl, pdo_sqlite, session, simplexml, sqlite3, xml, zip
           coverage: none
           tools: composer:v2
 
@@ -86,3 +86,7 @@ jobs:
           }
           echo $pluginName." loaded on Kanboard ".APP_VERSION." with PHP ".PHP_VERSION.PHP_EOL;
           PHP
+
+      - name: Run focused regression tests
+        shell: bash
+        run: KANBOARD_PATH="$GITHUB_WORKSPACE/kanboard" php plugin/tests/run.php
