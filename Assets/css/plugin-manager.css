@@ -1,40 +1,44 @@
 /* KANBOARD PLUGIN - PLUGIN MANAGER CSS FILE */
 
 :root {
-    --pp-blue: #007AC9;
-    --pp-blue-alt: #00ADFF;
-    --pp-red: #B71234;
-    --pp-red-alt: #DA004C;
-    --pp-red-alt-2: #AE003D;
-    --pp-red-alt-3: #D50000;
-    --pp-black: #000000;
-    --pp-light-grey: #8F8F8F;
-    --pp-grey: #4D4D4D;
+    --pp-blue: #0B6FAF;
+    --pp-blue-alt: #178CC7;
+    --pp-red: #B3261E;
+    --pp-red-alt: #C2413C;
+    --pp-red-alt-2: #B3261E;
+    --pp-red-alt-3: #B45309;
+    --pp-black: var(--color-primary);
+    --pp-light-grey: var(--color-light);
+    --pp-grey: var(--color-primary);
     --pp-white: #FFFFFF;
-    --pp-green: #2EA02E;
-    --pp-green-dark: #055D20;
-    --pp-orange: #FF6500;
-    --pp-orangered: #FF4500;
-    --blue-icon-dark: #034CA6;
-    --link-color-pm: #3366CC;
-    --table-header-dir-info-pm: #AFCFE6;
-    --table-header-plugin-pm: #DEF2FD;
-    --color-light:#999999;
-    --button-blue-gradient: linear-gradient(to bottom, #7892C2 80%, #476E9E 100%);
-    --blue-border-gradient-match: #476E9E;
-    --table-blue-border-gradient-match: #476E9E;
+    --pp-green: #237C36;
+    --pp-green-dark: #1F6B32;
+    --pp-orange: #B45309;
+    --pp-orangered: #C2410C;
+    --blue-icon-dark: #0B5EA8;
+    --link-color-pm: var(--link-color-primary);
+    --table-header-dir-info-pm: var(--table-header-background-color);
+    --table-header-plugin-pm: var(--table-header-background-color);
+    --button-blue-gradient: linear-gradient(to bottom, var(--button-primary-background-color) 80%, var(--button-primary-border-color) 100%);
+    --blue-border-gradient-match: var(--button-primary-border-color);
+    --table-blue-border-gradient-match: var(--table-border-color);
     --table-head-padding: 4px 15px;
-    --table-head-box-shadow: 0 0 5px 0 #000000;
-    --table-head-text-shadow: 2px 2px #373737;
-    --button-background-delete: #D05C84;
-    --tooltip-box-shadow: 1px 1px 1px 0 #000000;
+    --table-head-box-shadow: 0 1px 3px var(--tooltip-shadow-color);
+    --table-head-text-shadow: none;
+    --button-background-delete: var(--button-danger-background-color);
+    --tooltip-box-shadow: 1px 1px 1px var(--tooltip-shadow-color);
     --header-page-margin-pm: 5px 15px 10px 15px;
     --page-margin-pm: 0 15px 0 15px;
     --title-margin-pm: 0 15px 0 15px;
-    --panel-background-pm: #EEEEEE;
+    --panel-background-pm: var(--panel-background-color);
     --border-radius-pm: 3px;
-    --transition-pm: ease-in-out all .3s;
+    --transition-pm: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out, opacity .2s ease-in-out, transform .2s ease-in-out;
     --modal-page-header-pm: 5px 5px 10px 5px;
+    --pm-icon-primary: var(--link-color-primary);
+    --pm-icon-muted: var(--color-primary);
+    --pm-icon-success: #237C36;
+    --pm-icon-warning: #B45309;
+    --pm-icon-danger: var(--color-error);
 }
 
 .pp-blue { color: var(--pp-blue); fill: var(--pp-blue); }
@@ -120,7 +124,7 @@
 
 .pm-page-title h3 {
     margin-bottom: 0;
-    color: var(--pp-red);
+    color: var(--link-color-pm);
 }
 
 .pm-page-title h3 span {
@@ -153,7 +157,7 @@
 }
 
 #PluginSideBar ul li a:hover {
-    color: var(--pp-red);
+    color: var(--link-color-hover);
 }
 
 #PluginSideBar + .sidebar-content {
@@ -169,7 +173,7 @@
 }
 
 #PluginSideBar > ul li.active > a span {
-    color: var(--pp-red);
+    color: var(--link-color-pm);
 }
 
 #PluginSideBar > ul li > a span {
@@ -316,15 +320,15 @@
 
 #InstalledPluginsTable > thead > tr > th {
     border: 2px inset var(--blue-border-gradient-match);
-    background: var(--table-blue-border-gradient-match);
+    background: var(--table-header-background-color);
     text-shadow: var(--table-head-text-shadow);
-    color: var(--pp-white);
+    color: var(--color-primary);
 }
 
 #InstalledIncompatiblePluginsTable thead > tr > th {
-    border: 2px inset rgb(183, 18, 52, .5);
-    background: rgb(183, 18, 52, .5);
-    color: var(--pp-red-alt-2);
+    border: 2px inset var(--alert-border-color-error);
+    background: var(--alert-background-color-error);
+    color: var(--alert-color-error);
 }
 
 #InstalledPluginsTable > thead > tr > th, #InstalledIncompatiblePluginsTable thead > tr > th {
@@ -538,6 +542,8 @@ tr.plugin-description td {
     margin: auto;
     display: block;
     width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .directory-info {
@@ -656,8 +662,8 @@ td.available-plugin-description .markdown p {
 }
 
 .available-plugin-structure .btn-action:hover, .plugin-action .btn-action:hover {
-    border-color: var(--pp-red);
-    box-shadow: 0 0 0 1px var(--pp-red);
+    border-color: var(--link-color-hover);
+    box-shadow: 0 0 0 1px var(--link-color-hover);
 }
 
 .available-plugin-structure {
@@ -741,9 +747,9 @@ a.update-plugin, a.update-plugin:link, a.update-plugin:visited {
 }
 
 .install-plugin:hover, .update-plugin:hover, .download-archive:hover {
-    color: var(--pp-red-alt-2);
-    fill: var(--pp-red-alt-2);
-    border-color: var(--pp-red-alt-2) !important;
+    color: var(--link-color-hover);
+    fill: var(--link-color-hover);
+    border-color: var(--link-color-hover) !important;
     text-decoration: none !important;
 }
 
@@ -988,6 +994,11 @@ figure.notice a, figure.notice a:visited {
     padding: 0 0 0 5px;
     border-radius: var(--border-radius-pm);
     margin-bottom: 20px;
+    color: var(--color-primary);
+    background: var(--button-default-background-color);
+    cursor: pointer;
+    font: inherit;
+    transition: var(--transition-pm);
 }
 
 .plugin-type-count-section.plugin-type-count-section-updates {
@@ -1294,8 +1305,8 @@ td span.install-date {
 }
 
 td.manual-plugin-note.developer-plugin {
-    background-color: rgb(213, 0, 0, .3);
-    color: #8B0000;
+    background-color: var(--alert-background-color-info);
+    color: var(--alert-color-info);
 }
 
 .manual-plugins-table th.available-plugins-author {
@@ -1303,7 +1314,7 @@ td.manual-plugin-note.developer-plugin {
     font-weight: normal;
     font-style: italic;
     font-size: .9em;
-    background: var(--pp-white);
+    background: var(--table-header-background-color);
     border-color: var(--pp-red-alt-3);
     border-left: 0;
     border-top: 0;
@@ -1429,28 +1440,30 @@ input.plugin-file[type="file"]::file-selector-button {
   border: 1px solid var(--pp-grey);
   padding: .2em .4em;
   border-radius: .2em;
-  background-color: var(--pp-light-grey);
+  color: var(--button-default-color);
+  background-color: var(--button-default-background-color);
   transition: var(--transition-pm);
 }
 
 input.plugin-file[type="file"]::-ms-browse:hover {
-  background-color: rgb(213, 0, 0, .6);
+  background-color: var(--button-default-background-color-focus);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::-webkit-file-upload-button:hover {
-  background-color: rgb(213, 0, 0, .6);
+  background-color: var(--button-default-background-color-focus);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-file[type="file"]::file-selector-button:hover {
-  background-color: rgb(213, 0, 0, .6);
+  background-color: var(--button-default-background-color-focus);
   border: 1px solid var(--pp-grey);
 }
 
 input.plugin-url[type="url"] {
-    color: var(--pp-black);
-    border: 1px solid var(--pp-red-alt-3);
+    color: var(--input-focus-color);
+    background: var(--input-background-color);
+    border: 1px solid var(--input-border-color);
     width: 600px;
     max-width: 95%;
     font-size: 1em;
@@ -1463,7 +1476,7 @@ input.plugin-url[type="url"] {
 }
 
 fieldset.manual-install {
-    border: 1px solid var(--pp-red-alt-3);
+    border: 1px solid var(--panel-border-color);
     border-radius: var(--border-radius-pm);
 }
 
@@ -1625,10 +1638,10 @@ tbody.plugin-body {
 }
 
 .plugin-manager-modal .modal-actions .form-actions button {
-    background: #D14836;
+    background: var(--button-danger-background-color);
     border-radius: var(--border-radius-pm);
     transition: var(--transition-pm);
-    border: 1px solid #D14836;
+    border: 1px solid var(--button-danger-border-color);
     color: var(--pp-white) !important;
     vertical-align: middle;
 }
@@ -1645,19 +1658,246 @@ tbody.plugin-body {
     border-radius: var(--border-radius-pm);
     padding: 4px 10px 3px 10px;
     margin: 0 0 0 -15px;
-    border: 1px solid #AEAEAE;
-    background: #F5F5F5;
-    color: #333333;
+    border: 1px solid var(--button-default-border-color);
+    background: var(--button-default-background-color);
+    color: var(--button-default-color);
     text-decoration: none;
 }
 
 .plugin-manager-modal .modal-actions .form-actions a:hover {
-    border: 1px solid #D14836;
-    color: #D14836 !important;
+    border: 1px solid var(--button-danger-border-color);
+    color: var(--button-danger-background-color) !important;
 }
 
 .plugin-manager-modal .modal-actions .form-actions button:focus, .plugin-manager-modal .modal-actions .form-actions button:hover {
-    border: 1px solid #D14836;
-    color: #D14836 !important;
-    background: var(--pp-white);
+    border: 1px solid var(--button-danger-border-color);
+    color: var(--button-danger-background-color) !important;
+    background: var(--button-default-background-color);
+}
+
+/* Theme-aware surfaces and controls */
+.available-plugins-table,
+.directory-info,
+.manual-install,
+.plugin-problems-section .panel {
+    color: var(--color-primary);
+}
+
+.available-plugins-table td,
+.manual-plugins-table td {
+    background-color: var(--body-background-color);
+}
+
+.available-plugins-table[hidden] {
+    display: none !important;
+}
+
+.plugin-type-count-section:hover,
+.plugin-type-count-section:focus-visible,
+.plugin-type-count-section.is-active {
+    color: var(--button-primary-color);
+    background: var(--button-primary-background-color);
+    border-color: var(--button-primary-border-color);
+    outline: none;
+}
+
+.plugin-type-count-section:hover [class*="-icon"],
+.plugin-type-count-section:focus-visible [class*="-icon"],
+.plugin-type-count-section.is-active [class*="-icon"] {
+    color: currentcolor;
+}
+
+.pm-copy-success {
+    color: var(--pp-green);
+}
+
+.pm-copy-failure {
+    color: var(--color-error);
+}
+
+.tooltip-section,
+.info-type-wrapper,
+.structure-info-section,
+.structure-info-3-section,
+input.plugin-url[type="url"] {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    #main .pm-page-header,
+    .pm-page-margin,
+    .pm-page-title {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .plugin-available-filter-wrapper,
+    .plugin-type-counts,
+    .plugin-type-counts label,
+    .plugin-type-filter-controls {
+        width: 100%;
+    }
+
+    .plugin-type-filter-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .plugin-type-count-section,
+    .plugin-type-count-section.plugin-type-count-section-updates {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        padding-left: 5px;
+    }
+
+    table.available-plugins-table,
+    table.manual-plugins-table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .top-detail-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .available-plugin-last-updated,
+    .available-plugin-structure,
+    .available-plugin-status {
+        min-width: 140px;
+    }
+
+    .info-type-wrapper,
+    .structure-info-section,
+    .structure-info-3-section {
+        box-sizing: border-box;
+        width: calc(100% - 12px);
+        height: auto;
+        margin: 6px;
+    }
+
+    .info-type-text {
+        width: auto;
+        height: auto;
+    }
+
+    .install-section {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    input.plugin-file[type="file"],
+    input.plugin-url[type="url"] {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pm-page-header h2 {
+        font-size: 1.35em;
+    }
+
+    .plugin-type-count-section,
+    .plugin-type-count-section.plugin-type-count-section-updates {
+        flex: 1 1 calc(50% - 6px);
+        justify-content: space-between;
+    }
+
+    .plugin-type-count-text {
+        width: auto;
+        padding: 0 5px;
+    }
+
+    #DirectoryInfo,
+    #DirectoryInfo tbody,
+    #DirectoryInfo tr,
+    #DirectoryInfo td,
+    table.available-plugins-table,
+    table.available-plugins-table tbody,
+    table.available-plugins-table tr,
+    table.available-plugins-table th,
+    table.available-plugins-table td {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #DirectoryInfo {
+        border-spacing: 0;
+    }
+
+    #DirectoryInfo thead,
+    table.available-plugins-table th.plugin-last-updated,
+    table.available-plugins-table th.plugin-structure,
+    table.available-plugins-table th.plugin-status {
+        display: none;
+    }
+
+    #DirectoryInfo td,
+    table.available-plugins-table td:not(.available-plugins-title, .available-plugin-description) {
+        display: block;
+        padding: 7px 8px;
+        text-align: left;
+    }
+
+    #DirectoryInfo td::before,
+    table.available-plugins-table td::before {
+        content: attr(data-label);
+        display: inline-block;
+        width: 7rem;
+        margin-right: 8px;
+        font-weight: 600;
+        color: var(--color-primary);
+        vertical-align: middle;
+    }
+
+    table.available-plugins-table th.available-plugins-author,
+    table.available-plugins-table td.available-plugins-title,
+    table.available-plugins-table td.available-plugin-description {
+        padding: 7px 8px;
+    }
+
+    table.available-plugins-table td.available-plugins-title {
+        font-size: 1.05em;
+    }
+
+    table.available-plugins-table td.available-plugins-title::before,
+    table.available-plugins-table td.available-plugin-description::before {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    table.available-plugins-table td.available-plugin-structure,
+    table.available-plugins-table td.available-plugin-status {
+        text-align: left;
+    }
+
+    table.available-plugins-table td.available-plugin-last-updated > *,
+    table.available-plugins-table td.available-plugin-status > * {
+        display: inline-block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-uninstall,
+    #PluginSideBar ul li a,
+    .plugin-type-count-section,
+    .install-plugin,
+    .update-plugin,
+    .download-archive,
+    .copy-url-link-format,
+    .js-updates-copy-paste {
+        transition-duration: .01ms;
+    }
 }

@@ -60,6 +60,8 @@ return array(
     'Not Specified' => 'Not Specified',
     'Plugin Homepage' => 'Plugin Homepage',
     'Opens in a new window' => 'Opens in a new window',
+    'Copied' => 'Copied',
+    'Unable to copy' => 'Unable to copy',
     'Plugin Readme' => 'Plugin Readme',
     'Readme' => 'Readme',
     'Go to the top of the page' => 'Go to the top of the page',
@@ -124,6 +126,8 @@ return array(
     'Updated plugin version available' => 'Updated plugin version available',
     'View in Plugin Manager' => 'View in Plugin Manager',
     'Filter by type' => 'Filter by type',
+    'Plugin type filters' => 'Plugin type filters',
+    'Toggle date display' => 'Toggle date display',
     'Updates' => 'Updates',
     //
     // info/db-info.php

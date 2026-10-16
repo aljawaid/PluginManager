@@ -60,6 +60,8 @@ return array(
     'Not Specified' => '',
     'Plugin Homepage' => '',
     'Opens in a new window' => '',
+    'Copied' => '',
+    'Unable to copy' => '',
     'Plugin Readme' => '',
     'Readme' => '',
     'Go to the top of the page' => '',
@@ -124,6 +126,8 @@ return array(
     'Updated plugin version available' => '',
     'View in Plugin Manager' => '',
     'Filter by type' => '',
+    'Plugin type filters' => '',
+    'Toggle date display' => '',
     'Updates' => '',
     //
     // info/db-info.php

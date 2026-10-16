@@ -6,7 +6,7 @@ function sortPlugins(&$arr)
 $updatables = $this->helper->pluginManagerHelper->getPluginUpdates();
 // phpcs:enable
 ?>
-<div class="pm-page-header plugin-manager-header">
+<div class="pm-page-header plugin-manager-header" data-pm-copied="<?= $this->text->e(t('Copied')) ?>" data-pm-copy-failed="<?= $this->text->e(t('Unable to copy')) ?>" data-pm-new-window-title="<?= $this->text->e(t('Opens in a new window')) ?>">
     <h2 class="">
         <span class="pm-plugin-icon"></span><?= t('Plugin Manager') ?></h2>
 </div>

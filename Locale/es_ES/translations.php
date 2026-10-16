@@ -60,6 +60,8 @@ return array(
     'Not Specified' => 'No especificado',
     'Plugin Homepage' => 'Página de inicio del plugin',
     'Opens in a new window' => 'Se abre en una nueva ventana',
+    'Copied' => 'Copiado',
+    'Unable to copy' => 'No se pudo copiar',
     'Plugin Readme' => 'Léame del plugin',
     'Readme' => 'Léame',
     'Go to the top of the page' => 'Ir a la parte superior de la página',
@@ -124,6 +126,8 @@ return array(
     'Updated plugin version available' => 'Versión actualizada del plugin disponible',
     'View in Plugin Manager' => 'Ver en Plugin Manager',
     'Filter by type' => 'Filtrar por tipo',
+    'Plugin type filters' => 'Filtros de tipo de plugin',
+    'Toggle date display' => 'Cambiar la visualización de la fecha',
     'Updates' => 'Actualizaciones',
     //
     // info/db-info.php

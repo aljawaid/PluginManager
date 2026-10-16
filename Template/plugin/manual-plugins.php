@@ -1,4 +1,4 @@
-<div id="ManualPlugins" class="pm-page-header manual-plugins">
+<div id="ManualPlugins" class="pm-page-header manual-plugins" data-pm-copied="<?= $this->text->e(t('Copied')) ?>" data-pm-copy-failed="<?= $this->text->e(t('Unable to copy')) ?>" data-pm-new-window-title="<?= $this->text->e(t('Opens in a new window')) ?>">
     <h2 class="">
         <span class="pm-manual-plugin-icon"></span><?= t('Manual Plugins') ?>
         <span class="manual-plugin-count"><?= count($manual_plugins) ?></span>
@@ -9,7 +9,7 @@
         <p class="alert"><?= t('Your application instance is not configured to install plugins from the user interface.') ?></p>
     <?php endif ?>
     <?php if (!empty($manual_plugins)): ?>
-        <section class="message error cleaner-warning">
+        <section class="message warning cleaner-warning">
             <header></header>
             <i class=""></i>
             <h3 class="">
@@ -78,7 +78,7 @@
                     <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
                         <?= $this->text->e($plugin['version'] ?? t('Not Specified')) ?>
                     </td>
-                    <td class="date-toggle available-plugin-last-updated">
+                    <td class="date-toggle available-plugin-last-updated" tabindex="0" role="button" aria-label="<?= t('Toggle date display') ?>">
                         <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
                             <?php
                             $pluginAge = strtotime($plugin['last_updated']);
@@ -150,7 +150,7 @@
                     </td>
                     <td class="available-plugin-status text-center">
                         <?php if ($downloadUrl !== ''): ?>
-                            <a href="<?= $this->text->e($downloadUrl) ?>" class="download-archive" title="<?= t('Download Plugin') ?>">
+                            <a href="<?= $this->text->e($downloadUrl) ?>" class="download-archive" target="_blank" rel="noopener noreferrer" title="<?= t('Download Plugin') ?> &#8663; <?= t('Opens in a new window') ?>">
                                 <span class="pm-download-icon"></span><?= t('Download') ?>
                             </a>
                             <span class="copy-url-link-format btn" title="<?= t('Copy download link') ?>" data-clipboard-text="<?= $this->text->e($downloadUrl) ?>">

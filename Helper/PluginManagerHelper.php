@@ -21,6 +21,7 @@ class PluginManagerHelper extends Base
 {
     private array $manualPluginCache = array();
     private array $installablePluginCache = array();
+    private array $svgIconCache = array();
 
     /**
      * Get SVG Icons for Inline Markup and CSS Styling (Embed SVG Fly Method)
@@ -36,13 +37,28 @@ class PluginManagerHelper extends Base
      */
     public function embedSVGIcon($icon_filename)
     {
-        if ($this->router->getPlugin()) {
-            // For plugin templates
-            return file_get_contents('plugins/' . $this->helper->app->getPluginName() . '/Assets/icons/' . $icon_filename . '.svg');
-        } else {
-            // For core templates
-            return file_get_contents('plugins/PluginManager/Assets/icons/' . $icon_filename . '.svg');
+        if (! is_string($icon_filename) || preg_match('/^[A-Za-z0-9_-]+$/', $icon_filename) !== 1) {
+            return '';
         }
+
+        $pluginName = $this->router->getPlugin() ? $this->helper->app->getPluginName() : 'PluginManager';
+        if (! is_string($pluginName) || preg_match('/^[A-Za-z0-9_-]+$/', $pluginName) !== 1) {
+            return '';
+        }
+
+        $iconRoot = realpath(PLUGINS_DIR . DIRECTORY_SEPARATOR . $pluginName . DIRECTORY_SEPARATOR . 'Assets' . DIRECTORY_SEPARATOR . 'icons');
+        $iconPath = $iconRoot === false ? false : realpath($iconRoot . DIRECTORY_SEPARATOR . $icon_filename . '.svg');
+
+        if ($iconPath === false || dirname($iconPath) !== $iconRoot) {
+            return '';
+        }
+
+        if (! array_key_exists($iconPath, $this->svgIconCache)) {
+            $contents = file_get_contents($iconPath);
+            $this->svgIconCache[$iconPath] = is_string($contents) ? $contents : '';
+        }
+
+        return $this->svgIconCache[$iconPath];
     }
 
     /**

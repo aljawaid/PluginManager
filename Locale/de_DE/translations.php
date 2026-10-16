@@ -60,6 +60,8 @@ return array(
     'Not Specified' => 'Nicht spezifiziert',
     'Plugin Homepage' => 'Erweiterungswebseite',
     'Opens in a new window' => 'Öffnet in einem neuen Fenster',
+    'Copied' => 'Kopiert',
+    'Unable to copy' => 'Kopieren nicht möglich',
     'Plugin Readme' => 'Plugin Liesmich',
     'Readme' => 'Liesmich',
     'Go to the top of the page' => 'Gehen Sie zum Anfang der Seite',
@@ -124,6 +126,8 @@ return array(
     'Updated plugin version available' => 'Aktualisierte Version verfügbar',
     'View in Plugin Manager' => 'Ansicht im Plugin Manager',
     'Filter by type' => 'Nach Typ filtern',
+    'Plugin type filters' => 'Plugin-Typfilter',
+    'Toggle date display' => 'Datumsanzeige umschalten',
     'Updates' => 'Aktualisierung',
     //
     // info/db-info.php

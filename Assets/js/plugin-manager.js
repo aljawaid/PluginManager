@@ -1,218 +1,180 @@
 // KANBOARD PLUGIN ASSET FILE
 
-// Dynamic filtering of the plugin directory list on plugin types
-$(document).ready(function() {
+(function () {
     "use strict";
 
-    const target = 'table.available-plugins-table';
-    const activator = 'div.plugin-type-count-section';
-    const bgColor = 'LightGray';
-    let filter = null;
-    let mode = 0;
+    function getPageMessages() {
+        const source = document.querySelector("[data-pm-new-window-title], [data-pm-copied]");
 
-    function isType(type) {
-        return `[data-type='${type}']`;
+        return {
+            copied: source?.dataset.pmCopied || "Copied",
+            copyFailed: source?.dataset.pmCopyFailed || "Unable to copy",
+            newWindow: source?.dataset.pmNewWindowTitle || "Opens in a new window",
+        };
     }
 
-    function isNotType(type) {
-        return `[data-type!='${type}']`;
-    }
+    function initialiseInstalledFilter() {
+        const input = document.getElementById("InstalledPluginsFilterInput");
+        const form = input?.closest("form");
 
-    function select(cond) {
-        $(`${activator}${cond}`).css('background-color', bgColor);
-        $(`${target}${cond}`).show();
-    }
-
-    function deselect(cond) {
-        $(`${activator}${cond}`).css('background-color', '');
-        $(`${target}${cond}`).hide();
-    }
-
-    $(activator).click(function() {
-        const type = $(this).data('type');
-
-        if (filter != type) {
-            mode = 1;
+        if (!input) {
+            return;
         }
 
-        switch(mode){
-            case 0: // Turn off
-                filter = null;
-                mode = 1;
-                $(target).show();
-                $(activator).css('background-color', '');
-                break;
-            case 1: // Select type
-                filter = type;
-                mode = 2;
-                select(isType(type));
-                deselect(isNotType(type));
-                break;
-            case 2: // Select all but type
-                filter = type;
-                mode = 0;
-                select(isNotType(type));
-                deselect(isType(type));
-                break;
-            default: // Ignore
-        }
-    });
-});
+        input.addEventListener("input", function () {
+            const query = input.value.trim().toLocaleLowerCase();
 
-// FILTER TABLES IN THE INSTALLED PLUGINS PAGE
-$(document).ready(function(){
-    $("#InstalledPluginsFilterInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#InstalledPluginsTable tbody").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            document.querySelectorAll("#InstalledPluginsTable tbody").forEach(function (plugin) {
+                plugin.hidden = !plugin.textContent.toLocaleLowerCase().includes(query);
+            });
         });
-    });
-});
 
-// PREVENTS ENTER KEY FROM BEING USED FOR THIS FORM
-$(document).ready(function() {
-    $("#InstalledPluginsFilterInput").on("keypress", function (event) {
-        //console.log("Enter key pressed on input field inside form");
-        var keyPressed = event.keyCode || event.which;
-        if (keyPressed === 13) {
-            alert("The enter key is ignored as it is not required in this filter");
+        form?.addEventListener("submit", function (event) {
             event.preventDefault();
-            return false;
-        }
-    });
-});
-
-// SELECT INPUT ON MOUSOVER
-$(document).ready(function() {
-    const input = document.getElementById("InstalledPluginsFilterInput");
-    if (input !== null) {
-        input.addEventListener('mouseover', () => {
-            input.select();
-        })
-    }
-});
-
-// SELECT INPUT ON MOUSOVER
-$(document).ready(function() {
-    const input = document.getElementById("AvailablePluginsFilterInput");
-    if (input !== null) {
-        input.addEventListener('mouseover', () => {
-            input.select();
-        })
-    }
-});
-
-// TOGGLE DATES FOR PLUGIN LAST UPDATED
-$(document).ready(function() {
-    $(document).on("click",".date-toggle",function(){
-        $('.exact-date').toggle();
-        $('.relative-date').toggle();
-    });
-});
-
-// FILTER TABLES IN THE PLUGIN DIRECTORY
-$(document).ready(function(){
-    $("#AvailablePluginsFilterInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $(".available-plugins-table").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
-    });
-});
+    }
 
-// PREVENTS ENTER KEY FROM BEING USED FOR THIS FORM
-$(document).ready(function() {
-    $("#AvailablePluginsFilterInput").on("keypress", function (event) {
-        //console.log("Enter key pressed on input field inside form");
-        var keyPressed = event.keyCode || event.which;
-        if (keyPressed === 13) {
-            alert("The enter key is ignored as it is not required in this filter");
+    function initialiseDirectoryFilters() {
+        const input = document.getElementById("AvailablePluginsFilterInput");
+        const form = input?.closest("form");
+        const filters = Array.from(document.querySelectorAll(".plugin-type-count-section"));
+        const plugins = Array.from(document.querySelectorAll("table.available-plugins-table"));
+        let activeType = "";
+
+        if (!input && filters.length === 0) {
+            return;
+        }
+
+        function applyFilters() {
+            const query = input?.value.trim().toLocaleLowerCase() || "";
+
+            plugins.forEach(function (plugin) {
+                const matchesText = plugin.textContent.toLocaleLowerCase().includes(query);
+                const matchesType = activeType === "" || plugin.dataset.type === activeType;
+                plugin.hidden = !(matchesText && matchesType);
+            });
+
+            filters.forEach(function (filter) {
+                const isActive = filter.dataset.type === activeType;
+                filter.classList.toggle("is-active", isActive);
+                filter.setAttribute("aria-pressed", String(isActive));
+            });
+        }
+
+        input?.addEventListener("input", applyFilters);
+        form?.addEventListener("submit", function (event) {
             event.preventDefault();
-            return false;
-        }
-    });
-});
-
-// INSTALLED PLUGIN LIST
-// COPY TO CLIPBOARD SCRIPT - INSTANTIATE SCRIPT - /// FORMATTED OUTPUT TO CLIPBOARD
-$( document ).ready(function() {
-    var clipboard = new ClipboardJS('.copy-installed-list-format');
-
-    // COPY TO CLIPBOARD SCRIPT - SUCCESS/ERROR STATES
-    clipboard.on('success', function(e) {
-        $(e.trigger).html("<strong style='font-size:28px; line-height: 1.2;'>&#10004;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html("<svg height='30px' class='clippy-icon' fill='currentColor' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path xmlns='http://www.w3.org/2000/svg' d='M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z'/></svg>");
-        }, 3500);
-    });
-    clipboard.on('error', function(e) {
-        $(e.trigger).html("<strong style='font-size:28px; line-height: 1.2;'>&#10008;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html("<svg height='30px' class='clippy-icon' fill='currentColor' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path xmlns='http://www.w3.org/2000/svg' d='M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z'/></svg>");
-        }, 3500);
-    });
-});
-
-// INSTALLED PLUGIN LIST
-// COPY TO CLIPBOARD SCRIPT - INSTANTIATE SCRIPT /// FORMATTED OUTPUT TO CLIPBOARD
-$( document ).ready(function() {
-    var clipboard = new ClipboardJS('.copy-url-link-format');
-
-    // COPY TO CLIPBOARD SCRIPT - SUCCESS/ERROR STATES
-    clipboard.on('success', function(e) {
-        $(e.trigger).html("<strong style='font-size:20px; line-height: 1.1;'>&#10004;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html("<svg height='24px' class='clippy-icon' fill='currentColor' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path xmlns='http://www.w3.org/2000/svg' d='M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z'/></svg>");
-        }, 3500);
-    });
-    clipboard.on('error', function(e) {
-        $(e.trigger).html("<strong style='font-size:20px; line-height: 1.1;'>&#10008;</strong>");
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        e.clearSelection();
-        setTimeout(function() {
-            $(e.trigger).html("<svg height='24px' class='clippy-icon' fill='currentColor' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'><path xmlns='http://www.w3.org/2000/svg' d='M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z'/></svg>");
-        }, 3500);
-    });
-});
-
-// Filter Updates in Installed Plugins
-KB.onClick('.js-updates-copy-paste', function (e) {
-    var update = KB.dom(e.target).data('update');
-    var target = KB.dom(e.target).data('updateTarget');
-    var targetField = KB.find(target);
-
-    if (targetField) {
-        targetField.build().value = update;
-    }
-});
-
-// Filter Tables in the Installed Plugins Page on Mouseover
-$(document).ready(function(){
-    $("#InstalledPluginsFilterInput").on("mouseover", function() {
-        var value = $(this).val().toLowerCase();
-        $("#InstalledPluginsTable tbody").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
-    });
-});
 
-// Add attributes to links in plugin descriptions
-$(document).ready(function(){
-    $('.available-plugin-description .markdown p a').attr('target', '_blank');
-    $('.available-plugin-description .markdown p a').attr('rel', 'noopener noreferrer');
-    $('.available-plugin-description .markdown p a').attr('title', 'Opens in a new window');
-});
+        filters.forEach(function (filter) {
+            filter.addEventListener("click", function () {
+                activeType = activeType === filter.dataset.type ? "" : filter.dataset.type;
+                applyFilters();
+            });
+        });
+    }
+
+    function initialiseDateToggles() {
+        document.querySelectorAll(".date-toggle").forEach(function (toggle) {
+            function switchDate() {
+                const relative = toggle.querySelector(".relative-date");
+                const exact = toggle.querySelector(".exact-date");
+
+                if (!relative || !exact) {
+                    return;
+                }
+
+                relative.hidden = !relative.hidden;
+                exact.hidden = !exact.hidden;
+            }
+
+            toggle.addEventListener("click", switchDate);
+            toggle.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    switchDate();
+                }
+            });
+        });
+    }
+
+    function initialiseClipboard(selector, messages) {
+        if (typeof window.ClipboardJS !== "function") {
+            return;
+        }
+
+        const originalMarkup = new WeakMap();
+        const clipboard = new window.ClipboardJS(selector);
+
+        function showStatus(event, successful) {
+            const trigger = event.trigger;
+
+            if (!originalMarkup.has(trigger)) {
+                originalMarkup.set(trigger, {
+                    html: trigger.innerHTML,
+                    ariaLabel: trigger.getAttribute("aria-label"),
+                });
+            }
+
+            const original = originalMarkup.get(trigger);
+            trigger.textContent = successful ? "✓" : "✕";
+            trigger.classList.toggle("pm-copy-success", successful);
+            trigger.classList.toggle("pm-copy-failure", !successful);
+            trigger.setAttribute("aria-label", successful ? messages.copied : messages.copyFailed);
+            event.clearSelection();
+
+            window.setTimeout(function () {
+                trigger.innerHTML = original.html;
+                trigger.classList.remove("pm-copy-success", "pm-copy-failure");
+
+                if (original.ariaLabel === null) {
+                    trigger.removeAttribute("aria-label");
+                } else {
+                    trigger.setAttribute("aria-label", original.ariaLabel);
+                }
+            }, 2500);
+        }
+
+        clipboard.on("success", function (event) {
+            showStatus(event, true);
+        });
+        clipboard.on("error", function (event) {
+            showStatus(event, false);
+        });
+    }
+
+    function initialiseExternalDescriptionLinks(messages) {
+        document.querySelectorAll(".available-plugin-description .markdown a").forEach(function (link) {
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.title = messages.newWindow;
+        });
+    }
+
+    function initialiseUpdateCopy() {
+        if (!window.KB?.onClick) {
+            return;
+        }
+
+        window.KB.onClick(".js-updates-copy-paste", function (event) {
+            const source = window.KB.dom(event.target);
+            const targetField = window.KB.find(source.data("updateTarget"));
+
+            if (targetField) {
+                targetField.build().value = source.data("update");
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const messages = getPageMessages();
+
+        initialiseInstalledFilter();
+        initialiseDirectoryFilters();
+        initialiseDateToggles();
+        initialiseClipboard(".copy-installed-list-format", messages);
+        initialiseClipboard(".copy-url-link-format", messages);
+        initialiseExternalDescriptionLinks(messages);
+        initialiseUpdateCopy();
+    });
+}());

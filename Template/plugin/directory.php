@@ -1,4 +1,4 @@
-<div id="PluginDirectoryPage" class="pm-page-header">
+<div id="PluginDirectoryPage" class="pm-page-header" data-pm-new-window-title="<?= $this->text->e(t('Opens in a new window')) ?>">
     <h2 class="">
         <span class="pm-plugin-directory-icon"></span><?= t('Plugin Directory') ?>
     </h2>
@@ -24,10 +24,10 @@
                 </thead>
                 <tbody>
                     <tr class="">
-                        <td scope="row" class="available-count pp-green">&#10004; <?= count($available_plugins) ?></td>
-                        <td scope="row" class="total-count"><?= count($installed_plugins) ?></td>
-                        <td class="kb-app-version">v<?= APP_VERSION ?></td>
-                        <td class="plugin-dir-view">
+                        <td scope="row" class="available-count pp-green" data-label="<?= t('Available Plugins') ?>">&#10004; <?= count($available_plugins) ?></td>
+                        <td scope="row" class="total-count" data-label="<?= t('Currently Installed') ?>"><?= count($installed_plugins) ?></td>
+                        <td class="kb-app-version" data-label="<?= t('Your Application') ?>">v<?= APP_VERSION ?></td>
+                        <td class="plugin-dir-view" data-label="<?= t('Directory Source') ?>">
                             <?php if (PLUGIN_API_URL == 'https://kanboard.org/plugins.json'): ?>
                                 <a href="https://kanboard.org/plugins.html" target="_blank" title="<?= t('Opens in a new window') ?> &#8663;" rel="noopener noreferrer">
                                     <span class="pm-source-directory-icon"></span> <?= t('Official Plugin Directory') ?>
@@ -36,7 +36,7 @@
                                 <?= t('Custom Directory') ?>
                             <?php endif ?>
                         </td>
-                        <td class="plugin-dir-url"><?= $this->text->e(PLUGIN_API_URL) ?></td>
+                        <td class="plugin-dir-url" data-label="<?= t('Directory Source') ?>"><?= $this->text->e(PLUGIN_API_URL) ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -50,48 +50,48 @@
             </form>
             <?php $countTypes = $this->helper->pluginManagerHelper->countTypes($available_plugins); ?>
             <div class="plugin-type-counts">
-                <label for="AvailablePluginsFilterInput">
+                <div class="plugin-type-filter-controls" aria-label="<?= t('Plugin type filters') ?>">
                     <?php if (!empty($updates)): ?>
-                        <div class="plugin-type-count-section plugin-type-count-section-updates" data-type="update" title="<?= t('Filter by type') ?>">
+                        <button type="button" class="plugin-type-count-section plugin-type-count-section-updates" data-type="update" title="<?= t('Filter by type') ?>" aria-pressed="false">
                             <div class="plugin-type-count-icon"><i class="fa fa-refresh"></i></div>
                             <div class="plugin-type-count-text"><?= t('Updates') ?></div>
                             <div class="plugin-type-count-total-updates"><?= isset($countTypes['plugin']) ? count($updates) : '0' ?></div>
-                        </div>
+                        </button>
                     <?php endif ?>
-                    <div class="plugin-type-count-section" data-type="plugin" title="<?= t('Filter by type') ?>">
+                    <button type="button" class="plugin-type-count-section" data-type="plugin" title="<?= t('Filter by type') ?>" aria-pressed="false">
                         <div class="plugin-type-count-icon"><span class="pm-plugin-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('General') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['plugin']) ? $countTypes['plugin'] : '0' ?></div>
-                    </div>
-                    <div class="plugin-type-count-section" data-type="action" title="<?= t('Filter by type') ?>">
+                    </button>
+                    <button type="button" class="plugin-type-count-section" data-type="action" title="<?= t('Filter by type') ?>" aria-pressed="false">
                         <div class="plugin-type-count-icon"><span class="pm-action-icon"></span></div>
                         <div class="plugin-type-count-text" title="<?= t('Automatic Actions') ?>"><?= t('Actions') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['action']) ? $countTypes['action'] : '0' ?></div>
-                    </div>
-                    <div class="plugin-type-count-section" data-type="theme" title="<?= t('Filter by type') ?>">
+                    </button>
+                    <button type="button" class="plugin-type-count-section" data-type="theme" title="<?= t('Filter by type') ?>" aria-pressed="false">
                         <div class="plugin-type-count-icon"><span class="pm-theme-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Themes') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['theme']) ? $countTypes['theme'] : '0' ?></div>
-                    </div>
-                    <div class="plugin-type-count-section" data-type="connector" title="<?= t('Filter by type') ?>">
+                    </button>
+                    <button type="button" class="plugin-type-count-section" data-type="connector" title="<?= t('Filter by type') ?>" aria-pressed="false">
                         <div class="plugin-type-count-icon"><span class="pm-connector-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Connectors') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['connector']) ? $countTypes['connector'] : '0' ?></div>
-                    </div>
-                    <div class="plugin-type-count-section" data-type="multi" title="<?= t('Filter by type') ?>">
+                    </button>
+                    <button type="button" class="plugin-type-count-section" data-type="multi" title="<?= t('Filter by type') ?>" aria-pressed="false">
                         <div class="plugin-type-count-icon"><span class="pm-multi-icon"></span></div>
                         <div class="plugin-type-count-text"><?= t('Multi') ?></div>
                         <div class="plugin-type-count-total"><?= isset($countTypes['multi']) ? $countTypes['multi'] : '0' ?></div>
-                    </div>
+                    </button>
                     <?php $totalOthers = isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?>
                     <?php if ($totalOthers > 0): ?>
-                        <div class="plugin-type-count-section" data-type="other" title="<?= t('Filter by type') ?>">
+                        <button type="button" class="plugin-type-count-section" data-type="other" title="<?= t('Filter by type') ?>" aria-pressed="false">
                             <div class="plugin-type-count-icon"><span class="pm-other-icon"></span></div>
                             <div class="plugin-type-count-text"><?= t('Others') ?></div>
                             <div class="plugin-type-count-total"><?= isset($countTypes) ? ((count($available_plugins)) - (array_sum($countTypes))) : '0' ?></div>
-                        </div>
+                        </button>
                     <?php endif ?>
-                </label>
+                </div>
                 <span class="tooltip">
                     <span class="pm-info-circle-icon"></span>
                     <script type="text/template">
@@ -158,23 +158,23 @@
                     <th class="plugin-status text-center"><?= t('Status') ?></th>
                 </tr>
                 <tr class="">
-                    <td class="column-40 available-plugins-title">
+                    <td class="column-40 available-plugins-title" data-label="<?= t('Plugin') ?>">
                         <?= $this->text->e($plugin['title'] ?? $pluginId) ?>
                     </td>
                     <?php if (!isset($installed_plugins[$pluginId])): ?>
-                        <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
+                        <td class="available-plugin-version" data-label="<?= t('Plugin Version') ?>" title="<?= t('Plugin Version') ?>">
                             <?= $this->text->e($plugin['version'] ?? t('Not Specified')) ?>
                         </td>
                     <?php elseif ($isUpdate): ?>
-                        <td class="available-plugin-version font-weight-bold" title="<?= t('Updated plugin version available') ?>">
+                        <td class="available-plugin-version font-weight-bold" data-label="<?= t('Plugin Version') ?>" title="<?= t('Updated plugin version available') ?>">
                             <?= $this->text->e($plugin['version'] ?? t('Not Specified')) ?>
                         </td>
                     <?php else: ?>
-                        <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
+                        <td class="available-plugin-version" data-label="<?= t('Plugin Version') ?>" title="<?= t('Plugin Version') ?>">
                             <?= $this->text->e($plugin['version'] ?? t('Not Specified')) ?>
                         </td>
                     <?php endif ?>
-                    <td class="date-toggle available-plugin-last-updated">
+                    <td class="date-toggle available-plugin-last-updated" data-label="<?= t('Last Updated') ?>" tabindex="0" role="button" aria-label="<?= t('Toggle date display') ?>">
                         <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
                             <?php
                             $pluginAge = strtotime($plugin['last_updated']);
@@ -196,7 +196,7 @@
                             </span>
                         <?php endif ?>
                     </td>
-                    <td class="available-plugin-structure">
+                    <td class="available-plugin-structure" data-label="<?= t('Plugin Structure') ?>">
                         <?php if ($readmeUrl !== ''): ?>
                             <a href="<?= $this->text->e($readmeUrl) ?>" class="dir-plugin-readme btn-action" target="_blank" rel="noopener noreferrer" title="<?= t('View Readme') ?> &#8663; <?= t('Opens in a new window') ?>">
                                 <span class="pm-readme-icon"></span>
@@ -244,7 +244,7 @@
                             <span class="pm-hooks-icon btn-action x-has-hooks" title="<?= t('This plugin has not specified any hooks') ?>"></span>
                         <?php endif ?>
                     </td>
-                    <td class="available-plugin-status text-center">
+                    <td class="available-plugin-status text-center" data-label="<?= t('Status') ?>">
                         <?php if ($is_configured): ?>
                             <?php if (!isset($installed_plugins[$pluginId]) && $downloadUrl !== ''): ?>
                                 <?= $this->url->icon('cloud-download', t('Install'), 'PluginController', 'install', array('archive_url' => urlencode($downloadUrl)), true, 'install-plugin', t('Install this plugin')) ?>
@@ -265,7 +265,7 @@
                     </td>
                 </tr>
                 <tr class="">
-                    <td class="available-plugin-description" colspan="5">
+                    <td class="available-plugin-description" data-label="<?= t('Description') ?>" colspan="5">
                         <div class="markdown">
                             <?= $this->text->markdown($plugin['description'] ?? '') ?>
                         </div>

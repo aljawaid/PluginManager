@@ -1,23 +1,28 @@
 // KANBOARD PLUGIN ASSET FILE
 
-$(document).ready(function() {
-    // Click event for any anchor tag that's href starts with #
-    $('a[href^="#main"], a[href^="#PluginTop"]').click(function(event) {
+(function () {
+    "use strict";
 
-        // The id of the section we want to go to.
-        var id = $(this).attr("href");
+    document.addEventListener("click", function (event) {
+        const link = event.target.closest('a[href^="#main"], a[href^="#PluginTop"]');
 
-        // An offset to push the content down from the top. Lower the value to push down
-        var offset = 100;
+        if (!link) {
+            return;
+        }
 
-        // Our scroll target : the top position of the
-        // section that has the id referenced by our href.
-        var target = $(id).offset().top - offset;
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) {
+            return;
+        }
 
-        // The magic...smooth scrollin' goodness.
-        $('html, body').animate({scrollTop:target}, 1000);
-
-        //prevent the page from jumping down to our section.
         event.preventDefault();
+
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const targetTop = Math.max(0, target.getBoundingClientRect().top + window.scrollY - 100);
+
+        window.scrollTo({
+            top: targetTop,
+            behavior: reduceMotion ? "auto" : "smooth",
+        });
     });
-});
+}());
