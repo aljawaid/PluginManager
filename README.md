@@ -31,7 +31,7 @@
     </a>
 </p>
 
-Replace the Installed Plugins section with a whole new interface. Plugin Manager provides both users and developers with an improved comprehensive layout displaying a new section for troubleshooting plugins with a new plugin structure breakdown for each plugin. Install plugins direct from the Plugin Directory or explore new upcoming or untested features from manual plugins.
+PluginManager replaces the Installed Plugins section with a clearer interface for administrators and developers. It groups installation details, compatibility information and troubleshooting guidance in one place. Administrators can install published plugins from the Plugin Directory and review experimental or unlisted plugins separately.
 
 <p align="right">[<a href="#user-content-readme-bottom">&#8595; Bottom</a>] [<a href="#screenshots">&#8594; Next</a>] [<a href="#user-content-readme-top">&#8593; Top</a>]</p>
 
@@ -43,7 +43,9 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Add New Plugin Sidebar Menu Hook
   - `'template:plugin:sidebar'` is located in the plugins menu sidebar
 - Fully translatable
-- Clean coded icons without images for faster page load times
+- Reuse the existing standalone SVG icon set through cacheable CSS masks
+- Responsive light and dark theme presentation, including mobile-friendly directory cards
+- Keyboard-accessible filters, date controls and clipboard feedback
 - Direct link to [ContentCleaner](https://github.com/aljawaid/ContentCleaner) and [KanboardSupport](https://github.com/aljawaid/KanboardSupport) from the PluginManager sidebar
 
 
@@ -54,8 +56,8 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show total count for plugins with updates
   - Filter plugins by those requiring updates
 - Fixed table headers for easier page navigation
-- Use the user friendly search filter to quickly find installed plugins
-  - Hover over the input box to focus without clicking
+- Use the user-friendly search filter to quickly find installed plugins
+  - Focus the input with a pointer or keyboard
 - Show a notification icon if the plugin has database changes
 - Show a notification icon if the plugin has a published homepage
 - Show the Kanboard compatible version set by the plugin
@@ -74,14 +76,15 @@ Replace the Installed Plugins section with a whole new interface. Plugin Manager
 - Show the current application version
 - Show a direct link for each plugin's readme file
 - Show plugin totals by type
-- Use the user friendly search filter for quickly finding available plugins
+- Use the user-friendly search filter for quickly finding available plugins
   - Click on each type to dynamically filter all plugins including those with updates
-  - Hover over the input box to focus without clicking
+  - Use each filter with a pointer or keyboard
 - Highlight the last updated dates to reflect the development activity of a plugin
 - Show direct links to installed plugins
 
 **Manual Plugins**
-- Manually install plugins in `.zip` archive files from local or remote locations
+- Manually install validated `.zip` plugin archives from local or remote locations
+- Restrict manual installation to administrators when Kanboard's plugin installer is enabled
 - Manual plugins are part or completely functional plugins but not suitable for general Kanboard installation
 - Show a list of plugins which can be manually downloaded and installed based on data from the Plugin Directory
 - Developers can list their plugins in the normal directory but if they set `remote_install` to `false`, the plugin will appear on the manual plugin page with a download link (no install). Kanboard by default, currently completely ignores such plugins.
@@ -152,7 +155,10 @@ Go to `Plugins`
 <details>
     <summary><strong>Compatibility</strong></summary>
 
-- Requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.20`
+- PluginManager `5.0.0` requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.54`
+- Supported PHP versions: `8.2`, `8.3`, `8.4` and `8.5`
+- In-app archive installation requires PHP's ZIP extension, `PLUGIN_INSTALLER` enabled and a writable Kanboard plugin directory
+- PluginManager pages and installation actions are available only to Kanboard administrators
 - **Other Plugins & Action Plugins**
   - _No known issues_
   - Compatible with [KanboardSupport](https://github.com/aljawaid/KanboardSupport), [Glancer](https://github.com/aljawaid/Glancer), [ContentCleaner](https://github.com/aljawaid/ContentCleaner), [KanboardCSS](https://github.com/aljawaid/KanboardCSS)

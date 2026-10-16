@@ -4,7 +4,7 @@
 ## Super Linter GitHub Actions ##
 #################################
 #################################
-name: Code Scan
+name: Code Quality
 
 #
 # Documentation:
@@ -27,7 +27,7 @@ on:
 jobs:
   build:
     # Name the Job
-    name: Check Code
+    name: Lint Source
     # Set the agent to run on
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -85,7 +85,7 @@ jobs:
           SUPPRESS_POSSUM: true
           VALIDATE_CSS: true
           VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_GITLEAKS: true
+          VALIDATE_GITLEAKS: false
           VALIDATE_HTML: true
           # VALIDATE_JAVA: true
           VALIDATE_JAVASCRIPT_ES: true

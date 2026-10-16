@@ -1,5 +1,19 @@
 # Changelog
 
+## v5.0.0 - 16 October 2026
+
+_(most recent changes are listed on top):_
+- SECURITY FIX: Restrict every PluginManager page and installation action to Kanboard administrators
+- SECURITY FIX: Validate archive paths, structure and size before staging a plugin for atomic installation
+- FIX: Preserve plugin directory identities and compare update versions semantically - closes #73
+- FIX: Validate remote directory links, escape directory data and avoid repeated directory requests
+- FIX: Add responsive light and dark theme presentation with mobile directory cards - closes #72
+- FIX: Reuse every existing standalone SVG icon through cacheable CSS masks
+- FIX: Improve keyboard filters, date controls, clipboard feedback and safe external links
+- FIX: Complete and verify the English, French, German and Spanish translation catalogues
+- FIX: Support Kanboard 1.2.54 with PHP 8.2-8.5 compatibility checks
+
+
 ## v4.7
 
 _(most recent changes are listed on top):_
