@@ -58,8 +58,14 @@ class PluginManagerController extends BaseController
      */
     public function showManualPlugins()
     {
+        $manualPlugins = $this->helper->pluginManagerHelper->sortPluginsByTitle(
+            $this->helper->pluginManagerHelper->getAllPlugins()
+        );
+
         $this->response->html($this->helper->layout->plugin('pluginManager:plugin/manual-plugins', array(
             'title' => t('Plugin Manager') . ' &#10562; ' . t('Manual Plugins'),
+            'manual_plugins' => $manualPlugins,
+            'directory_last_updated' => $this->helper->pluginManagerHelper->lastUpdatedDirectory(),
             'is_configured' => Installer::isConfigured(),
         )));
     }

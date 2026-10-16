@@ -1,14 +1,14 @@
 <div id="ManualPlugins" class="pm-page-header manual-plugins">
     <h2 class="">
         <span class="pm-manual-plugin-icon"></span><?= t('Manual Plugins') ?>
-        <span class="manual-plugin-count"><?= count($this->helper->pluginManagerHelper->getAllPlugins()) ?></span>
+        <span class="manual-plugin-count"><?= count($manual_plugins) ?></span>
     </h2>
     <?php if ($is_configured): ?>
         <?= $this->render('PluginManager:plugin/installer') ?>
     <?php else: ?>
         <p class="alert"><?= t('Your application instance is not configured to install plugins from the user interface.') ?></p>
     <?php endif ?>
-    <?php if (!empty($this->helper->pluginManagerHelper->getAllPlugins())): ?>
+    <?php if (!empty($manual_plugins)): ?>
         <section class="message error cleaner-warning">
             <header></header>
             <i class=""></i>
@@ -19,17 +19,18 @@
         </section>
         <div class="top-detail-bar">
             <div class="plugin-dir-last-updated">
-                <?= t('Directory Last Updated') ?>: <?=$this->helper->pluginManagerHelper->lastUpdatedDirectory() ?>
+                <?= t('Directory Last Updated') ?>: <?= $this->text->e($directory_last_updated) ?>
             </div>
             <a id="PluginBottom" href="#PluginTop" title="<?= t('Go to the bottom of the page') ?>" class="btn-action">
                 <i class="fa fa-level-down" aria-hidden="true"></i> <?= t('Bottom') ?>
             </a>
         </div>
-        <?php
-            $manualPlugins = $this->helper->pluginManagerHelper->getAllPlugins();
-            usort($manualPlugins, fn ($a, $b) => strtolower($a['title']) <=> strtolower($b['title']));
-        ?>
-        <?php foreach ($this->helper->pluginManagerHelper->getAllPlugins() as $plugin): ?>
+        <?php foreach ($manual_plugins as $pluginId => $plugin): ?>
+            <?php
+                $readmeUrl = $this->helper->pluginManagerHelper->getExternalUrl($plugin['readme'] ?? '');
+                $homepageUrl = $this->helper->pluginManagerHelper->getExternalUrl($plugin['homepage'] ?? '');
+                $downloadUrl = $this->helper->pluginManagerHelper->getExternalUrl($plugin['download'] ?? '');
+            ?>
             <table class="manual-plugins-table available-plugins-table">
                 <tr class="">
                     <th class="available-plugins-author" colspan="2">
@@ -49,8 +50,8 @@
                             <!-- IF UNRECOGNISED VALUE -->
                             <span class="plugin-type"><span class="pm-other-icon"></span></span>
                         <?php endif ?>
-                        <span title="<?= t('Plugin Author(s)') ?>"><?= $this->text->e($plugin['author']) ?></span>
-                        <span class="pm-license-icon"></span>
+                        <span title="<?= t('Plugin Author(s)') ?>"><?= $this->text->e($plugin['author'] ?? t('Not Specified')) ?></span>
+                        <span class="pm-license-icon" title="<?= $this->text->e($plugin['license'] ?? t('Not Specified')) ?> <?= t('License') ?>"></span>
                     </th>
                     <th class="plugin-last-updated text-center"><?= t('Last Updated') ?>
                         <span class="tooltip">
@@ -72,24 +73,27 @@
                 </tr>
                 <tr class="">
                     <td class="column-40 available-plugins-title">
-                        <?= $this->text->e($plugin['title']) ?>
+                        <?= $this->text->e($plugin['title'] ?? $pluginId) ?>
                     </td>
                     <td class="available-plugin-version" title="<?= t('Plugin Version') ?>">
-                        <?= $this->text->e($plugin['version']) ?>
+                        <?= $this->text->e($plugin['version'] ?? t('Not Specified')) ?>
                     </td>
                     <td class="date-toggle available-plugin-last-updated">
                         <?php if (isset($plugin['last_updated']) && $plugin['last_updated']): ?>
                             <?php
-                            $dateFormatplugin = date_create($plugin['last_updated']);
-                            $dateFormat = date_format($dateFormatplugin, 'd F Y');
+                            $pluginAge = strtotime($plugin['last_updated']);
+                            $dateFormat = $pluginAge === false ? '' : date('d F Y', $pluginAge);
                             ?>
-                            <div class="relative-date dir-plugin-last-updated" title="<?= $dateFormat ?>">
-                                <?php $pluginAge = strtotime($plugin['last_updated']) ?>
-                                <?= $this->helper->ageHelper->newAge($pluginAge) ?>
-                            </div>
-                            <div class="exact-date dir-plugin-last-updated" title="<?= strip_tags($this->helper->ageHelper->newAge($pluginAge)) ?>" style="display: none;">
-                                <?= $dateFormat ?>
-                            </div>
+                            <?php if ($pluginAge !== false): ?>
+                                <div class="relative-date dir-plugin-last-updated" title="<?= $this->text->e($dateFormat) ?>">
+                                    <?= $this->helper->ageHelper->newAge($pluginAge) ?>
+                                </div>
+                                <div class="exact-date dir-plugin-last-updated" title="<?= $this->text->e(strip_tags($this->helper->ageHelper->newAge($pluginAge))) ?>" hidden>
+                                    <?= $this->text->e($dateFormat) ?>
+                                </div>
+                            <?php else: ?>
+                                <span class="not-specified"><?= t('Not Specified') ?></span>
+                            <?php endif ?>
                         <?php else: ?>
                             <span class="not-specified" title="<?= t('Unable to detect the last time this plugin was updated or a version was released') ?>">
                                 <?= t('Not Specified') ?>
@@ -97,13 +101,13 @@
                         <?php endif ?>
                     </td>
                     <td class="available-plugin-structure">
-                        <?php if (isset($plugin['readme']) && $plugin['readme']): ?>
-                            <a href="<?= $plugin['readme'] ?>" class="dir-plugin-readme btn-action" target="_blank" rel="noopener noreferrer" title="<?= t('View Readme') ?> &#8663; <?= t('Opens in a new window') ?>">
+                        <?php if ($readmeUrl !== ''): ?>
+                            <a href="<?= $this->text->e($readmeUrl) ?>" class="dir-plugin-readme btn-action" target="_blank" rel="noopener noreferrer" title="<?= t('View Readme') ?> &#8663; <?= t('Opens in a new window') ?>">
                                 <span class="pm-readme-icon"></span>
                             </a>
                         <?php endif ?>
-                        <?php if (isset($plugin['homepage']) && $plugin['homepage']): ?>
-                            <a href="<?= $plugin['homepage'] ?>" class="plugin-homepage btn-action plugin-book" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Homepage') ?> &#8663; <?= t('Opens in a new window') ?>">
+                        <?php if ($homepageUrl !== ''): ?>
+                            <a href="<?= $this->text->e($homepageUrl) ?>" class="plugin-homepage btn-action plugin-book" target="_blank" rel="noopener noreferrer" title="<?= t('Plugin Homepage') ?> &#8663; <?= t('Opens in a new window') ?>">
                                 <span class="pm-homepage-icon"></span>
                             </a>
                         <?php endif ?>
@@ -145,11 +149,11 @@
                         <?php endif ?>
                     </td>
                     <td class="available-plugin-status text-center">
-                        <?php if ($plugin['download']): ?>
-                            <a href="<?= ($plugin['download']) ?>" class="download-archive" title="<?= t('Download Plugin') ?>">
+                        <?php if ($downloadUrl !== ''): ?>
+                            <a href="<?= $this->text->e($downloadUrl) ?>" class="download-archive" title="<?= t('Download Plugin') ?>">
                                 <span class="pm-download-icon"></span><?= t('Download') ?>
                             </a>
-                            <span class="copy-url-link-format btn" title="<?= t('Copy download link') ?>" data-clipboard-text="<?= $plugin['download'] ?>">
+                            <span class="copy-url-link-format btn" title="<?= t('Copy download link') ?>" data-clipboard-text="<?= $this->text->e($downloadUrl) ?>">
                                 <span class="pm-clipboard-icon"></span>
                             </span>
                         <?php else: ?>
@@ -160,14 +164,14 @@
                 <tr class="">
                     <td class="manual-plugin-description" colspan="5">
                         <div class="markdown">
-                            <?= $this->text->markdown($plugin['description']) ?>
+                            <?= $this->text->markdown($plugin['description'] ?? '') ?>
                         </div>
                     </td>
                 </tr>
                 <tr class="">
-                    <?php if ($this->text->e($plugin['title']) == 'KanboardSkeletonPlugin'): ?>
+                    <?php if (($plugin['title'] ?? '') === 'KanboardSkeletonPlugin'): ?>
                         <td class="manual-plugin-note developer-plugin" colspan="5"><?= t('This plugin is for developers') ?></td>
-                    <?php elseif ($this->text->e($plugin['title']) == 'php_Translation_Helper' || $this->text->e($plugin['title']) == 'PHP Translation Helper'): ?>
+                    <?php elseif (in_array(($plugin['title'] ?? ''), array('php_Translation_Helper', 'PHP Translation Helper'), true)): ?>
                         <td class="manual-plugin-note developer-plugin" colspan="5"><?= t('This plugin is for translators and developers') ?></td>
                     <?php else: ?>
                         <td class="manual-plugin-note" colspan="5">

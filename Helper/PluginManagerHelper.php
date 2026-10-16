@@ -3,7 +3,6 @@
 namespace Kanboard\Plugin\PluginManager\Helper;
 
 use Kanboard\Core\Base;
-use Kanboard\Core\Http\Client;
 use Kanboard\Core\Plugin\Directory;
 
 /**
@@ -15,9 +14,14 @@ use Kanboard\Core\Plugin\Directory;
  * @author   creecros       Craig Crosby
  * @author   alfredbuehler  Alfred Bühler
  * @author   cptsanifair    Cpt. Sanifair
+ *
+ * Related test file: tests/DirectoryDataTest.php.
  */
 class PluginManagerHelper extends Base
 {
+    private array $manualPluginCache = array();
+    private array $installablePluginCache = array();
+
     /**
      * Get SVG Icons for Inline Markup and CSS Styling (Embed SVG Fly Method)
      *
@@ -86,8 +90,10 @@ class PluginManagerHelper extends Base
         $types = array();
 
         foreach ($available_plugins as $plugin) {
-            if (isset($plugin['is_type']) && in_array($plugin['is_type'], ['plugin', 'action', 'theme', 'multi', 'connector'], false)) {
-                array_push($types, $plugin['is_type']);
+            $pluginType = $plugin['is_type'] ?? null;
+
+            if (in_array($pluginType, array('plugin', 'action', 'theme', 'multi', 'connector'), true)) {
+                $types[] = $pluginType;
             }
         }
 
@@ -106,7 +112,14 @@ class PluginManagerHelper extends Base
      */
     public function getAllPlugins($url = PLUGIN_API_URL)
     {
-        return array_filter($this->httpClient->getJson($url), array($this, 'isNotInstallable'));
+        if (! array_key_exists($url, $this->manualPluginCache)) {
+            $plugins = $this->httpClient->getJson($url);
+            $this->manualPluginCache[$url] = is_array($plugins)
+                ? array_filter($plugins, array($this, 'isNotInstallable'))
+                : array();
+        }
+
+        return $this->manualPluginCache[$url];
     }
 
     /**
@@ -118,7 +131,7 @@ class PluginManagerHelper extends Base
      */
     public function isNotInstallable(array $plugin)
     {
-        return $plugin['remote_install'] === false;
+        return ($plugin['remote_install'] ?? null) === false;
     }
 
     /**
@@ -133,38 +146,37 @@ class PluginManagerHelper extends Base
     {
         $curlCheck = $this->httpClient->backend();
 
-        if ($curlCheck == 'cURL') {
-            $curl = curl_init(PLUGIN_API_URL);
-
-            // Don't fetch the actual page, we only want the headers
-            curl_setopt($curl, CURLOPT_NOBODY, true);
-
-            // Stop it from outputting stuff to `stdout`
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-            // Attempt to retrieve the modification date
-            curl_setopt($curl, CURLOPT_FILETIME, true);
-
-            // Set HTTP_VERIFY_SSL_CERTIFICATE from config.php
-            if (HTTP_VERIFY_SSL_CERTIFICATE === false) {
-                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-            }
-
-            $result = curl_exec($curl);
-
-            if ($result === false) {
-                die(curl_error($curl));
-            }
-
-            $timestamp = curl_getinfo($curl, CURLINFO_FILETIME);
-
-            if ($timestamp != -1) { // otherwise unknown
-                return date("d F Y H:i", $timestamp); // etc
-            }
-        } else {
-            return t('Not Available');
+        if ($curlCheck !== 'cURL') {
+            return t('Not available');
         }
+
+        $curl = curl_init(PLUGIN_API_URL);
+        if ($curl === false) {
+            return t('Not available');
+        }
+
+        curl_setopt_array($curl, array(
+            CURLOPT_NOBODY => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FILETIME => true,
+            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_TIMEOUT => 10,
+        ));
+
+        // Honour the Kanboard transport setting for custom directory endpoints.
+        if (HTTP_VERIFY_SSL_CERTIFICATE === false) {
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        }
+
+        $result = curl_exec($curl);
+        $timestamp = $result === false ? -1 : curl_getinfo($curl, CURLINFO_FILETIME);
+
+        if (is_int($timestamp) && $timestamp >= 0) {
+            return date('d F Y H:i', $timestamp);
+        }
+
+        return t('Not available');
     }
 
     /**
@@ -173,19 +185,18 @@ class PluginManagerHelper extends Base
      * @return  array with plugin titles
      * @author  creecros    Craig Crosby
      */
-    public function getPluginUpdates(): array
+    public function getPluginUpdates(?array $availablePlugins = null): array
     {
-        $installed_plugins = array();
+        $installedPlugins = array();
         $updatables = array();
 
         foreach ($this->pluginLoader->getPlugins() as $plugin) {
-            $installed_plugins[$plugin->getPluginName()] = $plugin->getPluginVersion();
+            $installedPlugins[$plugin->getPluginName()] = $plugin->getPluginVersion();
         }
 
-        foreach (Directory::getInstance($this->container)->getAvailablePlugins() as $plugin) {
-            $proband = &$installed_plugins[$plugin['title']];
-            if (isset($proband) && $proband < $plugin['version']) {
-                $updatables[$plugin['title']] = $plugin['download'];
+        foreach ($availablePlugins ?? $this->getAllInstallablePlugins() as $pluginId => $plugin) {
+            if ($this->isPluginUpdateAvailable($installedPlugins, (string) $pluginId, $plugin)) {
+                $updatables[$pluginId] = $plugin['download'] ?? '';
             }
         }
 
@@ -204,6 +215,46 @@ class PluginManagerHelper extends Base
      */
     public function getAllInstallablePlugins($url = PLUGIN_API_URL)
     {
-        return Directory::getInstance($this->container)->getAvailablePlugins($url);
+        if (! array_key_exists($url, $this->installablePluginCache)) {
+            $plugins = Directory::getInstance($this->container)->getAvailablePlugins($url);
+            $this->installablePluginCache[$url] = is_array($plugins) ? $plugins : array();
+        }
+
+        return $this->installablePluginCache[$url];
+    }
+
+    /**
+     * Sort directory entries by their display title without losing their plugin IDs.
+     */
+    public function sortPluginsByTitle(array $plugins): array
+    {
+        uasort($plugins, static function (array $left, array $right): int {
+            return strcasecmp((string) ($left['title'] ?? ''), (string) ($right['title'] ?? ''));
+        });
+
+        return $plugins;
+    }
+
+    /**
+     * Compare versions against the stable directory ID rather than the display title.
+     */
+    public function isPluginUpdateAvailable(array $installedPlugins, string $pluginId, array $plugin): bool
+    {
+        return isset($installedPlugins[$pluginId], $plugin['version'])
+            && version_compare((string) $installedPlugins[$pluginId], (string) $plugin['version'], '<');
+    }
+
+    /**
+     * Return a safe external HTTP(S) URL or an empty string for invalid directory data.
+     */
+    public function getExternalUrl($url): string
+    {
+        if (! is_string($url) || filter_var($url, FILTER_VALIDATE_URL) === false) {
+            return '';
+        }
+
+        $scheme = strtolower((string) parse_url($url, PHP_URL_SCHEME));
+
+        return in_array($scheme, array('http', 'https'), true) ? $url : '';
     }
 }

@@ -120,7 +120,7 @@ return array(
     'Update' => 'Aktualisieren',
     'Update this plugin' => 'Diese Erweiterung aktualisieren',
     'Up to date' => 'Aktualität',
-    'Not Available' => 'Nicht verfügbar',
+    'Not available' => 'Nicht verfügbar',
     'Updated plugin version available' => 'Aktualisierte Version verfügbar',
     'View in Plugin Manager' => 'Ansicht im Plugin Manager',
     'Filter by type' => 'Nach Typ filtern',

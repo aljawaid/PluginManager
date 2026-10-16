@@ -1,13 +1,16 @@
 <?php
 
 use Kanboard\Core\Tool;
+use Kanboard\Plugin\PluginManager\Tests\DirectoryDataTest;
 use Kanboard\Plugin\PluginManager\Tests\SecurityBoundaryTest;
 use Kanboard\Plugin\PluginManager\Tests\TestAssertions;
+use Kanboard\Plugin\PluginManager\Tests\TranslationCatalogTest;
 
 /**
  * Boots the supported Kanboard release and runs PluginManager's focused regression tests.
  *
- * Related test files: tests/TestAssertions.php and tests/SecurityBoundaryTest.php.
+ * Related test files: tests/TestAssertions.php, tests/SecurityBoundaryTest.php,
+ * tests/DirectoryDataTest.php and tests/TranslationCatalogTest.php.
  */
 
 $kanboardPath = getenv('KANBOARD_PATH');
@@ -37,9 +40,13 @@ try {
     require dirname(__DIR__) . '/Plugin.php';
     require __DIR__ . '/TestAssertions.php';
     require __DIR__ . '/SecurityBoundaryTest.php';
+    require __DIR__ . '/DirectoryDataTest.php';
+    require __DIR__ . '/TranslationCatalogTest.php';
 
     $assertions = new TestAssertions();
     (new SecurityBoundaryTest())->run($container, $sandbox, $assertions);
+    (new DirectoryDataTest())->run($container, $assertions);
+    (new TranslationCatalogTest())->run(dirname(__DIR__), $assertions);
 
     echo 'PluginManager focused regression suite: ' . $assertions->count() . " assertions passed.\n";
 } catch (Throwable $exception) {
