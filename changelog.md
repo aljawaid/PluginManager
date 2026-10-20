@@ -1,5 +1,12 @@
 # Changelog
 
+## v5.0.1 - 20 October 2026
+
+_(most recent changes are listed on top):_
+- FIX: DEPENDENCY: Upgrade Super-Linter To 9.0.0
+- FIX: BUG: Correct Super-Linter Allowlist Configuration
+
+
 ## v5.0.0 - 16 October 2026
 
 _(most recent changes are listed on top):_

@@ -155,7 +155,7 @@ Go to `Plugins`
 <details>
     <summary><strong>Compatibility</strong></summary>
 
-- PluginManager `5.0.0` requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.54`
+- PluginManager `5.0.1` requires [Kanboard](https://github.com/kanboard/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.54`
 - Supported PHP versions: `8.2`, `8.3`, `8.4` and `8.5`
 - In-app archive installation requires PHP's ZIP extension, `PLUGIN_INSTALLER` enabled and a writable Kanboard plugin directory
 - PluginManager pages and installation actions are available only to Kanboard administrators

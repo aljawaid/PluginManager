@@ -81,13 +81,13 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '5.0.0';
+        return '5.0.1';
     }
 
     public function getCompatibleVersion()
     {
         // Examples: '>=1.0.37' '<1.0.37' '<=1.0.37'
-        // PluginManager 5.0.0 is tested on Kanboard 1.2.54 with PHP 8.2-8.5.
+        // PluginManager 5.0.1 is tested on Kanboard 1.2.54 with PHP 8.2-8.5.
         return '>=1.2.54';
     }
 
