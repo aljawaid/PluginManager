@@ -1,20 +1,28 @@
+# Local editor and operating-system state
 .buildpath
 .project
 /.settings/
-.idea
-.vscode
+.idea/
+.vscode/
 /nbproject/
-.DS_Store
-ehthumbs.db
-Thumbs.db
+*.sublime-workspace
 *.swp
 .*.swp
 *~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local development and dependency state
+.vagrant
+node_modules
+
+# Local test and temporary output
+.phpunit.result.cache
+.phpunit.cache/
+coverage/
 *.out
 *.log
-.vagrant
+*.tmp
 *.bak
-node_modules
-.phpunit.result.cache
-*.sublime-workspace
-
